@@ -1,0 +1,258 @@
+{
+  "entryId": "caquqk3hvvtc0",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "1618749303893790672/Perfomance 3 - Instagram SQL",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-02-12T07:45:54.454Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-02-12T18:19:07.858Z",
+  "savedId": "dbu0qn8glf7e1",
+  "publishedId": "dbu0qn8glf7e1",
+  "revId": "dbu0qn8glf7e1",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "bpds0nslojo40",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "WITH nickname AS (\n  -- Никнеймы инсты, если есть\n  SELECT contacts_id,\n         value\n  FROM amocrm_contacts_attributes\n  WHERE name = 'Instagram_WZ'\n)\n\nSELECT \n       ROW_NUMBER() OVER (ORDER BY COALESCE(p.lead_creation_date, p.creation_date) DESC) AS N, -- Порядковый номер\n       COALESCE(p.lead_creation_date, p.creation_date) AS \"Дата лида\", -- Дата создания лида\n       n.value AS \"Аккаунт\", -- Никнейм Инстаграма\n       c.phone AS \"Телефон\",\n       p.qual AS \"Квал\",\n       p.priority AS \"Приоритет\",\n       DATE(p.date_qual) AS \"Дата квала\",\n       p.booking_event AS \"Бронь\",\n       p.password AS \"Пароль\",\n       p.source_deal AS \"Воронка\",\n       p.utmsource AS \"Источник\",\n       p.crm_id AS \"AMO ID\"\n       \nFROM perfomance_all_leads p\nLEFT JOIN amocrm_leads_facts lf ON p.leads_id = lf.leads_id\nLEFT JOIN amocrm_contacts c ON c.id = lf.contacts_id\nLEFT JOIN nickname n ON n.contacts_id = c.id\nWHERE qual = 1\n      AND p.utmsource = 'instagram'\n      AND {{dates_from}} <= COALESCE(p.lead_creation_date, p.creation_date)\n      AND {{dates_to}} >= COALESCE(p.lead_creation_date, p.creation_date)\nORDER BY COALESCE(p.lead_creation_date, p.creation_date) DESC\n",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "dates",
+        "defaultValue": {
+          "from": "__relative_-6d",
+          "to": "__relative_-0d"
+        }
+      }
+    ],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "n-1",
+              "title": "n",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1707761708338"
+            },
+            {
+              "guid": "Дата лида-6",
+              "title": "Дата лида",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "date",
+              "cast": "date",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Аккаунт-2",
+              "title": "Аккаунт",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Телефон-11",
+              "title": "Телефон",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Дата квала-5",
+              "title": "Дата квала",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "date",
+              "cast": "date",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Приоритет-10",
+              "title": "Приоритет",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1707747305875"
+            },
+            {
+              "guid": "Бронь-3",
+              "title": "Бронь",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1707725759912"
+            },
+            {
+              "guid": "Пароль-9",
+              "title": "Пароль",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1707758825123"
+            },
+            {
+              "guid": "Источник-7",
+              "title": "Источник",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Воронка-4",
+              "title": "Воронка",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1707758861821"
+            },
+            {
+              "guid": "AMO ID-0",
+              "title": "AMO ID",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "35806d70-c980-11ee-a8c3-d3e54d4b4e2f",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "AMO ID-0"
+              }
+            },
+            {
+              "guid": "Квал-8",
+              "title": "Квал",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "n-1": "continuous"
+            }
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

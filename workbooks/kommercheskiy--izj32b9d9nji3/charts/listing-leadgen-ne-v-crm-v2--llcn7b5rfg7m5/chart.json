@@ -1,0 +1,386 @@
+{
+  "entryId": "llcn7b5rfg7m5",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2165207666018749577/listing_leadgen — Не в CRM v2",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2026-03-07T07:01:07.263Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2026-03-09T20:00:12.708Z",
+  "savedId": "0096f9thfqwkk",
+  "publishedId": "0096f9thfqwkk",
+  "revId": "0096f9thfqwkk",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "llclzwbqf22m5"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "leadgen_created_at_3c8f",
+          "title": "Дата создания в лидгене",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leadgen_service_453d",
+          "title": "Сервис",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leadgen_lead_id_f9d6",
+          "title": "Лидген ID",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leadgen_phone_key_60ee",
+          "title": "Контакт",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "listing_leadgen — Не в CRM v2",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "pagination": "on",
+      "limit": 200,
+      "totals": "off",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "leadgen_created_at_3c8f",
+        "datasetId": "llclzwbqf22m5",
+        "fakeTitle": "Дата создания в лидгене",
+        "data_type": "genericdatetime",
+        "title": "Дата создания в лидгене",
+        "source": "leadgen_created_at",
+        "type": "DIMENSION",
+        "direction": "DESC"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "title": "Причина miss",
+          "fakeTitle": "Причина miss",
+          "type": "DIMENSION",
+          "lock_aggregation": false,
+          "initial_data_type": "string",
+          "aggregation": "none",
+          "cast": "string",
+          "managed_by": "user",
+          "hidden": false,
+          "guid": "f9685d8b-d951-4b9f-8349-ea8bc0234f48",
+          "autoaggregated": false,
+          "data_type": "string",
+          "has_auto_aggregation": false,
+          "description": "",
+          "virtual": false,
+          "aggregation_locked": true,
+          "valid": true,
+          "avatar_id": null,
+          "source": "",
+          "calc_mode": "formula",
+          "formula": "IF ISNULL([crm_id]) THEN 'Не найдено в amoCRM' END",
+          "guid_formula": "IF ISNULL([crm_id_a69b]) THEN 'Не найдено в amoCRM' END",
+          "default_value": null,
+          "value_constraint": null,
+          "datasetId": "llclzwbqf22m5",
+          "id": "dimension-5",
+          "datasetName": "listing_leadgen_not_in_crm",
+          "hideLabelMode": "show",
+          "local": true,
+          "ui_settings": "",
+          "columnSettings": {
+            "width": {
+              "mode": "auto",
+              "value": "12"
+            }
+          },
+          "subTotalsSettings": {
+            "enabled": true
+          }
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "pivotTable",
+      "type": "table",
+      "name": "label_visualization-pivot-table",
+      "iconProps": {
+        "id": "visPivot",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "pivot-table-columns",
+          "type": "pivot-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [],
+          "settings": {}
+        },
+        {
+          "allowedDataTypes": {},
+          "id": "rows",
+          "type": "rows",
+          "title": "section_rows",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "Дата создания в лидгене",
+              "cast": "genericdatetime",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "genericdatetime",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "genericdatetime",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "leadgen_created_at_3c8f",
+              "managed_by": "user",
+              "avatar_id": "90ae5260-6f21-4fc0-908e-a8ac4314f808",
+              "source": "leadgen_created_at",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "fakeTitle": "Дата создания в лидгене",
+              "datasetId": "llclzwbqf22m5",
+              "datasetName": "listing_leadgen_not_in_crm",
+              "id": "dimension-1",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            },
+            {
+              "title": "Сервис",
+              "cast": "string",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "string",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "leadgen_service_453d",
+              "managed_by": "user",
+              "avatar_id": "90ae5260-6f21-4fc0-908e-a8ac4314f808",
+              "source": "leadgen_service",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "fakeTitle": "Сервис",
+              "datasetId": "llclzwbqf22m5",
+              "datasetName": "listing_leadgen_not_in_crm",
+              "id": "dimension-2",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            },
+            {
+              "title": "Лидген ID",
+              "cast": "string",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "string",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "leadgen_lead_id_f9d6",
+              "managed_by": "user",
+              "avatar_id": "90ae5260-6f21-4fc0-908e-a8ac4314f808",
+              "source": "leadgen_lead_id",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "fakeTitle": "Лидген ID",
+              "datasetId": "llclzwbqf22m5",
+              "datasetName": "listing_leadgen_not_in_crm",
+              "id": "dimension-3",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            },
+            {
+              "title": "Контакт",
+              "cast": "string",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "string",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "leadgen_phone_key_60ee",
+              "managed_by": "user",
+              "avatar_id": "90ae5260-6f21-4fc0-908e-a8ac4314f808",
+              "source": "leadgen_phone_key",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "fakeTitle": "Контакт",
+              "datasetId": "llclzwbqf22m5",
+              "datasetName": "listing_leadgen_not_in_crm",
+              "id": "dimension-4",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            },
+            {
+              "title": "Причина miss",
+              "fakeTitle": "Причина miss",
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "initial_data_type": "string",
+              "aggregation": "none",
+              "cast": "string",
+              "managed_by": "user",
+              "hidden": false,
+              "guid": "f9685d8b-d951-4b9f-8349-ea8bc0234f48",
+              "autoaggregated": false,
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": true,
+              "valid": true,
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "IF ISNULL([crm_id]) THEN 'Не найдено в amoCRM' END",
+              "guid_formula": "IF ISNULL([crm_id_a69b]) THEN 'Не найдено в amoCRM' END",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "llclzwbqf22m5",
+              "id": "dimension-5",
+              "datasetName": "listing_leadgen_not_in_crm",
+              "hideLabelMode": "show",
+              "local": true,
+              "ui_settings": "",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            }
+          ],
+          "settings": {}
+        },
+        {
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measures",
+          "iconProps": {},
+          "items": [],
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "izj32b9d9nji3",
+  "collectionId": null
+}

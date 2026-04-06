@@ -1,0 +1,257 @@
+{
+  "entryId": "fb31e5ksm4si3",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1608806498794736739/newsletter_tags — Сводная таблица по тегам",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-01-29T14:31:19.724Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-01-29T14:31:19.724Z",
+  "savedId": "ea20d4jrl3rg2",
+  "publishedId": "ea20d4jrl3rg2",
+  "revId": "ea20d4jrl3rg2",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "jf73yud8m5na7"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "tags_ibgd",
+          "title": "tags",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_tcv0",
+          "title": "date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_4ck1",
+          "title": "leads",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "catalog_a7vw",
+          "title": "catalog",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "win_iqf8",
+          "title": "win",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "leads_4ck1",
+        "datasetId": "jf73yud8m5na7",
+        "data_type": "integer",
+        "title": "leads",
+        "source": "leads",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "autoaggregated": false,
+              "title": "tags",
+              "valid": true,
+              "guid": "tags_ibgd",
+              "aggregation_locked": false,
+              "virtual": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "hidden": false,
+              "cast": "string",
+              "aggregation": "none",
+              "data_type": "string",
+              "description": "",
+              "avatar_id": "d6fce1d0-beb1-11ee-9fa6-c9395aebba3e",
+              "source": "tags",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "jf73yud8m5na7",
+              "id": "inserted-1706538650310",
+              "datasetName": "newsletter_tags"
+            },
+            {
+              "autoaggregated": false,
+              "title": "date",
+              "valid": true,
+              "guid": "date_tcv0",
+              "aggregation_locked": false,
+              "virtual": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "initial_data_type": "date",
+              "hidden": false,
+              "cast": "date",
+              "aggregation": "none",
+              "data_type": "date",
+              "description": "",
+              "avatar_id": "d6fce1d0-beb1-11ee-9fa6-c9395aebba3e",
+              "source": "date",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "jf73yud8m5na7",
+              "id": "inserted-1706538635960",
+              "datasetName": "newsletter_tags"
+            },
+            {
+              "autoaggregated": false,
+              "title": "leads",
+              "valid": true,
+              "guid": "leads_4ck1",
+              "aggregation_locked": false,
+              "virtual": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "initial_data_type": "integer",
+              "hidden": false,
+              "cast": "integer",
+              "aggregation": "none",
+              "data_type": "integer",
+              "description": "",
+              "avatar_id": "d6fce1d0-beb1-11ee-9fa6-c9395aebba3e",
+              "source": "leads",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "jf73yud8m5na7",
+              "id": "inserted-1706538640257",
+              "datasetName": "newsletter_tags"
+            },
+            {
+              "autoaggregated": false,
+              "title": "catalog",
+              "valid": true,
+              "guid": "catalog_a7vw",
+              "aggregation_locked": false,
+              "virtual": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "initial_data_type": "integer",
+              "hidden": false,
+              "cast": "integer",
+              "aggregation": "none",
+              "data_type": "integer",
+              "description": "",
+              "avatar_id": "d6fce1d0-beb1-11ee-9fa6-c9395aebba3e",
+              "source": "catalog",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "jf73yud8m5na7",
+              "id": "inserted-1706538655616",
+              "datasetName": "newsletter_tags"
+            },
+            {
+              "autoaggregated": false,
+              "title": "win",
+              "valid": true,
+              "guid": "win_iqf8",
+              "aggregation_locked": false,
+              "virtual": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "initial_data_type": "integer",
+              "hidden": false,
+              "cast": "integer",
+              "aggregation": "none",
+              "data_type": "integer",
+              "description": "",
+              "avatar_id": "d6fce1d0-beb1-11ee-9fa6-c9395aebba3e",
+              "source": "win",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "jf73yud8m5na7",
+              "id": "inserted-1706538657165",
+              "datasetName": "newsletter_tags"
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "tags_ibgd": "discrete"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    },
+    "convert": false
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

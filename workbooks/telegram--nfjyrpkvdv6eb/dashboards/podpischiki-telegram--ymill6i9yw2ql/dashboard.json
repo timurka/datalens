@@ -1,0 +1,5656 @@
+{
+  "entry": {
+    "version": 1,
+    "scope": "dash",
+    "entryId": "ymill6i9yw2ql",
+    "key": "1718089834708338521/Подписчики Telegram",
+    "createdAt": "2024-06-28T09:17:48.575Z",
+    "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+    "updatedAt": "2026-03-23T18:29:10.337Z",
+    "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+    "revId": "orpbmmkvabu88",
+    "savedId": "orpbmmkvabu88",
+    "publishedId": "orpbmmkvabu88",
+    "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+    "hidden": false,
+    "public": false,
+    "workbookId": "nfjyrpkvdv6eb",
+    "meta": {
+      "is_release": true
+    },
+    "annotation": {
+      "description": ""
+    },
+    "type": "",
+    "data": {
+      "salt": "0.7868346821062093",
+      "tabs": [
+        {
+          "id": "4ww",
+          "items": [
+            {
+              "id": "8eO",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "2Rq",
+                    "hint": "Показываются события, которые произошли за день, независимо от даты вступления подписчика.\n\nНапример, 1 сентября отображается что произошло событие квалификации у конкретного подписчика, независимо от его даты вступления и даты лида.\n\nНекоторые категории пока не определены - временно пустые, 404 или 500.",
+                    "title": "Сводный по событию",
+                    "params": {},
+                    "chartId": "00q3vu8s166yl",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": true,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "vB1",
+              "data": {
+                "group": [
+                  {
+                    "id": "zqn",
+                    "title": "Дата",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "55v8t5dn50xsq",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-0d___relative_-0d",
+                      "datasetFieldId": "date_ska4",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "date_ska4": "__interval___relative_-0d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "G4j",
+              "data": {
+                "group": [
+                  {
+                    "id": "nB4",
+                    "title": "Гео",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "55v8t5dn50xsq",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "geo_6yq8",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "geo_6yq8": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "ZA7",
+              "data": {
+                "group": [
+                  {
+                    "id": "M9Z",
+                    "title": "Категория",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "55v8t5dn50xsq",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "category_9w3d",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "category_9w3d": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "3w1",
+              "data": {
+                "size": "m",
+                "text": "Датасет",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "arE",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "xdN",
+                    "hint": "",
+                    "title": "Таблица датасета по событию",
+                    "params": {},
+                    "chartId": "mmspfg511t6i7",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "LJm",
+              "data": {
+                "text": "### **О дашборде**\n\nПоказываются события, которые произошли за день, независимо от даты вступления подписчика.\n\nНапример,  1 сентября отображается что произошло событие квалификации у конкретного подписчика, независимо от его даты вступления и даты лида.\n\nНекоторые категории пока не определены - временно пустые, 404 или 500.",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "eDj",
+              "data": {
+                "text": "*Датасет открывает \"черный ящик\" - из каких данных/лидов состоит сводная таблица. Используется для проверки точности.*",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "dGx",
+              "data": {
+                "size": "m",
+                "text": "Категории",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "PVe",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "WrJ",
+                    "hint": "Общие фильтры так же действуют на таблицу.",
+                    "title": "По категориям, без названий каналов",
+                    "params": {},
+                    "chartId": "nn0pqe3fhx1c8",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": true,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "VnM",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "OP6",
+              "data": {
+                "text": "### **Детали**\n\n* Если пользователь зашел на один и тот же канал несколько раз, то берется **последний значимый источник**. \n\n  * Например, пользователь выходил и заходил три раза: первые два раза с какого-нибудь канала, а третий раз без источника.  В таком случае берется второй источник, т.к. он был последний где мы понимаем откуда он пришел.",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "19Z",
+              "data": {
+                "group": [
+                  {
+                    "id": "NWa",
+                    "title": "Название ссылки",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "55v8t5dn50xsq",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "invite_link_name_vm30",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "invite_link_name_vm30": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "kBj",
+              "data": {
+                "group": [
+                  {
+                    "id": "AzQ",
+                    "title": "Ссылка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "55v8t5dn50xsq",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "invitelinks_ely5",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "invitelinks_ely5": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "08G",
+              "data": {
+                "size": "m",
+                "text": "Гео",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "YdW",
+              "data": {
+                "size": "m",
+                "text": "Гео",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "lwb",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "2qe",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "4qA",
+                    "hint": "",
+                    "title": "Сводная по событию по гео",
+                    "params": {},
+                    "chartId": "acv4ic7tsrt6v",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "5Wd",
+              "data": {
+                "group": [
+                  {
+                    "id": "O09",
+                    "title": "telegram_id",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "55v8t5dn50xsq",
+                      "fieldType": "integer",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "input",
+                      "datasetFieldId": "telegram_id_svf5",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "telegram_id_svf5": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "kEg",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "AJP",
+                    "hint": "",
+                    "title": "Сводный по событию — Индикатор лидов",
+                    "params": {},
+                    "chartId": "u8nvxebl4szef",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "jRW",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "QNr",
+                    "hint": "",
+                    "title": "Сводный по событию — Индикатор квалов",
+                    "params": {},
+                    "chartId": "n1gouwn3ys608",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "Mqv",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "GaQ",
+                    "hint": "",
+                    "title": "Сводный по событию — Индикатор брони",
+                    "params": {},
+                    "chartId": "o23nh1pathfy9",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            }
+          ],
+          "title": "Сводная — По событию",
+          "layout": [
+            {
+              "h": 31,
+              "i": "8eO",
+              "w": 35,
+              "x": 0,
+              "y": 4
+            },
+            {
+              "h": 2,
+              "i": "vB1",
+              "w": 8,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "9rm",
+              "w": 6,
+              "x": 8,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "G4j",
+              "w": 6,
+              "x": 15,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "ZA7",
+              "w": 7,
+              "x": 21,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "3w1",
+              "w": 36,
+              "x": 0,
+              "y": 115
+            },
+            {
+              "h": 24,
+              "i": "arE",
+              "w": 36,
+              "x": 0,
+              "y": 91
+            },
+            {
+              "h": 9,
+              "i": "LJm",
+              "w": 14,
+              "x": 0,
+              "y": 80
+            },
+            {
+              "h": 2,
+              "i": "eDj",
+              "w": 25,
+              "x": 0,
+              "y": 117
+            },
+            {
+              "h": 2,
+              "i": "dGx",
+              "w": 36,
+              "x": 0,
+              "y": 40
+            },
+            {
+              "h": 28,
+              "i": "PVe",
+              "w": 36,
+              "x": 0,
+              "y": 42
+            },
+            {
+              "h": 3,
+              "i": "VnM",
+              "w": 36,
+              "x": 0,
+              "y": 37
+            },
+            {
+              "h": 9,
+              "i": "OP6",
+              "w": 14,
+              "x": 15,
+              "y": 80
+            },
+            {
+              "h": 2,
+              "i": "19Z",
+              "w": 8,
+              "x": 28,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "kBj",
+              "w": 8,
+              "x": 28,
+              "y": 0,
+              "parent": "__fixGCont"
+            },
+            {
+              "h": 2,
+              "i": "08G",
+              "w": 36,
+              "x": 0,
+              "y": 35
+            },
+            {
+              "h": 2,
+              "i": "YdW",
+              "w": 36,
+              "x": 0,
+              "y": 73
+            },
+            {
+              "h": 3,
+              "i": "lwb",
+              "w": 36,
+              "x": 0,
+              "y": 70
+            },
+            {
+              "h": 5,
+              "i": "2qe",
+              "w": 29,
+              "x": 0,
+              "y": 75
+            },
+            {
+              "h": 2,
+              "i": "5Wd",
+              "w": 7,
+              "x": 0,
+              "y": 89
+            },
+            {
+              "h": 4,
+              "i": "kEg",
+              "w": 4,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 4,
+              "i": "jRW",
+              "w": 4,
+              "x": 4,
+              "y": 0
+            },
+            {
+              "h": 12,
+              "i": "Mqv",
+              "w": 4,
+              "x": 8,
+              "y": 0
+            }
+          ],
+          "aliases": {},
+          "settings": {
+            "fixedHeaderCollapsedDefault": true
+          },
+          "connections": [],
+          "globalItems": [
+            {
+              "id": "9rm",
+              "data": {
+                "group": [
+                  {
+                    "id": "728",
+                    "title": "Группировка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "fieldName": "period",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "defaultValue": [
+                        "День"
+                      ],
+                      "titlePlacement": "left",
+                      "acceptableValues": [
+                        {
+                          "title": "День",
+                          "value": "День"
+                        },
+                        {
+                          "title": "Неделя",
+                          "value": "Неделя"
+                        },
+                        {
+                          "title": "Месяц",
+                          "value": "Месяц"
+                        },
+                        {
+                          "title": "Год",
+                          "value": "Год"
+                        }
+                      ],
+                      "multiselectable": false
+                    },
+                    "defaults": {
+                      "period": [
+                        "День"
+                      ]
+                    },
+                    "namespace": "default",
+                    "impactType": "selectedTabs",
+                    "sourceType": "manual",
+                    "impactTabsIds": [
+                      "4ww",
+                      "DBK"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            }
+          ]
+        },
+        {
+          "id": "egj",
+          "items": [
+            {
+              "id": "jEz",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "QOJ",
+                    "hint": "",
+                    "title": "Сводная таблица по дате закупки",
+                    "params": {},
+                    "chartId": "56o1ckmy9lu0q",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "like-chart-bg"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "WrA",
+              "data": {
+                "group": [
+                  {
+                    "id": "DJe",
+                    "title": "Дата закупки",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "tucn327jv02ke",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-27d___relative_-0d",
+                      "datasetFieldId": "purchase_date_0g48",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "purchase_date_0g48": "__interval___relative_-27d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "Vnq",
+              "data": {
+                "group": [
+                  {
+                    "id": "PVE",
+                    "title": "Дата лида",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "tucn327jv02ke",
+                      "fieldType": "genericdatetime",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "datasetFieldId": "creation_date_elaz",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "creation_date_elaz": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "5Bd",
+              "data": {
+                "group": [
+                  {
+                    "id": "OP9",
+                    "title": "Гео",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "tucn327jv02ke",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "geo_gemm",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "geo_gemm": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "19w",
+              "data": {
+                "group": [
+                  {
+                    "id": "NWJ",
+                    "title": "Канал",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "tucn327jv02ke",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "invite_link_name_6fha",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "invite_link_name_6fha": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "k7g",
+              "data": {
+                "group": [
+                  {
+                    "id": "AzP",
+                    "title": "Ссылки",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "tucn327jv02ke",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "invitelink_qbm5",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "invitelink_qbm5": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "jlW",
+              "data": {
+                "group": [
+                  {
+                    "id": "Q9r",
+                    "title": "Группировка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "fieldName": "period",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "titlePlacement": "left",
+                      "acceptableValues": [
+                        {
+                          "title": "День",
+                          "value": "День"
+                        },
+                        {
+                          "title": "Месяц",
+                          "value": "Месяц"
+                        },
+                        {
+                          "title": "Год",
+                          "value": "Год"
+                        }
+                      ],
+                      "multiselectable": false
+                    },
+                    "defaults": {
+                      "period": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "manual",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "DbG",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "Rzr",
+              "data": {
+                "size": "m",
+                "text": "Датасет",
+                "showInTOC": true,
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "Emj",
+              "data": {
+                "text": "*Датасет открывает \"черный ящик\" - из каких данных/лидов состоит сводная таблица. Используется для проверки точности.*",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "JJJ",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "K2G",
+                    "hint": "",
+                    "title": "Таблица датасета",
+                    "params": {},
+                    "chartId": "56pfv0bumctoq",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "mwx",
+              "data": {
+                "size": "m",
+                "text": "Период",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "BEz",
+              "data": {
+                "size": "m",
+                "text": "Гео",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "g8d",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "wE3",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "b8J",
+                    "hint": "",
+                    "title": "Сводная по дате закупки по гео",
+                    "params": {},
+                    "chartId": "efyr58jq21yez",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "vDa",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "zJd",
+                    "hint": "",
+                    "title": "telegram_logs_svodny_join — Индикатор расходов",
+                    "params": {},
+                    "chartId": "hjdzcsmwyn0k2",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "7EJ",
+              "data": {
+                "size": "m",
+                "text": "Каналы",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "9bQ",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "G07",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "nwK",
+                    "hint": "",
+                    "title": "Таблица по каналам",
+                    "params": {},
+                    "chartId": "sxin8gquvrdud",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "1gw",
+              "data": {
+                "group": [
+                  {
+                    "id": "NbJ",
+                    "title": "telegram_id",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "tucn327jv02ke",
+                      "fieldType": "integer",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "input",
+                      "datasetFieldId": "telegram_id_kk97",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "telegram_id_kk97": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "1AA",
+              "data": {
+                "size": "m",
+                "text": "Гео по месяцам",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "A3q",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "QqY",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "klK",
+                    "hint": "",
+                    "title": "telegram_logs_svodny_join — Таблица по гео по месяцам",
+                    "params": {},
+                    "chartId": "q4yrgiositrqb",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "01V",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "wA6",
+                    "hint": "",
+                    "title": "telegram_logs_svodny_join — Индикатор лидов",
+                    "params": {},
+                    "chartId": "guv6qgr9goyi1",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "lGZ",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "YEM",
+                    "hint": "",
+                    "title": "telegram_logs_svodny_join — Индикатор квалов",
+                    "params": {},
+                    "chartId": "v9alc4djn6rog",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "6R3",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "qPN",
+                    "hint": "",
+                    "title": "telegram_logs_svodny_join — Индикатор брони",
+                    "params": {},
+                    "chartId": "o23h6juh43li9",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "2k6",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "4DZ",
+                    "hint": "",
+                    "title": "telegram_logs_svodny_join — Индикатор CPL",
+                    "params": {},
+                    "chartId": "8mn2x0g18166t",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "zWl",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "8gn",
+                    "hint": "",
+                    "title": "telegram_logs_svodny_join — Индикатор CPQL",
+                    "params": {},
+                    "chartId": "q45kptanbyhqb",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "7wx",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "v1A",
+                    "hint": "",
+                    "title": "telegram_logs_svodny_join — Индикатор CPA",
+                    "params": {},
+                    "chartId": "jxye3jh0je6o4",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "n0L",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "9lE",
+                    "hint": "",
+                    "title": "telegram_logs_svodny_join — Индикатор CPA",
+                    "params": {},
+                    "chartId": "2ghygjii0w2mn",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "jYe",
+              "data": {
+                "text": "### О дашборде\n\n* Дашборд показывает по срезу даты закупки\n\n* Например, мы выбрали в фильтре по \"Дате закупки\" фильтр на ноябрь 2024 года. За этот период покажутся все закупки, которые были сделаны в период ноября 2024 \n\n  * Внутри каждой закупки появятся количество лидов и квалов подписчиков, которые пришли с этих закупок за эту дату\n\n  * Например, Вася увидел рекламу 5 ноября 2024 года и подписался. Через день он стал лидом, а через 500 дней квалом. Дашборд покажется и лиды и квал, т.к. не важно когда Вася заквалился - важно что он подписался на канал с этой закупки, в этот период.",
+                "autoHeight": true,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            }
+          ],
+          "title": "Сводная — По закупкам",
+          "layout": [
+            {
+              "h": 31,
+              "i": "jEz",
+              "w": 36,
+              "x": 0,
+              "y": 6
+            },
+            {
+              "h": 2,
+              "i": "WrA",
+              "w": 9,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "Vnq",
+              "w": 9,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixGCont"
+            },
+            {
+              "h": 2,
+              "i": "5Bd",
+              "w": 7,
+              "x": 17,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "19w",
+              "w": 8,
+              "x": 24,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "k7g",
+              "w": 7,
+              "x": 17,
+              "y": 0,
+              "parent": "__fixGCont"
+            },
+            {
+              "h": 2,
+              "i": "jlW",
+              "w": 6,
+              "x": 9,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "DbG",
+              "w": 36,
+              "x": 0,
+              "y": 37
+            },
+            {
+              "h": 2,
+              "i": "Rzr",
+              "w": 36,
+              "x": 0,
+              "y": 104
+            },
+            {
+              "h": 2,
+              "i": "Emj",
+              "w": 25,
+              "x": 0,
+              "y": 106
+            },
+            {
+              "h": 24,
+              "i": "JJJ",
+              "w": 36,
+              "x": 0,
+              "y": 110
+            },
+            {
+              "h": 2,
+              "i": "mwx",
+              "w": 36,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "BEz",
+              "w": 36,
+              "x": 0,
+              "y": 39
+            },
+            {
+              "h": 3,
+              "i": "g8d",
+              "w": 36,
+              "x": 0,
+              "y": 101
+            },
+            {
+              "h": 18,
+              "i": "wE3",
+              "w": 36,
+              "x": 0,
+              "y": 41
+            },
+            {
+              "h": 4,
+              "i": "vDa",
+              "w": 5,
+              "x": 0,
+              "y": 2
+            },
+            {
+              "h": 2,
+              "i": "7EJ",
+              "w": 36,
+              "x": 0,
+              "y": 73
+            },
+            {
+              "h": 2,
+              "i": "9bQ",
+              "w": 36,
+              "x": 0,
+              "y": 71
+            },
+            {
+              "h": 26,
+              "i": "G07",
+              "w": 36,
+              "x": 0,
+              "y": 75
+            },
+            {
+              "h": 2,
+              "i": "1gw",
+              "w": 7,
+              "x": 0,
+              "y": 108
+            },
+            {
+              "h": 2,
+              "i": "1AA",
+              "w": 36,
+              "x": 0,
+              "y": 54
+            },
+            {
+              "h": 2,
+              "i": "A3q",
+              "w": 36,
+              "x": 0,
+              "y": 52
+            },
+            {
+              "h": 86,
+              "i": "QqY",
+              "w": 36,
+              "x": 0,
+              "y": 56
+            },
+            {
+              "h": 4,
+              "i": "01V",
+              "w": 4,
+              "x": 7,
+              "y": 2
+            },
+            {
+              "h": 4,
+              "i": "lGZ",
+              "w": 4,
+              "x": 11,
+              "y": 2
+            },
+            {
+              "h": 4,
+              "i": "6R3",
+              "w": 4,
+              "x": 15,
+              "y": 2
+            },
+            {
+              "h": 4,
+              "i": "2k6",
+              "w": 4,
+              "x": 24,
+              "y": 2
+            },
+            {
+              "h": 4,
+              "i": "zWl",
+              "w": 4,
+              "x": 28,
+              "y": 2
+            },
+            {
+              "h": 4,
+              "i": "7wx",
+              "w": 4,
+              "x": 32,
+              "y": 2
+            },
+            {
+              "h": 12,
+              "i": "n0L",
+              "w": 4,
+              "x": 19,
+              "y": 2
+            },
+            {
+              "h": 15,
+              "i": "jYe",
+              "w": 13,
+              "x": 23,
+              "y": 134
+            }
+          ],
+          "aliases": {},
+          "settings": {
+            "fixedHeaderCollapsedDefault": false
+          },
+          "connections": []
+        },
+        {
+          "id": "EPl",
+          "items": [
+            {
+              "id": "M44",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "GKP",
+                    "title": "Последние подписки",
+                    "params": {},
+                    "chartId": "gwdjg0bp9rdi3",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent",
+                      "enabled": false
+                    },
+                    "description": ""
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "rkd",
+              "data": {
+                "group": [
+                  {
+                    "id": "Zwz",
+                    "title": "Название ссылки",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "br8azf59xj5ky",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "datasetFieldId": "invite_link_name_0op2",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "invite_link_name_0op2": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "updateControlsOnChange": false,
+                "showGroupName": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "xB9",
+              "data": {
+                "group": [
+                  {
+                    "id": "3Jw",
+                    "title": "Гео",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "br8azf59xj5ky",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "datasetFieldId": "geo_omot",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "geo_omot": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "updateControlsOnChange": false,
+                "showGroupName": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "L3W",
+              "data": {
+                "group": [
+                  {
+                    "id": "aR5",
+                    "title": "Инвайт-ссылки",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "br8azf59xj5ky",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "datasetFieldId": "invitelinks_wihq",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "invitelinks_wihq": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "updateControlsOnChange": false,
+                "showGroupName": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "ddJ",
+              "data": {
+                "group": [
+                  {
+                    "id": "eEQ",
+                    "title": "Название ∈",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "br8azf59xj5ky",
+                      "fieldType": "string",
+                      "operation": "ICONTAINS",
+                      "showTitle": true,
+                      "innerTitle": "ICONTAINS",
+                      "elementType": "input",
+                      "datasetFieldId": "invite_link_name_0op2",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "invite_link_name_0op2": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "updateControlsOnChange": false,
+                "showGroupName": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "PrY",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "W3k",
+                    "title": "По пользователям",
+                    "params": {},
+                    "chartId": "gwdsy1c1mssi3",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent",
+                      "enabled": false
+                    },
+                    "description": ""
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "VmD",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": false
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "5Jb",
+              "data": {
+                "group": [
+                  {
+                    "id": "Odn",
+                    "title": "Telegram ID",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "br8azf59xj5ky",
+                      "fieldType": "integer",
+                      "operation": "EQ",
+                      "showTitle": true,
+                      "innerTitle": "=",
+                      "elementType": "input",
+                      "datasetFieldId": "user_id_zqij",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "user_id_zqij": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "updateControlsOnChange": false,
+                "showGroupName": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "1d5",
+              "data": {
+                "group": [
+                  {
+                    "id": "Nj0",
+                    "title": "Дата входа",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "br8azf59xj5ky",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-27d___relative_-0d",
+                      "datasetFieldId": "date_only_join_agsh",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "date_only_join_agsh": "__interval___relative_-27d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "updateControlsOnChange": false,
+                "showGroupName": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "j3J",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "Qz2",
+                    "title": "Логи входа — Индикатор выхода",
+                    "params": {},
+                    "chartId": "rfaag98o2ftoe",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "RKj",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "DGL",
+                    "title": "Логи входа — Индикатор остатка",
+                    "params": {},
+                    "chartId": "oc761roksxcqb",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "KKZ",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "E9l",
+                    "title": "Логи входа — Индикатор оттока",
+                    "params": {},
+                    "chartId": "i611ll3v1cna5",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "meP",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "J1w",
+                    "title": "Логи входа — Индикатор оставшихся больше 3 дней",
+                    "params": {},
+                    "chartId": "c4npm31vxjuqz",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "4J8",
+              "data": {
+                "text": "### О дашборде\n\nСводная по логам входа и выхода в телеграм-каналы \\+ лиды, квалы и брони из CRM.\n\nКак определяется что именно этот телеграм-пользователь оставил лид:\n\n1. Берем номер телефона и пробиваем его telegram id\n\n2. Ищем telegram id в логах входа\n\nМинусы подхода - могут быть неточности из-за базы или у пользователя привязан к телефону другой аккаунт. Других вариантов пока нет, т.к. лиды оставляют через вотсап.\n\nДанные обновляются 1 раз в час, в рабочее время.",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": false
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "2LO",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": false
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "zxg",
+              "data": {
+                "group": [
+                  {
+                    "id": "8Jl",
+                    "title": "Название ∉",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "br8azf59xj5ky",
+                      "fieldType": "string",
+                      "operation": "NOTICONTAINS",
+                      "showTitle": true,
+                      "innerTitle": "NOTICONTAINS",
+                      "elementType": "input",
+                      "datasetFieldId": "invite_link_name_0op2",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "invite_link_name_0op2": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "updateControlsOnChange": false,
+                "showGroupName": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "7Nq",
+              "data": {
+                "group": [
+                  {
+                    "id": "vqN",
+                    "title": "Закупка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "br8azf59xj5ky",
+                      "fieldType": "boolean",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "datasetFieldId": "1a914d80-f91e-11ef-8357-175e64176e93",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION",
+                      "multiselectable": false
+                    },
+                    "defaults": {
+                      "1a914d80-f91e-11ef-8357-175e64176e93": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "ndg",
+              "data": {
+                "group": [
+                  {
+                    "id": "9WA",
+                    "title": "Тематика",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "br8azf59xj5ky",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "datasetFieldId": "category_qpxj",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "category_qpxj": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "LZm",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "aQE",
+                    "hint": "",
+                    "title": "Логи входа — Индикатор входа",
+                    "params": {},
+                    "chartId": "ymhhlknsw2eel",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "RRV",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "Dze",
+                    "hint": "",
+                    "title": "Заголовок 1",
+                    "params": {},
+                    "chartId": "vphxx0zl4ohgg",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "5BP",
+              "data": {
+                "size": "m",
+                "text": "По Telegram ID",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            }
+          ],
+          "title": "Подписчики",
+          "layout": [
+            {
+              "h": 36,
+              "i": "M44",
+              "w": 36,
+              "x": 0,
+              "y": 4
+            },
+            {
+              "h": 2,
+              "i": "rkd",
+              "w": 11,
+              "x": 16,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "xB9",
+              "w": 6,
+              "x": 10,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "L3W",
+              "w": 7,
+              "x": 27,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "ddJ",
+              "w": 7,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixGCont"
+            },
+            {
+              "h": 27,
+              "i": "PrY",
+              "w": 36,
+              "x": 0,
+              "y": 46
+            },
+            {
+              "h": 2,
+              "i": "VmD",
+              "w": 36,
+              "x": 0,
+              "y": 40
+            },
+            {
+              "h": 2,
+              "i": "5Jb",
+              "w": 6,
+              "x": 0,
+              "y": 44
+            },
+            {
+              "h": 2,
+              "i": "1d5",
+              "w": 9,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 4,
+              "i": "j3J",
+              "w": 4,
+              "x": 8,
+              "y": 0
+            },
+            {
+              "h": 4,
+              "i": "RKj",
+              "w": 4,
+              "x": 4,
+              "y": 0
+            },
+            {
+              "h": 4,
+              "i": "KKZ",
+              "w": 4,
+              "x": 12,
+              "y": 0
+            },
+            {
+              "h": 4,
+              "i": "meP",
+              "w": 4,
+              "x": 16,
+              "y": 0
+            },
+            {
+              "h": 11,
+              "i": "4J8",
+              "w": 20,
+              "x": 16,
+              "y": 75
+            },
+            {
+              "h": 2,
+              "i": "2LO",
+              "w": 36,
+              "x": 0,
+              "y": 73
+            },
+            {
+              "h": 2,
+              "i": "zxg",
+              "w": 7,
+              "x": 7,
+              "y": 0,
+              "parent": "__fixGCont"
+            },
+            {
+              "h": 2,
+              "i": "7Nq",
+              "w": 5,
+              "x": 20,
+              "y": 0,
+              "parent": "__fixGCont"
+            },
+            {
+              "h": 2,
+              "i": "ndg",
+              "w": 6,
+              "x": 14,
+              "y": 0,
+              "parent": "__fixGCont"
+            },
+            {
+              "h": 4,
+              "i": "LZm",
+              "w": 4,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 4,
+              "i": "RRV",
+              "w": 4,
+              "x": 20,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "5BP",
+              "w": 36,
+              "x": 0,
+              "y": 42
+            }
+          ],
+          "aliases": {},
+          "settings": {
+            "fixedHeaderCollapsedDefault": false
+          },
+          "connections": [
+            {
+              "to": "Odn",
+              "from": "GKP",
+              "kind": "ignore"
+            },
+            {
+              "to": "GKP",
+              "from": "Odn",
+              "kind": "ignore"
+            },
+            {
+              "to": "W3k",
+              "from": "Odn",
+              "kind": "ignore"
+            },
+            {
+              "to": "eEQ",
+              "from": "8Jl",
+              "kind": "ignore"
+            },
+            {
+              "to": "8Jl",
+              "from": "eEQ",
+              "kind": "ignore"
+            }
+          ]
+        },
+        {
+          "id": "MQl",
+          "items": [
+            {
+              "id": "rbR",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "ZWZ",
+                    "hint": "",
+                    "title": "От подписки до квала — Когортный отчет",
+                    "params": {},
+                    "chartId": "elvs56onpmaez",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "x9V",
+              "data": {
+                "group": [
+                  {
+                    "id": "38Z",
+                    "title": "Конверсия",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "fieldName": "metrics_bool",
+                      "showTitle": true,
+                      "elementType": "checkbox",
+                      "defaultValue": "true",
+                      "acceptableValues": [
+                        {
+                          "title": "Проценты",
+                          "value": "Проценты"
+                        },
+                        {
+                          "title": "Целые",
+                          "value": "Целые"
+                        }
+                      ]
+                    },
+                    "defaults": {
+                      "metrics_bool": "true"
+                    },
+                    "namespace": "default",
+                    "sourceType": "manual",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "L4j",
+              "data": {
+                "group": [
+                  {
+                    "id": "a8W",
+                    "title": "Кумулятивный",
+                    "width": "",
+                    "source": {
+                      "hint": "Накопительный",
+                      "required": false,
+                      "showHint": true,
+                      "fieldName": "csum",
+                      "showTitle": true,
+                      "elementType": "checkbox",
+                      "defaultValue": "true",
+                      "acceptableValues": [
+                        {
+                          "title": "Обычный",
+                          "value": "Обычный"
+                        },
+                        {
+                          "title": "Кумулятивный",
+                          "value": "Кумулятивный"
+                        }
+                      ]
+                    },
+                    "defaults": {
+                      "csum": "true"
+                    },
+                    "namespace": "default",
+                    "sourceType": "manual",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "dBg",
+              "data": {
+                "group": [
+                  {
+                    "id": "ezq",
+                    "title": "Дата подписки",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "qx72swoink6ib",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-27d___relative_-0d",
+                      "datasetFieldId": "cohort_day_1w4z",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "cohort_day_1w4z": "__interval___relative_-27d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "P0E",
+              "data": {
+                "group": [
+                  {
+                    "id": "W5A",
+                    "title": "Группировка",
+                    "width": "",
+                    "source": {
+                      "required": true,
+                      "showHint": false,
+                      "fieldName": "period",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "defaultValue": [
+                        "Месяц"
+                      ],
+                      "titlePlacement": "left",
+                      "acceptableValues": [
+                        {
+                          "title": "День",
+                          "value": "День"
+                        },
+                        {
+                          "title": "Неделя",
+                          "value": "Неделя"
+                        },
+                        {
+                          "title": "Месяц",
+                          "value": "Месяц"
+                        }
+                      ],
+                      "multiselectable": false
+                    },
+                    "defaults": {
+                      "period": [
+                        "Месяц"
+                      ]
+                    },
+                    "namespace": "default",
+                    "sourceType": "manual",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "VOq",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "N9J",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "5ed",
+                    "hint": "",
+                    "title": "Когортный по подпискам — Датасет",
+                    "params": {},
+                    "chartId": "5cn0ylh3qmisq",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "17w",
+              "data": {
+                "size": "m",
+                "text": "Датасет",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "ARP",
+              "data": {
+                "text": "*Датасет для проверки агрегированных данных.*",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "k1g",
+              "data": {
+                "text": "### О дашборде\n\n* В **день 0** отображаются подписчики\n\n* В остальные дни - лиды или квалы\n\n* В **31-й день** - все лиды или квалы суммарно после 30-го дня. Например, если подписчик заквалился на 34, а еще один на 50 день - будет два квала в 31-й день.\n\n* Кумулятивный - накопительный режим. Значит что последующий день суммируется с предыдущим.\n\n* Конверсия - вместо количества лидов или квалов, показывает конверсию от количество подписчиков.",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "Rlr",
+              "data": {
+                "group": [
+                  {
+                    "id": "D2G",
+                    "title": "Название",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "qx72swoink6ib",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "invite_link_name_v979",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "invite_link_name_v979": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "EGj",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "J0J",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "K3G",
+                    "hint": "",
+                    "title": "От подписки до лида — Когортный отчет",
+                    "params": {},
+                    "chartId": "v2d5hqvec02cg",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "B8z",
+              "data": {
+                "group": [
+                  {
+                    "id": "mxx",
+                    "title": "Вступление",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "qx72swoink6ib",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "9aaaa1d0-a600-11f0-a290-bd06ebbe1645",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "9aaaa1d0-a600-11f0-a290-bd06ebbe1645": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "Lv0",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "aeL",
+                    "hint": "",
+                    "title": "Кумулятивные лиды и квалы",
+                    "params": {},
+                    "chartId": "s7zppgoho0aad",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "elL",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            }
+          ],
+          "title": "Когортный: Лиды и квалы",
+          "layout": [
+            {
+              "h": 5,
+              "i": "rbR",
+              "w": 36,
+              "x": 0,
+              "y": 7
+            },
+            {
+              "h": 2,
+              "i": "x9V",
+              "w": 4,
+              "x": 27,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "L4j",
+              "w": 5,
+              "x": 31,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "dBg",
+              "w": 10,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "P0E",
+              "w": 7,
+              "x": 27,
+              "y": 0,
+              "parent": "__fixGCont"
+            },
+            {
+              "h": 3,
+              "i": "VOq",
+              "w": 36,
+              "x": 0,
+              "y": 33
+            },
+            {
+              "h": 34,
+              "i": "N9J",
+              "w": 36,
+              "x": 0,
+              "y": 40
+            },
+            {
+              "h": 2,
+              "i": "17w",
+              "w": 36,
+              "x": 0,
+              "y": 36
+            },
+            {
+              "h": 2,
+              "i": "ARP",
+              "w": 9,
+              "x": 0,
+              "y": 38
+            },
+            {
+              "h": 12,
+              "i": "k1g",
+              "w": 12,
+              "x": 24,
+              "y": 14
+            },
+            {
+              "h": 2,
+              "i": "Rlr",
+              "w": 10,
+              "x": 12,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "EGj",
+              "w": 36,
+              "x": 0,
+              "y": 5
+            },
+            {
+              "h": 5,
+              "i": "J0J",
+              "w": 36,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "B8z",
+              "w": 7,
+              "x": 12,
+              "y": 0,
+              "parent": "__fixGCont"
+            },
+            {
+              "h": 19,
+              "i": "Lv0",
+              "w": 21,
+              "x": 0,
+              "y": 14
+            },
+            {
+              "h": 2,
+              "i": "elL",
+              "w": 36,
+              "x": 0,
+              "y": 12
+            }
+          ],
+          "aliases": {},
+          "connections": []
+        },
+        {
+          "id": "dJd",
+          "items": [
+            {
+              "id": "PvR",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "Wdz",
+                    "hint": "",
+                    "title": "Когортный брони — Сводная таблица",
+                    "params": {},
+                    "chartId": "0f736ywgv0xel",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "OvQ",
+              "data": {
+                "group": [
+                  {
+                    "id": "VPn",
+                    "title": "Месяц подписки",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "7me5hxuk4tzks",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-365d___relative_-0d",
+                      "datasetFieldId": "cohort_month_4phl",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "cohort_month_4phl": "__interval___relative_-365d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "NvV",
+              "data": {
+                "group": [
+                  {
+                    "id": "5LW",
+                    "title": "Гео",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "7me5hxuk4tzks",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "geo_cre8",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "geo_cre8": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "QvY",
+              "data": {
+                "group": [
+                  {
+                    "id": "kWK",
+                    "title": "Конверсия",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "fieldName": "metrics_bool",
+                      "showTitle": true,
+                      "elementType": "checkbox",
+                      "defaultValue": "true",
+                      "acceptableValues": [
+                        {
+                          "title": "Проценты",
+                          "value": "Проценты"
+                        },
+                        {
+                          "title": "Целые",
+                          "value": "Целые"
+                        }
+                      ]
+                    },
+                    "defaults": {
+                      "metrics_bool": "true"
+                    },
+                    "namespace": "default",
+                    "sourceType": "manual",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "DBn",
+              "data": {
+                "group": [
+                  {
+                    "id": "jYm",
+                    "title": "Кумулятивный",
+                    "width": "",
+                    "source": {
+                      "hint": "Накопительный",
+                      "required": false,
+                      "showHint": true,
+                      "fieldName": "csum",
+                      "showTitle": true,
+                      "elementType": "checkbox",
+                      "defaultValue": "true",
+                      "acceptableValues": [
+                        {
+                          "title": "Обычный",
+                          "value": "Обычный"
+                        },
+                        {
+                          "title": "Кумулятивный",
+                          "value": "Кумулятивный"
+                        }
+                      ]
+                    },
+                    "defaults": {
+                      "csum": "true"
+                    },
+                    "namespace": "default",
+                    "sourceType": "manual",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "Pv8",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "Wd7",
+                    "hint": "",
+                    "title": "Кумулятивные конверсии сделки по месяцам",
+                    "params": {},
+                    "chartId": "va3yo65hm590g",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "VP9",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "OvG",
+              "data": {
+                "text": "### О дашборде\n\n* В **месяц 0** отображаются **брони** подписчиков, которые пришли за этот месяц.\n\n  * Например, клиент подписался на канал в июне 2024, а бронь совершил спустя 3 месяца. В месяц 0 и месяц 3 он зачтется по \\+1.\n\n* В **13-й месяц** - все брони суммарно после 12 месяцев. Например, если подписчик купил на 20 месяц, а еще один на 50 месяц - будет две брони в 13-й месяц.\n\n* Кумулятивный - накопительный режим. Значит что последующий день суммируется с предыдущим.",
+                "autoHeight": true,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "Nvg",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "1kM",
+              "data": {
+                "text": "*Датасет для проверки агрегированных данных.*",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "AqL",
+              "data": {
+                "size": "m",
+                "text": "Датасет",
+                "showInTOC": true,
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "Qve",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "kW8",
+                    "hint": "",
+                    "title": "Когортный брони — Таблица датасета",
+                    "params": {},
+                    "chartId": "8ngdw4cvib32t",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            }
+          ],
+          "title": "Когортный: Сделки",
+          "layout": [
+            {
+              "h": 16,
+              "i": "PvR",
+              "w": 32,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "OvQ",
+              "w": 10,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "NvV",
+              "w": 7,
+              "x": 12,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "QvY",
+              "w": 4,
+              "x": 27,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "DBn",
+              "w": 5,
+              "x": 31,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 17,
+              "i": "Pv8",
+              "w": 21,
+              "x": 0,
+              "y": 18
+            },
+            {
+              "h": 2,
+              "i": "VP9",
+              "w": 36,
+              "x": 0,
+              "y": 16
+            },
+            {
+              "h": 12,
+              "i": "OvG",
+              "w": 12,
+              "x": 24,
+              "y": 18
+            },
+            {
+              "h": 3,
+              "i": "Nvg",
+              "w": 36,
+              "x": 0,
+              "y": 35
+            },
+            {
+              "h": 2,
+              "i": "1kM",
+              "w": 9,
+              "x": 0,
+              "y": 40
+            },
+            {
+              "h": 2,
+              "i": "AqL",
+              "w": 36,
+              "x": 0,
+              "y": 38
+            },
+            {
+              "h": 30,
+              "i": "Qve",
+              "w": 24,
+              "x": 0,
+              "y": 42
+            }
+          ],
+          "aliases": {},
+          "connections": []
+        },
+        {
+          "id": "gVd",
+          "items": [
+            {
+              "id": "wK3",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "bNJ",
+                    "hint": "",
+                    "title": "Медиана возраста подписчика и его брони по месяцам",
+                    "params": {},
+                    "chartId": "p1drw543wxqca",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "0LG",
+              "data": {
+                "text": "*Сколько прошло времени между подпиской (которую смогли определить) и датой брони. По всем гео:*",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "lAb",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "Y9W",
+                    "hint": "",
+                    "title": "От подписки до брони - датасет",
+                    "params": {},
+                    "chartId": "6ida83j6wxx6r",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "qlj",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "4dA",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "6Pe",
+                    "hint": "",
+                    "title": "Медиана от подписчика до брони, по гео",
+                    "params": {},
+                    "chartId": "jv7nozqod51o4",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "2ge",
+              "data": {
+                "text": "*График с фильтром по гео*",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "z4d",
+              "data": {
+                "group": [
+                  {
+                    "id": "8Oz",
+                    "title": "Гео брони",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "w8kxqdruvuquh",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "defaultValue": [
+                        "ОАЭ",
+                        "Москва"
+                      ],
+                      "datasetFieldId": "geo_booking_jjjk",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "geo_booking_jjjk": [
+                        "ОАЭ",
+                        "Москва"
+                      ]
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "7VJ",
+              "data": {
+                "group": [
+                  {
+                    "id": "vwa",
+                    "title": "Дата брони",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "w8kxqdruvuquh",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-30d___relative_-0d",
+                      "datasetFieldId": "date_booking_fa0c",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "date_booking_fa0c": "__interval___relative_-30d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "gVd"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "95Q",
+              "data": {
+                "size": "m",
+                "text": "От подписки до сделки",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "n7K",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "GG7",
+              "data": {
+                "size": "m",
+                "text": "От подписки до квала",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "Mbl",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "rlR",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "ZJZ",
+                    "hint": "",
+                    "title": "Медиана возраста подписчика и его квала по месяцам",
+                    "params": {},
+                    "chartId": "myasmxlve1qi7",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "xKV",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "39Z",
+                    "hint": "",
+                    "title": "Медиана возраста подписчика и его квала по гео",
+                    "params": {},
+                    "chartId": "co0ij51u3j7ax",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "LBj",
+              "data": {
+                "group": [
+                  {
+                    "id": "a5W",
+                    "title": "Гео квала",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "zbn5o70pl850k",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "defaultValue": [
+                        "ОАЭ",
+                        "Москва"
+                      ],
+                      "datasetFieldId": "geo_qual_zkal",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "geo_qual_zkal": [
+                        "ОАЭ",
+                        "Москва"
+                      ]
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "eWq",
+              "data": {
+                "text": "*Сколько прошло времени между подпиской (которую смогли определить) и датой квала. По всем гео:*",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "dAg",
+              "data": {
+                "text": "*График с фильтром по гео*",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "PbE",
+              "data": {
+                "group": [
+                  {
+                    "id": "WQA",
+                    "title": "Дата квала",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "zbn5o70pl850k",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "defaultValue": "__interval_2023-09-01T00:00:00.000Z_2025-10-31T00:00:00.000Z",
+                      "datasetFieldId": "date_qual_g92e",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "date_qual_g92e": "__interval_2023-09-01T00:00:00.000Z_2025-10-31T00:00:00.000Z"
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "Vrq",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            }
+          ],
+          "title": "Возраст лида",
+          "layout": [
+            {
+              "h": 18,
+              "i": "wK3",
+              "w": 17,
+              "x": 0,
+              "y": 34
+            },
+            {
+              "h": 2,
+              "i": "0LG",
+              "w": 11,
+              "x": 0,
+              "y": 6
+            },
+            {
+              "h": 24,
+              "i": "lAb",
+              "w": 36,
+              "x": 0,
+              "y": 8
+            },
+            {
+              "h": 2,
+              "i": "qlj",
+              "w": 36,
+              "x": 0,
+              "y": 32
+            },
+            {
+              "h": 18,
+              "i": "4dA",
+              "w": 18,
+              "x": 18,
+              "y": 34
+            },
+            {
+              "h": 2,
+              "i": "2ge",
+              "w": 6,
+              "x": 22,
+              "y": 6
+            },
+            {
+              "h": 2,
+              "i": "z4d",
+              "w": 8,
+              "x": 28,
+              "y": 6
+            },
+            {
+              "h": 2,
+              "i": "7VJ",
+              "w": 10,
+              "x": 0,
+              "y": 2
+            },
+            {
+              "h": 2,
+              "i": "95Q",
+              "w": 36,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "n7K",
+              "w": 36,
+              "x": 0,
+              "y": 4
+            },
+            {
+              "h": 2,
+              "i": "GG7",
+              "w": 36,
+              "x": 0,
+              "y": 54
+            },
+            {
+              "h": 2,
+              "i": "Mbl",
+              "w": 36,
+              "x": 0,
+              "y": 52
+            },
+            {
+              "h": 18,
+              "i": "rlR",
+              "w": 18,
+              "x": 0,
+              "y": 62
+            },
+            {
+              "h": 18,
+              "i": "xKV",
+              "w": 17,
+              "x": 19,
+              "y": 62
+            },
+            {
+              "h": 2,
+              "i": "LBj",
+              "w": 8,
+              "x": 28,
+              "y": 60
+            },
+            {
+              "h": 2,
+              "i": "eWq",
+              "w": 11,
+              "x": 0,
+              "y": 60
+            },
+            {
+              "h": 2,
+              "i": "dAg",
+              "w": 5,
+              "x": 23,
+              "y": 60
+            },
+            {
+              "h": 2,
+              "i": "PbE",
+              "w": 10,
+              "x": 0,
+              "y": 56
+            },
+            {
+              "h": 2,
+              "i": "Vrq",
+              "w": 36,
+              "x": 0,
+              "y": 58
+            }
+          ],
+          "aliases": {},
+          "connections": [
+            {
+              "to": "8Oz",
+              "from": "bNJ",
+              "kind": "ignore"
+            },
+            {
+              "to": "bNJ",
+              "from": "8Oz",
+              "kind": "ignore"
+            },
+            {
+              "to": "Y9W",
+              "from": "8Oz",
+              "kind": "ignore"
+            },
+            {
+              "to": "a5W",
+              "from": "ZJZ",
+              "kind": "ignore"
+            },
+            {
+              "to": "ZJZ",
+              "from": "a5W",
+              "kind": "ignore"
+            }
+          ]
+        },
+        {
+          "id": "DBK",
+          "items": [
+            {
+              "id": "JZg",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "KvP",
+                    "hint": "",
+                    "title": "Заголовок 1",
+                    "params": {},
+                    "chartId": "xx5285ys6p06h",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "like-chart-bg"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "BBW",
+              "data": {
+                "group": [
+                  {
+                    "id": "mVR",
+                    "title": "Дата",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ppxtter30d2y9",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-30d___relative_-0d",
+                      "datasetFieldId": "event_date_ttsx",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "event_date_ttsx": "__interval___relative_-30d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "DBK"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "bJm",
+              "data": {
+                "group": [
+                  {
+                    "id": "gJ4",
+                    "title": "Гео",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ppxtter30d2y9",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "geo_n2u6",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "geo_n2u6": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "DBK"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "0Ag",
+              "data": {
+                "group": [
+                  {
+                    "id": "w7O",
+                    "title": "Канал",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ppxtter30d2y9",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "canonical_channel_name_58v0",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "canonical_channel_name_58v0": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "DBK"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "689",
+              "data": {
+                "group": [
+                  {
+                    "id": "q1e",
+                    "title": "Канал ∈  ",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ppxtter30d2y9",
+                      "fieldType": "string",
+                      "operation": "ICONTAINS",
+                      "showTitle": true,
+                      "accentType": null,
+                      "innerTitle": "ICONTAINS",
+                      "elementType": "input",
+                      "datasetFieldId": "canonical_channel_name_58v0",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "canonical_channel_name_58v0": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "DBK"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            }
+          ],
+          "title": "Influence",
+          "layout": [
+            {
+              "h": 26,
+              "i": "JZg",
+              "w": 36,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "bJm",
+              "w": 6,
+              "x": 15,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "0Ag",
+              "w": 7,
+              "x": 21,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "BBW",
+              "w": 8,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "9rm",
+              "w": 6,
+              "x": 8,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "689",
+              "w": 7,
+              "x": 28,
+              "y": 0,
+              "parent": "__fixHead"
+            }
+          ],
+          "aliases": {},
+          "connections": [],
+          "globalItems": [
+            {
+              "id": "9rm",
+              "data": {
+                "group": [
+                  {
+                    "id": "728",
+                    "title": "Группировка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "fieldName": "period",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "defaultValue": [
+                        "День"
+                      ],
+                      "titlePlacement": "left",
+                      "acceptableValues": [
+                        {
+                          "title": "День",
+                          "value": "День"
+                        },
+                        {
+                          "title": "Неделя",
+                          "value": "Неделя"
+                        },
+                        {
+                          "title": "Месяц",
+                          "value": "Месяц"
+                        },
+                        {
+                          "title": "Год",
+                          "value": "Год"
+                        }
+                      ],
+                      "multiselectable": false
+                    },
+                    "defaults": {
+                      "period": [
+                        "День"
+                      ]
+                    },
+                    "namespace": "default",
+                    "impactType": "selectedTabs",
+                    "sourceType": "manual",
+                    "impactTabsIds": [
+                      "4ww",
+                      "DBK"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            }
+          ]
+        },
+        {
+          "id": "V3n",
+          "items": [
+            {
+              "id": "55W",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "OOQ",
+                    "hint": "",
+                    "title": "Лиды и источники с источником \"zakupka\"",
+                    "params": {},
+                    "chartId": "p3ix34natcf8a",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "1WA",
+              "data": {
+                "group": [
+                  {
+                    "id": "NVV",
+                    "title": "Дата лида",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "t7m1qnq8870ge",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-6d___relative_-0d",
+                      "datasetFieldId": "creation_date_q1qo",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "creation_date_q1qo": "__interval___relative_-6d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "A6q",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "QNY",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "kEK",
+                    "hint": "",
+                    "title": "Таблица логов входа",
+                    "params": {},
+                    "chartId": "lylycdppfh9o8",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "D8n",
+              "data": {
+                "group": [
+                  {
+                    "id": "jRm",
+                    "title": "Telegram ID",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "4h4g2i9zhgpyr",
+                      "fieldType": "integer",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "input",
+                      "datasetFieldId": "user_id_ff5z",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "user_id_ff5z": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "ERg",
+              "data": {
+                "group": [
+                  {
+                    "id": "R16",
+                    "title": "Гео",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "t7m1qnq8870ge",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "geo_mv8g",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "geo_mv8g": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "K4M",
+              "data": {
+                "size": "s",
+                "text": "telegram_member_updates",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "J3m",
+              "data": {
+                "size": "s",
+                "text": "telegram_logs_leads",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "Bz1",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "mBv",
+                    "hint": "",
+                    "title": "telegram_logs_leads 11.24 — Таблица последних лидов",
+                    "params": {},
+                    "chartId": "4xyv9lsypao2p",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "g2R",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "wq6",
+              "data": {
+                "group": [
+                  {
+                    "id": "b5x",
+                    "title": "user_id",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "br8azf59xj5ky",
+                      "fieldType": "integer",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "input",
+                      "datasetFieldId": "user_id_zqij",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "user_id_zqij": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "YDM",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "07V",
+                    "hint": "",
+                    "title": "Лиды и источники — Индикатор лидов",
+                    "params": {},
+                    "chartId": "m0nsb1oefgvu7",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "qRN",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "lJZ",
+                    "hint": "",
+                    "title": "Лиды и источники — Индикатор лидов и источники",
+                    "params": {},
+                    "chartId": "6k7c0geamfm6r",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "4OZ",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "6N3",
+                    "hint": "",
+                    "title": "Лиды и источники — Индикатор лидов со входом",
+                    "params": {},
+                    "chartId": "m0ns4jgzayqy7",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "2P6",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "",
+                  "enabled": true
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "znl",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "8An",
+                    "hint": "",
+                    "title": "Лиды и источники — Индикатор % найденных",
+                    "params": {},
+                    "chartId": "p3qwkszi39wca",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "71x",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "vEA",
+                    "hint": "",
+                    "title": "Лиды и источники — Индикатор telegram_id",
+                    "params": {},
+                    "chartId": "7l8ep9yi54lcs",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "nRL",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "9kE",
+                    "hint": "",
+                    "title": "Лиды и источники — Индикатор с другим гео",
+                    "params": {},
+                    "chartId": "lzmwji9gg5g86",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "GRQ",
+              "data": {
+                "size": "s",
+                "text": "amo_contacts",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "MPv",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "rwj",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "ZRB",
+                    "hint": "",
+                    "title": "amo_contacts — Таблица",
+                    "params": {},
+                    "chartId": "3h4g3u29ua9ko",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "xj6",
+              "data": {
+                "group": [
+                  {
+                    "id": "3VY",
+                    "title": "telegram_id",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "xby9zwxx4tkki",
+                      "fieldType": "integer",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "input",
+                      "datasetFieldId": "telegram_id_aihk",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "telegram_id_aihk": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "aNL",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "L80",
+              "data": {
+                "size": "s",
+                "text": "telegram_logs_join_old",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "dkd",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "eQL",
+                    "hint": "",
+                    "title": "telegram_logs_join_old — Таблица",
+                    "params": {},
+                    "chartId": "u8wal7rslbkmf",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "P2R",
+              "data": {
+                "group": [
+                  {
+                    "id": "Wvz",
+                    "title": "user_id",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "2g4gmdxf4f86n",
+                      "fieldType": "integer",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "input",
+                      "datasetFieldId": "user_id_vl7o",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "user_id_vl7o": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "OqQ",
+              "data": {
+                "group": [
+                  {
+                    "id": "Vzn",
+                    "title": "Источник (событие)",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "t7m1qnq8870ge",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "telegram_source_xitz",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "telegram_source_xitz": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "NdV",
+              "data": {
+                "group": [
+                  {
+                    "id": "5DW",
+                    "title": "Telegram ID",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "t7m1qnq8870ge",
+                      "fieldType": "integer",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "input",
+                      "datasetFieldId": "telegram_id_h7az",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "telegram_id_h7az": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "j0m",
+              "data": {
+                "size": "s",
+                "text": "zakupki",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent",
+                  "enabled": false
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "D3n",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "E3g",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "RY6",
+                    "hint": "",
+                    "title": "zakupki — Таблица",
+                    "params": {},
+                    "chartId": "4icbutk9barmp",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "Jqm",
+              "data": {
+                "group": [
+                  {
+                    "id": "KqM",
+                    "title": "date",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "jxrp1vnj15984",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "datasetFieldId": "date_98it",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "date_98it": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "B31",
+              "data": {
+                "group": [
+                  {
+                    "id": "m0v",
+                    "title": "city",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "jxrp1vnj15984",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "city_8k9k",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "city_8k9k": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "b1x",
+              "data": {
+                "group": [
+                  {
+                    "id": "gdR",
+                    "title": "CRM ID",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "t7m1qnq8870ge",
+                      "fieldType": "integer",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "input",
+                      "datasetFieldId": "crm_id_vlk2",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "crm_id_vlk2": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "rVj",
+              "data": {
+                "group": [
+                  {
+                    "id": "Z9B",
+                    "title": "Название ссылки",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "4h4g2i9zhgpyr",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "invite_link_name_odq3",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION",
+                      "multiselectable": false
+                    },
+                    "defaults": {
+                      "invite_link_name_odq3": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "xk6",
+              "data": {
+                "group": [
+                  {
+                    "id": "3QY",
+                    "title": "Дата события",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "4h4g2i9zhgpyr",
+                      "fieldType": "genericdatetime",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "defaultValue": "__interval_2025-05-22T00:00:00.000Z_2025-11-17T23:59:59.999Z",
+                      "datasetFieldId": "date_vg25",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "date_vg25": "__interval_2025-05-22T00:00:00.000Z_2025-11-17T23:59:59.999Z"
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            }
+          ],
+          "title": "Проверка источников [dev]",
+          "layout": [
+            {
+              "h": 31,
+              "i": "55W",
+              "w": 28,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "1WA",
+              "w": 8,
+              "x": 28,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "A6q",
+              "w": 36,
+              "x": 0,
+              "y": 56
+            },
+            {
+              "h": 19,
+              "i": "QNY",
+              "w": 36,
+              "x": 0,
+              "y": 37
+            },
+            {
+              "h": 2,
+              "i": "D8n",
+              "w": 7,
+              "x": 10,
+              "y": 35
+            },
+            {
+              "h": 2,
+              "i": "ERg",
+              "w": 8,
+              "x": 28,
+              "y": 2
+            },
+            {
+              "h": 2,
+              "i": "K4M",
+              "w": 36,
+              "x": 0,
+              "y": 33
+            },
+            {
+              "h": 2,
+              "i": "J3m",
+              "w": 36,
+              "x": 0,
+              "y": 84
+            },
+            {
+              "h": 22,
+              "i": "Bz1",
+              "w": 36,
+              "x": 0,
+              "y": 88
+            },
+            {
+              "h": 2,
+              "i": "g2R",
+              "w": 36,
+              "x": 0,
+              "y": 82
+            },
+            {
+              "h": 2,
+              "i": "wq6",
+              "w": 7,
+              "x": 0,
+              "y": 86
+            },
+            {
+              "h": 4,
+              "i": "YDM",
+              "w": 4,
+              "x": 28,
+              "y": 12
+            },
+            {
+              "h": 4,
+              "i": "qRN",
+              "w": 4,
+              "x": 32,
+              "y": 12
+            },
+            {
+              "h": 4,
+              "i": "4OZ",
+              "w": 4,
+              "x": 32,
+              "y": 16
+            },
+            {
+              "h": 2,
+              "i": "2P6",
+              "w": 8,
+              "x": 28,
+              "y": 10
+            },
+            {
+              "h": 4,
+              "i": "znl",
+              "w": 4,
+              "x": 28,
+              "y": 16
+            },
+            {
+              "h": 4,
+              "i": "71x",
+              "w": 4,
+              "x": 28,
+              "y": 20
+            },
+            {
+              "h": 4,
+              "i": "nRL",
+              "w": 4,
+              "x": 32,
+              "y": 20
+            },
+            {
+              "h": 2,
+              "i": "GRQ",
+              "w": 36,
+              "x": 0,
+              "y": 112
+            },
+            {
+              "h": 2,
+              "i": "MPv",
+              "w": 36,
+              "x": 0,
+              "y": 110
+            },
+            {
+              "h": 23,
+              "i": "rwj",
+              "w": 27,
+              "x": 0,
+              "y": 114
+            },
+            {
+              "h": 2,
+              "i": "xj6",
+              "w": 7,
+              "x": 27,
+              "y": 114
+            },
+            {
+              "h": 2,
+              "i": "aNL",
+              "w": 36,
+              "x": 0,
+              "y": 31
+            },
+            {
+              "h": 2,
+              "i": "L80",
+              "w": 36,
+              "x": 0,
+              "y": 58
+            },
+            {
+              "h": 20,
+              "i": "dkd",
+              "w": 29,
+              "x": 0,
+              "y": 62
+            },
+            {
+              "h": 2,
+              "i": "P2R",
+              "w": 7,
+              "x": 0,
+              "y": 60
+            },
+            {
+              "h": 2,
+              "i": "OqQ",
+              "w": 8,
+              "x": 28,
+              "y": 4
+            },
+            {
+              "h": 2,
+              "i": "NdV",
+              "w": 8,
+              "x": 28,
+              "y": 6
+            },
+            {
+              "h": 2,
+              "i": "j0m",
+              "w": 36,
+              "x": 0,
+              "y": 139
+            },
+            {
+              "h": 2,
+              "i": "D3n",
+              "w": 36,
+              "x": 0,
+              "y": 137
+            },
+            {
+              "h": 27,
+              "i": "E3g",
+              "w": 29,
+              "x": 0,
+              "y": 141
+            },
+            {
+              "h": 2,
+              "i": "Jqm",
+              "w": 7,
+              "x": 29,
+              "y": 141
+            },
+            {
+              "h": 2,
+              "i": "B31",
+              "w": 7,
+              "x": 29,
+              "y": 143
+            },
+            {
+              "h": 2,
+              "i": "b1x",
+              "w": 8,
+              "x": 28,
+              "y": 8
+            },
+            {
+              "h": 2,
+              "i": "rVj",
+              "w": 8,
+              "x": 17,
+              "y": 35
+            },
+            {
+              "h": 2,
+              "i": "xk6",
+              "w": 8,
+              "x": 0,
+              "y": 35
+            }
+          ],
+          "aliases": {},
+          "connections": []
+        }
+      ],
+      "counter": 525,
+      "settings": {
+        "hideTabs": false,
+        "expandTOC": false,
+        "globalParams": {},
+        "loadPriority": "charts",
+        "hideDashTitle": false,
+        "silentLoading": false,
+        "autoupdateInterval": null,
+        "dependentSelectors": true,
+        "loadOnlyVisibleCharts": true,
+        "maxConcurrentRequests": null
+      },
+      "schemeVersion": 8
+    }
+  }
+}

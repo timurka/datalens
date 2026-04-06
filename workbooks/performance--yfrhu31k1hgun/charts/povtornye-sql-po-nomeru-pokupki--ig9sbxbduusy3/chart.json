@@ -1,0 +1,215 @@
+{
+  "entryId": "ig9sbxbduusy3",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "2022536197561126675/Повторные SQL - По номеру покупки",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-08-22T10:38:22.831Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-08-22T10:58:01.419Z",
+  "savedId": "zxqcaiduqy18k",
+  "publishedId": "zxqcaiduqy18k",
+  "revId": "zxqcaiduqy18k",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "d9mdkzqj4zxsy",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {
+      "polygonBorders": "show",
+      "palette": "classic20",
+      "mountedColors": {
+        "total_deal_amount": "2",
+        "repeat_count": "0"
+      },
+      "fieldGuid": "",
+      "coloredByMeasure": true,
+      "colorMode": "palette"
+    },
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "WITH\n-- 0) Параметры\nlist_p AS (\n  SELECT\n    CASE\n      WHEN regexp_replace($$ {{geo_list}} $$,'E''|''|\\(|\\)|\\s','', 'g') = ''\n        THEN NULL\n      ELSE string_to_array(\n             regexp_replace($$ {{geo_list}} $$,'E''|''|\\(|\\)|\\s','', 'g'),\n             ','\n           )::text[]\n    END AS geo_arr\n),\nparam_p AS (\n  SELECT COALESCE({{date_book_interval}}, 0)::int AS book_window_days\n),\n\n-- 1) Все повторные покупки ГЛОБАЛЬНО (учёт окна сессий)\nall_repeats AS (\n  SELECT\n    v.person_key,\n    v.crm_id,\n    v.booking_date,\n    v.prev_booking_date,\n    v.deal_amount,\n    v.geo,\n    (v.booking_date::date - v.prev_booking_date::date) AS days_gap\n  FROM v_person_purchases_prev v\n  WHERE v.prev_booking_date IS NOT NULL\n    AND (v.booking_date::date - v.prev_booking_date::date) > (SELECT book_window_days FROM param_p)\n),\n\n-- 2) Нумерация повтора внутри клиента (1-й повтор = вторая покупка и т.д.)\nrepeats_numbered AS (\n  SELECT\n    ar.*,\n    ROW_NUMBER() OVER (PARTITION BY ar.person_key ORDER BY ar.booking_date) AS repeat_no\n  FROM all_repeats ar\n),\n\n-- 3) Фильтр отчёта: GEO + интервал (какие повторы попадают в выборку)\nreport_repeats AS (\n  SELECT rn.*\n  FROM repeats_numbered rn\n  CROSS JOIN list_p lp\n  WHERE rn.geo IN ('ОАЭ','Москва','Грузия','Таиланд','Бали','Таиланд Eng')\n    AND (lp.geo_arr IS NULL OR rn.geo = ANY(lp.geo_arr))\n    AND rn.booking_date >= {{interval_from}}::date\n    AND rn.booking_date <  {{interval_to}}::date\n)\n\n-- 4) Агрегация по номеру повтора (1..4)\nSELECT\n  rr.repeat_no                                         AS \"Номер повтора\",\n  COUNT(*)                                             AS \"Количество брони\",\n  percentile_disc(0.5) WITHIN GROUP (ORDER BY rr.deal_amount)\nAS \"Медианный чек (deal_amount)\",\n  SUM(rr.deal_amount)                                  AS \"Сумма всех сделок\",\n  percentile_disc(0.5) WITHIN GROUP (ORDER BY rr.days_gap) AS \"Медиана разрыва (дней)\"\nFROM report_repeats rr\nWHERE rr.repeat_no BETWEEN 1 AND 4\nGROUP BY rr.repeat_no\nORDER BY rr.repeat_no\n",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2023-01-01T00:00:00.000Z",
+          "to": "2025-08-22T00:00:00.000Z"
+        }
+      },
+      {
+        "type": "number",
+        "name": "date_book_interval",
+        "defaultValue": "14"
+      },
+      {
+        "type": "string",
+        "name": "geo_list",
+        "defaultValue": ""
+      }
+    ],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "Номер повтора",
+              "title": "Номер повтора",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1755859116994"
+            },
+            {
+              "guid": "Количество брони",
+              "title": "Количество брони",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Медиана разрыва (дней)",
+              "title": "Медиана разрыва (дней)",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1755860261835"
+            },
+            {
+              "guid": "Медианный чек (deal_amount)",
+              "title": "Медианный чек (deal_amount)",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1755859818770",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "$",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "93259f40-7f46-11f0-863b-b1cc8dd7c6e2",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": true
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "Медианный чек (deal_amount)"
+              }
+            },
+            {
+              "guid": "Сумма всех сделок",
+              "title": "Сумма всех сделок",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1755859813723",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "$",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "9d245e50-7f46-11f0-863b-b1cc8dd7c6e2",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Сумма всех сделок"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7",
+    "geopointsConfig": {}
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

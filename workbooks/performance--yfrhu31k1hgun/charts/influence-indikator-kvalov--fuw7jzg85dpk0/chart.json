@@ -1,0 +1,280 @@
+{
+  "entryId": "fuw7jzg85dpk0",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "2087281543306284200/influence — Индикатор квалов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-11-19T18:35:49.569Z",
+  "updatedBy": "uid:ek0q2ng2ih4ubsq29dt8",
+  "updatedAt": "2026-03-19T08:44:27.722Z",
+  "savedId": "79ce6enrdofmr",
+  "publishedId": "79ce6enrdofmr",
+  "revId": "79ce6enrdofmr",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "m111z9a5e3827"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "cbcce1a0-236f-11f1-a223-e9c5288c2085",
+          "title": "Квалы",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "leads_id_mone",
+          "title": "leads_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_8p05",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_mbqf",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_k6iq",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_time_3r40",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_f5j3",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_campaign_snqb",
+          "title": "utm_campaign",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_medium_a8bc",
+          "title": "utm_medium",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_term_d5wh",
+          "title": "utm_term",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_cj2d",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_a_ss9z",
+          "title": "qual_priority_a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_b_5o4h",
+          "title": "qual_priority_b",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_c_886z",
+          "title": "qual_priority_c",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "priority_hupc",
+          "title": "priority",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_a2jy",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_fb75",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "revenue_nf2f",
+          "title": "revenue",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "zakupki_id_msa1",
+          "title": "zakupki_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "zakupki_date_74vl",
+          "title": "zakupki_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "landing_link_3si7",
+          "title": "landing_link",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_name_iuth",
+          "title": "channel_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_link_1p6m",
+          "title": "channel_link",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost_rub_pvou",
+          "title": "cost_rub",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost_usd_80o6",
+          "title": "cost_usd",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#FFC636",
+      "metricFontColorIndex": 3
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "data_type": "integer",
+          "aggregation": "none",
+          "type": "MEASURE",
+          "description": "",
+          "guid": "cbcce1a0-236f-11f1-a223-e9c5288c2085",
+          "autoaggregated": true,
+          "cast": "integer",
+          "initial_data_type": "integer",
+          "aggregation_locked": true,
+          "managed_by": "user",
+          "valid": true,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "title": "Квалы",
+          "hidden": false,
+          "lock_aggregation": false,
+          "virtual": false,
+          "formula": "sum([qual])",
+          "guid_formula": "sum([qual_cj2d])",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "m111z9a5e3827"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "description": "",
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "virtual": false,
+              "autoaggregated": true,
+              "data_type": "integer",
+              "ui_settings": "",
+              "has_auto_aggregation": true,
+              "hidden": false,
+              "type": "MEASURE",
+              "title": "Квалы",
+              "aggregation": "none",
+              "guid": "cbcce1a0-236f-11f1-a223-e9c5288c2085",
+              "cast": "integer",
+              "aggregation_locked": true,
+              "valid": true,
+              "guid_formula": "sum([qual_cj2d])",
+              "formula": "sum([qual])",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "m111z9a5e3827",
+              "id": "measure-0",
+              "datasetName": "influence"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "axisModeMap": {
+              "cbcce1a0-236f-11f1-a223-e9c5288c2085": "continuous"
+            }
+          }
+        },
+        {
+          "allowedTypes": {},
+          "id": "colors",
+          "type": "colors",
+          "title": "section_colors",
+          "iconProps": {},
+          "items": []
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

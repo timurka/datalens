@@ -1,0 +1,870 @@
+{
+  "entryId": "sdpwisjvwzdse",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1971837682958992586/Брони TG — Таблица лидов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-06-13T11:49:29.281Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-06-13T11:51:35.188Z",
+  "savedId": "9u6dcq7vdbn2v",
+  "publishedId": "9u6dcq7vdbn2v",
+  "revId": "9u6dcq7vdbn2v",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "sdodrefpok1ge"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "f732bd10-484b-11f0-bbce-19dd97242299",
+          "title": "title-f732bd10-484b-11f0-bbce-19dd97242299",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "b6ee1a10-484b-11f0-bbce-19dd97242299",
+          "title": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/contacts/detai...",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "246c0090-4840-11f0-a73b-d36c19c6a919",
+          "title": "Модель атрибуции",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "leads_id_tncm",
+          "title": "leads_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contacts_amo_id_4ipt",
+          "title": "contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id_ce1n",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_geo_zsu4",
+          "title": "booking_geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_booking_qc2k",
+          "title": "date_booking",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_t4nn",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "attribution_border_r3dz",
+          "title": "attribution_border",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "chat_join_time_2npv",
+          "title": "chat_join_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "chat_geo_hpmk",
+          "title": "chat_geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "chat_id_q7lo",
+          "title": "chat_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_hmsk",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invite_link_name_leyj",
+          "title": "invite_link_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category_rx2m",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "adv_reach_d3bp",
+          "title": "adv_reach",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost_tzfm",
+          "title": "cost",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "zakupki_id_o2x5",
+          "title": "zakupki_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "purchases_count_9h8a",
+          "title": "purchases_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deals_total_ofmd",
+          "title": "deals_total",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "zakupki_date_cq8p",
+          "title": "zakupki_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "days_from_zakupki_ktnr",
+          "title": "days_from_zakupki",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "days_from_join_4f53",
+          "title": "days_from_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost_usd_a8yp",
+          "title": "cost_usd",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "month_cost_rub_cr5v",
+          "title": "month_cost_rub",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "month_cost_usd_7ype",
+          "title": "month_cost_usd",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_5wkv",
+          "title": "account_id",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [
+      {
+        "guid": "attribution_border_r3dz",
+        "datasetId": "sdodrefpok1ge",
+        "filter": {
+          "value": [
+            "first"
+          ],
+          "operation": {
+            "code": "IN"
+          }
+        },
+        "type": "DIMENSION",
+        "title": "attribution_border",
+        "calc_mode": "direct"
+      }
+    ],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "date_booking_qc2k",
+        "datasetId": "sdodrefpok1ge",
+        "data_type": "date",
+        "title": "date_booking",
+        "source": "date_booking",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "type": "DIMENSION",
+          "virtual": false,
+          "title": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/contacts/detai...",
+          "description": "",
+          "lock_aggregation": false,
+          "aggregation_locked": true,
+          "autoaggregated": false,
+          "has_auto_aggregation": false,
+          "cast": "markup",
+          "aggregation": "none",
+          "hidden": false,
+          "managed_by": "user",
+          "data_type": "markup",
+          "initial_data_type": "markup",
+          "guid": "b6ee1a10-484b-11f0-bbce-19dd97242299",
+          "valid": true,
+          "formula": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/contacts/detail/' + STR([contacts_amo_id]), STR([contacts_amo_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/contacts/detail/' + STR([contacts_amo_id]), STR([contacts_amo_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/contacts/detail/' + STR([contacts_amo_id]), STR([contacts_amo_id]))\n\nEND",
+          "guid_formula": "-- Если ру-акк\nIF [account_id_5wkv] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/contacts/detail/' + STR([contacts_amo_id_4ipt]), STR([contacts_amo_id_4ipt]))\n\nELSEIF [account_id_5wkv] = 57817 OR [account_id_5wkv] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/contacts/detail/' + STR([contacts_amo_id_4ipt]), STR([contacts_amo_id_4ipt]))\n\nELSEIF [account_id_5wkv] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/contacts/detail/' + STR([contacts_amo_id_4ipt]), STR([contacts_amo_id_4ipt]))\n\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "sdodrefpok1ge"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "type": "MEASURE",
+          "virtual": false,
+          "title": "title-f732bd10-484b-11f0-bbce-19dd97242299",
+          "description": "",
+          "lock_aggregation": false,
+          "aggregation_locked": false,
+          "autoaggregated": false,
+          "has_auto_aggregation": false,
+          "cast": "integer",
+          "aggregation": "sum",
+          "hidden": false,
+          "managed_by": "user",
+          "data_type": "integer",
+          "initial_data_type": "integer",
+          "guid": "f732bd10-484b-11f0-bbce-19dd97242299",
+          "valid": true,
+          "avatar_id": "bf8673b0-483d-11f0-8dfe-67d1a6a925f0",
+          "source": "purchases_count",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "originalTitle": "purchases_count",
+          "fakeTitle": "purchases_count",
+          "datasetId": "sdodrefpok1ge"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "aggregation_locked": false,
+              "description": "",
+              "hidden": false,
+              "initial_data_type": "genericdatetime",
+              "title": "date_booking",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "virtual": false,
+              "guid": "date_booking_qc2k",
+              "valid": true,
+              "data_type": "date",
+              "type": "DIMENSION",
+              "cast": "date",
+              "autoaggregated": false,
+              "source": "date_booking",
+              "avatar_id": "bf8673b0-483d-11f0-8dfe-67d1a6a925f0",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "sdodrefpok1ge",
+              "id": "dimension-7",
+              "datasetName": "Брони TG",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Дата брони",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d027ed30-484b-11f0-bbce-19dd97242299",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "date_booking_qc2k"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "type": "DIMENSION",
+              "virtual": false,
+              "title": "booking_geo",
+              "description": "",
+              "lock_aggregation": false,
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "string",
+              "aggregation": "none",
+              "hidden": false,
+              "managed_by": "user",
+              "data_type": "string",
+              "initial_data_type": "string",
+              "guid": "booking_geo_zsu4",
+              "valid": true,
+              "avatar_id": "bf8673b0-483d-11f0-8dfe-67d1a6a925f0",
+              "source": "booking_geo",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "sdodrefpok1ge",
+              "id": "dimension-6",
+              "datasetName": "Брони TG",
+              "default_value": null,
+              "value_constraint": null,
+              "fakeTitle": "Гео брони",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a0b70a30-484c-11f0-95dc-87e058df916e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "booking_geo_zsu4"
+              }
+            },
+            {
+              "aggregation_locked": true,
+              "description": "",
+              "hidden": false,
+              "initial_data_type": "markup",
+              "title": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/contacts/detai...",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "virtual": false,
+              "guid": "b6ee1a10-484b-11f0-bbce-19dd97242299",
+              "valid": true,
+              "data_type": "markup",
+              "type": "DIMENSION",
+              "cast": "markup",
+              "autoaggregated": false,
+              "guid_formula": "-- Если ру-акк\nIF [account_id_5wkv] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/contacts/detail/' + STR([contacts_amo_id_4ipt]), STR([contacts_amo_id_4ipt]))\n\nELSEIF [account_id_5wkv] = 57817 OR [account_id_5wkv] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/contacts/detail/' + STR([contacts_amo_id_4ipt]), STR([contacts_amo_id_4ipt]))\n\nELSEIF [account_id_5wkv] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/contacts/detail/' + STR([contacts_amo_id_4ipt]), STR([contacts_amo_id_4ipt]))\n\nEND",
+              "formula": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/contacts/detail/' + STR([contacts_amo_id]), STR([contacts_amo_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/contacts/detail/' + STR([contacts_amo_id]), STR([contacts_amo_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/contacts/detail/' + STR([contacts_amo_id]), STR([contacts_amo_id]))\n\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "sdodrefpok1ge",
+              "id": "dimension-1",
+              "datasetName": "Брони TG",
+              "fakeTitle": "ID контакта",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "c8ad40f0-484b-11f0-bbce-19dd97242299",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "b6ee1a10-484b-11f0-bbce-19dd97242299"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "aggregation_locked": false,
+              "description": "",
+              "hidden": false,
+              "initial_data_type": "integer",
+              "title": "telegram_id",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "virtual": false,
+              "guid": "telegram_id_ce1n",
+              "valid": true,
+              "data_type": "integer",
+              "type": "DIMENSION",
+              "cast": "integer",
+              "autoaggregated": false,
+              "source": "telegram_id",
+              "avatar_id": "bf8673b0-483d-11f0-8dfe-67d1a6a925f0",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "sdodrefpok1ge",
+              "id": "dimension-5",
+              "datasetName": "Брони TG",
+              "fakeTitle": "user_id",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d42b7410-484b-11f0-bbce-19dd97242299",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "telegram_id_ce1n"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "type": "DIMENSION",
+              "virtual": false,
+              "title": "chat_join_time",
+              "description": "",
+              "lock_aggregation": false,
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "date",
+              "aggregation": "none",
+              "hidden": false,
+              "managed_by": "user",
+              "data_type": "date",
+              "initial_data_type": "genericdatetime",
+              "guid": "chat_join_time_2npv",
+              "valid": true,
+              "avatar_id": "bf8673b0-483d-11f0-8dfe-67d1a6a925f0",
+              "source": "chat_join_time",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "sdodrefpok1ge",
+              "id": "dimension-10",
+              "datasetName": "Брони TG",
+              "default_value": null,
+              "value_constraint": null,
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Дата вступления",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a3f12690-484c-11f0-95dc-87e058df916e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "chat_join_time_2npv"
+              }
+            },
+            {
+              "aggregation_locked": false,
+              "description": "",
+              "hidden": false,
+              "initial_data_type": "date",
+              "title": "zakupki_date",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "virtual": false,
+              "guid": "zakupki_date_cq8p",
+              "valid": true,
+              "data_type": "date",
+              "type": "DIMENSION",
+              "cast": "date",
+              "autoaggregated": false,
+              "source": "zakupki_date",
+              "avatar_id": "bf8673b0-483d-11f0-8dfe-67d1a6a925f0",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "sdodrefpok1ge",
+              "id": "dimension-21",
+              "datasetName": "Брони TG",
+              "default_value": null,
+              "value_constraint": null,
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Дата закупки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a6867770-484c-11f0-95dc-87e058df916e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "zakupki_date_cq8p"
+              }
+            },
+            {
+              "aggregation_locked": false,
+              "description": "",
+              "hidden": false,
+              "initial_data_type": "string",
+              "title": "invite_link_name",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "virtual": false,
+              "guid": "invite_link_name_leyj",
+              "valid": true,
+              "data_type": "string",
+              "type": "DIMENSION",
+              "cast": "string",
+              "autoaggregated": false,
+              "source": "invite_link_name",
+              "avatar_id": "bf8673b0-483d-11f0-8dfe-67d1a6a925f0",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "sdodrefpok1ge",
+              "id": "dimension-14",
+              "datasetName": "Брони TG",
+              "default_value": null,
+              "value_constraint": null,
+              "fakeTitle": "Название ссылки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a8fccea0-484c-11f0-95dc-87e058df916e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "invite_link_name_leyj"
+              }
+            },
+            {
+              "aggregation_locked": false,
+              "description": "",
+              "hidden": false,
+              "initial_data_type": "string",
+              "title": "category",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "virtual": false,
+              "guid": "category_rx2m",
+              "valid": true,
+              "data_type": "string",
+              "type": "DIMENSION",
+              "cast": "string",
+              "autoaggregated": false,
+              "source": "category",
+              "avatar_id": "bf8673b0-483d-11f0-8dfe-67d1a6a925f0",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "sdodrefpok1ge",
+              "id": "dimension-15",
+              "datasetName": "Брони TG",
+              "default_value": null,
+              "value_constraint": null,
+              "fakeTitle": "Категория",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "abf30430-484c-11f0-95dc-87e058df916e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "category_rx2m"
+              }
+            },
+            {
+              "aggregation_locked": false,
+              "description": "",
+              "hidden": false,
+              "initial_data_type": "string",
+              "title": "invitelinks",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "virtual": false,
+              "guid": "invitelinks_hmsk",
+              "valid": true,
+              "data_type": "string",
+              "type": "DIMENSION",
+              "cast": "string",
+              "autoaggregated": false,
+              "source": "invitelinks",
+              "avatar_id": "bf8673b0-483d-11f0-8dfe-67d1a6a925f0",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "sdodrefpok1ge",
+              "id": "dimension-13",
+              "datasetName": "Брони TG",
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "aggregation_locked": false,
+              "description": "",
+              "hidden": false,
+              "initial_data_type": "float",
+              "title": "cost",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "virtual": false,
+              "guid": "cost_tzfm",
+              "valid": true,
+              "data_type": "float",
+              "type": "DIMENSION",
+              "cast": "float",
+              "autoaggregated": false,
+              "source": "cost",
+              "avatar_id": "bf8673b0-483d-11f0-8dfe-67d1a6a925f0",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "sdodrefpok1ge",
+              "id": "dimension-17",
+              "datasetName": "Брони TG",
+              "default_value": null,
+              "value_constraint": null,
+              "fakeTitle": "Цена закупки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " руб.",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "ae9f3870-484c-11f0-95dc-87e058df916e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "cost_tzfm"
+              }
+            },
+            {
+              "aggregation_locked": false,
+              "description": "",
+              "hidden": false,
+              "initial_data_type": "integer",
+              "title": "title-f732bd10-484b-11f0-bbce-19dd97242299",
+              "has_auto_aggregation": false,
+              "aggregation": "sum",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "virtual": false,
+              "guid": "f732bd10-484b-11f0-bbce-19dd97242299",
+              "valid": true,
+              "data_type": "integer",
+              "type": "MEASURE",
+              "cast": "integer",
+              "autoaggregated": false,
+              "source": "purchases_count",
+              "avatar_id": "bf8673b0-483d-11f0-8dfe-67d1a6a925f0",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "sdodrefpok1ge",
+              "id": "measure-0",
+              "datasetName": "Брони TG",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "f5e07380-484b-11f0-bbce-19dd97242299",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "f732bd10-484b-11f0-bbce-19dd97242299"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "purchases_count",
+              "fakeTitle": "Покупок клиента",
+              "default_value": null,
+              "value_constraint": null,
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "positiveColor": "#8AD554",
+                    "negativeColor": "#FF3D64"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

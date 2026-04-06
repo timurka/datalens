@@ -1,0 +1,231 @@
+{
+  "entryId": "fk0ijrhzc31a3",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "1645010241777042703/Закупки - Похожие каналы — Индикатор похожих",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-03-19T13:21:42.213Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-03-19T14:09:47.695Z",
+  "savedId": "uzf6j2okcl2ki",
+  "publishedId": "uzf6j2okcl2ki",
+  "revId": "uzf6j2okcl2ki",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "y3ryirwxxeswm"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "5146e750-e5fa-11ee-a958-4d735ca608ae",
+          "title": "title-5146e750-e5fa-11ee-a958-4d735ca608ae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "4e1f6230-e5f2-11ee-8383-e564bb80e98a",
+          "title": "title_username",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "11f10030-e5f1-11ee-b69e-4d7251dcf88a",
+          "title": "username_url",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "f7cc09c0-e5f0-11ee-b69e-4d7251dcf88a",
+          "title": "source_url",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "source_5y2m",
+          "title": "source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "n_do65",
+          "title": "N",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "id_ujwa",
+          "title": "id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username_icnc",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "title_dpc4",
+          "title": "title",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "verified_t62y",
+          "title": "verified",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "participants_count_batr",
+          "title": "similar_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "url_fvm7",
+          "title": "url",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "mention_count_nxig",
+          "title": "mention_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_uae_5mkl",
+          "title": "sum_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category_ro9l",
+          "title": "category",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#4DA2F1",
+      "metricFontColorPalette": "classic20",
+      "indicatorTitleMode": "by-field"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "virtual": false,
+          "hidden": false,
+          "title": "title-5146e750-e5fa-11ee-a958-4d735ca608ae",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "guid": "5146e750-e5fa-11ee-a958-4d735ca608ae",
+          "data_type": "integer",
+          "valid": true,
+          "aggregation": "count",
+          "autoaggregated": false,
+          "initial_data_type": "string",
+          "cast": "string",
+          "description": "",
+          "managed_by": "user",
+          "type": "MEASURE",
+          "source": "username",
+          "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "originalTitle": "username",
+          "fakeTitle": "username",
+          "datasetId": "y3ryirwxxeswm"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "lock_aggregation": false,
+              "virtual": false,
+              "type": "MEASURE",
+              "valid": true,
+              "managed_by": "user",
+              "title": "title-5146e750-e5fa-11ee-a958-4d735ca608ae",
+              "hidden": false,
+              "guid": "5146e750-e5fa-11ee-a958-4d735ca608ae",
+              "aggregation": "count",
+              "autoaggregated": false,
+              "cast": "string",
+              "description": "",
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "data_type": "integer",
+              "initial_data_type": "string",
+              "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+              "source": "username",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "username",
+              "fakeTitle": "Похожих",
+              "datasetId": "y3ryirwxxeswm",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "id": "measure-0",
+              "datasetName": "Закупки - Похожие каналы"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "axisModeMap": {
+              "5146e750-e5fa-11ee-a958-4d735ca608ae": "continuous"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

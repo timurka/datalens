@@ -1,0 +1,171 @@
+{
+  "entryId": "norzhnzrtm80a",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "1764065993509834082/Топ лучших паролей по квалам ОАЭ (sql)",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-08-30T19:44:13.763Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-09-02T13:27:07.111Z",
+  "savedId": "npbix0bqwpw8a",
+  "publishedId": "npbix0bqwpw8a",
+  "revId": "npbix0bqwpw8a",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "g8crkisikyyc4",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "WITH post_data AS (\n    SELECT \n        password,\n        MIN(date_full) AS first_post_date\n    FROM \n        webhook_negburo\n    WHERE \n        channel_id = '12556306'\n    GROUP BY \n        password\n),\n-- Список лидов с паролями\nlead_data AS (\n    SELECT \n        password,\n        COUNT(DISTINCT leads_id) AS unique_leads,\n        COUNT(DISTINCT CASE WHEN qual = 1 THEN leads_id END) AS qualified_leads,\n        COUNT(DISTINCT CASE WHEN booking_event = 1 THEN leads_id END) AS booked_leads\n    FROM \n        perfomance_all_leads\n    WHERE \n        (creation_date >= {{interval_from}}\n            AND creation_date <= {{interval_to}})\n        AND password IS NOT NULL\n        -- В основной воронке и в валидации\n        AND (pipeline_id = '5987164' OR (pipeline_id = '7309478' AND status_id != 142))\n        -- Вычитаем мусорные лиды\n        AND (reason != 'НЕ клиент/Мусор/Застройщики' OR reason IS NULL)\n    GROUP BY \n        password\n)\n\nSELECT \n    pd.first_post_date AS \"Дата первого поста\",\n    COALESCE(t.password_org, ld.password) AS \"Пароль\",\n    ld.unique_leads AS \"Лиды\",\n    ld.qualified_leads AS \"Квалы\",\n    ld.booked_leads AS \"Брони\",\n    CASE \n        WHEN ld.unique_leads > 0 THEN \n            CAST((ld.qualified_leads::float / ld.unique_leads) AS NUMERIC(5,4))\n        ELSE \n            0\n    END AS \"CRQ\"\nFROM \n    lead_data ld\nINNER JOIN \n    post_data pd ON ld.password = pd.password\nLEFT JOIN \n    webhook_negburo t ON ld.password = t.password \n                      AND t.date_full = pd.first_post_date\n                      AND t.channel_id = '12556306' \nWHERE\n    t.channel_id = '12556306'  -- Фильтрация по каналу в основном запросе\nORDER BY \n    ld.qualified_leads DESC",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2024-01-01T00:00:00.000Z",
+          "to": "__relative_-0d"
+        }
+      }
+    ],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "Дата первого поста",
+              "title": "Дата первого поста",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "date",
+              "cast": "date",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Пароль",
+              "title": "Пароль",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Лиды",
+              "title": "Лиды",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1725045933412"
+            },
+            {
+              "guid": "Квалы",
+              "title": "Квалы",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1725045945812"
+            },
+            {
+              "guid": "CRQ",
+              "title": "CRQ",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a7b1a050-6708-11ef-aff0-dd572bf719b1",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "CRQ"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "Дата первого поста": "continuous"
+            }
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

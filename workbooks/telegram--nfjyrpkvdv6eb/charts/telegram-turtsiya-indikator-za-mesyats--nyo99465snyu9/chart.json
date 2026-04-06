@@ -1,0 +1,88 @@
+{
+  "entryId": "nyo99465snyu9",
+  "scope": "widget",
+  "type": "metric2_ql_node",
+  "key": "1935631283673630009/Telegram Турция - Индикатор за месяц",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-04-24T12:53:50.112Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-04-24T12:53:56.924Z",
+  "savedId": "x8yjk5n4qf1qj",
+  "publishedId": "x8yjk5n4qf1qj",
+  "revId": "x8yjk5n4qf1qj",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "g8crkisikyyc4",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "metricFontSize": "m",
+      "metricFontColor": "#4DA2F1",
+      "metricFontColorPalette": "classic20"
+    },
+    "queryValue": "SELECT \n  SUM(leads)::INTEGER || ' / ' || \n  SUM(quals)::INTEGER || ' / ' || \n  CASE \n    WHEN SUM(leads) > 0 THEN ROUND(SUM(quals)::NUMERIC / SUM(leads) * 100, 1)\n    ELSE 0\n  END || '%' AS \"Лиды / Квалы / CRQ за этот месяц с TG\"\nFROM perfomance_svodny_actions\nWHERE geo = 'Турция'\n  --AND pipeline_id = 6674022\n  AND creation_date >= date_trunc('month', CURRENT_DATE)\n  AND creation_date < date_trunc('month', CURRENT_DATE + INTERVAL '1 month')\n  AND utmsource = 'zakupka'",
+    "queries": [],
+    "params": [],
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "Лиды / Квалы / CRQ за этот месяц с TG",
+              "title": "Лиды / Квалы / CRQ за этот месяц с TG",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            }
+          ],
+          "required": true,
+          "capacity": 1
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

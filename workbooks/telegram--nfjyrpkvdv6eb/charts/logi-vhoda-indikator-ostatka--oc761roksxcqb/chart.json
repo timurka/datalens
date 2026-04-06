@@ -1,0 +1,229 @@
+{
+  "entryId": "oc761roksxcqb",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "1718077754508838611/Логи входа — Индикатор остатка",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-06-28T08:53:48.473Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-11-27T16:49:29.012Z",
+  "savedId": "wfmio6lfrw9qj",
+  "publishedId": "wfmio6lfrw9qj",
+  "revId": "wfmio6lfrw9qj",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "br8azf59xj5ky"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "e4be3ac0-352c-11ef-b44b-c99edacb5739",
+          "title": "Осталось",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "user_id_94gr",
+          "title": "user_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "chat_id_sk8j",
+          "title": "chat_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_8feq",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_uf43",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_neo2",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username_hs72",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "premium_aik4",
+          "title": "premium",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_left_w24q",
+          "title": "date_left",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_1_dnwe",
+          "title": "invitelinks (1)",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invite_link_name_ep3l",
+          "title": "dict_invite_link_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id_gu40",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_pjws",
+          "title": "leads",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "quals_gpyh",
+          "title": "quals",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "bookings_pnmu",
+          "title": "bookings",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_f74z",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "folder_0zgi",
+          "title": "folder",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_only_join_x86z",
+          "title": "date_only_join",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#54A520",
+      "metricFontColorPalette": "classic20",
+      "indicatorTitleMode": "by-field"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "type": "MEASURE",
+          "virtual": false,
+          "autoaggregated": true,
+          "data_type": "integer",
+          "has_auto_aggregation": true,
+          "managed_by": "user",
+          "aggregation": "none",
+          "valid": true,
+          "guid": "e4be3ac0-352c-11ef-b44b-c99edacb5739",
+          "hidden": false,
+          "initial_data_type": "integer",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "description": "",
+          "title": "Осталось",
+          "cast": "integer",
+          "formula": "COUNTD_IF([user_id], [date_join] IS NOT NULL) - COUNTD_IF([user_id], [date_left] IS NOT NULL)",
+          "guid_formula": "COUNTD_IF([user_id_94gr], [date_join_uf43] IS NOT NULL) - COUNTD_IF([user_id_94gr], [date_left_w24q] IS NOT NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "br8azf59xj5ky"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "managed_by": "user",
+              "data_type": "integer",
+              "valid": true,
+              "autoaggregated": true,
+              "initial_data_type": "integer",
+              "has_auto_aggregation": true,
+              "lock_aggregation": false,
+              "aggregation_locked": true,
+              "virtual": false,
+              "type": "MEASURE",
+              "cast": "integer",
+              "guid": "e4be3ac0-352c-11ef-b44b-c99edacb5739",
+              "aggregation": "none",
+              "description": "",
+              "hidden": false,
+              "title": "Осталось",
+              "formula": "COUNTD_IF([user_id], [date_join] IS NOT NULL) - COUNTD_IF([user_id], [date_left] IS NOT NULL)",
+              "guid_formula": "COUNTD_IF([user_id_94gr], [date_join_uf43] IS NOT NULL) - COUNTD_IF([user_id_94gr], [date_left_w24q] IS NOT NULL)",
+              "calc_mode": "formula",
+              "source": "",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "local": true,
+              "datasetId": "br8azf59xj5ky",
+              "id": "measure-0",
+              "datasetName": "sql_telegram_logs"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

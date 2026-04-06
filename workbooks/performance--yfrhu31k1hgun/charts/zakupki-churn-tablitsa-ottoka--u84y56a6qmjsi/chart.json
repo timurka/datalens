@@ -1,0 +1,744 @@
+{
+  "entryId": "u84y56a6qmjsi",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1676801878706359918/zakupki_churn — Таблица оттока",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-05-02T10:06:00.655Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-05-15T16:19:58.816Z",
+  "savedId": "taqkpofqzx42h",
+  "publishedId": "taqkpofqzx42h",
+  "revId": "taqkpofqzx42h",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "1hjbd83idivip"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "59d22c60-1140-11ef-a2fc-f5fbe341200c",
+          "title": "channel_cut",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "d15a7870-1139-11ef-a26c-f7a8c6fa83e7",
+          "title": "url_channel",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "39dc3cb0-112d-11ef-87b7-45fc88f7335b",
+          "title": "f_avg_not_window",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "date",
+          "title": "date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_name",
+          "title": "channel_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_link",
+          "title": "channel_link",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost",
+          "title": "cost",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "followers_uae",
+          "title": "followers_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_uae",
+          "title": "invitelinks_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leavers_count",
+          "title": "leavers_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "churn_rate_percentage",
+          "title": "churn_rate_percentage",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "joiners_count",
+          "title": "joiners_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "avg_lifetime_days",
+          "title": "avg_lifetime_days",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "date",
+        "datasetId": "1hjbd83idivip",
+        "data_type": "date",
+        "title": "date",
+        "source": "date",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "integer",
+          "initial_data_type": "integer",
+          "lock_aggregation": false,
+          "guid": "39dc3cb0-112d-11ef-87b7-45fc88f7335b",
+          "managed_by": "user",
+          "autoaggregated": false,
+          "virtual": false,
+          "description": "",
+          "aggregation": "avg",
+          "hidden": false,
+          "has_auto_aggregation": false,
+          "title": "f_avg_not_window",
+          "data_type": "float",
+          "aggregation_locked": true,
+          "valid": true,
+          "type": "MEASURE",
+          "guid_formula": "[followers_uae]",
+          "formula": "[followers_uae]",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "1hjbd83idivip"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "markup",
+          "initial_data_type": "markup",
+          "lock_aggregation": false,
+          "guid": "d15a7870-1139-11ef-a26c-f7a8c6fa83e7",
+          "managed_by": "user",
+          "autoaggregated": false,
+          "virtual": false,
+          "description": "",
+          "aggregation": "none",
+          "hidden": false,
+          "has_auto_aggregation": false,
+          "title": "url_channel",
+          "data_type": "markup",
+          "aggregation_locked": true,
+          "valid": true,
+          "type": "DIMENSION",
+          "guid_formula": "URL([channel_link], LEFT([channel_name], 70))",
+          "formula": "URL([channel_link], LEFT([channel_name], 70))",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "1hjbd83idivip"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "guid": "39dc3cb0-112d-11ef-87b7-45fc88f7335b",
+          "virtual": false,
+          "hidden": false,
+          "aggregation": "avg",
+          "cast": "integer",
+          "lock_aggregation": false,
+          "description": "",
+          "autoaggregated": false,
+          "title": "f_avg_not_window",
+          "valid": true,
+          "initial_data_type": "integer",
+          "type": "MEASURE",
+          "aggregation_locked": true,
+          "has_auto_aggregation": false,
+          "data_type": "float",
+          "managed_by": "user",
+          "guid_formula": "[followers_uae]",
+          "formula": "[followers_uae]",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "1hjbd83idivip"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "guid": "d15a7870-1139-11ef-a26c-f7a8c6fa83e7",
+          "virtual": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "markup",
+          "lock_aggregation": false,
+          "description": "",
+          "autoaggregated": false,
+          "title": "url_channel",
+          "valid": true,
+          "initial_data_type": "markup",
+          "type": "DIMENSION",
+          "aggregation_locked": true,
+          "has_auto_aggregation": false,
+          "data_type": "markup",
+          "managed_by": "user",
+          "guid_formula": "URL([channel_link], LEFT([channel_name], 70))",
+          "formula": "URL([channel_link], LEFT([channel_name], 70))",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "1hjbd83idivip"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "string",
+          "initial_data_type": "string",
+          "lock_aggregation": false,
+          "guid": "59d22c60-1140-11ef-a2fc-f5fbe341200c",
+          "managed_by": "user",
+          "autoaggregated": false,
+          "virtual": false,
+          "description": "",
+          "aggregation": "none",
+          "hidden": false,
+          "has_auto_aggregation": false,
+          "title": "channel_cut",
+          "data_type": "string",
+          "aggregation_locked": true,
+          "valid": true,
+          "type": "DIMENSION",
+          "guid_formula": "LEFT([channel_name], 70)",
+          "formula": "LEFT([channel_name], 70)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "1hjbd83idivip"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "date",
+              "virtual": false,
+              "hidden": false,
+              "aggregation": "none",
+              "cast": "date",
+              "lock_aggregation": false,
+              "description": "",
+              "autoaggregated": false,
+              "title": "date",
+              "valid": true,
+              "initial_data_type": "date",
+              "type": "DIMENSION",
+              "aggregation_locked": false,
+              "has_auto_aggregation": false,
+              "data_type": "date",
+              "managed_by": "user",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "source": "date",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "1hjbd83idivip",
+              "id": "dimension-3",
+              "datasetName": "zakupki_churn_agg",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Дата закупки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1d545560-1140-11ef-8728-11fbac179962",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "date"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "lock_aggregation": false,
+              "valid": true,
+              "managed_by": "user",
+              "title": "channel_cut",
+              "guid": "59d22c60-1140-11ef-a2fc-f5fbe341200c",
+              "aggregation": "none",
+              "description": "",
+              "hidden": false,
+              "initial_data_type": "string",
+              "aggregation_locked": true,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "data_type": "string",
+              "virtual": false,
+              "cast": "string",
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "LEFT([channel_name], 70)",
+              "guid_formula": "LEFT([channel_name], 70)",
+              "datasetId": "1hjbd83idivip",
+              "id": "dimension-0",
+              "datasetName": "zakupki_churn_agg",
+              "fakeTitle": "Канал",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1774bb80-1140-11ef-8728-11fbac179962",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "59d22c60-1140-11ef-a2fc-f5fbe341200c"
+              },
+              "default_value": null,
+              "value_constraint": null,
+              "local": true
+            },
+            {
+              "cast": "string",
+              "title": "category",
+              "guid": "category",
+              "autoaggregated": false,
+              "description": "",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "hidden": false,
+              "initial_data_type": "string",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "data_type": "string",
+              "source": "category",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "1hjbd83idivip",
+              "id": "dimension-9",
+              "datasetName": "zakupki_churn_agg",
+              "fakeTitle": "Категория",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1b31ea90-1140-11ef-8728-11fbac179962",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "category"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "cast": "integer",
+              "title": "leavers_count",
+              "guid": "leavers_count",
+              "autoaggregated": false,
+              "description": "",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "hidden": false,
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "data_type": "integer",
+              "source": "leavers_count",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "1hjbd83idivip",
+              "id": "dimension-10",
+              "datasetName": "zakupki_churn_agg",
+              "fakeTitle": "Вышло",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "10668cb0-1140-11ef-8728-11fbac179962",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "leavers_count"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "data_type": "integer",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "virtual": false,
+              "valid": true,
+              "description": "",
+              "managed_by": "user",
+              "guid": "joiners_count",
+              "aggregation_locked": false,
+              "has_auto_aggregation": false,
+              "initial_data_type": "integer",
+              "cast": "integer",
+              "lock_aggregation": false,
+              "title": "joiners_count",
+              "hidden": false,
+              "source": "joiners_count",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1hjbd83idivip",
+              "id": "dimension-12",
+              "datasetName": "zakupki_churn_agg",
+              "fakeTitle": "Пришло (логи)",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "8efbfb60-12d4-11ef-a247-99b1d2a8e019",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "joiners_count"
+              }
+            },
+            {
+              "cast": "float",
+              "title": "churn_rate_percentage",
+              "guid": "churn_rate_percentage",
+              "autoaggregated": false,
+              "description": "",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "hidden": false,
+              "initial_data_type": "float",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "data_type": "float",
+              "source": "churn_rate_percentage",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "1hjbd83idivip",
+              "id": "dimension-11",
+              "datasetName": "zakupki_churn_agg",
+              "fakeTitle": "Отток",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "%",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "9045a570-113f-11ef-8728-11fbac179962",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "manual",
+                    "leftThreshold": "0",
+                    "middleThreshold": "30",
+                    "rightThreshold": "80",
+                    "gradientPalette": "blue-yellow-red",
+                    "gradientMode": "3-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "churn_rate_percentage"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "cast": "integer",
+              "title": "followers_uae",
+              "guid": "followers_uae",
+              "autoaggregated": false,
+              "description": "",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "hidden": false,
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "data_type": "integer",
+              "source": "followers_uae",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "1hjbd83idivip",
+              "id": "dimension-7",
+              "datasetName": "zakupki_churn_agg",
+              "fakeTitle": "Пришло (руки)",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "140cff70-1140-11ef-8728-11fbac179962",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "followers_uae"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "data_type": "float",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "virtual": false,
+              "valid": true,
+              "description": "",
+              "managed_by": "user",
+              "guid": "avg_lifetime_days",
+              "aggregation_locked": false,
+              "has_auto_aggregation": false,
+              "initial_data_type": "float",
+              "cast": "float",
+              "lock_aggregation": false,
+              "title": "avg_lifetime_days",
+              "hidden": false,
+              "source": "avg_lifetime_days",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1hjbd83idivip",
+              "id": "dimension-13",
+              "datasetName": "zakupki_churn_agg",
+              "fakeTitle": "Лайфтайм, д.",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "74db98d0-12d4-11ef-a247-99b1d2a8e019",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "red-orange-green",
+                    "gradientMode": "3-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "avg_lifetime_days"
+              }
+            },
+            {
+              "description": "",
+              "data_type": "string",
+              "initial_data_type": "string",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "guid": "invitelinks_uae",
+              "valid": true,
+              "virtual": false,
+              "aggregation_locked": false,
+              "hidden": false,
+              "cast": "string",
+              "type": "DIMENSION",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "title": "invitelinks_uae",
+              "aggregation": "none",
+              "source": "invitelinks_uae",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1hjbd83idivip",
+              "id": "inserted-1715789997067",
+              "datasetName": "zakupki_churn_agg"
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

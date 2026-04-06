@@ -1,0 +1,956 @@
+{
+  "entryId": "5cn0ylh3qmisq",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2058141429032554226/Когортный по подпискам — Датасет",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-10-10T13:39:37.530Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-10-10T15:01:45.874Z",
+  "savedId": "u1c3bvivgxkef",
+  "publishedId": "u1c3bvivgxkef",
+  "revId": "u1c3bvivgxkef",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "qx72swoink6ib"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "408cd6e0-a5de-11f0-a2e6-afeb47ddf626",
+          "title": "title-408cd6e0-a5de-11f0-a2e6-afeb47ddf626",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "44b9b7b0-a5de-11f0-a2e6-afeb47ddf626",
+          "title": "title-44b9b7b0-a5de-11f0-a2e6-afeb47ddf626",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "42712740-a5de-11f0-a2e6-afeb47ddf626",
+          "title": "title-42712740-a5de-11f0-a2e6-afeb47ddf626",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "metrics",
+          "title": "metrics",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "csum",
+          "title": "csum",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "metrics_bool",
+          "title": "metrics_bool",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "cohort_month_d6ul",
+          "title": "cohort_month",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_week_opro",
+          "title": "cohort_week",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_day_1w4z",
+          "title": "cohort_day",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelink_66t8",
+          "title": "invitelink",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "day_bucket_5a8l",
+          "title": "day_bucket",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_cnt_jci7",
+          "title": "cohort_cnt",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "tg_ids_jgns",
+          "title": "tg_ids",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "lead_cnt_on_day_br7a",
+          "title": "lead_cnt_on_day",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "lead_cnt_cum_7kuo",
+          "title": "lead_cnt_cum",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "lead_rate_cum_pct_x79k",
+          "title": "lead_rate_cum_pct",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_cnt_on_day_zwpr",
+          "title": "qual_cnt_on_day",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_cnt_cum_ht00",
+          "title": "qual_cnt_cum",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_rate_cum_pct_uyva",
+          "title": "qual_rate_cum_pct",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_nnm1",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_ids_tt5v",
+          "title": "crm_ids",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_quals_csro",
+          "title": "date_quals",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invite_link_name_v979",
+          "title": "invite_link_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "day_bucket_label_kp6k",
+          "title": "day_bucket_label",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [
+      {
+        "guid": "cohort_day_1w4z",
+        "datasetId": "qx72swoink6ib",
+        "filter": {
+          "value": [
+            "__interval_2025-10-02T00:00:00.000Z_2025-10-02T00:00:00.000Z"
+          ],
+          "operation": {
+            "code": "BETWEEN"
+          }
+        },
+        "type": "DIMENSION",
+        "title": "cohort_day",
+        "calc_mode": "direct"
+      }
+    ],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "cohort_day_1w4z",
+        "datasetId": "qx72swoink6ib",
+        "data_type": "date",
+        "title": "cohort_day",
+        "source": "cohort_day",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      },
+      {
+        "guid": "day_bucket_5a8l",
+        "datasetId": "qx72swoink6ib",
+        "data_type": "integer",
+        "title": "day_bucket",
+        "source": "day_bucket",
+        "direction": "ASC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "ui_settings": "",
+          "type": "MEASURE",
+          "aggregation": "sum",
+          "autoaggregated": false,
+          "initial_data_type": "integer",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "description": "",
+          "has_auto_aggregation": false,
+          "guid": "42712740-a5de-11f0-a2e6-afeb47ddf626",
+          "hidden": false,
+          "title": "title-42712740-a5de-11f0-a2e6-afeb47ddf626",
+          "valid": true,
+          "cast": "integer",
+          "virtual": false,
+          "data_type": "integer",
+          "aggregation_locked": false,
+          "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+          "source": "lead_cnt_on_day",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "qx72swoink6ib"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "ui_settings": "",
+          "type": "MEASURE",
+          "aggregation": "sum",
+          "autoaggregated": false,
+          "initial_data_type": "integer",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "description": "",
+          "has_auto_aggregation": false,
+          "guid": "44b9b7b0-a5de-11f0-a2e6-afeb47ddf626",
+          "hidden": false,
+          "title": "title-44b9b7b0-a5de-11f0-a2e6-afeb47ddf626",
+          "valid": true,
+          "cast": "integer",
+          "virtual": false,
+          "data_type": "integer",
+          "aggregation_locked": false,
+          "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+          "source": "qual_cnt_on_day",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "qx72swoink6ib"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "ui_settings": "",
+          "type": "MEASURE",
+          "aggregation": "sum",
+          "autoaggregated": false,
+          "initial_data_type": "integer",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "description": "",
+          "has_auto_aggregation": false,
+          "guid": "408cd6e0-a5de-11f0-a2e6-afeb47ddf626",
+          "hidden": false,
+          "title": "title-408cd6e0-a5de-11f0-a2e6-afeb47ddf626",
+          "valid": true,
+          "cast": "integer",
+          "virtual": false,
+          "data_type": "integer",
+          "aggregation_locked": false,
+          "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+          "source": "cohort_cnt",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "backgroundSettings": {
+            "enabled": false,
+            "settingsId": "3f1467b0-a5de-11f0-a2e6-afeb47ddf626",
+            "settings": {
+              "gradientState": {
+                "thresholdsMode": "auto",
+                "gradientPalette": "blue",
+                "gradientMode": "2-point",
+                "reversed": false
+              },
+              "paletteState": {},
+              "isContinuous": true
+            },
+            "colorFieldGuid": "408cd6e0-a5de-11f0-a2e6-afeb47ddf626"
+          },
+          "barsSettings": {
+            "enabled": false,
+            "colorSettings": {
+              "colorType": "two-color",
+              "settings": {
+                "positiveColorIndex": 2,
+                "negativeColorIndex": 1
+              }
+            },
+            "showLabels": true,
+            "align": "default",
+            "scale": {
+              "mode": "auto"
+            },
+            "showBarsInTotals": false
+          },
+          "datasetId": "qx72swoink6ib"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "aggregation": "none",
+              "autoaggregated": false,
+              "valid": true,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "hidden": false,
+              "initial_data_type": "date",
+              "lock_aggregation": false,
+              "data_type": "date",
+              "virtual": false,
+              "cast": "date",
+              "guid": "cohort_day_1w4z",
+              "aggregation_locked": false,
+              "ui_settings": "",
+              "title": "cohort_day",
+              "description": "",
+              "source": "cohort_day",
+              "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "qx72swoink6ib",
+              "id": "dimension-9",
+              "datasetName": "Когортный по подпискам",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Дата",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a22c2450-a5de-11f0-a2e6-afeb47ddf626",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "cohort_day_1w4z"
+              }
+            },
+            {
+              "aggregation": "none",
+              "autoaggregated": false,
+              "valid": true,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "hidden": false,
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "data_type": "integer",
+              "virtual": false,
+              "cast": "integer",
+              "guid": "day_bucket_5a8l",
+              "aggregation_locked": false,
+              "ui_settings": "",
+              "title": "day_bucket",
+              "description": "",
+              "source": "day_bucket",
+              "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "qx72swoink6ib",
+              "id": "dimension-11",
+              "datasetName": "Когортный по подпискам",
+              "fakeTitle": "День",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a5604d40-a5de-11f0-a2e6-afeb47ddf626",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "day_bucket_5a8l"
+              }
+            },
+            {
+              "aggregation": "sum",
+              "autoaggregated": false,
+              "valid": true,
+              "type": "MEASURE",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "hidden": false,
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "data_type": "integer",
+              "virtual": false,
+              "cast": "integer",
+              "guid": "408cd6e0-a5de-11f0-a2e6-afeb47ddf626",
+              "aggregation_locked": false,
+              "ui_settings": "",
+              "title": "title-408cd6e0-a5de-11f0-a2e6-afeb47ddf626",
+              "description": "",
+              "source": "cohort_cnt",
+              "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "qx72swoink6ib",
+              "id": "measure-0",
+              "datasetName": "Когортный по подпискам",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "3f1467b0-a5de-11f0-a2e6-afeb47ddf626",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "408cd6e0-a5de-11f0-a2e6-afeb47ddf626"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "cohort_cnt",
+              "fakeTitle": "Подписчиков",
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "positiveColorIndex": 2,
+                    "negativeColorIndex": 1
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              }
+            },
+            {
+              "aggregation": "sum",
+              "autoaggregated": false,
+              "valid": true,
+              "type": "MEASURE",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "hidden": false,
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "data_type": "integer",
+              "virtual": false,
+              "cast": "integer",
+              "guid": "42712740-a5de-11f0-a2e6-afeb47ddf626",
+              "aggregation_locked": false,
+              "ui_settings": "",
+              "title": "title-42712740-a5de-11f0-a2e6-afeb47ddf626",
+              "description": "",
+              "source": "lead_cnt_on_day",
+              "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "qx72swoink6ib",
+              "id": "measure-2",
+              "datasetName": "Когортный по подпискам",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "4117d8d0-a5de-11f0-a2e6-afeb47ddf626",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "42712740-a5de-11f0-a2e6-afeb47ddf626"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "lead_cnt_on_day",
+              "fakeTitle": "Лидов",
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "neutral20",
+                    "colorIndex": 9,
+                    "color": "#A6A6A6"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              }
+            },
+            {
+              "aggregation": "sum",
+              "autoaggregated": false,
+              "valid": true,
+              "type": "MEASURE",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "hidden": false,
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "data_type": "integer",
+              "virtual": false,
+              "cast": "integer",
+              "guid": "44b9b7b0-a5de-11f0-a2e6-afeb47ddf626",
+              "aggregation_locked": false,
+              "ui_settings": "",
+              "title": "title-44b9b7b0-a5de-11f0-a2e6-afeb47ddf626",
+              "description": "",
+              "source": "qual_cnt_on_day",
+              "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "qx72swoink6ib",
+              "id": "measure-1",
+              "datasetName": "Когортный по подпискам",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "431863c0-a5de-11f0-a2e6-afeb47ddf626",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "44b9b7b0-a5de-11f0-a2e6-afeb47ddf626"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "qual_cnt_on_day",
+              "fakeTitle": "Квалов",
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "colorIndex": 3,
+                    "color": "#FFC636"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              }
+            },
+            {
+              "aggregation": "none",
+              "cast": "string",
+              "virtual": false,
+              "initial_data_type": "string",
+              "title": "geo",
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "lock_aggregation": false,
+              "valid": true,
+              "guid": "geo_nnm1",
+              "aggregation_locked": false,
+              "data_type": "string",
+              "hidden": false,
+              "autoaggregated": false,
+              "description": "",
+              "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+              "source": "geo",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "qx72swoink6ib",
+              "id": "dimension-20",
+              "datasetName": "Когортный по подпискам",
+              "fakeTitle": "Гео",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "04ea4e40-a5ea-11f0-858d-a71f4fdd9369",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "geo_nnm1"
+              }
+            },
+            {
+              "aggregation": "none",
+              "cast": "string",
+              "virtual": false,
+              "initial_data_type": "string",
+              "title": "invitelink",
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "lock_aggregation": false,
+              "valid": true,
+              "guid": "invitelink_66t8",
+              "aggregation_locked": false,
+              "data_type": "string",
+              "hidden": false,
+              "autoaggregated": false,
+              "description": "",
+              "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+              "source": "invitelink",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "qx72swoink6ib",
+              "id": "dimension-10",
+              "datasetName": "Когортный по подпискам",
+              "fakeTitle": "Ссылка",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "02855c30-a5ea-11f0-858d-a71f4fdd9369",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "invitelink_66t8"
+              }
+            },
+            {
+              "data_type": "string",
+              "lock_aggregation": false,
+              "cast": "string",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "managed_by": "user",
+              "title": "invite_link_name",
+              "description": "",
+              "aggregation_locked": false,
+              "virtual": false,
+              "guid": "invite_link_name_v979",
+              "aggregation": "none",
+              "hidden": false,
+              "ui_settings": "",
+              "has_auto_aggregation": false,
+              "valid": true,
+              "initial_data_type": "string",
+              "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+              "source": "invite_link_name",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "qx72swoink6ib",
+              "id": "inserted-1760108485203",
+              "datasetName": "Когортный по подпискам",
+              "fakeTitle": "Название ссылки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "ff2cbb50-a5e9-11f0-858d-a71f4fdd9369",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "invite_link_name_v979"
+              }
+            },
+            {
+              "lock_aggregation": false,
+              "hidden": false,
+              "title": "crm_ids",
+              "cast": "string",
+              "ui_settings": "",
+              "aggregation_locked": false,
+              "valid": true,
+              "guid": "crm_ids_tt5v",
+              "autoaggregated": false,
+              "description": "",
+              "type": "DIMENSION",
+              "data_type": "string",
+              "aggregation": "none",
+              "has_auto_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "string",
+              "managed_by": "user",
+              "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+              "source": "crm_ids",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "qx72swoink6ib",
+              "id": "dimension-21",
+              "datasetName": "Когортный по подпискам"
+            },
+            {
+              "lock_aggregation": false,
+              "hidden": false,
+              "title": "date_quals",
+              "cast": "string",
+              "ui_settings": "",
+              "aggregation_locked": false,
+              "valid": true,
+              "guid": "date_quals_csro",
+              "autoaggregated": false,
+              "description": "",
+              "type": "DIMENSION",
+              "data_type": "string",
+              "aggregation": "none",
+              "has_auto_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "string",
+              "managed_by": "user",
+              "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+              "source": "date_quals",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "qx72swoink6ib",
+              "id": "dimension-22",
+              "datasetName": "Когортный по подпискам"
+            },
+            {
+              "aggregation": "none",
+              "cast": "string",
+              "virtual": false,
+              "initial_data_type": "string",
+              "title": "tg_ids",
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "lock_aggregation": false,
+              "valid": true,
+              "guid": "tg_ids_jgns",
+              "aggregation_locked": false,
+              "data_type": "string",
+              "hidden": false,
+              "autoaggregated": false,
+              "description": "",
+              "avatar_id": "d9413cf0-a5cf-11f0-a980-4fac36523cd7",
+              "source": "tg_ids",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "qx72swoink6ib",
+              "id": "dimension-13",
+              "datasetName": "Когортный по подпискам",
+              "fakeTitle": "Telegram ID",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "06e8b650-a5ea-11f0-858d-a71f4fdd9369",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "tg_ids_jgns"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

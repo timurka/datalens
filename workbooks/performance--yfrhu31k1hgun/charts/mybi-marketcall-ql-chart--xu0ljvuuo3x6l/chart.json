@@ -1,0 +1,195 @@
+{
+  "entryId": "xu0ljvuuo3x6l",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "1613891958126677157/mybi - marketcall QL-чарт",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-02-05T14:55:13.727Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-02-14T08:57:41.891Z",
+  "savedId": "xvrj4syd2bgyh",
+  "publishedId": "poiuqnn2dd1ud",
+  "revId": "poiuqnn2dd1ud",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "bpds0nslojo40",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "SELECT \n    ROW_NUMBER() OVER (ORDER BY COALESCE(p.lead_creation_date, p.creation_date) DESC) AS N,\n    p.crm_id as \"CRM ID\", \n    COALESCE(p.lead_creation_date, p.creation_date) as \"Дата создания\",\n    al.value as \"Lead ID\",\n    DATE(p.date_qual) AS \"Дата квала\",\n    p.priority AS Приоритет,\n    p.source_deal AS Источник\n\nFROM perfomance_all_leads p\nLEFT JOIN public.amocrm_leads_attributes al ON p.leads_id = al.leads_id\n\nWHERE utmsource = 'marketcall'\n      AND qual = 1 \n      AND al.attribute_id = '1001907'\n      -- параметр интервала дат\n      AND {{interval_from}} <= COALESCE(p.lead_creation_date, p.creation_date) AND COALESCE(p.lead_creation_date, p.creation_date) <= {{interval_to}}\n      \nORDER BY COALESCE(p.lead_creation_date, p.creation_date) DESC\n",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2024-01-01T00:00:00.000Z",
+          "to": "2024-01-31T00:00:00.000Z"
+        }
+      }
+    ],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "n-2",
+              "title": "n",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1707145207927"
+            },
+            {
+              "guid": "Дата создания-4",
+              "title": "Дата создания",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "date",
+              "cast": "date",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "CRM ID-0",
+              "title": "CRM ID",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "b5e86cd0-c4bf-11ee-b9b3-55cc0a968b36",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "CRM ID-0"
+              }
+            },
+            {
+              "guid": "Lead ID-1",
+              "title": "Lead ID",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Дата квала-3",
+              "title": "Дата квала",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "date",
+              "cast": "date",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Приоритет-6",
+              "title": "Приоритет",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Источник-5",
+              "title": "Источник",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "n-3": "continuous",
+              "n-2": "continuous"
+            }
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

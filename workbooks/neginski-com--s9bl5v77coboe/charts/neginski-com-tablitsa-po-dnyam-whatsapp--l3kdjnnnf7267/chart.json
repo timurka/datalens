@@ -1,0 +1,758 @@
+{
+  "entryId": "l3kdjnnnf7267",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1961039106163082879/neginski.com — Таблица по дням whatsapp",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-05-29T14:14:38.250Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-11-27T08:21:46.506Z",
+  "savedId": "j0ideoe1jrio4",
+  "publishedId": "j0ideoe1jrio4",
+  "revId": "j0ideoe1jrio4",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "k1fly68ali925"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "cc8fdbf0-cb69-11f0-a1da-89fc8630033d",
+          "title": "CRQ",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "a87bb6d0-cb69-11f0-9748-031bd1760163",
+          "title": "Брони",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "9da61fc0-cb69-11f0-9748-031bd1760163",
+          "title": "Квалы",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "aaaf5520-cb68-11f0-9748-031bd1760163",
+          "title": "Валидс",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "7b4a6af0-cb67-11f0-9748-031bd1760163",
+          "title": "title-7b4a6af0-cb67-11f0-9748-031bd1760163",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "day_bhg3",
+          "title": "day",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "wa_unique_visitors_etrr",
+          "title": "wa_unique_visitors",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "wa_leads_8ukr",
+          "title": "wa_leads",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "wa_quals_jfxs",
+          "title": "wa_quals",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "wa_valids_j203",
+          "title": "wa_valids",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "wa_bookings_bive",
+          "title": "wa_bookings",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_list_w46x",
+          "title": "geo_list",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100,
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "neginski.com — Таблица",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "totals": "off",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "stacking": "on",
+      "zoomMode": "auto",
+      "mapCenterMode": "auto"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "day_bhg3",
+        "datasetId": "k1fly68ali925",
+        "data_type": "date",
+        "title": "day",
+        "source": "day",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "initial_data_type": "float",
+          "valid": true,
+          "title": "title-7b4a6af0-cb67-11f0-9748-031bd1760163",
+          "autoaggregated": false,
+          "cast": "integer",
+          "aggregation": "sum",
+          "aggregation_locked": false,
+          "ui_settings": "",
+          "managed_by": "user",
+          "data_type": "integer",
+          "lock_aggregation": false,
+          "virtual": false,
+          "guid": "7b4a6af0-cb67-11f0-9748-031bd1760163",
+          "hidden": false,
+          "type": "MEASURE",
+          "has_auto_aggregation": false,
+          "source": "wa_leads",
+          "avatar_id": "d2e39700-cafe-11f0-a3cb-47b31afddc85",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "k1fly68ali925"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "initial_data_type": "integer",
+          "valid": true,
+          "title": "Валидс",
+          "autoaggregated": true,
+          "cast": "integer",
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "ui_settings": "",
+          "managed_by": "user",
+          "data_type": "integer",
+          "lock_aggregation": false,
+          "virtual": false,
+          "guid": "aaaf5520-cb68-11f0-9748-031bd1760163",
+          "hidden": false,
+          "type": "MEASURE",
+          "has_auto_aggregation": true,
+          "guid_formula": "IF(sum(int([wa_valids_j203])) > 0, sum(int([wa_valids_j203])), NULL)",
+          "formula": "IF(sum(int([wa_valids])) > 0, sum(int([wa_valids])), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "k1fly68ali925"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "initial_data_type": "integer",
+          "valid": true,
+          "title": "Квалы",
+          "autoaggregated": true,
+          "cast": "integer",
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "ui_settings": "",
+          "managed_by": "user",
+          "data_type": "integer",
+          "lock_aggregation": false,
+          "virtual": false,
+          "guid": "9da61fc0-cb69-11f0-9748-031bd1760163",
+          "hidden": false,
+          "type": "MEASURE",
+          "has_auto_aggregation": true,
+          "guid_formula": "IF(sum(int([wa_quals_jfxs])) > 0, sum(int([wa_quals_jfxs])), NULL)",
+          "formula": "IF(sum(int([wa_quals])) > 0, sum(int([wa_quals])), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "k1fly68ali925"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "initial_data_type": "integer",
+          "valid": true,
+          "title": "Брони",
+          "autoaggregated": true,
+          "cast": "integer",
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "ui_settings": "",
+          "managed_by": "user",
+          "data_type": "integer",
+          "lock_aggregation": false,
+          "virtual": false,
+          "guid": "a87bb6d0-cb69-11f0-9748-031bd1760163",
+          "hidden": false,
+          "type": "MEASURE",
+          "has_auto_aggregation": true,
+          "guid_formula": "IF(sum(int([wa_bookings_bive])) > 0, sum(int([wa_bookings_bive])), NULL)",
+          "formula": "IF(sum(int([wa_bookings])) > 0, sum(int([wa_bookings])), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "k1fly68ali925"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "initial_data_type": "float",
+          "valid": true,
+          "title": "CRQ",
+          "autoaggregated": true,
+          "cast": "float",
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "ui_settings": "",
+          "managed_by": "user",
+          "data_type": "float",
+          "lock_aggregation": false,
+          "virtual": false,
+          "guid": "cc8fdbf0-cb69-11f0-a1da-89fc8630033d",
+          "hidden": false,
+          "type": "MEASURE",
+          "has_auto_aggregation": true,
+          "guid_formula": "IF SUM([wa_leads_8ukr]) > 0 THEN\n    IF (SUM([wa_quals_jfxs]) / SUM([wa_leads_8ukr])) > 0 THEN\n        SUM([wa_quals_jfxs]) / SUM([wa_leads_8ukr])\n    END\nEND",
+          "formula": "IF SUM([wa_leads]) > 0 THEN\n    IF (SUM([wa_quals]) / SUM([wa_leads])) > 0 THEN\n        SUM([wa_quals]) / SUM([wa_leads])\n    END\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "fakeTitle": "CRQ",
+          "backgroundSettings": {
+            "enabled": false,
+            "settingsId": "e1aef6b0-cb69-11f0-a1da-89fc8630033d",
+            "settings": {
+              "gradientState": {
+                "thresholdsMode": "auto",
+                "gradientPalette": "blue",
+                "gradientMode": "2-point",
+                "reversed": false
+              },
+              "paletteState": {},
+              "isContinuous": true
+            },
+            "colorFieldGuid": "cc8fdbf0-cb69-11f0-a1da-89fc8630033d"
+          },
+          "barsSettings": {
+            "enabled": false,
+            "colorSettings": {
+              "colorType": "two-color",
+              "settings": {
+                "positiveColorIndex": 2,
+                "negativeColorIndex": 1
+              }
+            },
+            "showLabels": true,
+            "align": "default",
+            "scale": {
+              "mode": "auto"
+            },
+            "showBarsInTotals": false
+          },
+          "datasetId": "k1fly68ali925"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "cast": "date",
+              "guid": "day_bhg3",
+              "description": "",
+              "managed_by": "user",
+              "type": "DIMENSION",
+              "title": "day",
+              "data_type": "date",
+              "ui_settings": "",
+              "aggregation": "none",
+              "initial_data_type": "date",
+              "lock_aggregation": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "virtual": false,
+              "valid": true,
+              "source": "day",
+              "avatar_id": "d2e39700-cafe-11f0-a3cb-47b31afddc85",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "k1fly68ali925",
+              "id": "dimension-5",
+              "datasetName": "metrika_neginski_whatsapp",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Период",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a99e64e0-cb69-11f0-9748-031bd1760163",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "day_bhg3"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "cast": "integer",
+              "guid": "7b4a6af0-cb67-11f0-9748-031bd1760163",
+              "description": "",
+              "managed_by": "user",
+              "type": "MEASURE",
+              "title": "title-7b4a6af0-cb67-11f0-9748-031bd1760163",
+              "data_type": "integer",
+              "ui_settings": "",
+              "aggregation": "sum",
+              "initial_data_type": "float",
+              "lock_aggregation": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "virtual": false,
+              "valid": true,
+              "source": "wa_leads",
+              "avatar_id": "d2e39700-cafe-11f0-a3cb-47b31afddc85",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "k1fly68ali925",
+              "id": "measure-4",
+              "datasetName": "metrika_neginski_whatsapp",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "78a93330-cb67-11f0-9748-031bd1760163",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "7b4a6af0-cb67-11f0-9748-031bd1760163"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "wa_leads",
+              "fakeTitle": "Лиды",
+              "default_value": null,
+              "value_constraint": null,
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "color": "#CCCCCC"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              }
+            },
+            {
+              "cast": "integer",
+              "guid": "aaaf5520-cb68-11f0-9748-031bd1760163",
+              "description": "",
+              "managed_by": "user",
+              "type": "MEASURE",
+              "title": "Валидс",
+              "data_type": "integer",
+              "ui_settings": "",
+              "aggregation": "none",
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "hidden": false,
+              "has_auto_aggregation": true,
+              "aggregation_locked": true,
+              "autoaggregated": true,
+              "virtual": false,
+              "valid": true,
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "IF(sum(int([wa_valids])) > 0, sum(int([wa_valids])), NULL)",
+              "guid_formula": "IF(sum(int([wa_valids_j203])) > 0, sum(int([wa_valids_j203])), NULL)",
+              "datasetId": "k1fly68ali925",
+              "id": "measure-3",
+              "datasetName": "metrika_neginski_whatsapp",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "7bbefeb0-cb67-11f0-9748-031bd1760163",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "aaaf5520-cb68-11f0-9748-031bd1760163"
+              },
+              "local": true,
+              "originalTitle": "wa_valids",
+              "fakeTitle": "Валид",
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "colorIndex": 2,
+                    "color": "#8AD554"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "cast": "integer",
+              "guid": "9da61fc0-cb69-11f0-9748-031bd1760163",
+              "description": "",
+              "managed_by": "user",
+              "type": "MEASURE",
+              "title": "Квалы",
+              "data_type": "integer",
+              "ui_settings": "",
+              "aggregation": "none",
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "hidden": false,
+              "has_auto_aggregation": true,
+              "aggregation_locked": true,
+              "autoaggregated": true,
+              "virtual": false,
+              "valid": true,
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "IF(sum(int([wa_quals])) > 0, sum(int([wa_quals])), NULL)",
+              "guid_formula": "IF(sum(int([wa_quals_jfxs])) > 0, sum(int([wa_quals_jfxs])), NULL)",
+              "datasetId": "k1fly68ali925",
+              "id": "measure-2",
+              "datasetName": "metrika_neginski_whatsapp",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "7db94810-cb67-11f0-9748-031bd1760163",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "9da61fc0-cb69-11f0-9748-031bd1760163"
+              },
+              "local": true,
+              "originalTitle": "wa_quals",
+              "default_value": null,
+              "value_constraint": null,
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "colorIndex": 3,
+                    "color": "#FFC636"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              }
+            },
+            {
+              "has_auto_aggregation": true,
+              "valid": true,
+              "description": "",
+              "guid": "cc8fdbf0-cb69-11f0-a1da-89fc8630033d",
+              "autoaggregated": true,
+              "type": "MEASURE",
+              "hidden": false,
+              "data_type": "float",
+              "managed_by": "user",
+              "virtual": false,
+              "title": "CRQ",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "cast": "float",
+              "aggregation_locked": true,
+              "initial_data_type": "float",
+              "aggregation": "none",
+              "guid_formula": "IF SUM([wa_leads_8ukr]) > 0 THEN\n    IF (SUM([wa_quals_jfxs]) / SUM([wa_leads_8ukr])) > 0 THEN\n        SUM([wa_quals_jfxs]) / SUM([wa_leads_8ukr])\n    END\nEND",
+              "formula": "IF SUM([wa_leads]) > 0 THEN\n    IF (SUM([wa_quals]) / SUM([wa_leads])) > 0 THEN\n        SUM([wa_quals]) / SUM([wa_leads])\n    END\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "k1fly68ali925",
+              "id": "measure-0",
+              "datasetName": "metrika_neginski_whatsapp",
+              "fakeTitle": "CRQ",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "positiveColorIndex": 2,
+                    "negativeColorIndex": 1
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "e1aef6b0-cb69-11f0-a1da-89fc8630033d",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "cc8fdbf0-cb69-11f0-a1da-89fc8630033d"
+              }
+            },
+            {
+              "cast": "integer",
+              "guid": "a87bb6d0-cb69-11f0-9748-031bd1760163",
+              "description": "",
+              "managed_by": "user",
+              "type": "MEASURE",
+              "title": "Брони",
+              "data_type": "integer",
+              "ui_settings": "",
+              "aggregation": "none",
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "hidden": false,
+              "has_auto_aggregation": true,
+              "aggregation_locked": true,
+              "autoaggregated": true,
+              "virtual": false,
+              "valid": true,
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "IF(sum(int([wa_bookings])) > 0, sum(int([wa_bookings])), NULL)",
+              "guid_formula": "IF(sum(int([wa_bookings_bive])) > 0, sum(int([wa_bookings_bive])), NULL)",
+              "datasetId": "k1fly68ali925",
+              "id": "measure-1",
+              "datasetName": "metrika_neginski_whatsapp",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "7ff29640-cb67-11f0-9748-031bd1760163",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "a87bb6d0-cb69-11f0-9748-031bd1760163"
+              },
+              "local": true,
+              "originalTitle": "wa_bookings",
+              "default_value": null,
+              "value_constraint": null,
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "colorIndex": 1,
+                    "color": "#FF3D64"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "hintSettings": {
+                "enabled": false,
+                "text": ""
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "s9bl5v77coboe",
+  "collectionId": null
+}

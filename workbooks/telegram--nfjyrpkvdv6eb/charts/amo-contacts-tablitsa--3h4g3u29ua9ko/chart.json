@@ -1,0 +1,374 @@
+{
+  "entryId": "3h4g3u29ua9ko",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2082059292185199860/amo_contacts — Таблица",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-11-12T13:40:09.013Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-11-12T13:41:25.975Z",
+  "savedId": "p3q2xo9pgnysa",
+  "publishedId": "p3q2xo9pgnysa",
+  "revId": "p3q2xo9pgnysa",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "xby9zwxx4tkki"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "09493940-bfcd-11f0-a9fb-0f9b4c1166d6",
+          "title": "Телефон",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "contacts_amo_id_d4xq",
+          "title": "contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_weno",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "phone_gm5f",
+          "title": "phone",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id_aihk",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_telegram_id_mchx",
+          "title": "source_telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_username_rkjo",
+          "title": "telegram_username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "instagram_n3hz",
+          "title": "instagram",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_nnao",
+          "title": "geo",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation": "none",
+          "virtual": false,
+          "title": "Телефон",
+          "cast": "string",
+          "type": "DIMENSION",
+          "initial_data_type": "string",
+          "lock_aggregation": false,
+          "data_type": "string",
+          "managed_by": "user",
+          "valid": true,
+          "hidden": false,
+          "description": "",
+          "ui_settings": "",
+          "aggregation_locked": true,
+          "has_auto_aggregation": false,
+          "autoaggregated": false,
+          "guid": "09493940-bfcd-11f0-a9fb-0f9b4c1166d6",
+          "formula": "CONCAT(LEFT([phone], 6), '*')",
+          "guid_formula": "CONCAT(LEFT([phone_gm5f], 6), '*')",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "xby9zwxx4tkki"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "type": "DIMENSION",
+              "hidden": false,
+              "description": "",
+              "title": "contacts_amo_id",
+              "valid": true,
+              "data_type": "integer",
+              "aggregation": "none",
+              "cast": "integer",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "initial_data_type": "integer",
+              "has_auto_aggregation": false,
+              "guid": "contacts_amo_id_d4xq",
+              "aggregation_locked": false,
+              "source": "contacts_amo_id",
+              "avatar_id": "fb438d60-bfcb-11f0-b8bf-31b8e5b551b7",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xby9zwxx4tkki",
+              "id": "dimension-1",
+              "datasetName": "amo_contacts",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "45593340-bfcd-11f0-a53e-3d3a3ae0f42a",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "contacts_amo_id_d4xq"
+              }
+            },
+            {
+              "type": "DIMENSION",
+              "hidden": false,
+              "description": "",
+              "title": "Телефон",
+              "valid": true,
+              "data_type": "string",
+              "aggregation": "none",
+              "cast": "string",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "has_auto_aggregation": false,
+              "guid": "09493940-bfcd-11f0-a9fb-0f9b4c1166d6",
+              "aggregation_locked": true,
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "CONCAT(LEFT([phone], 6), '*')",
+              "guid_formula": "CONCAT(LEFT([phone_gm5f], 6), '*')",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xby9zwxx4tkki",
+              "id": "dimension-0",
+              "datasetName": "amo_contacts",
+              "local": true
+            },
+            {
+              "type": "DIMENSION",
+              "hidden": false,
+              "description": "",
+              "title": "geo",
+              "valid": true,
+              "data_type": "string",
+              "aggregation": "none",
+              "cast": "string",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "has_auto_aggregation": false,
+              "guid": "geo_nnao",
+              "aggregation_locked": false,
+              "source": "geo",
+              "avatar_id": "fb438d60-bfcb-11f0-b8bf-31b8e5b551b7",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xby9zwxx4tkki",
+              "id": "dimension-8",
+              "datasetName": "amo_contacts"
+            },
+            {
+              "type": "DIMENSION",
+              "hidden": false,
+              "description": "",
+              "title": "telegram_id",
+              "valid": true,
+              "data_type": "integer",
+              "aggregation": "none",
+              "cast": "integer",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "initial_data_type": "integer",
+              "has_auto_aggregation": false,
+              "guid": "telegram_id_aihk",
+              "aggregation_locked": false,
+              "source": "telegram_id",
+              "avatar_id": "fb438d60-bfcb-11f0-b8bf-31b8e5b551b7",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xby9zwxx4tkki",
+              "id": "dimension-4",
+              "datasetName": "amo_contacts",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "edf782a0-bfcc-11f0-a9fb-0f9b4c1166d6",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "telegram_id_aihk"
+              }
+            },
+            {
+              "type": "DIMENSION",
+              "hidden": false,
+              "description": "",
+              "title": "source_telegram_id",
+              "valid": true,
+              "data_type": "string",
+              "aggregation": "none",
+              "cast": "string",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "has_auto_aggregation": false,
+              "guid": "source_telegram_id_mchx",
+              "aggregation_locked": false,
+              "source": "source_telegram_id",
+              "avatar_id": "fb438d60-bfcb-11f0-b8bf-31b8e5b551b7",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xby9zwxx4tkki",
+              "id": "dimension-5",
+              "datasetName": "amo_contacts"
+            },
+            {
+              "type": "DIMENSION",
+              "hidden": false,
+              "description": "",
+              "title": "telegram_username",
+              "valid": true,
+              "data_type": "string",
+              "aggregation": "none",
+              "cast": "string",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "has_auto_aggregation": false,
+              "guid": "telegram_username_rkjo",
+              "aggregation_locked": false,
+              "source": "telegram_username",
+              "avatar_id": "fb438d60-bfcb-11f0-b8bf-31b8e5b551b7",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xby9zwxx4tkki",
+              "id": "dimension-6",
+              "datasetName": "amo_contacts"
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

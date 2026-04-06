@@ -1,0 +1,420 @@
+{
+  "entryId": "thccxdo3uofcg",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1718079907067595788/Логи входа — Таблица группировка",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-06-28T08:58:05.071Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-06-28T08:58:05.071Z",
+  "savedId": "6uppaq256196t",
+  "publishedId": "6uppaq256196t",
+  "revId": "6uppaq256196t",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "7vqqbr0eb4gcu"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "c34d50d0-2fa8-11ef-9f73-119ac9d9d462",
+          "title": "title-c34d50d0-2fa8-11ef-9f73-119ac9d9d462",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "b2997f70-2fa8-11ef-9f73-119ac9d9d462",
+          "title": "title-b2997f70-2fa8-11ef-9f73-119ac9d9d462",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "cb646d10-28b6-11ef-ad03-053a0ef05bf2",
+          "title": "channel_name",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "user_id_6e86",
+          "title": "user_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_8h69",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "3b92a150-28bd-11ef-a579-dbd621870717",
+          "title": "date_join_short",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_left_vp75",
+          "title": "date_left",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_k3yq",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username_s00g",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_mfy4",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_eimh",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "count_2r96",
+          "title": "count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_qual_v2df",
+          "title": "sum_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_4rzv",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_qual_ofse",
+          "title": "date_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_ub7e",
+          "title": "channel",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_1_lvak",
+          "title": "source",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "c34d50d0-2fa8-11ef-9f73-119ac9d9d462",
+        "datasetId": "7vqqbr0eb4gcu",
+        "fakeTitle": "user_id",
+        "originalTitle": "user_id",
+        "data_type": "integer",
+        "title": "title-c34d50d0-2fa8-11ef-9f73-119ac9d9d462",
+        "source": "user_id",
+        "direction": "DESC",
+        "type": "MEASURE"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "cast": "integer",
+          "managed_by": "user",
+          "initial_data_type": "integer",
+          "aggregation_locked": false,
+          "autoaggregated": false,
+          "guid": "b2997f70-2fa8-11ef-9f73-119ac9d9d462",
+          "aggregation": "countunique",
+          "hidden": false,
+          "has_auto_aggregation": false,
+          "valid": true,
+          "description": "",
+          "type": "MEASURE",
+          "data_type": "integer",
+          "virtual": false,
+          "title": "title-b2997f70-2fa8-11ef-9f73-119ac9d9d462",
+          "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+          "source": "user_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "7vqqbr0eb4gcu"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "cast": "integer",
+          "managed_by": "user",
+          "initial_data_type": "integer",
+          "aggregation_locked": false,
+          "autoaggregated": false,
+          "guid": "c34d50d0-2fa8-11ef-9f73-119ac9d9d462",
+          "aggregation": "countunique",
+          "hidden": false,
+          "has_auto_aggregation": false,
+          "valid": true,
+          "description": "",
+          "type": "MEASURE",
+          "data_type": "integer",
+          "virtual": false,
+          "title": "title-c34d50d0-2fa8-11ef-9f73-119ac9d9d462",
+          "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+          "source": "user_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "originalTitle": "user_id",
+          "fakeTitle": "user_id",
+          "datasetId": "7vqqbr0eb4gcu"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "valid": true,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "description": "",
+              "type": "DIMENSION",
+              "hidden": false,
+              "lock_aggregation": false,
+              "title": "invitelinks",
+              "managed_by": "user",
+              "data_type": "string",
+              "cast": "string",
+              "virtual": false,
+              "aggregation": "none",
+              "guid": "invitelinks_mfy4",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "invitelinks",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "7vqqbr0eb4gcu",
+              "id": "dimension-10",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Ссылка",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d073dcc0-2fa8-11ef-9f73-119ac9d9d462",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "invitelinks_mfy4"
+              }
+            },
+            {
+              "valid": true,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "description": "",
+              "type": "DIMENSION",
+              "hidden": false,
+              "lock_aggregation": false,
+              "title": "source",
+              "managed_by": "user",
+              "data_type": "string",
+              "cast": "string",
+              "virtual": false,
+              "aggregation": "none",
+              "guid": "source_1_lvak",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "source",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "7vqqbr0eb4gcu",
+              "id": "dimension-17",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Источник",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "cd288250-2fa8-11ef-9f73-119ac9d9d462",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "source_1_lvak"
+              }
+            },
+            {
+              "valid": true,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "description": "",
+              "type": "MEASURE",
+              "hidden": false,
+              "lock_aggregation": false,
+              "title": "title-b2997f70-2fa8-11ef-9f73-119ac9d9d462",
+              "managed_by": "user",
+              "data_type": "integer",
+              "cast": "integer",
+              "virtual": false,
+              "aggregation": "countunique",
+              "guid": "b2997f70-2fa8-11ef-9f73-119ac9d9d462",
+              "initial_data_type": "integer",
+              "aggregation_locked": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "user_id",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "7vqqbr0eb4gcu",
+              "id": "measure-1",
+              "datasetName": "Логи входа",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "af9a4930-2fa8-11ef-9f73-119ac9d9d462",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "b2997f70-2fa8-11ef-9f73-119ac9d9d462"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "user_id",
+              "fakeTitle": "Вступило (уник.)",
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "positiveColor": "#8AD554",
+                    "negativeColor": "#FF3D64"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "invitelinks_mfy4": "discrete"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    },
+    "convert": false
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

@@ -1,0 +1,581 @@
+{
+  "entryId": "4er90hyndje4q",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1930607660353193726/leadmagnets — Таблица сделок",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-04-17T14:32:47.257Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-04-17T14:32:47.257Z",
+  "savedId": "5fsa1izoekf6r",
+  "publishedId": "5fsa1izoekf6r",
+  "revId": "5fsa1izoekf6r",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "q0dvm3kp0y8wc"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "creation_date_time_yxa4",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_teaz",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_lozi",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_hx43",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utmsource_dr2n",
+          "title": "utmsource",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_exst",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_a_7cw5",
+          "title": "qual_priority_a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_b_qndp",
+          "title": "qual_priority_b",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_c_smx9",
+          "title": "qual_priority_c",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_jw6p",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_9v4t",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "tag_name_76ec",
+          "title": "tag_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "broker_pipeline_5jp9",
+          "title": "broker_pipeline",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100,
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "leadmagnets — Таблица сделок",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "totals": "on",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "stacking": "on"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "creation_date_teaz",
+        "datasetId": "q0dvm3kp0y8wc",
+        "data_type": "date",
+        "title": "creation_date",
+        "source": "creation_date",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "creation_date_teaz",
+              "valid": true,
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": false,
+              "initial_data_type": "date",
+              "managed_by": "user",
+              "title": "creation_date",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "cast": "date",
+              "has_auto_aggregation": false,
+              "data_type": "date",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "source": "creation_date",
+              "avatar_id": "25e05c20-e2ea-11ef-9438-add5470b4e7c",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "q0dvm3kp0y8wc",
+              "id": "dimension-2",
+              "datasetName": "leadmagnets",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Дата лида",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1ab0cbe0-e3b3-11ef-904e-35edddde688b",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "creation_date_teaz"
+              }
+            },
+            {
+              "guid": "crm_id_lozi",
+              "valid": true,
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": false,
+              "initial_data_type": "integer",
+              "managed_by": "user",
+              "title": "crm_id",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "cast": "integer",
+              "has_auto_aggregation": false,
+              "data_type": "integer",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "source": "crm_id",
+              "avatar_id": "25e05c20-e2ea-11ef-9438-add5470b4e7c",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "q0dvm3kp0y8wc",
+              "id": "dimension-3",
+              "datasetName": "leadmagnets",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "06b6a920-e3b3-11ef-904e-35edddde688b",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "crm_id_lozi"
+              }
+            },
+            {
+              "guid": "geo_hx43",
+              "valid": true,
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": false,
+              "initial_data_type": "string",
+              "managed_by": "user",
+              "title": "geo",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "cast": "string",
+              "has_auto_aggregation": false,
+              "data_type": "string",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "source": "geo",
+              "avatar_id": "25e05c20-e2ea-11ef-9438-add5470b4e7c",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "q0dvm3kp0y8wc",
+              "id": "dimension-4",
+              "datasetName": "leadmagnets",
+              "fakeTitle": "Гео",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1db5a770-e3b3-11ef-904e-35edddde688b",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "geo_hx43"
+              }
+            },
+            {
+              "guid": "tag_name_76ec",
+              "valid": true,
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": false,
+              "initial_data_type": "string",
+              "managed_by": "user",
+              "title": "tag_name",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "cast": "string",
+              "has_auto_aggregation": false,
+              "data_type": "string",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "source": "tag_name",
+              "avatar_id": "25e05c20-e2ea-11ef-9438-add5470b4e7c",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "q0dvm3kp0y8wc",
+              "id": "dimension-12",
+              "datasetName": "leadmagnets",
+              "fakeTitle": "Название тэга",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1f870c10-e3b3-11ef-904e-35edddde688b",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "tag_name_76ec"
+              }
+            },
+            {
+              "guid": "utmsource_dr2n",
+              "valid": true,
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": false,
+              "initial_data_type": "string",
+              "managed_by": "user",
+              "title": "utmsource",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "cast": "string",
+              "has_auto_aggregation": false,
+              "data_type": "string",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "source": "utmsource",
+              "avatar_id": "25e05c20-e2ea-11ef-9438-add5470b4e7c",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "q0dvm3kp0y8wc",
+              "id": "dimension-5",
+              "datasetName": "leadmagnets",
+              "fakeTitle": "Источник",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "241baf60-e3b3-11ef-904e-35edddde688b",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "utmsource_dr2n"
+              }
+            },
+            {
+              "guid": "qual_exst",
+              "valid": true,
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": false,
+              "initial_data_type": "integer",
+              "managed_by": "user",
+              "title": "qual",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "cast": "integer",
+              "has_auto_aggregation": false,
+              "data_type": "integer",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "source": "qual",
+              "avatar_id": "25e05c20-e2ea-11ef-9438-add5470b4e7c",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "q0dvm3kp0y8wc",
+              "id": "dimension-6",
+              "datasetName": "leadmagnets",
+              "fakeTitle": "Квалы",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "274948a0-e3b3-11ef-904e-35edddde688b",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "qual_exst"
+              }
+            },
+            {
+              "guid": "booking_event_jw6p",
+              "valid": true,
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": false,
+              "initial_data_type": "integer",
+              "managed_by": "user",
+              "title": "booking_event",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "cast": "integer",
+              "has_auto_aggregation": false,
+              "data_type": "integer",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "source": "booking_event",
+              "avatar_id": "25e05c20-e2ea-11ef-9438-add5470b4e7c",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "q0dvm3kp0y8wc",
+              "id": "dimension-10",
+              "datasetName": "leadmagnets",
+              "fakeTitle": "Брони",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "29d571c0-e3b3-11ef-904e-35edddde688b",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "booking_event_jw6p"
+              }
+            },
+            {
+              "guid": "broker_pipeline_5jp9",
+              "valid": true,
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": false,
+              "initial_data_type": "integer",
+              "managed_by": "user",
+              "title": "broker_pipeline",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "cast": "integer",
+              "has_auto_aggregation": false,
+              "data_type": "integer",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "source": "broker_pipeline",
+              "avatar_id": "25e05c20-e2ea-11ef-9438-add5470b4e7c",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "q0dvm3kp0y8wc",
+              "id": "dimension-13",
+              "datasetName": "leadmagnets",
+              "fakeTitle": "У брокеров",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "2c2220e0-e3b3-11ef-904e-35edddde688b",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "broker_pipeline_5jp9"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

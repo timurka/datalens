@@ -1,0 +1,212 @@
+{
+  "entryId": "yk51f8iqa2gom",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "1705744111287406394/Логи входа — Индикатор квалов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-06-11T08:29:03.645Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-06-11T08:29:20.023Z",
+  "savedId": "dzkgwe0cdw461",
+  "publishedId": "dzkgwe0cdw461",
+  "revId": "dzkgwe0cdw461",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "vh2lph3ot1laj"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "ac948180-27cc-11ef-8dde-37cd5e904484",
+          "title": "title-ac948180-27cc-11ef-8dde-37cd5e904484",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "a8d96460-27c3-11ef-a0f4-7794d1bcdfc1",
+          "title": "source",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "user_id_6e86",
+          "title": "user_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_8h69",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_left_vp75",
+          "title": "date_left",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_k3yq",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username_s00g",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_mfy4",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_eimh",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "count_2r96",
+          "title": "count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_qual_v2df",
+          "title": "sum_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_4rzv",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#FFC636",
+      "metricFontColorPalette": "classic20",
+      "indicatorTitleMode": "by-field"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "initial_data_type": "integer",
+          "virtual": false,
+          "autoaggregated": false,
+          "cast": "integer",
+          "valid": true,
+          "aggregation": "sum",
+          "title": "title-ac948180-27cc-11ef-8dde-37cd5e904484",
+          "aggregation_locked": false,
+          "guid": "ac948180-27cc-11ef-8dde-37cd5e904484",
+          "hidden": false,
+          "description": "",
+          "data_type": "integer",
+          "managed_by": "user",
+          "type": "MEASURE",
+          "has_auto_aggregation": false,
+          "source": "sum_qual",
+          "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "vh2lph3ot1laj"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "cast": "integer",
+              "aggregation_locked": false,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "aggregation": "sum",
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "guid": "ac948180-27cc-11ef-8dde-37cd5e904484",
+              "description": "",
+              "type": "MEASURE",
+              "title": "title-ac948180-27cc-11ef-8dde-37cd5e904484",
+              "data_type": "integer",
+              "initial_data_type": "integer",
+              "virtual": false,
+              "autoaggregated": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "sum_qual",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "sum_qual",
+              "fakeTitle": "Квалов",
+              "datasetId": "vh2lph3ot1laj",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              }
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "axisModeMap": {
+              "ac948180-27cc-11ef-8dde-37cd5e904484": "continuous"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

@@ -1,0 +1,262 @@
+{
+  "entryId": "lkcousk2mgfo6",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "2026173845043417078/По клиентам — Индикатор CR в покупку",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-08-27T11:05:44.280Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-08-27T11:07:54.836Z",
+  "savedId": "21t6p72wg53un",
+  "publishedId": "21t6p72wg53un",
+  "revId": "21t6p72wg53un",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "fe033520ovhc0"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "b4336da0-8335-11f0-bc63-793587fe7224",
+          "title": "clients_book",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "aa3f0ed0-8335-11f0-bc63-793587fe7224",
+          "title": "CR в покупку",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "last_creation_date_time_6jnr",
+          "title": "last_creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "first_creation_date_time_w8az",
+          "title": "first_creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "last_crm_id_l8a6",
+          "title": "last_crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "first_crm_id_jw7y",
+          "title": "first_crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_count_4kqn",
+          "title": "crm_id_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_book_f0wv",
+          "title": "sum_book",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_qual_s6ln",
+          "title": "sum_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contacts_amo_id_p3zw",
+          "title": "contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_7cg7",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_ruu6",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "group_name_ro82",
+          "title": "group_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "first_creation_date_cp69",
+          "title": "first_creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_deal_amount_7824",
+          "title": "sum_deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_revenue_9fx6",
+          "title": "sum_revenue",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "last_creation_date_cvsk",
+          "title": "last_creation_date",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontColorIndex": 2,
+      "metricFontSize": "s",
+      "metricFontColorPalette": "classic20",
+      "metricFontColor": "#8AD554"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "float",
+          "managed_by": "user",
+          "initial_data_type": "float",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "virtual": false,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "description": "",
+          "valid": true,
+          "ui_settings": "",
+          "autoaggregated": true,
+          "has_auto_aggregation": true,
+          "hidden": false,
+          "guid": "aa3f0ed0-8335-11f0-bc63-793587fe7224",
+          "title": "CR в покупку",
+          "data_type": "float",
+          "formula": "IF COUNTD([contacts_amo_id]) > 0 THEN\n    [clients_book] / COUNTD([contacts_amo_id])\nELSE\n    NULL\nEND",
+          "guid_formula": "IF COUNTD([contacts_amo_id_p3zw]) > 0 THEN\n    [b4336da0-8335-11f0-bc63-793587fe7224] / COUNTD([contacts_amo_id_p3zw])\nELSE\n    NULL\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "fe033520ovhc0"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "integer",
+          "managed_by": "user",
+          "initial_data_type": "integer",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "virtual": false,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "description": "",
+          "valid": true,
+          "ui_settings": "",
+          "autoaggregated": true,
+          "has_auto_aggregation": true,
+          "hidden": false,
+          "guid": "b4336da0-8335-11f0-bc63-793587fe7224",
+          "title": "clients_book",
+          "data_type": "integer",
+          "formula": "COUNTD_IF([contacts_amo_id], [sum_book] > 0)",
+          "guid_formula": "COUNTD_IF([contacts_amo_id_p3zw], [sum_book_f0wv] > 0)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "fe033520ovhc0"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "cast": "float",
+              "managed_by": "user",
+              "initial_data_type": "float",
+              "aggregation_locked": true,
+              "lock_aggregation": false,
+              "virtual": false,
+              "type": "MEASURE",
+              "aggregation": "none",
+              "description": "",
+              "valid": true,
+              "ui_settings": "",
+              "autoaggregated": true,
+              "has_auto_aggregation": true,
+              "hidden": false,
+              "guid": "aa3f0ed0-8335-11f0-bc63-793587fe7224",
+              "title": "CR в покупку",
+              "data_type": "float",
+              "formula": "IF COUNTD([contacts_amo_id]) > 0 THEN\n    [clients_book] / COUNTD([contacts_amo_id])\nELSE\n    NULL\nEND",
+              "guid_formula": "IF COUNTD([contacts_amo_id_p3zw]) > 0 THEN\n    [b4336da0-8335-11f0-bc63-793587fe7224] / COUNTD([contacts_amo_id_p3zw])\nELSE\n    NULL\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "fe033520ovhc0",
+              "id": "measure-1",
+              "datasetName": "По клиентам",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "10mo8a4aebtgm",
+  "collectionId": null
+}

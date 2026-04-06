@@ -1,0 +1,417 @@
+{
+  "entryId": "sc3z1r96lxr4c",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2108756259636250312/broker_leads_distrib — Таблица датасета",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-12-19T09:42:15.537Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-12-19T09:44:18.618Z",
+  "savedId": "td41fzmdjkeyd",
+  "publishedId": "td41fzmdjkeyd",
+  "revId": "td41fzmdjkeyd",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "vf6w80lojksuf"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "485ffd80-dcbf-11f0-8178-55d19cb6722a",
+          "title": "CRM ID",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "creation_date_time_aq1o",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "5e9985c0-dcbb-11f0-bef3-91013c5ee3fe",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_urcf",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_bg2q",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_qc5x",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "distrib_bieq",
+          "title": "distrib",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "times_vzd9",
+          "title": "times",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "valid": true,
+          "aggregation_locked": true,
+          "initial_data_type": "markup",
+          "hidden": false,
+          "title": "CRM ID",
+          "autoaggregated": false,
+          "cast": "markup",
+          "managed_by": "user",
+          "virtual": false,
+          "lock_aggregation": false,
+          "has_auto_aggregation": false,
+          "type": "DIMENSION",
+          "description": "",
+          "aggregation": "none",
+          "ui_settings": "",
+          "data_type": "markup",
+          "guid": "485ffd80-dcbf-11f0-8178-55d19cb6722a",
+          "guid_formula": "-- Если ру-акк\nIF [account_id_urcf] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id_bg2q]), STR([crm_id_bg2q]))\n\nELSEIF [account_id_urcf] = 57817 OR [account_id_urcf] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id_bg2q]), STR([crm_id_bg2q]))\n\nELSEIF [account_id_urcf] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id_bg2q]), STR([crm_id_bg2q]))\n\nEND",
+          "formula": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "vf6w80lojksuf"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "aggregation_locked": false,
+              "initial_data_type": "genericdatetime",
+              "cast": "genericdatetime",
+              "data_type": "genericdatetime",
+              "hidden": false,
+              "description": "",
+              "valid": true,
+              "ui_settings": "",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "title": "creation_date_time",
+              "guid": "creation_date_time_aq1o",
+              "type": "DIMENSION",
+              "managed_by": "user",
+              "source": "creation_date_time",
+              "avatar_id": "60388530-dcba-11f0-86d4-250467b66d59",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "vf6w80lojksuf",
+              "id": "dimension-2",
+              "datasetName": "broker_leads_distrib",
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none",
+              "fakeTitle": "Дата лида",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "cd83cfb0-dcbe-11f0-be5a-d557a08954dd",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "creation_date_time_aq1o"
+              }
+            },
+            {
+              "aggregation_locked": true,
+              "initial_data_type": "markup",
+              "cast": "markup",
+              "data_type": "markup",
+              "hidden": false,
+              "description": "",
+              "valid": true,
+              "ui_settings": "",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "title": "CRM ID",
+              "guid": "485ffd80-dcbf-11f0-8178-55d19cb6722a",
+              "type": "DIMENSION",
+              "managed_by": "user",
+              "source": "",
+              "avatar_id": "60388530-dcba-11f0-86d4-250467b66d59",
+              "calc_mode": "formula",
+              "formula": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nEND",
+              "guid_formula": "-- Если ру-акк\nIF [account_id_urcf] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id_bg2q]), STR([crm_id_bg2q]))\n\nELSEIF [account_id_urcf] = 57817 OR [account_id_urcf] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id_bg2q]), STR([crm_id_bg2q]))\n\nELSEIF [account_id_urcf] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id_bg2q]), STR([crm_id_bg2q]))\n\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "vf6w80lojksuf",
+              "id": "dimension-0",
+              "datasetName": "broker_leads_distrib",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "c8c97bf0-dcbe-11f0-be5a-d557a08954dd",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "crm_id_bg2q"
+              },
+              "quickFormula": false,
+              "local": true
+            },
+            {
+              "aggregation_locked": false,
+              "initial_data_type": "string",
+              "cast": "string",
+              "data_type": "string",
+              "hidden": false,
+              "description": "",
+              "valid": true,
+              "ui_settings": "",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "title": "geo",
+              "guid": "geo_qc5x",
+              "type": "DIMENSION",
+              "managed_by": "user",
+              "source": "geo",
+              "avatar_id": "60388530-dcba-11f0-86d4-250467b66d59",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "vf6w80lojksuf",
+              "id": "dimension-6",
+              "datasetName": "broker_leads_distrib",
+              "fakeTitle": "Гео",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d4c395d0-dcbe-11f0-be5a-d557a08954dd",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "geo_qc5x"
+              }
+            },
+            {
+              "aggregation_locked": false,
+              "initial_data_type": "integer",
+              "cast": "integer",
+              "data_type": "integer",
+              "hidden": false,
+              "description": "",
+              "valid": true,
+              "ui_settings": "",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "title": "distrib",
+              "guid": "distrib_bieq",
+              "type": "DIMENSION",
+              "managed_by": "user",
+              "source": "distrib",
+              "avatar_id": "60388530-dcba-11f0-86d4-250467b66d59",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "vf6w80lojksuf",
+              "id": "dimension-7",
+              "datasetName": "broker_leads_distrib",
+              "fakeTitle": "Распределений",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d6a52710-dcbe-11f0-be5a-d557a08954dd",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "distrib_bieq"
+              }
+            },
+            {
+              "aggregation_locked": false,
+              "initial_data_type": "string",
+              "cast": "string",
+              "data_type": "string",
+              "hidden": false,
+              "description": "",
+              "valid": true,
+              "ui_settings": "",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "title": "times",
+              "guid": "times_vzd9",
+              "type": "DIMENSION",
+              "managed_by": "user",
+              "source": "times",
+              "avatar_id": "60388530-dcba-11f0-86d4-250467b66d59",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "vf6w80lojksuf",
+              "id": "dimension-8",
+              "datasetName": "broker_leads_distrib",
+              "fakeTitle": "Лог распределений",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "da8f3280-dcbe-11f0-be5a-d557a08954dd",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "times_vzd9"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "10mo8a4aebtgm",
+  "collectionId": null
+}

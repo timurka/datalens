@@ -1,0 +1,975 @@
+{
+  "entryId": "df79vfsfh8qy1",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1631280975944090901/webinar — Сводная таблица - Источники",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-02-29T14:44:06.140Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-03-01T09:06:51.584Z",
+  "savedId": "pro2yjxwqymud",
+  "publishedId": "pro2yjxwqymud",
+  "revId": "pro2yjxwqymud",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "oqiclv8avlnkc"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "0cfc5660-d7aa-11ee-bf4e-c57b7b995420",
+          "title": "Анкеты",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "95bde8c0-d7a9-11ee-bf4e-c57b7b995420",
+          "title": "Зашли",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "777fe7a0-d7a9-11ee-bf4e-c57b7b995420",
+          "title": "Регистраций",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "04cbe790-d70e-11ee-b931-439c42aeac99",
+          "title": "N",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "4025df60-d70b-11ee-9e32-49e8b0dddee2",
+          "title": "title-4025df60-d70b-11ee-9e32-49e8b0dddee2",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "ae6ce140-d70a-11ee-9e32-49e8b0dddee2",
+          "title": "title-ae6ce140-d70a-11ee-9e32-49e8b0dddee2",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "a8ca5060-d70a-11ee-9e32-49e8b0dddee2",
+          "title": "title-a8ca5060-d70a-11ee-9e32-49e8b0dddee2",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "86248b80-d70e-11ee-9248-bbc1b3e6b134",
+          "title": "actions",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "id_hafk",
+          "title": "id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "full_date_7q2q",
+          "title": "full_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_num_4pba",
+          "title": "deal_num",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "users_id_2lj9",
+          "title": "users_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "title_ro34",
+          "title": "title",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_52zs",
+          "title": "source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_count_1mqv",
+          "title": "leads_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_ykem",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "book_wwv0",
+          "title": "book",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "keyword_sjn4",
+          "title": "keyword",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "webinar_6wwb",
+          "title": "webinar",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "type_kewt",
+          "title": "type",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_2nq9",
+          "title": "date",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "totals": "on"
+    },
+    "filters": [
+      {
+        "guid": "full_date_7q2q",
+        "datasetId": "oqiclv8avlnkc",
+        "filter": {
+          "value": [
+            "__interval_2024-02-05T00:00:00.000Z_2024-02-29T23:59:59.999Z"
+          ],
+          "operation": {
+            "code": "BETWEEN"
+          }
+        },
+        "type": "DIMENSION",
+        "title": "full_date",
+        "calc_mode": "direct"
+      }
+    ],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "webinar_6wwb",
+        "datasetId": "oqiclv8avlnkc",
+        "data_type": "string",
+        "title": "webinar",
+        "source": "webinar",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      },
+      {
+        "guid": "source_52zs",
+        "datasetId": "oqiclv8avlnkc",
+        "data_type": "string",
+        "title": "source",
+        "source": "source",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "managed_by": "user",
+          "cast": "integer",
+          "autoaggregated": false,
+          "hidden": false,
+          "data_type": "integer",
+          "valid": true,
+          "type": "MEASURE",
+          "aggregation": "sum",
+          "aggregation_locked": false,
+          "guid": "a8ca5060-d70a-11ee-9e32-49e8b0dddee2",
+          "virtual": false,
+          "lock_aggregation": false,
+          "title": "title-a8ca5060-d70a-11ee-9e32-49e8b0dddee2",
+          "has_auto_aggregation": false,
+          "description": "",
+          "initial_data_type": "integer",
+          "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+          "source": "leads_count",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "oqiclv8avlnkc"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "managed_by": "user",
+          "cast": "integer",
+          "autoaggregated": false,
+          "hidden": false,
+          "data_type": "integer",
+          "valid": true,
+          "type": "MEASURE",
+          "aggregation": "sum",
+          "aggregation_locked": false,
+          "guid": "ae6ce140-d70a-11ee-9e32-49e8b0dddee2",
+          "virtual": false,
+          "lock_aggregation": false,
+          "title": "title-ae6ce140-d70a-11ee-9e32-49e8b0dddee2",
+          "has_auto_aggregation": false,
+          "description": "",
+          "initial_data_type": "integer",
+          "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+          "source": "qual",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "oqiclv8avlnkc"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "managed_by": "user",
+          "cast": "integer",
+          "autoaggregated": false,
+          "hidden": false,
+          "data_type": "integer",
+          "valid": true,
+          "type": "MEASURE",
+          "aggregation": "sum",
+          "aggregation_locked": false,
+          "guid": "4025df60-d70b-11ee-9e32-49e8b0dddee2",
+          "virtual": false,
+          "lock_aggregation": false,
+          "title": "title-4025df60-d70b-11ee-9e32-49e8b0dddee2",
+          "has_auto_aggregation": false,
+          "description": "",
+          "initial_data_type": "integer",
+          "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+          "source": "book",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "oqiclv8avlnkc"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "managed_by": "user",
+          "cast": "string",
+          "autoaggregated": false,
+          "hidden": false,
+          "data_type": "string",
+          "valid": true,
+          "type": "DIMENSION",
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "guid": "04cbe790-d70e-11ee-b931-439c42aeac99",
+          "virtual": false,
+          "lock_aggregation": false,
+          "title": "N",
+          "has_auto_aggregation": false,
+          "description": "",
+          "initial_data_type": "string",
+          "formula": "CASE [type]\n    WHEN 'reg' THEN \"1\"\n    WHEN 'visit' THEN \"2\"\n    WHEN 'interest' THEN \"3\"\n    WHEN 'guide' THEN \"4\"\n    WHEN 'finish' THEN \"5\"\n    WHEN 'form' THEN \"6\"\nEND",
+          "guid_formula": "CASE [type_kewt]\n    WHEN 'reg' THEN \"1\"\n    WHEN 'visit' THEN \"2\"\n    WHEN 'interest' THEN \"3\"\n    WHEN 'guide' THEN \"4\"\n    WHEN 'finish' THEN \"5\"\n    WHEN 'form' THEN \"6\"\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "oqiclv8avlnkc"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "managed_by": "user",
+          "cast": "integer",
+          "autoaggregated": true,
+          "hidden": false,
+          "data_type": "integer",
+          "valid": true,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "guid": "777fe7a0-d7a9-11ee-bf4e-c57b7b995420",
+          "virtual": false,
+          "lock_aggregation": false,
+          "title": "Регистраций",
+          "has_auto_aggregation": true,
+          "description": "",
+          "initial_data_type": "integer",
+          "formula": "COUNTD_IF([users_id], [type] = 'reg')",
+          "guid_formula": "COUNTD_IF([users_id_2lj9], [type_kewt] = 'reg')",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "oqiclv8avlnkc"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "managed_by": "user",
+          "cast": "integer",
+          "autoaggregated": true,
+          "hidden": false,
+          "data_type": "integer",
+          "valid": true,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "guid": "95bde8c0-d7a9-11ee-bf4e-c57b7b995420",
+          "virtual": false,
+          "lock_aggregation": false,
+          "title": "Зашли",
+          "has_auto_aggregation": true,
+          "description": "",
+          "initial_data_type": "integer",
+          "formula": "COUNTD_IF([users_id], [type] = 'visit')",
+          "guid_formula": "COUNTD_IF([users_id_2lj9], [type_kewt] = 'visit')",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "oqiclv8avlnkc"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "managed_by": "user",
+          "cast": "integer",
+          "autoaggregated": true,
+          "hidden": false,
+          "data_type": "integer",
+          "valid": true,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "guid": "0cfc5660-d7aa-11ee-bf4e-c57b7b995420",
+          "virtual": false,
+          "lock_aggregation": false,
+          "title": "Анкеты",
+          "has_auto_aggregation": true,
+          "description": "",
+          "initial_data_type": "integer",
+          "formula": "COUNTD_IF([users_id], [type] = 'form')",
+          "guid_formula": "COUNTD_IF([users_id_2lj9], [type_kewt] = 'form')",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "oqiclv8avlnkc"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "pivotTable",
+      "type": "table",
+      "name": "label_visualization-pivot-table",
+      "iconProps": {
+        "id": "visPivot",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "pivot-table-columns",
+          "type": "pivot-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "Measure Names",
+              "type": "PSEUDO",
+              "className": "item pseudo-item dimension-item",
+              "data_type": "string"
+            }
+          ],
+          "settings": {}
+        },
+        {
+          "allowedDataTypes": {},
+          "id": "rows",
+          "type": "rows",
+          "title": "section_rows",
+          "iconProps": {},
+          "items": [
+            {
+              "type": "DIMENSION",
+              "initial_data_type": "string",
+              "lock_aggregation": false,
+              "guid": "webinar_6wwb",
+              "hidden": false,
+              "managed_by": "user",
+              "valid": true,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "description": "",
+              "cast": "string",
+              "virtual": false,
+              "data_type": "string",
+              "title": "webinar",
+              "has_auto_aggregation": false,
+              "source": "webinar",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "dimension-18",
+              "datasetName": "webinar",
+              "fakeTitle": "Вебинар",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "158c7510-d70c-11ee-9e32-49e8b0dddee2",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "webinar_6wwb"
+              },
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            },
+            {
+              "virtual": false,
+              "cast": "string",
+              "data_type": "string",
+              "lock_aggregation": false,
+              "aggregation_locked": false,
+              "initial_data_type": "string",
+              "guid": "source_52zs",
+              "autoaggregated": false,
+              "title": "source",
+              "managed_by": "user",
+              "description": "",
+              "aggregation": "none",
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "hidden": false,
+              "valid": true,
+              "source": "source",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "dimension-13",
+              "datasetName": "webinar",
+              "fakeTitle": "Источник",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "08e320b0-d712-11ee-96a8-0fe9ccd40908",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "source_52zs"
+              },
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            }
+          ],
+          "settings": {}
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measures",
+          "iconProps": {},
+          "items": [
+            {
+              "managed_by": "user",
+              "cast": "integer",
+              "autoaggregated": true,
+              "hidden": false,
+              "data_type": "integer",
+              "valid": true,
+              "type": "MEASURE",
+              "aggregation": "none",
+              "aggregation_locked": true,
+              "guid": "777fe7a0-d7a9-11ee-bf4e-c57b7b995420",
+              "virtual": false,
+              "lock_aggregation": false,
+              "title": "Регистраций",
+              "has_auto_aggregation": true,
+              "description": "",
+              "initial_data_type": "integer",
+              "formula": "COUNTD_IF([users_id], [type] = 'reg')",
+              "guid_formula": "COUNTD_IF([users_id_2lj9], [type_kewt] = 'reg')",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "measure-2",
+              "datasetName": "webinar",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "color": "#CCCCCC"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a2d643e0-d7a9-11ee-bf4e-c57b7b995420",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "777fe7a0-d7a9-11ee-bf4e-c57b7b995420"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "type": "MEASURE",
+              "valid": true,
+              "aggregation_locked": true,
+              "title": "Зашли",
+              "data_type": "integer",
+              "aggregation": "none",
+              "autoaggregated": true,
+              "description": "",
+              "hidden": false,
+              "virtual": false,
+              "lock_aggregation": false,
+              "cast": "integer",
+              "managed_by": "user",
+              "has_auto_aggregation": true,
+              "initial_data_type": "integer",
+              "guid": "95bde8c0-d7a9-11ee-bf4e-c57b7b995420",
+              "guid_formula": "COUNTD_IF([users_id_2lj9], [type_kewt] = 'visit')",
+              "formula": "COUNTD_IF([users_id], [type] = 'visit')",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "measure-1",
+              "datasetName": "webinar",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "color": "#CCCCCC"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "0571a490-d7aa-11ee-bf4e-c57b7b995420",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "95bde8c0-d7a9-11ee-bf4e-c57b7b995420"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "managed_by": "user",
+              "cast": "integer",
+              "autoaggregated": true,
+              "hidden": false,
+              "data_type": "integer",
+              "valid": true,
+              "type": "MEASURE",
+              "aggregation": "none",
+              "aggregation_locked": true,
+              "guid": "0cfc5660-d7aa-11ee-bf4e-c57b7b995420",
+              "virtual": false,
+              "lock_aggregation": false,
+              "title": "Анкеты",
+              "has_auto_aggregation": true,
+              "description": "",
+              "initial_data_type": "integer",
+              "formula": "COUNTD_IF([users_id], [type] = 'form')",
+              "guid_formula": "COUNTD_IF([users_id_2lj9], [type_kewt] = 'form')",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "measure-0",
+              "datasetName": "webinar",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "color": "#CCCCCC"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1a9b1f90-d7aa-11ee-bf4e-c57b7b995420",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "0cfc5660-d7aa-11ee-bf4e-c57b7b995420"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "virtual": false,
+              "cast": "integer",
+              "data_type": "integer",
+              "lock_aggregation": false,
+              "aggregation_locked": false,
+              "initial_data_type": "integer",
+              "guid": "a8ca5060-d70a-11ee-9e32-49e8b0dddee2",
+              "autoaggregated": false,
+              "title": "title-a8ca5060-d70a-11ee-9e32-49e8b0dddee2",
+              "managed_by": "user",
+              "description": "",
+              "aggregation": "sum",
+              "has_auto_aggregation": false,
+              "type": "MEASURE",
+              "hidden": false,
+              "valid": true,
+              "source": "leads_count",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "oqiclv8avlnkc",
+              "id": "measure-6",
+              "datasetName": "webinar",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a6d29f10-d70a-11ee-9e32-49e8b0dddee2",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "a8ca5060-d70a-11ee-9e32-49e8b0dddee2"
+              },
+              "subTotalsSettings": {
+                "enabled": false
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "leads_count",
+              "fakeTitle": "Запрос",
+              "default_value": null,
+              "value_constraint": null,
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "neutral20",
+                    "color": "#595959"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              }
+            },
+            {
+              "type": "MEASURE",
+              "title": "title-ae6ce140-d70a-11ee-9e32-49e8b0dddee2",
+              "initial_data_type": "integer",
+              "cast": "integer",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "guid": "ae6ce140-d70a-11ee-9e32-49e8b0dddee2",
+              "managed_by": "user",
+              "hidden": false,
+              "valid": true,
+              "description": "",
+              "aggregation": "sum",
+              "data_type": "integer",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "source": "qual",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "qual",
+              "fakeTitle": "Квал",
+              "datasetId": "oqiclv8avlnkc",
+              "id": "measure-5",
+              "datasetName": "webinar",
+              "default_value": null,
+              "value_constraint": null,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "color": "#FFC636"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "341186c0-d70b-11ee-9e32-49e8b0dddee2",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "ae6ce140-d70a-11ee-9e32-49e8b0dddee2"
+              }
+            },
+            {
+              "type": "MEASURE",
+              "title": "title-4025df60-d70b-11ee-9e32-49e8b0dddee2",
+              "initial_data_type": "integer",
+              "cast": "integer",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "guid": "4025df60-d70b-11ee-9e32-49e8b0dddee2",
+              "managed_by": "user",
+              "hidden": false,
+              "valid": true,
+              "description": "",
+              "aggregation": "sum",
+              "data_type": "integer",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "source": "book",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "book",
+              "fakeTitle": "Бронь",
+              "datasetId": "oqiclv8avlnkc",
+              "id": "measure-4",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "color": "#FF3D64"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "4271a420-d70b-11ee-9e32-49e8b0dddee2",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "4025df60-d70b-11ee-9e32-49e8b0dddee2"
+              },
+              "datasetName": "webinar",
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

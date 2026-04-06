@@ -1,0 +1,96 @@
+{
+  "entryId": "wzwhldj2yywgk",
+  "scope": "widget",
+  "type": "metric2_ql_node",
+  "key": "1635614782453190192/Закупки - Индикатор Лидов SQL",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-03-06T14:14:36.183Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-03-12T18:26:56.865Z",
+  "savedId": "8cgvfddzddx4w",
+  "publishedId": "8cgvfddzddx4w",
+  "revId": "8cgvfddzddx4w",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "bpds0nslojo40",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#4DA2F1",
+      "metricFontColorPalette": "classic20"
+    },
+    "queryValue": "-- Вытаскиваем квалы и лиды по закупкам\n\nSELECT \n       COUNT(leads_id) AS \"Лидов\",\n       SUM(qual) AS quals\nFROM perfomance_all_leads\nWHERE utmsource = 'zakupka'\n      AND pipeline_id = 5987164\n      AND first_deal = 'Да'\n      AND creation_date >= {{interval_from}}\n      AND creation_date <= {{interval_to}}\n",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2024-03-03T00:00:00.000Z",
+          "to": "2024-03-06T00:00:00.000Z"
+        }
+      }
+    ],
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "Лидов-1",
+              "title": "Лидов",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            }
+          ],
+          "required": true,
+          "capacity": 1
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

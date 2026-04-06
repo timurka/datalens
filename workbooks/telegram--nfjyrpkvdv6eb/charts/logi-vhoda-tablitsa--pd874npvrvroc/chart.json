@@ -1,0 +1,977 @@
+{
+  "entryId": "pd874npvrvroc",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1718077900369954584/Логи входа — Таблица",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-06-28T08:54:05.805Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-07-17T10:01:17.057Z",
+  "savedId": "vn6blux78g70i",
+  "publishedId": "vn6blux78g70i",
+  "revId": "vn6blux78g70i",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "oc76oxvglrqqb"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "02b07af0-352f-11ef-96cf-ad11c2d0f9b1",
+          "title": "Ник",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "7c97e180-4422-11ef-94cf-9d770fb92709",
+          "title": "lifetime",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "c8243af0-3553-11ef-ba74-277394194b39",
+          "title": "user_left",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "b6d4ece0-3553-11ef-ba74-277394194b39",
+          "title": "user_join",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "cb646d10-28b6-11ef-ad03-053a0ef05bf2",
+          "title": "channel_name",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "user_id_6e86",
+          "title": "user_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_8h69",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "3b92a150-28bd-11ef-a579-dbd621870717",
+          "title": "date_join_short",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_left_vp75",
+          "title": "date_left",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_k3yq",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username_s00g",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_mfy4",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_eimh",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "count_2r96",
+          "title": "count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_qual_v2df",
+          "title": "sum_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_4rzv",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_qual_ofse",
+          "title": "date_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_ub7e",
+          "title": "channel",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_1_lvak",
+          "title": "source",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100,
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "Логи входа — Таблица",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "totals": "on",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      }
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "date_join_8h69",
+        "datasetId": "oc76oxvglrqqb",
+        "data_type": "genericdatetime",
+        "title": "date_join",
+        "source": "date_join",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "guid": "02b07af0-352f-11ef-96cf-ad11c2d0f9b1",
+          "aggregation": "none",
+          "data_type": "markup",
+          "cast": "markup",
+          "initial_data_type": "markup",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "title": "Ник",
+          "type": "DIMENSION",
+          "virtual": false,
+          "has_auto_aggregation": false,
+          "description": "",
+          "valid": true,
+          "autoaggregated": false,
+          "hidden": false,
+          "formula": "-- Формируем урл и убираем собаку\nURL('https://t.me/' + REGEXP_EXTRACT([username], \"(?<=@)\\w+\"), [username])",
+          "guid_formula": "-- Формируем урл и убираем собаку\nURL('https://t.me/' + REGEXP_EXTRACT([username_s00g], \"(?<=@)\\w+\"), [username_s00g])",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "oc76oxvglrqqb"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "description": "",
+              "autoaggregated": false,
+              "initial_data_type": "string",
+              "managed_by": "user",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "guid": "date_join_8h69",
+              "valid": true,
+              "data_type": "genericdatetime",
+              "virtual": false,
+              "title": "date_join",
+              "cast": "genericdatetime",
+              "lock_aggregation": false,
+              "hidden": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "date_join",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-7",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Дата входа",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "264c3130-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "date_join_8h69"
+              },
+              "columnSettings": {}
+            },
+            {
+              "initial_data_type": "string",
+              "valid": true,
+              "aggregation_locked": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "date_left_vp75",
+              "title": "date_left",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "genericdatetime",
+              "managed_by": "user",
+              "data_type": "genericdatetime",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "date_left",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-9",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Дата выхода",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "2a52ec60-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "date_left_vp75"
+              },
+              "columnSettings": {}
+            },
+            {
+              "hidden": false,
+              "description": "",
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "guid": "7c97e180-4422-11ef-94cf-9d770fb92709",
+              "cast": "float",
+              "valid": true,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation_locked": true,
+              "managed_by": "user",
+              "virtual": false,
+              "autoaggregated": false,
+              "title": "lifetime",
+              "initial_data_type": "float",
+              "data_type": "float",
+              "formula": "[date_left] - [date_join]",
+              "guid_formula": "[date_left_vp75] - [date_join_8h69]",
+              "calc_mode": "formula",
+              "source": "",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "inserted-1721210401806",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Лайфтайм, дни",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "55cc6f20-4423-11ef-a240-1fb445d87fae",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "7c97e180-4422-11ef-94cf-9d770fb92709"
+              }
+            },
+            {
+              "initial_data_type": "string",
+              "valid": true,
+              "aggregation_locked": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "name_k3yq",
+              "title": "name",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "string",
+              "managed_by": "user",
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "name",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-10",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Имя",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "2dc7eee0-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "name_k3yq"
+              },
+              "columnSettings": {
+                "width": {
+                  "mode": "pixel",
+                  "value": "200"
+                }
+              }
+            },
+            {
+              "initial_data_type": "integer",
+              "valid": true,
+              "aggregation_locked": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "user_id_6e86",
+              "title": "user_id",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "integer",
+              "managed_by": "user",
+              "data_type": "integer",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "user_id",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-6",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Telegram ID",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "33d48c30-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "user_id_6e86"
+              },
+              "columnSettings": {}
+            },
+            {
+              "initial_data_type": "markup",
+              "valid": true,
+              "aggregation_locked": true,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "02b07af0-352f-11ef-96cf-ad11c2d0f9b1",
+              "title": "Ник",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "markup",
+              "managed_by": "user",
+              "data_type": "markup",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "-- Формируем урл и убираем собаку\nURL('https://t.me/' + REGEXP_EXTRACT([username], \"(?<=@)\\w+\"), [username])",
+              "guid_formula": "-- Формируем урл и убираем собаку\nURL('https://t.me/' + REGEXP_EXTRACT([username_s00g], \"(?<=@)\\w+\"), [username_s00g])",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-0",
+              "datasetName": "Логи входа",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "37afca90-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "username_s00g"
+              },
+              "local": true,
+              "columnSettings": {}
+            },
+            {
+              "initial_data_type": "string",
+              "valid": true,
+              "aggregation_locked": true,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "cb646d10-28b6-11ef-ad03-053a0ef05bf2",
+              "title": "channel_name",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "string",
+              "managed_by": "user",
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "formula": "CASE [channel]\n    WHEN \"OP3e3jXATQIzNmRi\" THEN \"Основной ОАЭ\"\n    WHEN \"bn_xVEVje1Y4MDdi\" THEN \"МСК канал\"\n    WHEN \"negburo\" THEN \"negburo\"\nEND",
+              "guid_formula": "CASE [channel_ub7e]\n    WHEN \"OP3e3jXATQIzNmRi\" THEN \"Основной ОАЭ\"\n    WHEN \"bn_xVEVje1Y4MDdi\" THEN \"МСК канал\"\n    WHEN \"negburo\" THEN \"negburo\"\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-5",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Канал",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "3ef97bc0-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "cb646d10-28b6-11ef-ad03-053a0ef05bf2"
+              },
+              "columnSettings": {}
+            },
+            {
+              "initial_data_type": "string",
+              "valid": true,
+              "aggregation_locked": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "source_1_lvak",
+              "title": "source",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "string",
+              "managed_by": "user",
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "source",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-19",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Источник",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "4337e8c0-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "source_1_lvak"
+              },
+              "columnSettings": {
+                "width": {
+                  "mode": "pixel",
+                  "value": "300"
+                }
+              }
+            },
+            {
+              "initial_data_type": "string",
+              "valid": true,
+              "aggregation_locked": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "invitelinks_mfy4",
+              "title": "invitelinks",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "string",
+              "managed_by": "user",
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "invitelinks",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-12",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Ссылка",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "47aef1f0-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "invitelinks_mfy4"
+              },
+              "columnSettings": {}
+            },
+            {
+              "initial_data_type": "float",
+              "valid": true,
+              "aggregation_locked": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "count_2r96",
+              "title": "count",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "integer",
+              "managed_by": "user",
+              "data_type": "integer",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "count",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-14",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Лиды",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "5115ddd0-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "count_2r96"
+              },
+              "columnSettings": {}
+            },
+            {
+              "initial_data_type": "float",
+              "valid": true,
+              "aggregation_locked": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "sum_qual_v2df",
+              "title": "sum_qual",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "integer",
+              "managed_by": "user",
+              "data_type": "integer",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "sum_qual",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-15",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Квалы",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "558b6060-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {
+                      "1": "3",
+                      "2": "3",
+                      "3": "3",
+                      "4": "3",
+                      "6": "3"
+                    }
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "sum_qual_v2df"
+              },
+              "columnSettings": {}
+            },
+            {
+              "initial_data_type": "float",
+              "valid": true,
+              "aggregation_locked": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "booking_event_4rzv",
+              "title": "booking_event",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "integer",
+              "managed_by": "user",
+              "data_type": "integer",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "booking_event",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-16",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Брони",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "59a8b0d0-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {
+                      "1": "1",
+                      "2": "1",
+                      "4": "1"
+                    }
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "booking_event_4rzv"
+              },
+              "columnSettings": {}
+            },
+            {
+              "initial_data_type": "genericdatetime",
+              "valid": true,
+              "aggregation_locked": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "date_qual_ofse",
+              "title": "date_qual",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "genericdatetime",
+              "managed_by": "user",
+              "data_type": "genericdatetime",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "date_qual",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-17",
+              "datasetName": "Логи входа",
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none",
+              "fakeTitle": "Дата квала",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "5f8898d0-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "date_qual_ofse"
+              },
+              "columnSettings": {}
+            },
+            {
+              "initial_data_type": "string",
+              "valid": true,
+              "aggregation_locked": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "geo_eimh",
+              "title": "geo",
+              "type": "DIMENSION",
+              "description": "",
+              "cast": "string",
+              "managed_by": "user",
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "geo",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oc76oxvglrqqb",
+              "id": "dimension-13",
+              "datasetName": "Логи входа",
+              "fakeTitle": "Гео",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "64e19d90-352e-11ef-8656-0f1947646d1d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "geo_eimh"
+              },
+              "columnSettings": {}
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

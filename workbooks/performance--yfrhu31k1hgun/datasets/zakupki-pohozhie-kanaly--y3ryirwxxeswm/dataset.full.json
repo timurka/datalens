@@ -1,0 +1,1705 @@
+{
+  "name": "Закупки - Похожие каналы",
+  "permissions": {
+    "execute": true,
+    "read": true,
+    "edit": true,
+    "admin": true
+  },
+  "key": "1642159311851357794/Закупки - Похожие каналы",
+  "full_permissions": {},
+  "options": {
+    "supported_functions": [
+      "abs",
+      "acos",
+      "ago",
+      "all_concat",
+      "any",
+      "arr_distinct",
+      "arr_index_of",
+      "arr_intersect",
+      "arr_remove",
+      "arr_str",
+      "array",
+      "ascii",
+      "asin",
+      "at_date",
+      "atan",
+      "atan2",
+      "avg",
+      "avg_if",
+      "bold",
+      "bool",
+      "br",
+      "case",
+      "cast_arr_float",
+      "cast_arr_int",
+      "cast_arr_str",
+      "ceiling",
+      "char",
+      "color",
+      "concat",
+      "contains",
+      "contains_all",
+      "contains_any",
+      "cos",
+      "cot",
+      "count",
+      "count_if",
+      "count_item",
+      "countd",
+      "countd_if",
+      "date",
+      "dateadd",
+      "datepart",
+      "datetime",
+      "datetrunc",
+      "day",
+      "dayofweek",
+      "db_call_agg_float",
+      "db_call_agg_int",
+      "db_call_agg_string",
+      "db_call_array_float",
+      "db_call_array_int",
+      "db_call_array_string",
+      "db_call_bool",
+      "db_call_float",
+      "db_call_int",
+      "db_call_string",
+      "db_cast",
+      "degrees",
+      "div",
+      "div_safe",
+      "endswith",
+      "exp",
+      "fdiv_safe",
+      "find",
+      "first",
+      "float",
+      "floor",
+      "geopoint",
+      "geopolygon",
+      "get_item",
+      "greatest",
+      "hour",
+      "icontains",
+      "iendswith",
+      "if",
+      "ifnan",
+      "ifnull",
+      "iif",
+      "image",
+      "int",
+      "isnan",
+      "isnull",
+      "istartswith",
+      "italic",
+      "lag",
+      "last",
+      "least",
+      "left",
+      "len",
+      "ln",
+      "log",
+      "log10",
+      "lower",
+      "ltrim",
+      "markup",
+      "mavg",
+      "max",
+      "mcount",
+      "md5",
+      "median",
+      "min",
+      "minute",
+      "mmax",
+      "mmin",
+      "month",
+      "msum",
+      "notcontains",
+      "now",
+      "pi",
+      "power",
+      "quantile",
+      "quarter",
+      "radians",
+      "rank",
+      "rank_dense",
+      "rank_percentile",
+      "rank_unique",
+      "ravg",
+      "rcount",
+      "regexp_extract",
+      "regexp_extract_all",
+      "regexp_extract_nth",
+      "regexp_match",
+      "regexp_replace",
+      "replace",
+      "right",
+      "rmax",
+      "rmin",
+      "round",
+      "rsum",
+      "rtrim",
+      "second",
+      "sha1",
+      "sha256",
+      "sign",
+      "sin",
+      "size",
+      "slice",
+      "space",
+      "split",
+      "sqrt",
+      "square",
+      "startswith",
+      "stdev",
+      "stdevp",
+      "str",
+      "substr",
+      "sum",
+      "sum_if",
+      "tan",
+      "today",
+      "tooltip",
+      "tree",
+      "trim",
+      "unnest",
+      "upper",
+      "url",
+      "user_info",
+      "var",
+      "varp",
+      "week",
+      "year",
+      "zn"
+    ],
+    "source_listing": {
+      "supports_db_name_listing": false,
+      "supports_source_pagination": true,
+      "supports_source_search": true,
+      "db_name_label": null,
+      "db_name_required_for_search": false
+    },
+    "preview": {
+      "enabled": true
+    },
+    "is_cache_invalidation_enabled_in_conn": false,
+    "join": {
+      "operators": [
+        "eq"
+      ],
+      "types": [
+        "inner",
+        "left",
+        "full",
+        "right"
+      ]
+    },
+    "data_types": {
+      "items": [
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "type": "string"
+        },
+        {
+          "aggregations": [
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "type": "integer"
+        },
+        {
+          "aggregations": [
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "type": "float"
+        },
+        {
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ],
+          "casts": [
+            "date",
+            "genericdatetime",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "type": "date"
+        },
+        {
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ],
+          "casts": [
+            "genericdatetime",
+            "datetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "type": "datetime"
+        },
+        {
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "boolean",
+            "integer",
+            "float",
+            "string"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "type": "boolean"
+        },
+        {
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "geopoint",
+            "string"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "type": "geopoint"
+        },
+        {
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "geopolygon",
+            "string"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "type": "geopolygon"
+        },
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "uuid",
+            "string"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "type": "uuid"
+        },
+        {
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "markup"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL"
+          ],
+          "type": "markup"
+        },
+        {
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ],
+          "casts": [
+            "datetimetz",
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "type": "datetimetz"
+        },
+        {
+          "aggregations": [],
+          "casts": [
+            "unsupported"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL"
+          ],
+          "type": "unsupported"
+        },
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "array_str",
+            "string"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "type": "array_str"
+        },
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "array_int",
+            "string"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "type": "array_int"
+        },
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "array_float",
+            "string"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "type": "array_float"
+        },
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "tree_str"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "type": "tree_str"
+        },
+        {
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "type": "genericdatetime"
+        }
+      ]
+    },
+    "connections": {
+      "max": 1,
+      "compatible_types": [],
+      "items": [
+        {
+          "replacement_types": [
+            {
+              "conn_type": "greenplum"
+            },
+            {
+              "conn_type": "gsheets"
+            },
+            {
+              "conn_type": "metrika_api"
+            },
+            {
+              "conn_type": "snowflake"
+            },
+            {
+              "conn_type": "ch_billing_analytics"
+            },
+            {
+              "conn_type": "ch_frozen_transparency"
+            },
+            {
+              "conn_type": "mssql"
+            },
+            {
+              "conn_type": "postgres"
+            },
+            {
+              "conn_type": "ch_frozen_horeca"
+            },
+            {
+              "conn_type": "ch_frozen_samples"
+            },
+            {
+              "conn_type": "ch_frozen_covid"
+            },
+            {
+              "conn_type": "mysql"
+            },
+            {
+              "conn_type": "speechsense"
+            },
+            {
+              "conn_type": "ch_frozen_gkh"
+            },
+            {
+              "conn_type": "ch_frozen_dtp"
+            },
+            {
+              "conn_type": "chyt"
+            },
+            {
+              "conn_type": "equeo"
+            },
+            {
+              "conn_type": "promql"
+            },
+            {
+              "conn_type": "ch_frozen_bumpy_roads"
+            },
+            {
+              "conn_type": "ydb"
+            },
+            {
+              "conn_type": "smb_heatmaps"
+            },
+            {
+              "conn_type": "file"
+            },
+            {
+              "conn_type": "appmetrica_api"
+            },
+            {
+              "conn_type": "gsheets_v2"
+            },
+            {
+              "conn_type": "trino"
+            },
+            {
+              "conn_type": "bitrix24"
+            },
+            {
+              "conn_type": "usage_analytics_detailed"
+            },
+            {
+              "conn_type": "ch_frozen_demo"
+            },
+            {
+              "conn_type": "moysklad"
+            },
+            {
+              "conn_type": "extractor1c"
+            },
+            {
+              "conn_type": "oracle"
+            },
+            {
+              "conn_type": "usage_analytics_light"
+            },
+            {
+              "conn_type": "bigquery"
+            },
+            {
+              "conn_type": "ch_frozen_weather"
+            },
+            {
+              "conn_type": "ch_geo_filtered"
+            },
+            {
+              "conn_type": "ch_ya_music_podcast_stats"
+            },
+            {
+              "conn_type": "json_api"
+            },
+            {
+              "conn_type": "yq"
+            },
+            {
+              "conn_type": "clickhouse"
+            },
+            {
+              "conn_type": "yadocs"
+            },
+            {
+              "conn_type": "kontur_market"
+            }
+          ],
+          "id": "bpds0nslojo40"
+        }
+      ]
+    },
+    "sources": {
+      "compatible_types": [
+        {
+          "source_type": "PG_SUBSELECT"
+        },
+        {
+          "source_type": "PG_TABLE"
+        }
+      ],
+      "items": [
+        {
+          "id": "c01a23a2-e5f9-11ee-8186-afe96c7c07cc",
+          "schema_update_enabled": true
+        }
+      ]
+    },
+    "source_avatars": {
+      "max": 32,
+      "items": [
+        {
+          "id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+          "schema_update_enabled": true
+        }
+      ]
+    },
+    "supports_offset": true,
+    "fields": {
+      "items": [
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "guid": "4e1f6230-e5f2-11ee-8383-e564bb80e98a",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count"
+          ],
+          "guid": "11f10030-e5f1-11ee-b69e-4d7251dcf88a",
+          "casts": [
+            "markup"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count"
+          ],
+          "guid": "f7cc09c0-e5f0-11ee-b69e-4d7251dcf88a",
+          "casts": [
+            "markup"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "guid": "source_5y2m",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "guid": "n_do65",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "guid": "id_ujwa",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "guid": "username_icnc",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "guid": "title_dpc4",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count"
+          ],
+          "guid": "verified_t62y",
+          "casts": [
+            "boolean",
+            "integer",
+            "float",
+            "string"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "guid": "participants_count_batr",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "guid": "url_fvm7",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "guid": "mention_count_nxig",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "guid": "sum_uae_5mkl",
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ]
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "guid": "category_ro9l",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ]
+        }
+      ]
+    },
+    "schema_update_enabled": true
+  },
+  "workbook_id": "yfrhu31k1hgun",
+  "id": "y3ryirwxxeswm",
+  "dataset": {
+    "component_errors": {
+      "items": []
+    },
+    "template_enabled": false,
+    "avatar_relations": [],
+    "revision_id": "Pmq3PzBJjHmje8cs625Dd8",
+    "load_preview_by_default": true,
+    "rls2": {},
+    "obligatory_filters": [],
+    "cache_invalidation_source": {
+      "mode": "off",
+      "field": null,
+      "sql": null,
+      "last_result_error": null,
+      "filters": [],
+      "last_result_timestamp": null,
+      "cache_invalidation_error": null
+    },
+    "data_export_forbidden": false,
+    "preview_enabled": true,
+    "result_schema": [
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "4e1f6230-e5f2-11ee-8383-e564bb80e98a",
+        "ui_settings": "",
+        "aggregation_locked": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "string",
+        "initial_data_type": "string",
+        "data_type": "string",
+        "title": "title_username",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "formula": "CONCAT([title], ' (', [username], ')')",
+        "guid_formula": "CONCAT([title_dpc4], ' (', [username_icnc], ')')",
+        "calc_mode": "formula",
+        "source": "",
+        "avatar_id": null,
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "11f10030-e5f1-11ee-b69e-4d7251dcf88a",
+        "ui_settings": "",
+        "aggregation_locked": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "markup",
+        "initial_data_type": "markup",
+        "data_type": "markup",
+        "title": "username_url",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "formula": "URL('https://t.me/' + [username], [username])",
+        "guid_formula": "URL('https://t.me/' + [username_icnc], [username_icnc])",
+        "calc_mode": "formula",
+        "source": "",
+        "avatar_id": null,
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "f7cc09c0-e5f0-11ee-b69e-4d7251dcf88a",
+        "ui_settings": "",
+        "aggregation_locked": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "markup",
+        "initial_data_type": "markup",
+        "data_type": "markup",
+        "title": "source_url",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "formula": "URL('https://t.me/' + [source], [source])",
+        "guid_formula": "URL('https://t.me/' + [source_5y2m], [source_5y2m])",
+        "calc_mode": "formula",
+        "source": "",
+        "avatar_id": null,
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "source_5y2m",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "string",
+        "initial_data_type": "string",
+        "data_type": "string",
+        "title": "source",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "source": "source",
+        "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "n_do65",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "integer",
+        "initial_data_type": "integer",
+        "data_type": "integer",
+        "title": "N",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "source": "N",
+        "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "id_ujwa",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "integer",
+        "initial_data_type": "integer",
+        "data_type": "integer",
+        "title": "id",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "source": "id",
+        "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "username_icnc",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "string",
+        "initial_data_type": "string",
+        "data_type": "string",
+        "title": "username",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "source": "username",
+        "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "title_dpc4",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "string",
+        "initial_data_type": "string",
+        "data_type": "string",
+        "title": "title",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "source": "title",
+        "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "verified_t62y",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "boolean",
+        "initial_data_type": "boolean",
+        "data_type": "boolean",
+        "title": "verified",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "source": "verified",
+        "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "participants_count_batr",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "integer",
+        "initial_data_type": "integer",
+        "data_type": "integer",
+        "title": "similar_count",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "source": "participants_count",
+        "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "url_fvm7",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "string",
+        "initial_data_type": "string",
+        "data_type": "string",
+        "title": "url",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "source": "url",
+        "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "mention_count_nxig",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "integer",
+        "initial_data_type": "integer",
+        "data_type": "integer",
+        "title": "mention_count",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "source": "mention_count",
+        "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "sum_uae_5mkl",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "integer",
+        "initial_data_type": "float",
+        "data_type": "integer",
+        "title": "sum_uae",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "source": "sum_uae",
+        "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "guid": "category_ro9l",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "virtual": false,
+        "lock_aggregation": false,
+        "autoaggregated": false,
+        "type": "DIMENSION",
+        "valid": true,
+        "cast": "string",
+        "initial_data_type": "string",
+        "data_type": "string",
+        "title": "category",
+        "hidden": false,
+        "description": "",
+        "managed_by": "user",
+        "source": "category",
+        "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      }
+    ],
+    "source_avatars": [
+      {
+        "is_root": true,
+        "source_id": "c01a23a2-e5f9-11ee-8186-afe96c7c07cc",
+        "virtual": false,
+        "valid": true,
+        "title": "SQL",
+        "id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+        "managed_by": "user"
+      }
+    ],
+    "sources": [
+      {
+        "raw_schema": [
+          {
+            "has_auto_aggregation": false,
+            "lock_aggregation": false,
+            "name": "source",
+            "user_type": "string",
+            "nullable": true,
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "title": "source",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "lock_aggregation": false,
+            "name": "N",
+            "user_type": "integer",
+            "nullable": true,
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "title": "N",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "lock_aggregation": false,
+            "name": "id",
+            "user_type": "integer",
+            "nullable": true,
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "title": "id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "lock_aggregation": false,
+            "name": "username",
+            "user_type": "string",
+            "nullable": true,
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "title": "username",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "lock_aggregation": false,
+            "name": "title",
+            "user_type": "string",
+            "nullable": true,
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "title": "title",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "lock_aggregation": false,
+            "name": "verified",
+            "user_type": "boolean",
+            "nullable": true,
+            "native_type": {
+              "name": "boolean",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "title": "verified",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "lock_aggregation": false,
+            "name": "participants_count",
+            "user_type": "integer",
+            "nullable": true,
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "title": "participants_count",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "lock_aggregation": false,
+            "name": "url",
+            "user_type": "string",
+            "nullable": true,
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "title": "url",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "lock_aggregation": false,
+            "name": "mention_count",
+            "user_type": "integer",
+            "nullable": true,
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "title": "mention_count",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "lock_aggregation": false,
+            "name": "sum_uae",
+            "user_type": "float",
+            "nullable": true,
+            "native_type": {
+              "name": "numeric",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "title": "sum_uae",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "lock_aggregation": false,
+            "name": "category",
+            "user_type": "string",
+            "nullable": true,
+            "native_type": {
+              "name": "varchar",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "title": "category",
+            "description": ""
+          }
+        ],
+        "parameter_hash": "81834d01b56bddcc",
+        "virtual": false,
+        "parameters": {
+          "subsql": "WITH mention_counts AS (\n    SELECT \n        channel_link,\n        COUNT(*) AS mention_count,\n        SUM(followers_uae) AS sum_uae\n    FROM \n        zakupki\n    GROUP BY \n        channel_link\n)\nSELECT\n    zsc.*,\n    CONCAT('https://t.me/', zsc.username) AS URL,\n    mc.mention_count,\n    mc.sum_uae,\n    zi.category\nFROM\n    zakupki_similar_channels zsc\nLEFT JOIN\n    mention_counts mc ON CONCAT('https://t.me/', zsc.username) = mc.channel_link\nLEFT JOIN\n    webhook_zakupki_channels_info zi ON CONCAT('https://t.me/', zsc.username) = zi.channel_url"
+        },
+        "index_info_set": null,
+        "valid": true,
+        "source_type": "PG_SUBSELECT",
+        "connection_id": "bpds0nslojo40",
+        "title": "SQL",
+        "id": "c01a23a2-e5f9-11ee-8186-afe96c7c07cc",
+        "managed_by": "user"
+      }
+    ],
+    "result_schema_aux": {
+      "inter_dependencies": {
+        "deps": [
+          {
+            "dep_field_id": "f7cc09c0-e5f0-11ee-b69e-4d7251dcf88a",
+            "ref_field_ids": [
+              "source_5y2m"
+            ]
+          },
+          {
+            "dep_field_id": "4e1f6230-e5f2-11ee-8383-e564bb80e98a",
+            "ref_field_ids": [
+              "username_icnc",
+              "title_dpc4"
+            ]
+          },
+          {
+            "dep_field_id": "11f10030-e5f1-11ee-b69e-4d7251dcf88a",
+            "ref_field_ids": [
+              "username_icnc"
+            ]
+          }
+        ]
+      }
+    },
+    "description": "",
+    "rls": {}
+  },
+  "is_favorite": false
+}

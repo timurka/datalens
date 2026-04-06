@@ -1,0 +1,275 @@
+{
+  "entryId": "0bxq8wzwr4jko",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "1664473357434752060/Закупки - Индикатор времени между вступлением и лидом",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-04-15T09:51:26.351Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-04-15T09:55:25.072Z",
+  "savedId": "epb5bu8s0zik2",
+  "publishedId": "epb5bu8s0zik2",
+  "revId": "epb5bu8s0zik2",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "0ara2j2bcr7so"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "3922cd00-fb0e-11ee-9133-6938768216cb",
+          "title": "join_creation_avg",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "2dbe3c60-fb0e-11ee-9133-6938768216cb",
+          "title": "delta_join_creation",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "06ffa920-f71b-11ee-90e7-57f3077353e2",
+          "title": "channels",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "contacts_id",
+          "title": "contacts_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_id",
+          "title": "leads_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_time",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_qual",
+          "title": "date_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "priority",
+          "title": "priority",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "budget",
+          "title": "budget",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "phone",
+          "title": "phone",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "zakupki_date",
+          "title": "zakupki_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_name",
+          "title": "channel_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_link",
+          "title": "channel_link",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost",
+          "title": "cost",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "password",
+          "title": "password",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#4DA2F1",
+      "metricFontColorPalette": "classic20",
+      "indicatorTitleMode": "by-field"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "float",
+          "guid": "2dbe3c60-fb0e-11ee-9133-6938768216cb",
+          "managed_by": "user",
+          "data_type": "float",
+          "description": "",
+          "has_auto_aggregation": false,
+          "valid": true,
+          "autoaggregated": false,
+          "lock_aggregation": false,
+          "virtual": false,
+          "title": "delta_join_creation",
+          "type": "DIMENSION",
+          "aggregation": "none",
+          "hidden": false,
+          "initial_data_type": "float",
+          "aggregation_locked": true,
+          "guid_formula": "[creation_date_time] - [date_join]",
+          "formula": "[creation_date_time] - [date_join]",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "0ara2j2bcr7so"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "string",
+          "guid": "3922cd00-fb0e-11ee-9133-6938768216cb",
+          "managed_by": "user",
+          "data_type": "string",
+          "description": "",
+          "has_auto_aggregation": true,
+          "valid": true,
+          "autoaggregated": true,
+          "lock_aggregation": false,
+          "virtual": false,
+          "title": "join_creation_avg",
+          "type": "MEASURE",
+          "aggregation": "none",
+          "hidden": false,
+          "initial_data_type": "string",
+          "aggregation_locked": true,
+          "guid_formula": "STR(INT(AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL))) + \" д. \" + STR(INT((AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL) - INT(AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL)))*24)) + \" ч. \" + STR(INT(((AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL) - INT(AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL)))*24 - INT((AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL) - INT(AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL)))*24))*60)) + \" мин.\"",
+          "formula": "STR(INT(AVG(AVG([delta_join_creation]) TOTAL))) + \" д. \" + STR(INT((AVG(AVG([delta_join_creation]) TOTAL) - INT(AVG(AVG([delta_join_creation]) TOTAL)))*24)) + \" ч. \" + STR(INT(((AVG(AVG([delta_join_creation]) TOTAL) - INT(AVG(AVG([delta_join_creation]) TOTAL)))*24 - INT((AVG(AVG([delta_join_creation]) TOTAL) - INT(AVG(AVG([delta_join_creation]) TOTAL)))*24))*60)) + \" мин.\"",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "0ara2j2bcr7so"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "cast": "string",
+              "guid": "3922cd00-fb0e-11ee-9133-6938768216cb",
+              "managed_by": "user",
+              "data_type": "string",
+              "description": "",
+              "has_auto_aggregation": true,
+              "valid": true,
+              "autoaggregated": true,
+              "lock_aggregation": false,
+              "virtual": false,
+              "title": "join_creation_avg",
+              "type": "MEASURE",
+              "aggregation": "none",
+              "hidden": false,
+              "initial_data_type": "string",
+              "aggregation_locked": true,
+              "guid_formula": "STR(INT(AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL))) + \" д. \" + STR(INT((AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL) - INT(AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL)))*24)) + \" ч. \" + STR(INT(((AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL) - INT(AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL)))*24 - INT((AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL) - INT(AVG(AVG([2dbe3c60-fb0e-11ee-9133-6938768216cb]) TOTAL)))*24))*60)) + \" мин.\"",
+              "formula": "STR(INT(AVG(AVG([delta_join_creation]) TOTAL))) + \" д. \" + STR(INT((AVG(AVG([delta_join_creation]) TOTAL) - INT(AVG(AVG([delta_join_creation]) TOTAL)))*24)) + \" ч. \" + STR(INT(((AVG(AVG([delta_join_creation]) TOTAL) - INT(AVG(AVG([delta_join_creation]) TOTAL)))*24 - INT((AVG(AVG([delta_join_creation]) TOTAL) - INT(AVG(AVG([delta_join_creation]) TOTAL)))*24))*60)) + \" мин.\"",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "0ara2j2bcr7so",
+              "id": "inserted-1713174909268",
+              "datasetName": "Закупки - qual_join",
+              "fakeTitle": "Ср. время между вступлением и лидом",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              }
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "axisModeMap": {
+              "3922cd00-fb0e-11ee-9133-6938768216cb": "discrete"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

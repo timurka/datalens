@@ -1,0 +1,553 @@
+{
+  "datasetId": "y4p7h02ve1koi",
+  "data": {
+    "dataset": {
+      "template_enabled": false,
+      "preview_enabled": true,
+      "description": "",
+      "rls2": {},
+      "data_export_forbidden": false,
+      "load_preview_by_default": true,
+      "component_errors": {
+        "items": []
+      },
+      "avatar_relations": [],
+      "sources": [
+        {
+          "raw_schema": [
+            {
+              "description": "",
+              "user_type": "integer",
+              "title": "CRM ID сделки",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "CRM ID сделки",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "genericdatetime",
+              "title": "Дата и время создания сделки",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "Дата и время создания сделки",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "string",
+              "title": "Брокер",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "varchar",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "Брокер",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "string",
+              "title": "Название задачи",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "text",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "Название задачи",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "genericdatetime",
+              "title": "Дата назначения задачи",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "Дата назначения задачи",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "genericdatetime",
+              "title": "Дата выполнения задачи",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "Дата выполнения задачи",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "genericdatetime",
+              "title": "Дедлайн задачи",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "Дедлайн задачи",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "string",
+              "title": "Итог блока 1",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "text",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "Итог блока 1",
+              "has_auto_aggregation": false
+            }
+          ],
+          "id": "febacc21-31c1-11f1-8a9b-89e81b293b66",
+          "parameter_hash": "7b52123ce906a6cd",
+          "connection_id": "qtp2vi8ns03ka",
+          "title": "SQL",
+          "managed_by": "user",
+          "index_info_set": null,
+          "source_type": "PG_SUBSELECT",
+          "virtual": false,
+          "parameters": {
+            "subsql": "SELECT\n    m.lead_id AS \"CRM ID сделки\",\n    lf.created_date AS \"Дата и время создания сделки\",\n    m.lead_user_name AS \"Брокер\",\n    COALESCE(NULLIF(BTRIM(t.text), ''), '[без названия]') AS \"Название задачи\",\n    tf.created_date AS \"Дата назначения задачи\",\n    gd_completed.full_date AS \"Дата выполнения задачи\",\n    tf.deadline_date AS \"Дедлайн задачи\",\n    CASE\n        WHEN m.block1_has_overdue_task_on_broker THEN 'Просроченная задача у брокера'\n        WHEN m.block1_has_no_tasks_on_broker THEN 'Нет задачи у брокера'\n        WHEN m.block1_is_healthy_on_broker THEN 'Норма'\n        ELSE 'Требует проверки'\n    END AS \"Итог блока 1\"\nFROM core.amocrm_leads_tasks_block1_metrics m\nLEFT JOIN core.amocrm_leads_facts lf\n  ON lf.account_id = m.account_id\n AND lf.leads_id = m.leads_id\nLEFT JOIN core.amocrm_tasks_facts tf\n  ON tf.account_id = m.account_id\n AND tf.leads_id = m.leads_id\nLEFT JOIN core.amocrm_tasks t\n  ON t.account_id = tf.account_id\n AND t.id = tf.tasks_id\nLEFT JOIN core.general_dates gd_completed\n  ON gd_completed.id = tf.completed_id\nWHERE m.is_in_block1_status_scope = true\n  AND (\n      tf.tasks_id IS NULL\n      OR (\n          COALESCE(t.is_deleted, FALSE) = FALSE\n          AND COALESCE(t.status_code, 0) = 0\n      )\n  )\nORDER BY\n    lf.created_date DESC NULLS LAST,\n    m.lead_id,\n    tf.deadline_date NULLS LAST,\n    t.task_id\n"
+          },
+          "valid": true
+        },
+        {
+          "raw_schema": [
+            {
+              "description": "",
+              "user_type": "integer",
+              "title": "account_id",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "account_id",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "integer",
+              "title": "crm_id",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "crm_id",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "genericdatetime",
+              "title": "deal_created_at",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "deal_created_at",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "string",
+              "title": "broker",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "varchar",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "broker",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "string",
+              "title": "task_name",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "text",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "task_name",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "genericdatetime",
+              "title": "task_assigned_at",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "task_assigned_at",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "genericdatetime",
+              "title": "task_completed_at",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "task_completed_at",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "genericdatetime",
+              "title": "task_deadline_at",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "task_deadline_at",
+              "has_auto_aggregation": false
+            },
+            {
+              "description": "",
+              "user_type": "string",
+              "title": "block1_result",
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "name": "text",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "block1_result",
+              "has_auto_aggregation": false
+            }
+          ],
+          "id": "e924de40-31c2-11f1-8a9b-89e81b293b66",
+          "parameter_hash": "e7bc740261b55314",
+          "connection_id": "qtp2vi8ns03ka",
+          "title": "SQL1",
+          "managed_by": "user",
+          "index_info_set": null,
+          "source_type": "PG_SUBSELECT",
+          "virtual": false,
+          "parameters": {
+            "subsql": "SELECT\n    m.account_id AS account_id,\n    m.lead_id AS crm_id,\n    lf.created_date AS deal_created_at,\n    m.lead_user_name AS broker,\n    COALESCE(NULLIF(BTRIM(t.text), ''), '[без названия]') AS task_name,\n    tf.created_date AS task_assigned_at,\n    gd_completed.full_date AS task_completed_at,\n    tf.deadline_date AS task_deadline_at,\n    CASE\n        WHEN m.block1_has_overdue_task_on_broker THEN 'Просроченная задача у брокера'\n        WHEN m.block1_has_no_tasks_on_broker THEN 'Нет задачи у брокера'\n        WHEN m.block1_is_healthy_on_broker THEN 'Норма'\n        ELSE 'Требует проверки'\n    END AS block1_result\nFROM core.amocrm_leads_tasks_block1_metrics m\nLEFT JOIN core.amocrm_leads_facts lf\n  ON lf.account_id = m.account_id\n AND lf.leads_id = m.leads_id\nLEFT JOIN core.amocrm_tasks_facts tf\n  ON tf.account_id = m.account_id\n AND tf.leads_id = m.leads_id\nLEFT JOIN core.amocrm_tasks t\n  ON t.account_id = tf.account_id\n AND t.id = tf.tasks_id\nLEFT JOIN core.general_dates gd_completed\n  ON gd_completed.id = tf.completed_id\nWHERE m.is_in_block1_status_scope = true\n  AND (\n      tf.tasks_id IS NULL\n      OR (\n          COALESCE(t.is_deleted, FALSE) = FALSE\n          AND COALESCE(t.status_code, 0) = 0\n      )\n  )\nORDER BY\n    lf.created_date DESC NULLS LAST,\n    m.lead_id,\n    tf.deadline_date NULLS LAST,\n    t.task_id\n"
+          },
+          "valid": true
+        }
+      ],
+      "result_schema_aux": {
+        "inter_dependencies": {
+          "deps": []
+        }
+      },
+      "cache_invalidation_source": {
+        "last_result_timestamp": null,
+        "field": null,
+        "filters": [],
+        "last_result_error": null,
+        "mode": "off",
+        "sql": null,
+        "cache_invalidation_error": null
+      },
+      "result_schema": [
+        {
+          "aggregation": "none",
+          "description": "",
+          "type": "DIMENSION",
+          "hidden": false,
+          "title": "account_id",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "guid": "account_id_okig",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "cast": "integer",
+          "virtual": false,
+          "data_type": "integer",
+          "autoaggregated": false,
+          "ui_settings": "",
+          "initial_data_type": "integer",
+          "valid": true,
+          "source": "account_id",
+          "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "aggregation": "none",
+          "description": "",
+          "type": "DIMENSION",
+          "hidden": false,
+          "title": "crm_id",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "guid": "crm_id_pn4s",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "cast": "integer",
+          "virtual": false,
+          "data_type": "integer",
+          "autoaggregated": false,
+          "ui_settings": "",
+          "initial_data_type": "integer",
+          "valid": true,
+          "source": "crm_id",
+          "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "aggregation": "none",
+          "description": "",
+          "type": "DIMENSION",
+          "hidden": false,
+          "title": "deal_created_at",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "guid": "deal_created_at_6z2g",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "cast": "genericdatetime",
+          "virtual": false,
+          "data_type": "genericdatetime",
+          "autoaggregated": false,
+          "ui_settings": "",
+          "initial_data_type": "genericdatetime",
+          "valid": true,
+          "source": "deal_created_at",
+          "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "aggregation": "none",
+          "description": "",
+          "type": "DIMENSION",
+          "hidden": false,
+          "title": "broker",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "guid": "broker_s6yo",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "cast": "string",
+          "virtual": false,
+          "data_type": "string",
+          "autoaggregated": false,
+          "ui_settings": "",
+          "initial_data_type": "string",
+          "valid": true,
+          "source": "broker",
+          "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "aggregation": "none",
+          "description": "",
+          "type": "DIMENSION",
+          "hidden": false,
+          "title": "task_name",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "guid": "task_name_u673",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "cast": "string",
+          "virtual": false,
+          "data_type": "string",
+          "autoaggregated": false,
+          "ui_settings": "",
+          "initial_data_type": "string",
+          "valid": true,
+          "source": "task_name",
+          "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "aggregation": "none",
+          "description": "",
+          "type": "DIMENSION",
+          "hidden": false,
+          "title": "task_assigned_at",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "guid": "task_assigned_at_3qya",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "cast": "genericdatetime",
+          "virtual": false,
+          "data_type": "genericdatetime",
+          "autoaggregated": false,
+          "ui_settings": "",
+          "initial_data_type": "genericdatetime",
+          "valid": true,
+          "source": "task_assigned_at",
+          "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "aggregation": "none",
+          "description": "",
+          "type": "DIMENSION",
+          "hidden": false,
+          "title": "task_completed_at",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "guid": "task_completed_at_ijvo",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "cast": "genericdatetime",
+          "virtual": false,
+          "data_type": "genericdatetime",
+          "autoaggregated": false,
+          "ui_settings": "",
+          "initial_data_type": "genericdatetime",
+          "valid": true,
+          "source": "task_completed_at",
+          "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "aggregation": "none",
+          "description": "",
+          "type": "DIMENSION",
+          "hidden": false,
+          "title": "task_deadline_at",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "guid": "task_deadline_at_q4ge",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "cast": "genericdatetime",
+          "virtual": false,
+          "data_type": "genericdatetime",
+          "autoaggregated": false,
+          "ui_settings": "",
+          "initial_data_type": "genericdatetime",
+          "valid": true,
+          "source": "task_deadline_at",
+          "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "aggregation": "none",
+          "description": "",
+          "type": "DIMENSION",
+          "hidden": false,
+          "title": "block1_result",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "guid": "block1_result_hjm7",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "cast": "string",
+          "virtual": false,
+          "data_type": "string",
+          "autoaggregated": false,
+          "ui_settings": "",
+          "initial_data_type": "string",
+          "valid": true,
+          "source": "block1_result",
+          "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        }
+      ],
+      "rls": {},
+      "revision_id": "NABmRwLh6wJYZiL5AwALLt",
+      "obligatory_filters": [],
+      "source_avatars": [
+        {
+          "id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+          "title": "SQL1",
+          "managed_by": "user",
+          "source_id": "e924de40-31c2-11f1-8a9b-89e81b293b66",
+          "virtual": false,
+          "is_root": true,
+          "valid": true
+        }
+      ]
+    }
+  }
+}

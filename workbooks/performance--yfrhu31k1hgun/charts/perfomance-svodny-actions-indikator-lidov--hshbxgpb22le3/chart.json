@@ -1,0 +1,260 @@
+{
+  "entryId": "hshbxgpb22le3",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "1935554603634396803/perfomance_svodny_actions — Индикатор лидов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-04-24T10:21:28.844Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-08-15T13:28:55.871Z",
+  "savedId": "uq80pxjvl6hif",
+  "publishedId": "uq80pxjvl6hif",
+  "revId": "uq80pxjvl6hif",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "62kb49g6kj4er"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "c8725460-79db-11f0-a60d-c301b87b7f57",
+          "title": "sum([leads])",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "19f71fb0-79db-11f0-a098-618fe40a7274",
+          "title": "pipeline_name",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "creation_date_gzep",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "month_ygdx",
+          "title": "month",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_id_kfi1",
+          "title": "pipeline_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utmsource_bt1a",
+          "title": "utmsource",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_medium_ful7",
+          "title": "utm_medium",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_campaign_7edr",
+          "title": "utm_campaign",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_5gnt",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "lang_5rw2",
+          "title": "lang",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_gynt",
+          "title": "leads",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "quals_8zit",
+          "title": "quals",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "quals_a_o13z",
+          "title": "quals_a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "quals_b_0ccv",
+          "title": "quals_b",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "quals_c_99xe",
+          "title": "quals_c",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "bookings_vq1j",
+          "title": "bookings",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amounts_2lib",
+          "title": "deal_amounts",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "revenue_5dhw",
+          "title": "revenue",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "value_xrls",
+          "title": "value",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost_rub_88xv",
+          "title": "cost_rub",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost_usd_hyft",
+          "title": "cost_usd",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#4DA2F1",
+      "metricFontColorPalette": "classic20"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "hidden": false,
+          "cast": "integer",
+          "aggregation_locked": true,
+          "managed_by": "user",
+          "has_auto_aggregation": true,
+          "type": "MEASURE",
+          "data_type": "integer",
+          "ui_settings": "",
+          "title": "sum([leads])",
+          "aggregation": "none",
+          "autoaggregated": true,
+          "guid": "c8725460-79db-11f0-a60d-c301b87b7f57",
+          "valid": true,
+          "virtual": false,
+          "lock_aggregation": false,
+          "initial_data_type": "integer",
+          "description": "",
+          "formula": "sum([leads])",
+          "guid_formula": "sum([leads_gynt])",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "62kb49g6kj4er"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "description": "",
+              "has_auto_aggregation": true,
+              "aggregation": "none",
+              "hidden": false,
+              "data_type": "integer",
+              "guid": "c8725460-79db-11f0-a60d-c301b87b7f57",
+              "valid": true,
+              "aggregation_locked": true,
+              "cast": "integer",
+              "ui_settings": "",
+              "virtual": false,
+              "initial_data_type": "integer",
+              "managed_by": "user",
+              "autoaggregated": true,
+              "type": "MEASURE",
+              "title": "sum([leads])",
+              "lock_aggregation": false,
+              "avatar_id": "7d618630-9c1e-11ef-885e-b9cf022dfaea",
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "sum([leads])",
+              "guid_formula": "sum([leads_gynt])",
+              "default_value": null,
+              "value_constraint": null,
+              "local": true,
+              "quickFormula": false,
+              "datasetId": "62kb49g6kj4er",
+              "fakeTitle": "Лиды",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "id": "measure-0",
+              "datasetName": "neginsky_perfomance_svodny_actions",
+              "hideLabelMode": "show"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

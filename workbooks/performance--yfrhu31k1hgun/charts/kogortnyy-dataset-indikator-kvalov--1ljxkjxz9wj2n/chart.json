@@ -1,0 +1,219 @@
+{
+  "entryId": "1ljxkjxz9wj2n",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "1970294026766651295/Когортный датасет — Индикатор квалов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-06-11T08:42:31.100Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-06-11T08:47:23.491Z",
+  "savedId": "scap7kcm93ace",
+  "publishedId": "scap7kcm93ace",
+  "revId": "scap7kcm93ace",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "udy9765ge1agg"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "55674120-469f-11f0-a3c2-311ca4db779f",
+          "title": "sum([cohort_cnt])",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "metrics_bool",
+          "title": "metrics_bool",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "csum",
+          "title": "csum",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "metrics",
+          "title": "metrics",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "utmsource_fpzx",
+          "title": "utmsource",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_v28n",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_cnt_p9bp",
+          "title": "cohort_cnt",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "day_bucket_w9fu",
+          "title": "day_bucket",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_day_5nw2",
+          "title": "cohort_day",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_month_ib37",
+          "title": "cohort_month",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_week_tcy3",
+          "title": "cohort_week",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_ids_p9ap",
+          "title": "crm_ids",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_cnt_on_day_jaou",
+          "title": "qual_cnt_on_day",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#FFC636",
+      "metricFontColorPalette": "classic20"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "virtual": false,
+          "valid": true,
+          "aggregation": "none",
+          "hidden": false,
+          "guid": "55674120-469f-11f0-a3c2-311ca4db779f",
+          "managed_by": "user",
+          "aggregation_locked": true,
+          "description": "",
+          "initial_data_type": "integer",
+          "data_type": "integer",
+          "type": "MEASURE",
+          "autoaggregated": true,
+          "cast": "integer",
+          "has_auto_aggregation": true,
+          "title": "sum([cohort_cnt])",
+          "lock_aggregation": false,
+          "guid_formula": "SUM(SUM([qual_cnt_on_day_jaou]))",
+          "formula": "SUM(SUM([qual_cnt_on_day]))",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "udy9765ge1agg"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "virtual": false,
+              "valid": true,
+              "aggregation": "none",
+              "hidden": false,
+              "guid": "55674120-469f-11f0-a3c2-311ca4db779f",
+              "managed_by": "user",
+              "aggregation_locked": true,
+              "description": "",
+              "initial_data_type": "integer",
+              "data_type": "integer",
+              "type": "MEASURE",
+              "autoaggregated": true,
+              "cast": "integer",
+              "has_auto_aggregation": true,
+              "title": "sum([cohort_cnt])",
+              "lock_aggregation": false,
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "SUM(SUM([qual_cnt_on_day]))",
+              "guid_formula": "SUM(SUM([qual_cnt_on_day_jaou]))",
+              "local": true,
+              "originalTitle": "cohort_cnt",
+              "fakeTitle": "Квалов",
+              "datasetId": "udy9765ge1agg",
+              "id": "measure-0",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetName": "Когортный датасет",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              }
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

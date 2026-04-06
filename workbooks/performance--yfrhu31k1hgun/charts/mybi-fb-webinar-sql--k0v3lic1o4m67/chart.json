@@ -1,0 +1,216 @@
+{
+  "entryId": "k0v3lic1o4m67",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "1819639580584838543/mybi - fb webinar sql",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-11-15T11:59:01.617Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-11-20T08:58:34.049Z",
+  "savedId": "ub458tolo8h6h",
+  "publishedId": "ub458tolo8h6h",
+  "revId": "ub458tolo8h6h",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "bpds0nslojo40",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "-- Отчет по вебинару из источника FB\n\nSELECT crm_id,\n       creation_date_time,\n       utmsource,\n       utm_campaign,\n       utm_content,\n       qual,\n       status,\n       priority\nFROM perfomance_all_leads p\nLEFT JOIN amocrm_leads_tags l ON p.leads_id = l.leads_id\nWHERE p.pipeline_id = '5987164'\n      AND l.name = {{webinar_name}} -- Тег = название вебинара\n      AND utm_source IS NOT NULL\n      AND creation_date > {{interval_from}}\n      AND creation_date < {{interval_to}}\n      AND utmsource = 'fb' \n      \nORDER BY creation_date_time DESC",
+    "queries": [],
+    "params": [
+      {
+        "type": "string",
+        "name": "source",
+        "defaultValue": "fb"
+      },
+      {
+        "type": "string",
+        "name": "webinar_name",
+        "defaultValue": "webinar21"
+      },
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2024-11-12T00:00:00.000Z",
+          "to": "2024-11-15T00:00:00.000Z"
+        }
+      }
+    ],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "creation_date_time",
+              "title": "creation_date_time",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "genericdatetime",
+              "cast": "genericdatetime",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "crm_id",
+              "title": "crm_id",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "fa2adaa0-a348-11ef-adbb-971467b07f62",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "crm_id"
+              }
+            },
+            {
+              "guid": "utmsource",
+              "title": "utmsource",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "utm_campaign",
+              "title": "utm_campaign",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "utm_content",
+              "title": "utm_content",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "qual",
+              "title": "qual",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "priority",
+              "title": "priority",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "status",
+              "title": "status",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1731675016241"
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "creation_date_time": "continuous"
+            }
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

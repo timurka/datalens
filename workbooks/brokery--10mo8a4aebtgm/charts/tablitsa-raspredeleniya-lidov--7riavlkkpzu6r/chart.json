@@ -1,0 +1,988 @@
+{
+  "entryId": "7riavlkkpzu6r",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2108743361958514299/Таблица распределения лидов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-12-19T09:16:38.007Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-12-19T09:46:48.597Z",
+  "savedId": "l5wtntcxi4g25",
+  "publishedId": "l5wtntcxi4g25",
+  "revId": "l5wtntcxi4g25",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "vf6w80lojksuf"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "9abe4370-dcbf-11f0-b9d9-e3d03d5472d9",
+          "title": "title-9abe4370-dcbf-11f0-b9d9-e3d03d5472d9",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "28b08780-dcbe-11f0-b6b5-8dc66dcf27af",
+          "title": "Период",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "2997c520-dcbc-11f0-b515-e1c7d50cafc2",
+          "title": ">4",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "1828e120-dcbc-11f0-b515-e1c7d50cafc2",
+          "title": "4",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "e4bad550-dcbb-11f0-b515-e1c7d50cafc2",
+          "title": "3",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "cb4c3690-dcbb-11f0-b515-e1c7d50cafc2",
+          "title": "2",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "1c92c060-dcbb-11f0-b515-e1c7d50cafc2",
+          "title": "1",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "creation_date_time_aq1o",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "5e9985c0-dcbb-11f0-bef3-91013c5ee3fe",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_urcf",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_bg2q",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_qc5x",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "distrib_bieq",
+          "title": "distrib",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "times_vzd9",
+          "title": "times",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "Новый чарт",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "pagination": "on",
+      "limit": 100,
+      "totals": "on",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "stacking": "on",
+      "zoomMode": "auto",
+      "mapCenterMode": "auto"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "28b08780-dcbe-11f0-b6b5-8dc66dcf27af",
+        "datasetId": "vf6w80lojksuf",
+        "data_type": "date",
+        "title": "Период",
+        "source": "",
+        "direction": "DESC",
+        "format": "DD.MM.YYYY",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "data_type": "float",
+          "ui_settings": "",
+          "aggregation": "none",
+          "cast": "float",
+          "type": "MEASURE",
+          "title": "1",
+          "valid": true,
+          "description": "",
+          "aggregation_locked": true,
+          "autoaggregated": true,
+          "hidden": false,
+          "has_auto_aggregation": true,
+          "managed_by": "user",
+          "virtual": false,
+          "initial_data_type": "float",
+          "guid": "1c92c060-dcbb-11f0-b515-e1c7d50cafc2",
+          "guid_formula": "IF COUNTD([crm_id_bg2q]) > 0 THEN\n    IF (COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 1) / COUNTD([crm_id_bg2q]) > 0) THEN\n        COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 1) / COUNTD([crm_id_bg2q])\n    END\nEND",
+          "formula": "IF COUNTD([crm_id]) > 0 THEN\n    IF (COUNTD_IF([crm_id], [distrib] = 1) / COUNTD([crm_id]) > 0) THEN\n        COUNTD_IF([crm_id], [distrib] = 1) / COUNTD([crm_id])\n    END\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "vf6w80lojksuf"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "data_type": "float",
+          "ui_settings": "",
+          "aggregation": "none",
+          "cast": "float",
+          "type": "MEASURE",
+          "title": "2",
+          "valid": true,
+          "description": "",
+          "aggregation_locked": true,
+          "autoaggregated": true,
+          "hidden": false,
+          "has_auto_aggregation": true,
+          "managed_by": "user",
+          "virtual": false,
+          "initial_data_type": "float",
+          "guid": "cb4c3690-dcbb-11f0-b515-e1c7d50cafc2",
+          "guid_formula": "IF COUNTD([crm_id_bg2q]) > 0 THEN\n    IF (COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 2) / COUNTD([crm_id_bg2q]) > 0) THEN\n        COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 2) / COUNTD([crm_id_bg2q])\n    END\nEND",
+          "formula": "IF COUNTD([crm_id]) > 0 THEN\n    IF (COUNTD_IF([crm_id], [distrib] = 2) / COUNTD([crm_id]) > 0) THEN\n        COUNTD_IF([crm_id], [distrib] = 2) / COUNTD([crm_id])\n    END\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "vf6w80lojksuf"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "data_type": "float",
+          "ui_settings": "",
+          "aggregation": "none",
+          "cast": "float",
+          "type": "MEASURE",
+          "title": "3",
+          "valid": true,
+          "description": "",
+          "aggregation_locked": true,
+          "autoaggregated": true,
+          "hidden": false,
+          "has_auto_aggregation": true,
+          "managed_by": "user",
+          "virtual": false,
+          "initial_data_type": "float",
+          "guid": "e4bad550-dcbb-11f0-b515-e1c7d50cafc2",
+          "guid_formula": "IF COUNTD([crm_id_bg2q]) > 0 THEN\n    IF (COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 3) / COUNTD([crm_id_bg2q]) > 0) THEN\n        COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 3) / COUNTD([crm_id_bg2q])\n    END\nEND",
+          "formula": "IF COUNTD([crm_id]) > 0 THEN\n    IF (COUNTD_IF([crm_id], [distrib] = 3) / COUNTD([crm_id]) > 0) THEN\n        COUNTD_IF([crm_id], [distrib] = 3) / COUNTD([crm_id])\n    END\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "vf6w80lojksuf"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "data_type": "float",
+          "ui_settings": "",
+          "aggregation": "none",
+          "cast": "float",
+          "type": "MEASURE",
+          "title": "4",
+          "valid": true,
+          "description": "",
+          "aggregation_locked": true,
+          "autoaggregated": true,
+          "hidden": false,
+          "has_auto_aggregation": true,
+          "managed_by": "user",
+          "virtual": false,
+          "initial_data_type": "float",
+          "guid": "1828e120-dcbc-11f0-b515-e1c7d50cafc2",
+          "guid_formula": "IF COUNTD([crm_id_bg2q]) > 0 THEN\n    IF (COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 4) / COUNTD([crm_id_bg2q]) > 0) THEN\n        COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 4) / COUNTD([crm_id_bg2q])\n    END\nEND",
+          "formula": "IF COUNTD([crm_id]) > 0 THEN\n    IF (COUNTD_IF([crm_id], [distrib] = 4) / COUNTD([crm_id]) > 0) THEN\n        COUNTD_IF([crm_id], [distrib] = 4) / COUNTD([crm_id])\n    END\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "vf6w80lojksuf"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "data_type": "float",
+          "ui_settings": "",
+          "aggregation": "none",
+          "cast": "float",
+          "type": "MEASURE",
+          "title": ">4",
+          "valid": true,
+          "description": "",
+          "aggregation_locked": true,
+          "autoaggregated": true,
+          "hidden": false,
+          "has_auto_aggregation": true,
+          "managed_by": "user",
+          "virtual": false,
+          "initial_data_type": "float",
+          "guid": "2997c520-dcbc-11f0-b515-e1c7d50cafc2",
+          "guid_formula": "IF COUNTD([crm_id_bg2q]) > 0 THEN\n    IF (COUNTD_IF([crm_id_bg2q], [distrib_bieq] > 4) / COUNTD([crm_id_bg2q]) > 0) THEN\n        COUNTD_IF([crm_id_bg2q], [distrib_bieq] > 4) / COUNTD([crm_id_bg2q])\n    END\nEND",
+          "formula": "IF COUNTD([crm_id]) > 0 THEN\n    IF (COUNTD_IF([crm_id], [distrib] > 4) / COUNTD([crm_id]) > 0) THEN\n        COUNTD_IF([crm_id], [distrib] > 4) / COUNTD([crm_id])\n    END\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "vf6w80lojksuf"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "data_type": "date",
+          "ui_settings": "",
+          "aggregation": "none",
+          "cast": "date",
+          "type": "DIMENSION",
+          "title": "Период",
+          "valid": true,
+          "description": "",
+          "aggregation_locked": true,
+          "autoaggregated": false,
+          "hidden": false,
+          "has_auto_aggregation": false,
+          "managed_by": "user",
+          "virtual": false,
+          "initial_data_type": "date",
+          "guid": "28b08780-dcbe-11f0-b6b5-8dc66dcf27af",
+          "guid_formula": "IF [period] = 'День' THEN\n    [5e9985c0-dcbb-11f0-bef3-91013c5ee3fe]\nELSEIF [period] = 'Неделя' THEN\n    DATETRUNC([5e9985c0-dcbb-11f0-bef3-91013c5ee3fe], 'week')\nELSEIF [period] = 'Месяц' THEN\n    DATETRUNC([5e9985c0-dcbb-11f0-bef3-91013c5ee3fe], 'month')\nELSEIF [period] = 'Год' THEN\n    DATETRUNC([5e9985c0-dcbb-11f0-bef3-91013c5ee3fe], 'year')\nEND",
+          "formula": "IF [period] = 'День' THEN\n    [creation_date]\nELSEIF [period] = 'Неделя' THEN\n    DATETRUNC([creation_date], 'week')\nELSEIF [period] = 'Месяц' THEN\n    DATETRUNC([creation_date], 'month')\nELSEIF [period] = 'Год' THEN\n    DATETRUNC([creation_date], 'year')\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "vf6w80lojksuf"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "data_type": "integer",
+          "ui_settings": "",
+          "aggregation": "countunique",
+          "cast": "integer",
+          "type": "MEASURE",
+          "title": "title-9abe4370-dcbf-11f0-b9d9-e3d03d5472d9",
+          "valid": true,
+          "description": "",
+          "aggregation_locked": false,
+          "autoaggregated": false,
+          "hidden": false,
+          "has_auto_aggregation": false,
+          "managed_by": "user",
+          "virtual": false,
+          "initial_data_type": "integer",
+          "guid": "9abe4370-dcbf-11f0-b9d9-e3d03d5472d9",
+          "avatar_id": "60388530-dcba-11f0-86d4-250467b66d59",
+          "source": "crm_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "fakeTitle": "Лидов",
+          "backgroundSettings": {
+            "enabled": false,
+            "settingsId": "9b6076e0-dcbf-11f0-b9d9-e3d03d5472d9",
+            "settings": {
+              "gradientState": {
+                "thresholdsMode": "auto",
+                "gradientPalette": "blue",
+                "gradientMode": "2-point",
+                "reversed": false
+              },
+              "paletteState": {},
+              "isContinuous": true
+            },
+            "colorFieldGuid": "9abe4370-dcbf-11f0-b9d9-e3d03d5472d9"
+          },
+          "barsSettings": {
+            "enabled": false,
+            "colorSettings": {
+              "colorType": "two-color",
+              "settings": {
+                "positiveColorIndex": 2,
+                "negativeColorIndex": 1
+              }
+            },
+            "showLabels": true,
+            "align": "default",
+            "scale": {
+              "mode": "auto"
+            },
+            "showBarsInTotals": false
+          },
+          "datasetId": "vf6w80lojksuf"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "pivotTable",
+      "type": "table",
+      "name": "label_visualization-pivot-table",
+      "iconProps": {
+        "id": "visPivot",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "pivot-table-columns",
+          "type": "pivot-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "Measure Names",
+              "type": "PSEUDO",
+              "className": "item pseudo-item dimension-item",
+              "data_type": "string"
+            }
+          ],
+          "settings": {}
+        },
+        {
+          "allowedDataTypes": {},
+          "id": "rows",
+          "type": "rows",
+          "title": "section_rows",
+          "iconProps": {},
+          "items": [
+            {
+              "aggregation_locked": true,
+              "initial_data_type": "date",
+              "cast": "date",
+              "data_type": "date",
+              "hidden": false,
+              "description": "",
+              "valid": true,
+              "ui_settings": "",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "title": "Период",
+              "guid": "28b08780-dcbe-11f0-b6b5-8dc66dcf27af",
+              "type": "DIMENSION",
+              "managed_by": "user",
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "IF [period] = 'День' THEN\n    [creation_date]\nELSEIF [period] = 'Неделя' THEN\n    DATETRUNC([creation_date], 'week')\nELSEIF [period] = 'Месяц' THEN\n    DATETRUNC([creation_date], 'month')\nELSEIF [period] = 'Год' THEN\n    DATETRUNC([creation_date], 'year')\nEND",
+              "guid_formula": "IF [period] = 'День' THEN\n    [5e9985c0-dcbb-11f0-bef3-91013c5ee3fe]\nELSEIF [period] = 'Неделя' THEN\n    DATETRUNC([5e9985c0-dcbb-11f0-bef3-91013c5ee3fe], 'week')\nELSEIF [period] = 'Месяц' THEN\n    DATETRUNC([5e9985c0-dcbb-11f0-bef3-91013c5ee3fe], 'month')\nELSEIF [period] = 'Год' THEN\n    DATETRUNC([5e9985c0-dcbb-11f0-bef3-91013c5ee3fe], 'year')\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "vf6w80lojksuf",
+              "id": "dimension-1",
+              "datasetName": "broker_leads_distrib",
+              "local": true,
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "7976ef60-dcbe-11f0-b6b5-8dc66dcf27af",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "28b08780-dcbe-11f0-b6b5-8dc66dcf27af"
+              },
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            },
+            {
+              "virtual": false,
+              "initial_data_type": "string",
+              "cast": "string",
+              "data_type": "string",
+              "hidden": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "geo_qc5x",
+              "has_auto_aggregation": false,
+              "valid": true,
+              "title": "geo",
+              "autoaggregated": false,
+              "description": "",
+              "aggregation_locked": false,
+              "avatar_id": "60388530-dcba-11f0-86d4-250467b66d59",
+              "source": "geo",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "vf6w80lojksuf",
+              "id": "dimension-12",
+              "datasetName": "broker_leads_distrib",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "7b0d46d0-dcbe-11f0-b6b5-8dc66dcf27af",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "geo_qc5x"
+              },
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Гео"
+            }
+          ],
+          "settings": {}
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measures",
+          "iconProps": {},
+          "items": [
+            {
+              "virtual": false,
+              "title": "title-9abe4370-dcbf-11f0-b9d9-e3d03d5472d9",
+              "guid": "9abe4370-dcbf-11f0-b9d9-e3d03d5472d9",
+              "hidden": false,
+              "ui_settings": "",
+              "autoaggregated": false,
+              "initial_data_type": "integer",
+              "has_auto_aggregation": false,
+              "data_type": "integer",
+              "aggregation_locked": false,
+              "description": "",
+              "aggregation": "countunique",
+              "type": "MEASURE",
+              "valid": true,
+              "cast": "integer",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "avatar_id": "60388530-dcba-11f0-86d4-250467b66d59",
+              "source": "crm_id",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "crm_id",
+              "fakeTitle": "Лидов",
+              "datasetId": "vf6w80lojksuf",
+              "id": "measure-0",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "positiveColorIndex": 2,
+                    "negativeColorIndex": 1
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "9b6076e0-dcbf-11f0-b9d9-e3d03d5472d9",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "9abe4370-dcbf-11f0-b9d9-e3d03d5472d9"
+              },
+              "datasetName": "broker_leads_distrib"
+            },
+            {
+              "aggregation_locked": true,
+              "initial_data_type": "float",
+              "cast": "float",
+              "data_type": "float",
+              "hidden": false,
+              "description": "",
+              "valid": true,
+              "ui_settings": "",
+              "aggregation": "none",
+              "autoaggregated": true,
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": true,
+              "title": "1",
+              "guid": "1c92c060-dcbb-11f0-b515-e1c7d50cafc2",
+              "type": "MEASURE",
+              "managed_by": "user",
+              "guid_formula": "IF COUNTD([crm_id_bg2q]) > 0 THEN\n    IF (COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 1) / COUNTD([crm_id_bg2q]) > 0) THEN\n        COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 1) / COUNTD([crm_id_bg2q])\n    END\nEND",
+              "formula": "IF COUNTD([crm_id]) > 0 THEN\n    IF (COUNTD_IF([crm_id], [distrib] = 1) / COUNTD([crm_id]) > 0) THEN\n        COUNTD_IF([crm_id], [distrib] = 1) / COUNTD([crm_id])\n    END\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "vf6w80lojksuf",
+              "id": "measure-6",
+              "datasetName": "broker_leads_distrib",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "colorIndex": 7,
+                    "color": "#54A520"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "02ae8700-dcbc-11f0-b515-e1c7d50cafc2",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "1c92c060-dcbb-11f0-b515-e1c7d50cafc2"
+              },
+              "fakeTitle": "1"
+            },
+            {
+              "aggregation_locked": true,
+              "initial_data_type": "float",
+              "cast": "float",
+              "data_type": "float",
+              "hidden": false,
+              "description": "",
+              "valid": true,
+              "ui_settings": "",
+              "aggregation": "none",
+              "autoaggregated": true,
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": true,
+              "title": "2",
+              "guid": "cb4c3690-dcbb-11f0-b515-e1c7d50cafc2",
+              "type": "MEASURE",
+              "managed_by": "user",
+              "guid_formula": "IF COUNTD([crm_id_bg2q]) > 0 THEN\n    IF (COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 2) / COUNTD([crm_id_bg2q]) > 0) THEN\n        COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 2) / COUNTD([crm_id_bg2q])\n    END\nEND",
+              "formula": "IF COUNTD([crm_id]) > 0 THEN\n    IF (COUNTD_IF([crm_id], [distrib] = 2) / COUNTD([crm_id]) > 0) THEN\n        COUNTD_IF([crm_id], [distrib] = 2) / COUNTD([crm_id])\n    END\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "vf6w80lojksuf",
+              "id": "measure-5",
+              "datasetName": "broker_leads_distrib",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "colorIndex": 0,
+                    "color": "#4DA2F1"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "095149d0-dcbc-11f0-b515-e1c7d50cafc2",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "cb4c3690-dcbb-11f0-b515-e1c7d50cafc2"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "virtual": false,
+              "autoaggregated": true,
+              "cast": "float",
+              "lock_aggregation": false,
+              "guid": "e4bad550-dcbb-11f0-b515-e1c7d50cafc2",
+              "description": "",
+              "type": "MEASURE",
+              "valid": true,
+              "hidden": false,
+              "ui_settings": "",
+              "aggregation": "none",
+              "has_auto_aggregation": true,
+              "aggregation_locked": true,
+              "initial_data_type": "float",
+              "data_type": "float",
+              "title": "3",
+              "managed_by": "user",
+              "formula": "IF COUNTD([crm_id]) > 0 THEN\n    IF (COUNTD_IF([crm_id], [distrib] = 3) / COUNTD([crm_id]) > 0) THEN\n        COUNTD_IF([crm_id], [distrib] = 3) / COUNTD([crm_id])\n    END\nEND",
+              "guid_formula": "IF COUNTD([crm_id_bg2q]) > 0 THEN\n    IF (COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 3) / COUNTD([crm_id_bg2q]) > 0) THEN\n        COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 3) / COUNTD([crm_id_bg2q])\n    END\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "vf6w80lojksuf",
+              "id": "measure-4",
+              "datasetName": "broker_leads_distrib",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "colorIndex": 18,
+                    "color": "#FFB46C"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "13d390c0-dcbc-11f0-b515-e1c7d50cafc2",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "e4bad550-dcbb-11f0-b515-e1c7d50cafc2"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "valid": true,
+              "aggregation_locked": true,
+              "initial_data_type": "float",
+              "hidden": false,
+              "title": "4",
+              "autoaggregated": true,
+              "cast": "float",
+              "managed_by": "user",
+              "virtual": false,
+              "lock_aggregation": false,
+              "has_auto_aggregation": true,
+              "type": "MEASURE",
+              "description": "",
+              "aggregation": "none",
+              "ui_settings": "",
+              "data_type": "float",
+              "guid": "1828e120-dcbc-11f0-b515-e1c7d50cafc2",
+              "guid_formula": "IF COUNTD([crm_id_bg2q]) > 0 THEN\n    IF (COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 4) / COUNTD([crm_id_bg2q]) > 0) THEN\n        COUNTD_IF([crm_id_bg2q], [distrib_bieq] = 4) / COUNTD([crm_id_bg2q])\n    END\nEND",
+              "formula": "IF COUNTD([crm_id]) > 0 THEN\n    IF (COUNTD_IF([crm_id], [distrib] = 4) / COUNTD([crm_id]) > 0) THEN\n        COUNTD_IF([crm_id], [distrib] = 4) / COUNTD([crm_id])\n    END\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "vf6w80lojksuf",
+              "id": "measure-3",
+              "datasetName": "broker_leads_distrib",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "colorIndex": 6,
+                    "color": "#FF91A1"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1d862ba0-dcbc-11f0-b515-e1c7d50cafc2",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "1828e120-dcbc-11f0-b515-e1c7d50cafc2"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "aggregation_locked": true,
+              "initial_data_type": "float",
+              "cast": "float",
+              "data_type": "float",
+              "hidden": false,
+              "description": "",
+              "valid": true,
+              "ui_settings": "",
+              "aggregation": "none",
+              "autoaggregated": true,
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": true,
+              "title": ">4",
+              "guid": "2997c520-dcbc-11f0-b515-e1c7d50cafc2",
+              "type": "MEASURE",
+              "managed_by": "user",
+              "guid_formula": "IF COUNTD([crm_id_bg2q]) > 0 THEN\n    IF (COUNTD_IF([crm_id_bg2q], [distrib_bieq] > 4) / COUNTD([crm_id_bg2q]) > 0) THEN\n        COUNTD_IF([crm_id_bg2q], [distrib_bieq] > 4) / COUNTD([crm_id_bg2q])\n    END\nEND",
+              "formula": "IF COUNTD([crm_id]) > 0 THEN\n    IF (COUNTD_IF([crm_id], [distrib] > 4) / COUNTD([crm_id]) > 0) THEN\n        COUNTD_IF([crm_id], [distrib] > 4) / COUNTD([crm_id])\n    END\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "vf6w80lojksuf",
+              "id": "measure-2",
+              "datasetName": "broker_leads_distrib",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "colorIndex": 16,
+                    "color": "#BE2443"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "31340320-dcbc-11f0-b515-e1c7d50cafc2",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "2997c520-dcbc-11f0-b515-e1c7d50cafc2"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "settings": {
+            "axisModeMap": {
+              "9abe4370-dcbf-11f0-b9d9-e3d03d5472d9": "continuous"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "10mo8a4aebtgm",
+  "collectionId": null
+}

@@ -1,0 +1,416 @@
+{
+  "entryId": "ky1zv34iaeg48",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1677543846067570208/Закупки - CPF — Таблица по месяцам Москва",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-05-03T10:40:10.045Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-05-03T11:27:35.152Z",
+  "savedId": "2gkqu5pt6b88q",
+  "publishedId": "2gkqu5pt6b88q",
+  "revId": "2gkqu5pt6b88q",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "lz2y1j0rwu2a9"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "month_year",
+          "title": "month_year",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_followers_msc",
+          "title": "total_followers_msc",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_followers_uae",
+          "title": "total_followers_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_followers_bali",
+          "title": "total_followers_bali",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_cost_msc",
+          "title": "total_cost_msc",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_cost_uae",
+          "title": "total_cost_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_cost_bali",
+          "title": "total_cost_bali",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpf_msc",
+          "title": "cpf_msc",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpf_uae",
+          "title": "cpf_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpf_bali",
+          "title": "cpf_bali",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "msc_placements_count",
+          "title": "msc_placements_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "uae_placements_count",
+          "title": "uae_placements_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "bali_placements_count",
+          "title": "bali_placements_count",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "month_year",
+        "datasetId": "lz2y1j0rwu2a9",
+        "data_type": "date",
+        "title": "month_year",
+        "source": "month_year",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "hidden": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "virtual": false,
+              "description": "",
+              "valid": true,
+              "cast": "date",
+              "data_type": "date",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "guid": "month_year",
+              "title": "month_year",
+              "aggregation_locked": false,
+              "initial_data_type": "date",
+              "avatar_id": "026ea940-0938-11ef-8998-41df399dd867",
+              "source": "month_year",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "lz2y1j0rwu2a9",
+              "id": "dimension-0",
+              "datasetName": "Закупки - CPF",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Месяц",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d5ccebd0-0938-11ef-a93b-1b0cc89b0336",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "month_year"
+              }
+            },
+            {
+              "cast": "integer",
+              "title": "msc_placements_count",
+              "guid": "msc_placements_count",
+              "autoaggregated": false,
+              "description": "",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "hidden": false,
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "data_type": "integer",
+              "source": "msc_placements_count",
+              "avatar_id": "026ea940-0938-11ef-8998-41df399dd867",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "lz2y1j0rwu2a9",
+              "id": "dimension-10",
+              "datasetName": "Закупки - CPF",
+              "fakeTitle": "Размещений",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1fce5eb0-0940-11ef-8b4d-77c7b3470d4b",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "msc_placements_count"
+              }
+            },
+            {
+              "guid": "total_cost_msc",
+              "aggregation_locked": false,
+              "hidden": false,
+              "cast": "float",
+              "managed_by": "user",
+              "virtual": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "title": "total_cost_msc",
+              "has_auto_aggregation": false,
+              "data_type": "float",
+              "initial_data_type": "float",
+              "description": "",
+              "valid": true,
+              "source": "total_cost_msc",
+              "avatar_id": "026ea940-0938-11ef-8998-41df399dd867",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "lz2y1j0rwu2a9",
+              "id": "dimension-4",
+              "datasetName": "Закупки - CPF",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "a8517030-0939-11ef-936b-837705069a7e",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "golden",
+                    "gradientMode": "2-point",
+                    "reversed": true
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "total_cost_msc"
+              },
+              "fakeTitle": "Расход"
+            },
+            {
+              "guid": "total_followers_msc",
+              "aggregation_locked": false,
+              "hidden": false,
+              "cast": "float",
+              "managed_by": "user",
+              "virtual": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "title": "total_followers_msc",
+              "has_auto_aggregation": false,
+              "data_type": "float",
+              "initial_data_type": "float",
+              "description": "",
+              "valid": true,
+              "source": "total_followers_msc",
+              "avatar_id": "026ea940-0938-11ef-8998-41df399dd867",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "lz2y1j0rwu2a9",
+              "id": "dimension-1",
+              "datasetName": "Закупки - CPF",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "a6a4f8b0-0939-11ef-936b-837705069a7e",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "cyan",
+                    "gradientMode": "2-point",
+                    "reversed": true
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "total_followers_msc"
+              },
+              "fakeTitle": "Подписчиков МСК"
+            },
+            {
+              "guid": "cpf_msc",
+              "aggregation_locked": false,
+              "hidden": false,
+              "cast": "float",
+              "managed_by": "user",
+              "virtual": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "title": "cpf_msc",
+              "has_auto_aggregation": false,
+              "data_type": "float",
+              "initial_data_type": "float",
+              "description": "",
+              "valid": true,
+              "source": "cpf_msc",
+              "avatar_id": "026ea940-0938-11ef-8998-41df399dd867",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "lz2y1j0rwu2a9",
+              "id": "dimension-7",
+              "datasetName": "Закупки - CPF",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "a49c0950-0939-11ef-936b-837705069a7e",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": true
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "cpf_msc"
+              },
+              "fakeTitle": "CPF"
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

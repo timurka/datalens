@@ -1,0 +1,228 @@
+{
+  "entryId": "m0ns4jgzayqy7",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "2082040967740788279/Лиды и источники — Индикатор лидов со входом",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-11-12T13:03:44.533Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-11-12T13:04:49.767Z",
+  "savedId": "1f28qx6uzxdsm",
+  "publishedId": "1f28qx6uzxdsm",
+  "revId": "1f28qx6uzxdsm",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "t7m1qnq8870ge"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "954e2910-bfc7-11f0-afc8-8bcbdc317be0",
+          "title": "Со входом",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "crm_id_vlk2",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contacts_amo_id_jri8",
+          "title": "contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_a92y",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_mv8g",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_q1qo",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id_h7az",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_source_xitz",
+          "title": "telegram_source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category_7g5o",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_x2sc",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_geo_3tnj",
+          "title": "source_geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_e0jc",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_2oxt",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_time_urza",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_source_status_vmhg",
+          "title": "telegram_source_status",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontColorIndex": 14,
+      "metricFontSize": "s",
+      "metricFontColor": "#7F7F7F",
+      "metricFontColorPalette": "neutral20"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "type": "MEASURE",
+          "title": "Со входом",
+          "hidden": false,
+          "valid": true,
+          "ui_settings": "",
+          "lock_aggregation": false,
+          "guid": "954e2910-bfc7-11f0-afc8-8bcbdc317be0",
+          "autoaggregated": true,
+          "has_auto_aggregation": true,
+          "cast": "integer",
+          "initial_data_type": "integer",
+          "description": "",
+          "aggregation": "none",
+          "data_type": "integer",
+          "managed_by": "user",
+          "aggregation_locked": true,
+          "virtual": false,
+          "guid_formula": "COUNTD_IF([crm_id_vlk2], [date_join_x2sc] IS NOT NULL)",
+          "formula": "COUNTD_IF([crm_id], [date_join] IS NOT NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "t7m1qnq8870ge"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "Со входом",
+              "cast": "integer",
+              "data_type": "integer",
+              "initial_data_type": "integer",
+              "managed_by": "user",
+              "aggregation_locked": true,
+              "valid": true,
+              "virtual": false,
+              "ui_settings": "",
+              "description": "",
+              "type": "MEASURE",
+              "guid": "954e2910-bfc7-11f0-afc8-8bcbdc317be0",
+              "aggregation": "none",
+              "autoaggregated": true,
+              "lock_aggregation": false,
+              "has_auto_aggregation": true,
+              "hidden": false,
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "COUNTD_IF([crm_id], [date_join] IS NOT NULL)",
+              "guid_formula": "COUNTD_IF([crm_id_vlk2], [date_join_x2sc] IS NOT NULL)",
+              "local": true,
+              "originalTitle": "crm_id",
+              "datasetId": "t7m1qnq8870ge",
+              "id": "measure-0",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "datasetName": "Лиды и источники",
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

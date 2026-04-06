@@ -1,0 +1,233 @@
+{
+  "entry": {
+    "version": 1,
+    "scope": "dash",
+    "entryId": "jpavawnucgji3",
+    "key": "2187173270862694239/Блок 1 - контроль задач по сделкам",
+    "createdAt": "2026-04-06T14:22:51.407Z",
+    "createdBy": "uid:ek0q2ng2ih4ubsq29dt8",
+    "updatedAt": "2026-04-06T14:24:47.392Z",
+    "updatedBy": "uid:ek0q2ng2ih4ubsq29dt8",
+    "revId": "28te6tvgnyn0m",
+    "savedId": "28te6tvgnyn0m",
+    "publishedId": "28te6tvgnyn0m",
+    "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+    "hidden": false,
+    "public": false,
+    "workbookId": "10mo8a4aebtgm",
+    "meta": {
+      "is_release": true
+    },
+    "annotation": {
+      "description": ""
+    },
+    "type": "",
+    "data": {
+      "salt": "0.6589621166208016",
+      "tabs": [
+        {
+          "id": "rz",
+          "items": [
+            {
+              "id": "AP",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "0b",
+                    "hint": "",
+                    "title": "Блок 1 - список сделок по задачам",
+                    "params": {},
+                    "chartId": "7dyic2wzz0emr",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "like-chart-bg"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "WO",
+              "data": {
+                "group": [
+                  {
+                    "id": "BZ",
+                    "title": "Брокер",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "y4p7h02ve1koi",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "broker_s6yo",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "broker_s6yo": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "rz"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "we",
+              "data": {
+                "group": [
+                  {
+                    "id": "v7",
+                    "title": "CRM_ID",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "y4p7h02ve1koi",
+                      "fieldType": "integer",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "input",
+                      "datasetFieldId": "account_id_okig",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "account_id_okig": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "rz"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "O4",
+              "data": {
+                "group": [
+                  {
+                    "id": "8M",
+                    "title": "Дата создания",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "y4p7h02ve1koi",
+                      "fieldType": "genericdatetime",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "datasetFieldId": "deal_created_at_6z2g",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "deal_created_at_6z2g": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "rz"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            }
+          ],
+          "title": "Вкладка 1",
+          "layout": [
+            {
+              "h": 31,
+              "i": "AP",
+              "w": 36,
+              "x": 0,
+              "y": 2
+            },
+            {
+              "h": 2,
+              "i": "WO",
+              "w": 8,
+              "x": 16,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "we",
+              "w": 8,
+              "x": 8,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "O4",
+              "w": 8,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "aliases": {},
+          "connections": []
+        }
+      ],
+      "counter": 9,
+      "settings": {
+        "hideTabs": false,
+        "expandTOC": false,
+        "globalParams": {},
+        "loadPriority": "charts",
+        "hideDashTitle": false,
+        "silentLoading": false,
+        "autoupdateInterval": null,
+        "dependentSelectors": true,
+        "loadOnlyVisibleCharts": true,
+        "maxConcurrentRequests": null
+      },
+      "schemeVersion": 8
+    }
+  }
+}

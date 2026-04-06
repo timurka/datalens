@@ -1,0 +1,1212 @@
+{
+  "entryId": "mw9qk1f66euk8",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1930605000266875908/Вебинары - по событию — Сводная таблица",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-04-17T14:27:30.278Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-04-17T14:27:30.278Z",
+  "savedId": "blyf9q5auhmyx",
+  "publishedId": "blyf9q5auhmyx",
+  "revId": "blyf9q5auhmyx",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "0an4yftql02km"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "f0f3d9c0-de1f-11ef-b2d4-2532c3241eb8",
+          "title": "title-f0f3d9c0-de1f-11ef-b2d4-2532c3241eb8",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "515e1f10-de1f-11ef-b3d3-85acd2689221",
+          "title": "C",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "4b22f7b0-de1f-11ef-b3d3-85acd2689221",
+          "title": "B",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "689d1e80-de1d-11ef-b49f-ada212139e93",
+          "title": "A",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "d38abfa0-dd81-11ef-938d-696dcc771a34",
+          "title": "Дата события",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "24355790-dd81-11ef-9afb-25f27a7c55e0",
+          "title": "leads",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "0fc4a640-dd76-11ef-9ee4-0f5f571060fc",
+          "title": "Дошли",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "dde18030-dd75-11ef-9ee4-0f5f571060fc",
+          "title": "Брони",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "cfb03b00-dd75-11ef-9ee4-0f5f571060fc",
+          "title": "Квалы",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "952f9390-dd75-11ef-9ee4-0f5f571060fc",
+          "title": "regs",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "event_date_4ivk",
+          "title": "event_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "event_type_raxb",
+          "title": "event_type",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "event_count_qfwa",
+          "title": "event_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "webinar_rc1p",
+          "title": "webinar",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utmsource_bs06",
+          "title": "utmsource",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_8xym",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cumulative_count_scpy",
+          "title": "cumulative_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "priority_2zid",
+          "title": "priority",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_0t1x",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "totals": "on",
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "Вебинары - по событию — Сводная таблица",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "pagination": "on",
+      "limit": 100,
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "stacking": "on"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "d38abfa0-dd81-11ef-938d-696dcc771a34",
+        "datasetId": "0an4yftql02km",
+        "data_type": "date",
+        "title": "Дата события",
+        "source": "",
+        "direction": "DESC",
+        "format": "DD.MM.YYYY",
+        "type": "DIMENSION"
+      },
+      {
+        "guid": "webinar_rc1p",
+        "datasetId": "0an4yftql02km",
+        "data_type": "string",
+        "title": "webinar",
+        "source": "webinar",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      },
+      {
+        "guid": "utmsource_bs06",
+        "datasetId": "0an4yftql02km",
+        "data_type": "string",
+        "title": "utmsource",
+        "source": "utmsource",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "hidden": false,
+          "guid": "952f9390-dd75-11ef-9ee4-0f5f571060fc",
+          "initial_data_type": "integer",
+          "title": "regs",
+          "type": "MEASURE",
+          "description": "",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "autoaggregated": true,
+          "cast": "integer",
+          "aggregation_locked": true,
+          "data_type": "integer",
+          "guid_formula": "IF SUM_IF([event_count_qfwa], [event_type_raxb] = 'Регистрация') > 0 THEN\n    SUM_IF([event_count_qfwa], [event_type_raxb] = 'Регистрация')\nEND",
+          "formula": "IF SUM_IF([event_count], [event_type] = 'Регистрация') > 0 THEN\n    SUM_IF([event_count], [event_type] = 'Регистрация')\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "0an4yftql02km"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "hidden": false,
+          "guid": "cfb03b00-dd75-11ef-9ee4-0f5f571060fc",
+          "initial_data_type": "integer",
+          "title": "Квалы",
+          "type": "MEASURE",
+          "description": "",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "autoaggregated": true,
+          "cast": "integer",
+          "aggregation_locked": true,
+          "data_type": "integer",
+          "guid_formula": "IF SUM_IF([event_count_qfwa], [event_type_raxb] = 'Квалификация') > 0 THEN\n    SUM_IF([event_count_qfwa], [event_type_raxb] = 'Квалификация')\nEND",
+          "formula": "IF SUM_IF([event_count], [event_type] = 'Квалификация') > 0 THEN\n    SUM_IF([event_count], [event_type] = 'Квалификация')\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "0an4yftql02km"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "hidden": false,
+          "guid": "dde18030-dd75-11ef-9ee4-0f5f571060fc",
+          "initial_data_type": "integer",
+          "title": "Брони",
+          "type": "MEASURE",
+          "description": "",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "autoaggregated": true,
+          "cast": "integer",
+          "aggregation_locked": true,
+          "data_type": "integer",
+          "guid_formula": "IF SUM_IF([event_count_qfwa], [event_type_raxb] = 'Бронь') > 0 THEN\n    SUM_IF([event_count_qfwa], [event_type_raxb] = 'Бронь')\nEND",
+          "formula": "IF SUM_IF([event_count], [event_type] = 'Бронь') > 0 THEN\n    SUM_IF([event_count], [event_type] = 'Бронь')\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "0an4yftql02km"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "hidden": false,
+          "guid": "0fc4a640-dd76-11ef-9ee4-0f5f571060fc",
+          "initial_data_type": "integer",
+          "title": "Дошли",
+          "type": "MEASURE",
+          "description": "",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "autoaggregated": true,
+          "cast": "integer",
+          "aggregation_locked": true,
+          "data_type": "integer",
+          "guid_formula": "IF SUM_IF([event_count_qfwa], [event_type_raxb] = 'Визит') > 0 THEN\n    SUM_IF([event_count_qfwa], [event_type_raxb] = 'Визит')\nEND",
+          "formula": "IF SUM_IF([event_count], [event_type] = 'Визит') > 0 THEN\n    SUM_IF([event_count], [event_type] = 'Визит')\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "0an4yftql02km"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "hidden": false,
+          "guid": "24355790-dd81-11ef-9afb-25f27a7c55e0",
+          "initial_data_type": "integer",
+          "title": "leads",
+          "type": "MEASURE",
+          "description": "",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "autoaggregated": true,
+          "cast": "integer",
+          "aggregation_locked": true,
+          "data_type": "integer",
+          "guid_formula": "IF SUM_IF([event_count_qfwa], [event_type_raxb] = 'Лид') > 0 THEN\n    SUM_IF([event_count_qfwa], [event_type_raxb] = 'Лид')\nEND",
+          "formula": "IF SUM_IF([event_count], [event_type] = 'Лид') > 0 THEN\n    SUM_IF([event_count], [event_type] = 'Лид')\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "0an4yftql02km"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": false,
+          "aggregation": "none",
+          "hidden": false,
+          "guid": "d38abfa0-dd81-11ef-938d-696dcc771a34",
+          "initial_data_type": "date",
+          "title": "Дата события",
+          "type": "DIMENSION",
+          "description": "",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "autoaggregated": false,
+          "cast": "date",
+          "aggregation_locked": true,
+          "data_type": "date",
+          "guid_formula": "IF [period] = 'Месяц' THEN\n    datetrunc([event_date_4ivk], \"month\")\nELSE\n    [event_date_4ivk]\nEND",
+          "formula": "IF [period] = 'Месяц' THEN\n    datetrunc([event_date], \"month\")\nELSE\n    [event_date]\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "0an4yftql02km"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "update_field",
+        "field": {
+          "has_auto_aggregation": false,
+          "aggregation": "none",
+          "hidden": false,
+          "guid": "period",
+          "initial_data_type": "string",
+          "title": "period",
+          "type": "DIMENSION",
+          "description": "",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "autoaggregated": false,
+          "cast": "string",
+          "aggregation_locked": true,
+          "data_type": "string",
+          "default_value": "Месяц",
+          "calc_mode": "parameter",
+          "formula": "",
+          "guid_formula": "",
+          "source": "",
+          "datasetId": "0an4yftql02km"
+        },
+        "deleteUpdateAfterValidation": false
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "hidden": false,
+          "guid": "689d1e80-de1d-11ef-b49f-ada212139e93",
+          "initial_data_type": "integer",
+          "title": "A",
+          "type": "MEASURE",
+          "description": "",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "autoaggregated": true,
+          "cast": "integer",
+          "aggregation_locked": true,
+          "data_type": "integer",
+          "guid_formula": "IF SUM_IF([event_count_qfwa], [priority_2zid] = 'A') > 0 THEN\n    SUM_IF([event_count_qfwa], [priority_2zid] = 'A')\nEND",
+          "formula": "IF SUM_IF([event_count], [priority] = 'A') > 0 THEN\n    SUM_IF([event_count], [priority] = 'A')\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "0an4yftql02km"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "hidden": false,
+          "guid": "4b22f7b0-de1f-11ef-b3d3-85acd2689221",
+          "initial_data_type": "integer",
+          "title": "B",
+          "type": "MEASURE",
+          "description": "",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "autoaggregated": true,
+          "cast": "integer",
+          "aggregation_locked": true,
+          "data_type": "integer",
+          "guid_formula": "IF SUM_IF([event_count_qfwa], [priority_2zid] = 'B') > 0 THEN\n    SUM_IF([event_count_qfwa], [priority_2zid] = 'B')\nEND",
+          "formula": "IF SUM_IF([event_count], [priority] = 'B') > 0 THEN\n    SUM_IF([event_count], [priority] = 'B')\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "0an4yftql02km"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "hidden": false,
+          "guid": "515e1f10-de1f-11ef-b3d3-85acd2689221",
+          "initial_data_type": "integer",
+          "title": "C",
+          "type": "MEASURE",
+          "description": "",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "autoaggregated": true,
+          "cast": "integer",
+          "aggregation_locked": true,
+          "data_type": "integer",
+          "guid_formula": "IF SUM_IF([event_count_qfwa], [priority_2zid] = 'C') > 0 THEN\n    SUM_IF([event_count_qfwa], [priority_2zid] = 'C')\nEND",
+          "formula": "IF SUM_IF([event_count], [priority] = 'C') > 0 THEN\n    SUM_IF([event_count], [priority] = 'C')\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "0an4yftql02km"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": false,
+          "aggregation": "sum",
+          "hidden": false,
+          "guid": "f0f3d9c0-de1f-11ef-b2d4-2532c3241eb8",
+          "initial_data_type": "float",
+          "title": "title-f0f3d9c0-de1f-11ef-b2d4-2532c3241eb8",
+          "type": "MEASURE",
+          "description": "",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "autoaggregated": false,
+          "cast": "float",
+          "aggregation_locked": false,
+          "data_type": "float",
+          "source": "deal_amount",
+          "avatar_id": "4421c170-dd80-11ef-bacf-174617f66c5f",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "originalTitle": "deal_amount",
+          "fakeTitle": "deal_amount",
+          "datasetId": "0an4yftql02km",
+          "id": "inserted-1738141425850"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "pivotTable",
+      "type": "table",
+      "name": "label_visualization-pivot-table",
+      "iconProps": {
+        "id": "visPivot",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "pivot-table-columns",
+          "type": "pivot-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "Measure Names",
+              "type": "PSEUDO",
+              "className": "item pseudo-item dimension-item",
+              "data_type": "string"
+            }
+          ],
+          "settings": {}
+        },
+        {
+          "allowedDataTypes": {},
+          "id": "rows",
+          "type": "rows",
+          "title": "section_rows",
+          "iconProps": {},
+          "items": [
+            {
+              "data_type": "date",
+              "autoaggregated": false,
+              "description": "",
+              "managed_by": "user",
+              "virtual": false,
+              "valid": true,
+              "aggregation_locked": true,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "cast": "date",
+              "type": "DIMENSION",
+              "initial_data_type": "date",
+              "title": "Дата события",
+              "guid": "d38abfa0-dd81-11ef-938d-696dcc771a34",
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "IF [period] = 'Месяц' THEN\n    datetrunc([event_date], \"month\")\nELSE\n    [event_date]\nEND",
+              "guid_formula": "IF [period] = 'Месяц' THEN\n    datetrunc([event_date_4ivk], \"month\")\nELSE\n    [event_date_4ivk]\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "0an4yftql02km",
+              "id": "dimension-4",
+              "datasetName": "Вебинары - по событию",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a7796d40-dd80-11ef-82d4-c321dad69d69",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "event_date_4ivk"
+              },
+              "subTotalsSettings": {
+                "enabled": false
+              },
+              "local": true
+            },
+            {
+              "data_type": "string",
+              "autoaggregated": false,
+              "description": "",
+              "managed_by": "user",
+              "virtual": false,
+              "valid": true,
+              "aggregation_locked": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "cast": "string",
+              "type": "DIMENSION",
+              "initial_data_type": "string",
+              "title": "webinar",
+              "guid": "webinar_rc1p",
+              "source": "webinar",
+              "avatar_id": "4421c170-dd80-11ef-bacf-174617f66c5f",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "0an4yftql02km",
+              "id": "dimension-14",
+              "datasetName": "Вебинары - по событию",
+              "fakeTitle": "Вебинар",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "ab3515b0-dd80-11ef-82d4-c321dad69d69",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "webinar_rc1p"
+              },
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            },
+            {
+              "data_type": "string",
+              "autoaggregated": false,
+              "description": "",
+              "managed_by": "user",
+              "virtual": false,
+              "valid": true,
+              "aggregation_locked": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "cast": "string",
+              "type": "DIMENSION",
+              "initial_data_type": "string",
+              "title": "utmsource",
+              "guid": "utmsource_bs06",
+              "source": "utmsource",
+              "avatar_id": "4421c170-dd80-11ef-bacf-174617f66c5f",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "0an4yftql02km",
+              "id": "dimension-15",
+              "datasetName": "Вебинары - по событию",
+              "fakeTitle": "Источник",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "ad60cf50-dd80-11ef-82d4-c321dad69d69",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "utmsource_bs06"
+              },
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            },
+            {
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "string",
+              "guid": "geo_8xym",
+              "valid": true,
+              "aggregation_locked": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "managed_by": "user",
+              "lock_aggregation": false,
+              "virtual": false,
+              "cast": "string",
+              "title": "geo",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "initial_data_type": "string",
+              "source": "geo",
+              "avatar_id": "4421c170-dd80-11ef-bacf-174617f66c5f",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "0an4yftql02km",
+              "id": "dimension-16",
+              "datasetName": "Вебинары - по событию",
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "settings": {}
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measures",
+          "iconProps": {},
+          "items": [
+            {
+              "data_type": "integer",
+              "autoaggregated": true,
+              "description": "",
+              "managed_by": "user",
+              "virtual": false,
+              "valid": true,
+              "aggregation_locked": true,
+              "has_auto_aggregation": true,
+              "hidden": false,
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "cast": "integer",
+              "type": "MEASURE",
+              "initial_data_type": "integer",
+              "title": "regs",
+              "guid": "952f9390-dd75-11ef-9ee4-0f5f571060fc",
+              "formula": "IF SUM_IF([event_count], [event_type] = 'Регистрация') > 0 THEN\n    SUM_IF([event_count], [event_type] = 'Регистрация')\nEND",
+              "guid_formula": "IF SUM_IF([event_count_qfwa], [event_type_raxb] = 'Регистрация') > 0 THEN\n    SUM_IF([event_count_qfwa], [event_type_raxb] = 'Регистрация')\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "local": true,
+              "datasetId": "0an4yftql02km",
+              "id": "measure-9",
+              "datasetName": "Вебинары - по событию",
+              "fakeTitle": "Регистраций",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "color": "#CCCCCC"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "78bb54f0-dd80-11ef-82d4-c321dad69d69",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "952f9390-dd75-11ef-9ee4-0f5f571060fc"
+              }
+            },
+            {
+              "data_type": "integer",
+              "autoaggregated": true,
+              "description": "",
+              "managed_by": "user",
+              "virtual": false,
+              "valid": true,
+              "aggregation_locked": true,
+              "has_auto_aggregation": true,
+              "hidden": false,
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "cast": "integer",
+              "type": "MEASURE",
+              "initial_data_type": "integer",
+              "title": "Дошли",
+              "guid": "0fc4a640-dd76-11ef-9ee4-0f5f571060fc",
+              "formula": "IF SUM_IF([event_count], [event_type] = 'Визит') > 0 THEN\n    SUM_IF([event_count], [event_type] = 'Визит')\nEND",
+              "guid_formula": "IF SUM_IF([event_count_qfwa], [event_type_raxb] = 'Визит') > 0 THEN\n    SUM_IF([event_count_qfwa], [event_type_raxb] = 'Визит')\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "local": true,
+              "datasetId": "0an4yftql02km",
+              "id": "measure-6",
+              "datasetName": "Вебинары - по событию"
+            },
+            {
+              "valid": true,
+              "type": "MEASURE",
+              "hidden": false,
+              "managed_by": "user",
+              "aggregation": "none",
+              "description": "",
+              "cast": "integer",
+              "aggregation_locked": true,
+              "data_type": "integer",
+              "initial_data_type": "integer",
+              "title": "leads",
+              "lock_aggregation": false,
+              "has_auto_aggregation": true,
+              "autoaggregated": true,
+              "guid": "24355790-dd81-11ef-9afb-25f27a7c55e0",
+              "virtual": false,
+              "formula": "IF SUM_IF([event_count], [event_type] = 'Лид') > 0 THEN\n    SUM_IF([event_count], [event_type] = 'Лид')\nEND",
+              "guid_formula": "IF SUM_IF([event_count_qfwa], [event_type_raxb] = 'Лид') > 0 THEN\n    SUM_IF([event_count_qfwa], [event_type_raxb] = 'Лид')\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "0an4yftql02km",
+              "id": "measure-5",
+              "datasetName": "Вебинары - по событию",
+              "fakeTitle": "Лиды",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "color": "#4DA2F1"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "2cda2bf0-dd81-11ef-9afb-25f27a7c55e0",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "24355790-dd81-11ef-9afb-25f27a7c55e0"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "has_auto_aggregation": true,
+              "aggregation": "none",
+              "hidden": false,
+              "guid": "cfb03b00-dd75-11ef-9ee4-0f5f571060fc",
+              "initial_data_type": "integer",
+              "title": "Квалы",
+              "type": "MEASURE",
+              "description": "",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "autoaggregated": true,
+              "cast": "integer",
+              "aggregation_locked": true,
+              "data_type": "integer",
+              "guid_formula": "IF SUM_IF([event_count_qfwa], [event_type_raxb] = 'Квалификация') > 0 THEN\n    SUM_IF([event_count_qfwa], [event_type_raxb] = 'Квалификация')\nEND",
+              "formula": "IF SUM_IF([event_count], [event_type] = 'Квалификация') > 0 THEN\n    SUM_IF([event_count], [event_type] = 'Квалификация')\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "0an4yftql02km",
+              "id": "measure-8",
+              "datasetName": "Вебинары - по событию",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "color": "#FFC636"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "f2848d20-dd75-11ef-9ee4-0f5f571060fc",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "cfb03b00-dd75-11ef-9ee4-0f5f571060fc"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "managed_by": "user",
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "description": "",
+              "autoaggregated": true,
+              "cast": "integer",
+              "initial_data_type": "integer",
+              "valid": true,
+              "hidden": false,
+              "has_auto_aggregation": true,
+              "guid": "689d1e80-de1d-11ef-b49f-ada212139e93",
+              "title": "A",
+              "virtual": false,
+              "data_type": "integer",
+              "aggregation_locked": true,
+              "type": "MEASURE",
+              "formula": "IF SUM_IF([event_count], [priority] = 'A') > 0 THEN\n    SUM_IF([event_count], [priority] = 'A')\nEND",
+              "guid_formula": "IF SUM_IF([event_count_qfwa], [priority_2zid] = 'A') > 0 THEN\n    SUM_IF([event_count_qfwa], [priority_2zid] = 'A')\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "0an4yftql02km",
+              "id": "measure-3",
+              "datasetName": "Вебинары - по событию",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "cast": "integer",
+              "aggregation": "none",
+              "virtual": false,
+              "type": "MEASURE",
+              "aggregation_locked": true,
+              "description": "",
+              "hidden": false,
+              "initial_data_type": "integer",
+              "title": "B",
+              "data_type": "integer",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "valid": true,
+              "autoaggregated": true,
+              "has_auto_aggregation": true,
+              "guid": "4b22f7b0-de1f-11ef-b3d3-85acd2689221",
+              "guid_formula": "IF SUM_IF([event_count_qfwa], [priority_2zid] = 'B') > 0 THEN\n    SUM_IF([event_count_qfwa], [priority_2zid] = 'B')\nEND",
+              "formula": "IF SUM_IF([event_count], [priority] = 'B') > 0 THEN\n    SUM_IF([event_count], [priority] = 'B')\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "0an4yftql02km",
+              "id": "measure-2",
+              "datasetName": "Вебинары - по событию",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "has_auto_aggregation": true,
+              "aggregation": "none",
+              "hidden": false,
+              "guid": "515e1f10-de1f-11ef-b3d3-85acd2689221",
+              "initial_data_type": "integer",
+              "title": "C",
+              "type": "MEASURE",
+              "description": "",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "autoaggregated": true,
+              "cast": "integer",
+              "aggregation_locked": true,
+              "data_type": "integer",
+              "guid_formula": "IF SUM_IF([event_count_qfwa], [priority_2zid] = 'C') > 0 THEN\n    SUM_IF([event_count_qfwa], [priority_2zid] = 'C')\nEND",
+              "formula": "IF SUM_IF([event_count], [priority] = 'C') > 0 THEN\n    SUM_IF([event_count], [priority] = 'C')\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "0an4yftql02km",
+              "id": "measure-1",
+              "datasetName": "Вебинары - по событию",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "aggregation_locked": true,
+              "data_type": "integer",
+              "guid": "dde18030-dd75-11ef-9ee4-0f5f571060fc",
+              "managed_by": "user",
+              "title": "Брони",
+              "cast": "integer",
+              "has_auto_aggregation": true,
+              "valid": true,
+              "aggregation": "none",
+              "initial_data_type": "integer",
+              "autoaggregated": true,
+              "type": "MEASURE",
+              "hidden": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "description": "",
+              "guid_formula": "IF SUM_IF([event_count_qfwa], [event_type_raxb] = 'Бронь') > 0 THEN\n    SUM_IF([event_count_qfwa], [event_type_raxb] = 'Бронь')\nEND",
+              "formula": "IF SUM_IF([event_count], [event_type] = 'Бронь') > 0 THEN\n    SUM_IF([event_count], [event_type] = 'Бронь')\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "0an4yftql02km",
+              "id": "measure-7",
+              "datasetName": "Вебинары - по событию",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": true,
+                "colorSettings": {
+                  "colorType": "one-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "color": "#FF3D64"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "fb029fa0-dd75-11ef-9ee4-0f5f571060fc",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "dde18030-dd75-11ef-9ee4-0f5f571060fc"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "has_auto_aggregation": false,
+              "aggregation": "sum",
+              "hidden": false,
+              "guid": "f0f3d9c0-de1f-11ef-b2d4-2532c3241eb8",
+              "initial_data_type": "float",
+              "title": "title-f0f3d9c0-de1f-11ef-b2d4-2532c3241eb8",
+              "type": "MEASURE",
+              "description": "",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "autoaggregated": false,
+              "cast": "float",
+              "aggregation_locked": false,
+              "data_type": "float",
+              "source": "deal_amount",
+              "avatar_id": "4421c170-dd80-11ef-bacf-174617f66c5f",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "deal_amount",
+              "fakeTitle": "$",
+              "datasetId": "0an4yftql02km",
+              "id": "inserted-1738141425850",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "$",
+                "postfix": "",
+                "unit": "k",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "positiveColor": "#8AD554",
+                    "negativeColor": "#FF3D64"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "f2e21530-de1f-11ef-b2d4-2532c3241eb8",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "f0f3d9c0-de1f-11ef-b2d4-2532c3241eb8"
+              }
+            }
+          ],
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

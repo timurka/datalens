@@ -1,0 +1,441 @@
+{
+  "entryId": "xjcjfc2ec9bul",
+  "scope": "widget",
+  "type": "graph_wizard_node",
+  "key": "1706610280412219121/Логи входа — Линейная диаграмма",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-06-12T13:09:59.039Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-06-17T09:40:01.885Z",
+  "savedId": "sf61etioeqecg",
+  "publishedId": "sf61etioeqecg",
+  "revId": "sf61etioeqecg",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [
+      {
+        "valid": true,
+        "guid": "cb646d10-28b6-11ef-ad03-053a0ef05bf2",
+        "description": "",
+        "virtual": false,
+        "lock_aggregation": false,
+        "aggregation_locked": true,
+        "title": "channel_name",
+        "cast": "string",
+        "aggregation": "none",
+        "hidden": false,
+        "autoaggregated": false,
+        "managed_by": "user",
+        "has_auto_aggregation": false,
+        "data_type": "string",
+        "type": "DIMENSION",
+        "initial_data_type": "string",
+        "guid_formula": "CASE [channel_ub7e]\n    WHEN \"OP3e3jXATQIzNmRi\" THEN \"Основной ОАЭ\"\n    WHEN \"bn_xVEVje1Y4MDdi\" THEN \"МСК канал\"\n    WHEN \"negburo\" THEN \"negburo\"\nEND",
+        "formula": "CASE [channel]\n    WHEN \"OP3e3jXATQIzNmRi\" THEN \"Основной ОАЭ\"\n    WHEN \"bn_xVEVje1Y4MDdi\" THEN \"МСК канал\"\n    WHEN \"negburo\" THEN \"negburo\"\nEND",
+        "calc_mode": "formula",
+        "source": "",
+        "avatar_id": null,
+        "default_value": null,
+        "value_constraint": null,
+        "datasetId": "vh2lph3ot1laj",
+        "id": "dimension-3",
+        "datasetName": "Логи входа"
+      }
+    ],
+    "colorsConfig": {
+      "fieldGuid": "cb646d10-28b6-11ef-ad03-053a0ef05bf2"
+    },
+    "datasetsIds": [
+      "vh2lph3ot1laj"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "5440d2c0-2c8d-11ef-b852-d78519ca09ba",
+          "title": "Период",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "048a7ed0-28bd-11ef-acfa-a7f9a4eafc76",
+          "title": "title-048a7ed0-28bd-11ef-acfa-a7f9a4eafc76",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "cb646d10-28b6-11ef-ad03-053a0ef05bf2",
+          "title": "channel_name",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "user_id_6e86",
+          "title": "user_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_8h69",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "3b92a150-28bd-11ef-a579-dbd621870717",
+          "title": "date_join_short",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_left_vp75",
+          "title": "date_left",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_k3yq",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username_s00g",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_mfy4",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_eimh",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "count_2r96",
+          "title": "count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_qual_v2df",
+          "title": "sum_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_4rzv",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_qual_ofse",
+          "title": "date_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_ub7e",
+          "title": "channel",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_1_lvak",
+          "title": "source",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {},
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "managed_by": "user",
+          "title": "title-048a7ed0-28bd-11ef-acfa-a7f9a4eafc76",
+          "lock_aggregation": false,
+          "aggregation_locked": false,
+          "guid": "048a7ed0-28bd-11ef-acfa-a7f9a4eafc76",
+          "hidden": false,
+          "description": "",
+          "initial_data_type": "integer",
+          "aggregation": "count",
+          "has_auto_aggregation": false,
+          "cast": "integer",
+          "autoaggregated": false,
+          "type": "MEASURE",
+          "virtual": false,
+          "data_type": "integer",
+          "valid": true,
+          "source": "user_id",
+          "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "vh2lph3ot1laj"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "managed_by": "user",
+          "title": "Период",
+          "lock_aggregation": false,
+          "aggregation_locked": true,
+          "guid": "5440d2c0-2c8d-11ef-b852-d78519ca09ba",
+          "hidden": false,
+          "description": "",
+          "initial_data_type": "genericdatetime",
+          "aggregation": "none",
+          "has_auto_aggregation": false,
+          "cast": "genericdatetime",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "virtual": false,
+          "data_type": "genericdatetime",
+          "valid": true,
+          "guid_formula": "IF [period] = 'День' THEN\n    datetrunc([date_join_8h69], \"day\")\nELSEIF [period] = 'Месяц' THEN\n    datetrunc([date_join_8h69], \"month\")\nEND",
+          "formula": "IF [period] = 'День' THEN\n    datetrunc([date_join], \"day\")\nELSEIF [period] = 'Месяц' THEN\n    datetrunc([date_join], \"month\")\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "vh2lph3ot1laj"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "update_field",
+        "field": {
+          "managed_by": "user",
+          "title": "period",
+          "lock_aggregation": false,
+          "aggregation_locked": true,
+          "guid": "period",
+          "hidden": false,
+          "description": "",
+          "initial_data_type": "string",
+          "aggregation": "none",
+          "has_auto_aggregation": false,
+          "cast": "string",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "virtual": false,
+          "data_type": "string",
+          "valid": true,
+          "default_value": "Месяц",
+          "calc_mode": "parameter",
+          "formula": "",
+          "guid_formula": "",
+          "source": "",
+          "datasetId": "vh2lph3ot1laj"
+        },
+        "deleteUpdateAfterValidation": false
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "line",
+      "type": "line",
+      "name": "label_visualization-line",
+      "iconProps": {
+        "id": "visLines",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "allowLabels": true,
+      "allowSegments": true,
+      "allowShapes": true,
+      "colorsCapacity": 1,
+      "shapesCapacity": 1,
+      "availableLabelModes": [
+        "absolute"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "autoaggregated": false,
+              "title": "Период",
+              "cast": "genericdatetime",
+              "aggregation_locked": true,
+              "virtual": false,
+              "initial_data_type": "genericdatetime",
+              "description": "",
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "aggregation": "none",
+              "hidden": false,
+              "data_type": "genericdatetime",
+              "guid": "5440d2c0-2c8d-11ef-b852-d78519ca09ba",
+              "managed_by": "user",
+              "valid": true,
+              "lock_aggregation": false,
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "IF [period] = 'День' THEN\n    datetrunc([date_join], \"day\")\nELSEIF [period] = 'Месяц' THEN\n    datetrunc([date_join], \"month\")\nEND",
+              "guid_formula": "IF [period] = 'День' THEN\n    datetrunc([date_join_8h69], \"day\")\nELSEIF [period] = 'Месяц' THEN\n    datetrunc([date_join_8h69], \"month\")\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "vh2lph3ot1laj",
+              "id": "dimension-0",
+              "datasetName": "Логи входа",
+              "format": "DD.MM.YYYY",
+              "grouping": "trunc-day",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "local": true,
+              "fakeTitle": "Период",
+              "originalDateCast": "date",
+              "originalSource": "date_join",
+              "originalTitle": "date_join",
+              "originalFormula": "IF [Период] = 'День' THEN\n    datetrunc([date_join], \"day\")\nELSEIF [Период] = 'Месяц' THEN\n    datetrunc([date_join], \"month\")\nEND"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "holidays": "off",
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "006fc670-28bd-11ef-acfa-a7f9a4eafc76": "continuous",
+              "5440d2c0-2c8d-11ef-b852-d78519ca09ba": "continuous"
+            }
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "data_type": "integer",
+              "guid": "048a7ed0-28bd-11ef-acfa-a7f9a4eafc76",
+              "title": "title-048a7ed0-28bd-11ef-acfa-a7f9a4eafc76",
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "virtual": false,
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "type": "MEASURE",
+              "initial_data_type": "integer",
+              "cast": "integer",
+              "aggregation": "count",
+              "description": "",
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "avatar_id": "eb4ed070-27cb-11ef-a0f4-7794d1bcdfc1",
+              "source": "user_id",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "user_id",
+              "fakeTitle": "Вступлений",
+              "datasetId": "vh2lph3ot1laj",
+              "id": "measure-1",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "datasetName": "Логи входа",
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisFormatMode": "auto"
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y2",
+          "type": "y2",
+          "title": "section_y2",
+          "iconProps": {},
+          "items": [],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisFormatMode": "auto"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

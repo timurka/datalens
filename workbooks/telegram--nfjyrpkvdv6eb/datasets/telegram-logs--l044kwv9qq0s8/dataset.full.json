@@ -1,0 +1,2133 @@
+{
+  "options": {
+    "is_cache_invalidation_enabled_in_conn": false,
+    "join": {
+      "operators": [
+        "eq"
+      ],
+      "types": [
+        "full",
+        "right",
+        "inner",
+        "left"
+      ]
+    },
+    "data_types": {
+      "items": [
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "type": "string",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "type": "integer",
+          "aggregations": [
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "type": "float",
+          "aggregations": [
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "date",
+            "genericdatetime",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "date",
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "genericdatetime",
+            "datetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "datetime",
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "casts": [
+            "boolean",
+            "integer",
+            "float",
+            "string"
+          ],
+          "type": "boolean",
+          "aggregations": [
+            "count"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "casts": [
+            "geopoint",
+            "string"
+          ],
+          "type": "geopoint",
+          "aggregations": [
+            "count"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "casts": [
+            "geopolygon",
+            "string"
+          ],
+          "type": "geopolygon",
+          "aggregations": [
+            "count"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "uuid",
+            "string"
+          ],
+          "type": "uuid",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL"
+          ],
+          "casts": [
+            "markup"
+          ],
+          "type": "markup",
+          "aggregations": [
+            "count"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "datetimetz",
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "datetimetz",
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL"
+          ],
+          "casts": [
+            "unsupported"
+          ],
+          "type": "unsupported",
+          "aggregations": []
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "casts": [
+            "array_str",
+            "string"
+          ],
+          "type": "array_str",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "casts": [
+            "array_int",
+            "string"
+          ],
+          "type": "array_int",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "casts": [
+            "array_float",
+            "string"
+          ],
+          "type": "array_float",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "casts": [
+            "tree_str"
+          ],
+          "type": "tree_str",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "genericdatetime",
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ]
+        }
+      ]
+    },
+    "sources": {
+      "items": [
+        {
+          "id": "26660091-a033-11ef-b7f5-b7732e1222ff",
+          "schema_update_enabled": true
+        },
+        {
+          "id": "72d93af2-a033-11ef-b7f5-b7732e1222ff",
+          "schema_update_enabled": true
+        },
+        {
+          "id": "cd1ff720-a104-11ef-9ace-352bb7e0d158",
+          "schema_update_enabled": true
+        }
+      ],
+      "compatible_types": [
+        {
+          "source_type": "PG_SUBSELECT"
+        },
+        {
+          "source_type": "PG_TABLE"
+        }
+      ]
+    },
+    "supported_functions": [
+      "abs",
+      "acos",
+      "ago",
+      "all_concat",
+      "any",
+      "arr_distinct",
+      "arr_index_of",
+      "arr_intersect",
+      "arr_remove",
+      "arr_str",
+      "array",
+      "ascii",
+      "asin",
+      "at_date",
+      "atan",
+      "atan2",
+      "avg",
+      "avg_if",
+      "bold",
+      "bool",
+      "br",
+      "case",
+      "cast_arr_float",
+      "cast_arr_int",
+      "cast_arr_str",
+      "ceiling",
+      "char",
+      "color",
+      "concat",
+      "contains",
+      "contains_all",
+      "contains_any",
+      "cos",
+      "cot",
+      "count",
+      "count_if",
+      "count_item",
+      "countd",
+      "countd_if",
+      "date",
+      "dateadd",
+      "datepart",
+      "datetime",
+      "datetrunc",
+      "day",
+      "dayofweek",
+      "db_call_agg_float",
+      "db_call_agg_int",
+      "db_call_agg_string",
+      "db_call_array_float",
+      "db_call_array_int",
+      "db_call_array_string",
+      "db_call_bool",
+      "db_call_float",
+      "db_call_int",
+      "db_call_string",
+      "db_cast",
+      "degrees",
+      "div",
+      "div_safe",
+      "endswith",
+      "exp",
+      "fdiv_safe",
+      "find",
+      "first",
+      "float",
+      "floor",
+      "geopoint",
+      "geopolygon",
+      "get_item",
+      "greatest",
+      "hour",
+      "icontains",
+      "iendswith",
+      "if",
+      "ifnan",
+      "ifnull",
+      "iif",
+      "image",
+      "int",
+      "isnan",
+      "isnull",
+      "istartswith",
+      "italic",
+      "lag",
+      "last",
+      "least",
+      "left",
+      "len",
+      "ln",
+      "log",
+      "log10",
+      "lower",
+      "ltrim",
+      "markup",
+      "mavg",
+      "max",
+      "mcount",
+      "md5",
+      "median",
+      "min",
+      "minute",
+      "mmax",
+      "mmin",
+      "month",
+      "msum",
+      "notcontains",
+      "now",
+      "pi",
+      "power",
+      "quantile",
+      "quarter",
+      "radians",
+      "rank",
+      "rank_dense",
+      "rank_percentile",
+      "rank_unique",
+      "ravg",
+      "rcount",
+      "regexp_extract",
+      "regexp_extract_all",
+      "regexp_extract_nth",
+      "regexp_match",
+      "regexp_replace",
+      "replace",
+      "right",
+      "rmax",
+      "rmin",
+      "round",
+      "rsum",
+      "rtrim",
+      "second",
+      "sha1",
+      "sha256",
+      "sign",
+      "sin",
+      "size",
+      "slice",
+      "space",
+      "split",
+      "sqrt",
+      "square",
+      "startswith",
+      "stdev",
+      "stdevp",
+      "str",
+      "substr",
+      "sum",
+      "sum_if",
+      "tan",
+      "today",
+      "tooltip",
+      "tree",
+      "trim",
+      "unnest",
+      "upper",
+      "url",
+      "user_info",
+      "var",
+      "varp",
+      "week",
+      "year",
+      "zn"
+    ],
+    "source_listing": {
+      "supports_db_name_listing": false,
+      "supports_source_search": true,
+      "db_name_label": null,
+      "db_name_required_for_search": false,
+      "supports_source_pagination": true
+    },
+    "fields": {
+      "items": [
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "297343c0-a037-11ef-b7f5-b7732e1222ff"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "user_id_vg4v"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "chat_id_xiwf"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "guid": "date_join_fvb3"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "guid": "first_date_join_ejx2"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "guid": "date_left_tlmw"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "guid": "first_date_left_lyea"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "name_5i1q"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "username_e1e6"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "invitelinks_t1sm"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count"
+          ],
+          "casts": [
+            "boolean",
+            "integer",
+            "float",
+            "string"
+          ],
+          "guid": "premium_g430"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "first_invitelinks_07vr"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "invite_link_name_whtb"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "3ace91b0-a195-11ef-8733-1f12583ac95b"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "telegram_id_1b6t"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "leads_m0is"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "quals_07n9"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "bookings_esq4"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "invitelinks_1_aqmb"
+        }
+      ]
+    },
+    "supports_offset": true,
+    "schema_update_enabled": true,
+    "connections": {
+      "items": [
+        {
+          "id": "g8crkisikyyc4",
+          "replacement_types": [
+            {
+              "conn_type": "metrika_api"
+            },
+            {
+              "conn_type": "moysklad"
+            },
+            {
+              "conn_type": "file"
+            },
+            {
+              "conn_type": "trino"
+            },
+            {
+              "conn_type": "snowflake"
+            },
+            {
+              "conn_type": "appmetrica_api"
+            },
+            {
+              "conn_type": "json_api"
+            },
+            {
+              "conn_type": "ch_billing_analytics"
+            },
+            {
+              "conn_type": "ch_frozen_gkh"
+            },
+            {
+              "conn_type": "oracle"
+            },
+            {
+              "conn_type": "ch_frozen_weather"
+            },
+            {
+              "conn_type": "bigquery"
+            },
+            {
+              "conn_type": "ch_ya_music_podcast_stats"
+            },
+            {
+              "conn_type": "yadocs"
+            },
+            {
+              "conn_type": "postgres"
+            },
+            {
+              "conn_type": "greenplum"
+            },
+            {
+              "conn_type": "mssql"
+            },
+            {
+              "conn_type": "ydb"
+            },
+            {
+              "conn_type": "ch_geo_filtered"
+            },
+            {
+              "conn_type": "kontur_market"
+            },
+            {
+              "conn_type": "usage_analytics_light"
+            },
+            {
+              "conn_type": "chyt"
+            },
+            {
+              "conn_type": "ch_frozen_bumpy_roads"
+            },
+            {
+              "conn_type": "gsheets_v2"
+            },
+            {
+              "conn_type": "promql"
+            },
+            {
+              "conn_type": "mysql"
+            },
+            {
+              "conn_type": "ch_frozen_covid"
+            },
+            {
+              "conn_type": "ch_frozen_horeca"
+            },
+            {
+              "conn_type": "extractor1c"
+            },
+            {
+              "conn_type": "usage_analytics_detailed"
+            },
+            {
+              "conn_type": "gsheets"
+            },
+            {
+              "conn_type": "ch_frozen_transparency"
+            },
+            {
+              "conn_type": "ch_frozen_samples"
+            },
+            {
+              "conn_type": "equeo"
+            },
+            {
+              "conn_type": "smb_heatmaps"
+            },
+            {
+              "conn_type": "speechsense"
+            },
+            {
+              "conn_type": "ch_frozen_demo"
+            },
+            {
+              "conn_type": "clickhouse"
+            },
+            {
+              "conn_type": "yq"
+            },
+            {
+              "conn_type": "bitrix24"
+            },
+            {
+              "conn_type": "ch_frozen_dtp"
+            }
+          ]
+        }
+      ],
+      "max": 1,
+      "compatible_types": []
+    },
+    "source_avatars": {
+      "items": [
+        {
+          "id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+          "schema_update_enabled": true
+        },
+        {
+          "id": "30ae99e0-a033-11ef-b7f5-b7732e1222ff",
+          "schema_update_enabled": true
+        },
+        {
+          "id": "72d93af0-a033-11ef-b7f5-b7732e1222ff",
+          "schema_update_enabled": true
+        }
+      ],
+      "max": 32
+    },
+    "preview": {
+      "enabled": true
+    }
+  },
+  "is_favorite": false,
+  "workbook_id": "nfjyrpkvdv6eb",
+  "dataset": {
+    "result_schema": [
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "297343c0-a037-11ef-b7f5-b7732e1222ff",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": true,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "geo",
+        "initial_data_type": "string",
+        "description": "",
+        "guid_formula": "CASE [chat_id_xiwf]\n    WHEN -1001155186661 THEN 'ОАЭ'\n    WHEN -1002065822757 THEN 'Бали'\n    WHEN -1001746931699 THEN 'МСК'\n    WHEN -1001970069033 THEN 'Таиланд'\nEND",
+        "formula": "CASE [chat_id]\n    WHEN -1001155186661 THEN 'ОАЭ'\n    WHEN -1002065822757 THEN 'Бали'\n    WHEN -1001746931699 THEN 'МСК'\n    WHEN -1001970069033 THEN 'Таиланд'\nEND",
+        "calc_mode": "formula",
+        "source": "",
+        "avatar_id": null,
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "user_id_vg4v",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "user_id",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "source": "user_id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "chat_id_xiwf",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "chat_id",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "source": "chat_id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "date_join_fvb3",
+        "data_type": "genericdatetime",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "genericdatetime",
+        "title": "date_join",
+        "initial_data_type": "genericdatetime",
+        "description": "",
+        "avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "source": "date_join",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "first_date_join_ejx2",
+        "data_type": "genericdatetime",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "genericdatetime",
+        "title": "first_date_join",
+        "initial_data_type": "genericdatetime",
+        "description": "",
+        "avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "source": "first_date_join",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "date_left_tlmw",
+        "data_type": "genericdatetime",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "genericdatetime",
+        "title": "date_left",
+        "initial_data_type": "genericdatetime",
+        "description": "",
+        "avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "source": "date_left",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "first_date_left_lyea",
+        "data_type": "genericdatetime",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "genericdatetime",
+        "title": "first_date_left",
+        "initial_data_type": "genericdatetime",
+        "description": "",
+        "avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "source": "first_date_left",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "name_5i1q",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "name",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "source": "name",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "username_e1e6",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "username",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "source": "username",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "invitelinks_t1sm",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "invitelinks",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "source": "invitelinks",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "premium_g430",
+        "data_type": "boolean",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "boolean",
+        "title": "premium",
+        "initial_data_type": "boolean",
+        "description": "",
+        "avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "source": "premium",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "first_invitelinks_07vr",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "first_invitelinks",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "source": "first_invitelinks",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "invite_link_name_whtb",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "dict_invite_link_name",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "30ae99e0-a033-11ef-b7f5-b7732e1222ff",
+        "source": "invite_link_name",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "3ace91b0-a195-11ef-8733-1f12583ac95b",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "dict_invite_link_name_copy",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "30ae99e0-a033-11ef-b7f5-b7732e1222ff",
+        "source": "invite_link_name",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": true,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "telegram_id_1b6t",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "telegram_id",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "72d93af0-a033-11ef-b7f5-b7732e1222ff",
+        "source": "telegram_id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "leads_m0is",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "leads",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "72d93af0-a033-11ef-b7f5-b7732e1222ff",
+        "source": "leads",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "quals_07n9",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "quals",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "72d93af0-a033-11ef-b7f5-b7732e1222ff",
+        "source": "quals",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "bookings_esq4",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "bookings",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "72d93af0-a033-11ef-b7f5-b7732e1222ff",
+        "source": "bookings",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "invitelinks_1_aqmb",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "dict_invite_link",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "30ae99e0-a033-11ef-b7f5-b7732e1222ff",
+        "source": "invitelinks",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      }
+    ],
+    "avatar_relations": [
+      {
+        "join_type": "left",
+        "virtual": false,
+        "right_avatar_id": "30ae99e0-a033-11ef-b7f5-b7732e1222ff",
+        "id": "30ae99e1-a033-11ef-b7f5-b7732e1222ff",
+        "managed_by": "user",
+        "conditions": [
+          {
+            "left": {
+              "calc_mode": "direct",
+              "source": "invitelinks"
+            },
+            "right": {
+              "calc_mode": "direct",
+              "source": "invitelinks"
+            },
+            "type": "binary",
+            "operator": "eq"
+          }
+        ],
+        "left_avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "required": false
+      },
+      {
+        "join_type": "left",
+        "virtual": false,
+        "right_avatar_id": "72d93af0-a033-11ef-b7f5-b7732e1222ff",
+        "id": "72d93af1-a033-11ef-b7f5-b7732e1222ff",
+        "managed_by": "user",
+        "conditions": [
+          {
+            "left": {
+              "calc_mode": "direct",
+              "source": "user_id"
+            },
+            "right": {
+              "calc_mode": "direct",
+              "source": "telegram_id"
+            },
+            "type": "binary",
+            "operator": "eq"
+          }
+        ],
+        "left_avatar_id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "required": false
+      }
+    ],
+    "rls2": {},
+    "template_enabled": false,
+    "cache_invalidation_source": {
+      "mode": "off",
+      "filters": [],
+      "last_result_timestamp": null,
+      "last_result_error": null,
+      "cache_invalidation_error": null,
+      "field": null,
+      "sql": null
+    },
+    "preview_enabled": true,
+    "component_errors": {
+      "items": []
+    },
+    "load_preview_by_default": true,
+    "sources": [
+      {
+        "parameters": {
+          "db_name": null,
+          "schema_name": "public",
+          "db_version": "PostgreSQL 14.13 (Ubuntu 14.13-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit",
+          "table_name": "telegram_logs"
+        },
+        "source_type": "PG_TABLE",
+        "virtual": false,
+        "id": "26660091-a033-11ef-b7f5-b7732e1222ff",
+        "parameter_hash": "9475ebd89eba8dc2",
+        "connection_id": "g8crkisikyyc4",
+        "managed_by": "user",
+        "valid": true,
+        "index_info_set": null,
+        "title": "telegram_logs",
+        "raw_schema": [
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "user_id",
+            "lock_aggregation": false,
+            "title": "user_id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "chat_id",
+            "lock_aggregation": false,
+            "title": "chat_id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "genericdatetime",
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "date_join",
+            "lock_aggregation": false,
+            "title": "date_join",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "genericdatetime",
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "first_date_join",
+            "lock_aggregation": false,
+            "title": "first_date_join",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "genericdatetime",
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "date_left",
+            "lock_aggregation": false,
+            "title": "date_left",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "genericdatetime",
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "first_date_left",
+            "lock_aggregation": false,
+            "title": "first_date_left",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "name",
+            "lock_aggregation": false,
+            "title": "name",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "username",
+            "lock_aggregation": false,
+            "title": "username",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "invitelinks",
+            "lock_aggregation": false,
+            "title": "invitelinks",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "boolean",
+            "native_type": {
+              "name": "boolean",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "premium",
+            "lock_aggregation": false,
+            "title": "premium",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "first_invitelinks",
+            "lock_aggregation": false,
+            "title": "first_invitelinks",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "parameters": {
+          "subsql": "SELECT CAST (telegram_id AS bigint),\n       COUNT(crm_id) AS leads,\n       SUM(qual) AS quals,\n       SUM(booking_event) AS bookings\nFROM perfomance_all_leads\nWHERE telegram_id IS NOT NULL\nGROUP BY telegram_id"
+        },
+        "source_type": "PG_SUBSELECT",
+        "virtual": false,
+        "id": "72d93af2-a033-11ef-b7f5-b7732e1222ff",
+        "parameter_hash": "22dc4b9f81cd95e6",
+        "connection_id": "g8crkisikyyc4",
+        "managed_by": "user",
+        "valid": true,
+        "index_info_set": null,
+        "title": "leads",
+        "raw_schema": [
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "telegram_id",
+            "lock_aggregation": false,
+            "title": "telegram_id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "leads",
+            "lock_aggregation": false,
+            "title": "leads",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "quals",
+            "lock_aggregation": false,
+            "title": "quals",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "bookings",
+            "lock_aggregation": false,
+            "title": "bookings",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "parameters": {
+          "db_name": null,
+          "schema_name": "public",
+          "db_version": "PostgreSQL 14.13 (Ubuntu 14.13-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit",
+          "table_name": "telegram_invitelinks"
+        },
+        "source_type": "PG_TABLE",
+        "virtual": false,
+        "id": "cd1ff720-a104-11ef-9ace-352bb7e0d158",
+        "parameter_hash": "644d993a5382db5c",
+        "connection_id": "g8crkisikyyc4",
+        "managed_by": "user",
+        "valid": true,
+        "index_info_set": null,
+        "title": "telegram_invitelinks",
+        "raw_schema": [
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "invitelinks",
+            "lock_aggregation": false,
+            "title": "invitelinks",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "invite_link_name",
+            "lock_aggregation": false,
+            "title": "invite_link_name",
+            "description": ""
+          }
+        ]
+      }
+    ],
+    "data_export_forbidden": false,
+    "obligatory_filters": [],
+    "result_schema_aux": {
+      "inter_dependencies": {
+        "deps": [
+          {
+            "ref_field_ids": [
+              "chat_id_xiwf"
+            ],
+            "dep_field_id": "297343c0-a037-11ef-b7f5-b7732e1222ff"
+          }
+        ]
+      }
+    },
+    "rls": {},
+    "revision_id": "jB6UKz4BSxRGbxTwts4g9Y",
+    "source_avatars": [
+      {
+        "virtual": false,
+        "id": "26660090-a033-11ef-b7f5-b7732e1222ff",
+        "managed_by": "user",
+        "valid": true,
+        "is_root": true,
+        "source_id": "26660091-a033-11ef-b7f5-b7732e1222ff",
+        "title": "public.telegram_logs"
+      },
+      {
+        "virtual": false,
+        "id": "30ae99e0-a033-11ef-b7f5-b7732e1222ff",
+        "managed_by": "user",
+        "valid": true,
+        "is_root": false,
+        "source_id": "cd1ff720-a104-11ef-9ace-352bb7e0d158",
+        "title": "public.telegram_invitelinks"
+      },
+      {
+        "virtual": false,
+        "id": "72d93af0-a033-11ef-b7f5-b7732e1222ff",
+        "managed_by": "user",
+        "valid": true,
+        "is_root": false,
+        "source_id": "72d93af2-a033-11ef-b7f5-b7732e1222ff",
+        "title": "leads"
+      }
+    ],
+    "description": ""
+  },
+  "permissions": {
+    "execute": true,
+    "read": true,
+    "edit": true,
+    "admin": true
+  },
+  "id": "l044kwv9qq0s8",
+  "key": "1816795774407675044/telegram_logs",
+  "full_permissions": {},
+  "name": "telegram_logs"
+}

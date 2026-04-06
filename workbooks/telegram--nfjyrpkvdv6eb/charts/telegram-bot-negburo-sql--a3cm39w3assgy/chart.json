@@ -1,0 +1,113 @@
+{
+  "entryId": "a3cm39w3assgy",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "1599231202168931370/Telegram - Бот negburo SQL",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-01-16T09:26:55.422Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-01-16T09:26:55.422Z",
+  "savedId": "92bl28v29rrex",
+  "publishedId": "92bl28v29rrex",
+  "revId": "92bl28v29rrex",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "g8crkisikyyc4",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "SELECT al.creation_date AS \"Дата CRM\",\n       COUNT(al.leads_id) AS \"Лидов\",\n       SUM(al.qual) AS \"Квал\"\nFROM public.perfomance_all_leads al\nLEFT JOIN public.perfomance_sourcetag s ON s.lead_id = al.leads_id\nWHERE s.prioritized_sourcetag = 'tg_bot_negburo'\nGROUP BY al.creation_date\nORDER BY al.creation_date;\n",
+    "queries": [],
+    "params": [],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "Дата CRM-0",
+              "title": "Дата CRM",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "date",
+              "cast": "date",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Лидов-2",
+              "title": "Лидов",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Квал-1",
+              "title": "Квал",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1705397179458"
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {}
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

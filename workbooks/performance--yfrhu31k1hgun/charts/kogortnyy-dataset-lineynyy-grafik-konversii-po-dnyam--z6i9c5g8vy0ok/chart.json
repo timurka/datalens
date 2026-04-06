@@ -1,0 +1,614 @@
+{
+  "entryId": "z6i9c5g8vy0ok",
+  "scope": "widget",
+  "type": "graph_wizard_node",
+  "key": "2058286851474589156/Когортный датасет — Линейный график конверсии по дням",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-10-10T18:28:32.926Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-10-10T18:38:47.100Z",
+  "savedId": "kr3wrgq1jk7u5",
+  "publishedId": "kr3wrgq1jk7u5",
+  "revId": "kr3wrgq1jk7u5",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [
+      {
+        "aggregation": "none",
+        "autoaggregated": false,
+        "valid": true,
+        "type": "DIMENSION",
+        "has_auto_aggregation": false,
+        "managed_by": "user",
+        "hidden": false,
+        "initial_data_type": "integer",
+        "lock_aggregation": false,
+        "data_type": "integer",
+        "virtual": false,
+        "cast": "integer",
+        "guid": "day_bucket_w9fu",
+        "aggregation_locked": false,
+        "ui_settings": "",
+        "title": "day_bucket",
+        "description": "",
+        "source": "day_bucket",
+        "avatar_id": "4f27af60-412d-11f0-aea8-bd2e30febb8d",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null,
+        "datasetId": "udy9765ge1agg",
+        "id": "inserted-1760120997886",
+        "datasetName": "Когортный датасет"
+      }
+    ],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "udy9765ge1agg"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "b4e07ce0-4634-11f0-ba2b-c1c443aca8dc",
+          "title": "Дневные квалы",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "c0840950-4697-11f0-884a-4963b5179be9",
+          "title": "Цвета",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "26969960-462a-11f0-a9fb-2bd851c42b5d",
+          "title": "Показатель",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "30d19b80-4695-11f0-884a-4963b5179be9",
+          "title": "Дневная конверсия",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "09b67990-4635-11f0-ba2b-c1c443aca8dc",
+          "title": "Кум. конверсия",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "d9da4710-4634-11f0-ba2b-c1c443aca8dc",
+          "title": "Кум. квалы",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "c7cefc00-4634-11f0-ba2b-c1c443aca8dc",
+          "title": "Размер когорты",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "7b2992e0-45d8-11f0-9c85-1b8bd51d4c22",
+          "title": "Период",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "metrics_bool",
+          "title": "metrics_bool",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "csum",
+          "title": "csum",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "metrics",
+          "title": "metrics",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "utmsource_fpzx",
+          "title": "utmsource",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_v28n",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_cnt_p9bp",
+          "title": "cohort_cnt",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "day_bucket_w9fu",
+          "title": "day_bucket",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_day_5nw2",
+          "title": "cohort_day",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_month_ib37",
+          "title": "cohort_month",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_week_tcy3",
+          "title": "cohort_week",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_ids_p9ap",
+          "title": "crm_ids",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_cnt_on_day_jaou",
+          "title": "qual_cnt_on_day",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_76sc",
+          "title": "pipeline",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pinnedColumns": 1,
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "Когортный датасет — Сводная таблица",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "pagination": "on",
+      "limit": 100,
+      "totals": "off",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "stacking": "on",
+      "zoomMode": "auto",
+      "mapCenterMode": "auto"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "date",
+          "has_auto_aggregation": false,
+          "title": "Период",
+          "data_type": "date",
+          "hidden": false,
+          "autoaggregated": false,
+          "virtual": false,
+          "type": "DIMENSION",
+          "aggregation": "none",
+          "managed_by": "user",
+          "description": "",
+          "cast": "date",
+          "valid": true,
+          "guid": "7b2992e0-45d8-11f0-9c85-1b8bd51d4c22",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "formula": "-- Группировка по периоду\nIF [period] = 'День' THEN\n    [cohort_day]\nELSEIF [period] = 'Неделя' THEN\n    [cohort_week]\nELSE\n    [cohort_month]\nEND",
+          "guid_formula": "-- Группировка по периоду\nIF [period] = 'День' THEN\n    [cohort_day_5nw2]\nELSEIF [period] = 'Неделя' THEN\n    [cohort_week_tcy3]\nELSE\n    [cohort_month_ib37]\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "udy9765ge1agg"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "integer",
+          "has_auto_aggregation": true,
+          "title": "Размер когорты",
+          "data_type": "integer",
+          "hidden": false,
+          "autoaggregated": true,
+          "virtual": false,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "managed_by": "user",
+          "description": "",
+          "cast": "integer",
+          "valid": true,
+          "guid": "c7cefc00-4634-11f0-ba2b-c1c443aca8dc",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "formula": "SUM(SUM([cohort_cnt]))",
+          "guid_formula": "SUM(SUM([cohort_cnt_p9bp]))",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "udy9765ge1agg"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "integer",
+          "has_auto_aggregation": true,
+          "title": "Кум. квалы",
+          "data_type": "integer",
+          "hidden": false,
+          "autoaggregated": true,
+          "virtual": false,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "managed_by": "user",
+          "description": "",
+          "cast": "integer",
+          "valid": true,
+          "guid": "d9da4710-4634-11f0-ba2b-c1c443aca8dc",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "formula": "IF sum([qual_cnt_on_day]) > 0 THEN\n    RSUM(SUM([qual_cnt_on_day]) WITHIN [Период] ORDER BY [day_bucket])\nEND",
+          "guid_formula": "IF sum([qual_cnt_on_day_jaou]) > 0 THEN\n    RSUM(SUM([qual_cnt_on_day_jaou]) WITHIN [7b2992e0-45d8-11f0-9c85-1b8bd51d4c22] ORDER BY [day_bucket_w9fu])\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "udy9765ge1agg"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "float",
+          "has_auto_aggregation": true,
+          "title": "Кум. конверсия",
+          "data_type": "float",
+          "hidden": false,
+          "autoaggregated": true,
+          "virtual": false,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "managed_by": "user",
+          "description": "",
+          "cast": "float",
+          "valid": true,
+          "guid": "09b67990-4635-11f0-ba2b-c1c443aca8dc",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "formula": "IF sum([qual_cnt_on_day]) > 0 THEN\n    ROUND(\n            (100 * RSUM(SUM([qual_cnt_on_day]) WITHIN [Период] ORDER BY [day_bucket]) / SUM(SUM([cohort_cnt])))\n            * 100\n        ) / 100.0\nEND",
+          "guid_formula": "IF sum([qual_cnt_on_day_jaou]) > 0 THEN\n    ROUND(\n            (100 * RSUM(SUM([qual_cnt_on_day_jaou]) WITHIN [7b2992e0-45d8-11f0-9c85-1b8bd51d4c22] ORDER BY [day_bucket_w9fu]) / SUM(SUM([cohort_cnt_p9bp])))\n            * 100\n        ) / 100.0\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "udy9765ge1agg"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "float",
+          "has_auto_aggregation": true,
+          "title": "Дневная конверсия",
+          "data_type": "float",
+          "hidden": false,
+          "autoaggregated": true,
+          "virtual": false,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "managed_by": "user",
+          "description": "",
+          "cast": "float",
+          "valid": true,
+          "guid": "30d19b80-4695-11f0-884a-4963b5179be9",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "formula": "IF sum([qual_cnt_on_day]) > 0 THEN\n    ROUND(\n                (100 * sum([qual_cnt_on_day]) / SUM(SUM([cohort_cnt]))) * 100\n            ) / 100.0\nEND",
+          "guid_formula": "IF sum([qual_cnt_on_day_jaou]) > 0 THEN\n    ROUND(\n                (100 * sum([qual_cnt_on_day_jaou]) / SUM(SUM([cohort_cnt_p9bp]))) * 100\n            ) / 100.0\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "udy9765ge1agg"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "string",
+          "has_auto_aggregation": true,
+          "title": "Показатель",
+          "data_type": "string",
+          "hidden": false,
+          "autoaggregated": true,
+          "virtual": false,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "managed_by": "user",
+          "description": "",
+          "cast": "string",
+          "valid": true,
+          "guid": "26969960-462a-11f0-a9fb-2bd851c42b5d",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "formula": "IF [day_bucket] = 0 THEN -- Служебный бакет. Показываем все лиды\n    STR([Размер когорты])\n\n-- По дням\nELSE\n    -- Конверсии\n    IF [metrics_bool] THEN\n        -- Кумулятивные\n        IF [csum] THEN\n            CONCAT(STR([Кум. конверсия]), '%')\n\n        ELSE\n            CONCAT(STR([Дневная конверсия]), '%')\n        END\n\n    -- Целые\n    ELSE\n        IF [csum] THEN\n            STR([Кум. квалы])\n        ELSE\n            STR([Дневные квалы])\n        END\n    END\n\nEND",
+          "guid_formula": "IF [day_bucket_w9fu] = 0 THEN -- Служебный бакет. Показываем все лиды\n    STR([c7cefc00-4634-11f0-ba2b-c1c443aca8dc])\n\n-- По дням\nELSE\n    -- Конверсии\n    IF [metrics_bool] THEN\n        -- Кумулятивные\n        IF [csum] THEN\n            CONCAT(STR([09b67990-4635-11f0-ba2b-c1c443aca8dc]), '%')\n\n        ELSE\n            CONCAT(STR([30d19b80-4695-11f0-884a-4963b5179be9]), '%')\n        END\n\n    -- Целые\n    ELSE\n        IF [csum] THEN\n            STR([d9da4710-4634-11f0-ba2b-c1c443aca8dc])\n        ELSE\n            STR([b4e07ce0-4634-11f0-ba2b-c1c443aca8dc])\n        END\n    END\n\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "udy9765ge1agg"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "float",
+          "has_auto_aggregation": true,
+          "title": "Цвета",
+          "data_type": "float",
+          "hidden": false,
+          "autoaggregated": true,
+          "virtual": false,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "managed_by": "user",
+          "description": "",
+          "cast": "float",
+          "valid": true,
+          "guid": "c0840950-4697-11f0-884a-4963b5179be9",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "formula": "IF [day_bucket] = 0 THEN -- Служебный бакет. Показываем все лиды\n    NULL\n\n-- По дням\nELSE\n    -- Конверсии\n    IF [metrics_bool] THEN\n        -- Кумулятивные\n        IF [csum] THEN\n            [Кум. конверсия]\n\n        ELSE\n            [Дневная конверсия]\n        END\n\n    -- Целые\n    ELSE\n        IF [csum] THEN\n            [Кум. квалы]\n        ELSE\n            [Дневные квалы]\n        END\n    END\n\nEND",
+          "guid_formula": "IF [day_bucket_w9fu] = 0 THEN -- Служебный бакет. Показываем все лиды\n    NULL\n\n-- По дням\nELSE\n    -- Конверсии\n    IF [metrics_bool] THEN\n        -- Кумулятивные\n        IF [csum] THEN\n            [09b67990-4635-11f0-ba2b-c1c443aca8dc]\n\n        ELSE\n            [30d19b80-4695-11f0-884a-4963b5179be9]\n        END\n\n    -- Целые\n    ELSE\n        IF [csum] THEN\n            [d9da4710-4634-11f0-ba2b-c1c443aca8dc]\n        ELSE\n            [b4e07ce0-4634-11f0-ba2b-c1c443aca8dc]\n        END\n    END\n\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "udy9765ge1agg"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "integer",
+          "has_auto_aggregation": true,
+          "title": "Дневные квалы",
+          "data_type": "integer",
+          "hidden": false,
+          "autoaggregated": true,
+          "virtual": false,
+          "type": "MEASURE",
+          "aggregation": "none",
+          "managed_by": "user",
+          "description": "",
+          "cast": "integer",
+          "valid": true,
+          "guid": "b4e07ce0-4634-11f0-ba2b-c1c443aca8dc",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "formula": "IF sum([qual_cnt_on_day]) > 0 THEN\n    sum([qual_cnt_on_day])\nEND",
+          "guid_formula": "IF sum([qual_cnt_on_day_jaou]) > 0 THEN\n    sum([qual_cnt_on_day_jaou])\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "udy9765ge1agg"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "line",
+      "type": "line",
+      "name": "label_visualization-line",
+      "iconProps": {
+        "id": "visLines",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "allowLabels": true,
+      "allowSegments": true,
+      "allowShapes": true,
+      "colorsCapacity": 1,
+      "shapesCapacity": 1,
+      "availableLabelModes": [
+        "absolute"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "aggregation": "none",
+              "autoaggregated": false,
+              "valid": true,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "hidden": false,
+              "initial_data_type": "date",
+              "lock_aggregation": false,
+              "data_type": "date",
+              "virtual": false,
+              "cast": "date",
+              "guid": "7b2992e0-45d8-11f0-9c85-1b8bd51d4c22",
+              "aggregation_locked": true,
+              "ui_settings": "",
+              "title": "Период",
+              "description": "",
+              "guid_formula": "-- Группировка по периоду\nIF [period] = 'День' THEN\n    [cohort_day_5nw2]\nELSEIF [period] = 'Неделя' THEN\n    [cohort_week_tcy3]\nELSE\n    [cohort_month_ib37]\nEND",
+              "formula": "-- Группировка по периоду\nIF [period] = 'День' THEN\n    [cohort_day]\nELSEIF [period] = 'Неделя' THEN\n    [cohort_week]\nELSE\n    [cohort_month]\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "local": true,
+              "datasetId": "udy9765ge1agg",
+              "id": "dimension-7",
+              "datasetName": "Когортный датасет"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "holidays": "off",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "7b2992e0-45d8-11f0-9c85-1b8bd51d4c22": "continuous"
+            },
+            "axisVisibility": "show"
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "aggregation": "none",
+              "autoaggregated": true,
+              "valid": true,
+              "type": "MEASURE",
+              "has_auto_aggregation": true,
+              "managed_by": "user",
+              "hidden": false,
+              "initial_data_type": "float",
+              "lock_aggregation": false,
+              "data_type": "float",
+              "virtual": false,
+              "cast": "float",
+              "guid": "30d19b80-4695-11f0-884a-4963b5179be9",
+              "aggregation_locked": true,
+              "ui_settings": "",
+              "title": "Дневная конверсия",
+              "description": "",
+              "guid_formula": "IF sum([qual_cnt_on_day_jaou]) > 0 THEN\n    ROUND(\n                (100 * sum([qual_cnt_on_day_jaou]) / SUM(SUM([cohort_cnt_p9bp]))) * 100\n            ) / 100.0\nEND",
+              "formula": "IF sum([qual_cnt_on_day]) > 0 THEN\n    ROUND(\n                (100 * sum([qual_cnt_on_day]) / SUM(SUM([cohort_cnt]))) * 100\n            ) / 100.0\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "local": true,
+              "datasetId": "udy9765ge1agg",
+              "id": "measure-3",
+              "datasetName": "Когортный датасет",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "%",
+                "labelMode": "absolute",
+                "precision": 2
+              }
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisVisibility": "show",
+            "axisModeMap": {
+              "30d19b80-4695-11f0-884a-4963b5179be9": "continuous"
+            }
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y2",
+          "type": "y2",
+          "title": "section_y2",
+          "iconProps": {},
+          "items": [],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisVisibility": "show"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

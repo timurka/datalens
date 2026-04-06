@@ -1,0 +1,813 @@
+{
+  "entry": {
+    "version": 1,
+    "scope": "dash",
+    "entryId": "cczhc74ozlxkw",
+    "key": "2164810997997505932/listing_leadgen — Дашборд",
+    "createdAt": "2026-03-06T17:53:01.077Z",
+    "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+    "updatedAt": "2026-03-09T19:15:04.450Z",
+    "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+    "revId": "yy7wba109zkki",
+    "savedId": "yy7wba109zkki",
+    "publishedId": "yy7wba109zkki",
+    "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+    "hidden": false,
+    "public": false,
+    "workbookId": "izj32b9d9nji3",
+    "meta": {
+      "title": "listing_leadgen — Дашборд",
+      "is_release": true
+    },
+    "annotation": {
+      "description": ""
+    },
+    "type": "",
+    "data": {
+      "salt": "L3E2MXloGu",
+      "tabs": [
+        {
+          "id": "t1",
+          "items": [
+            {
+              "id": "w1",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "wt1",
+                    "title": "Сводная по дате создания",
+                    "params": {},
+                    "chartId": "oobm6gd8dm4k8",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "gP",
+              "data": {
+                "group": [
+                  {
+                    "id": "pG",
+                    "title": "Группировка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "fieldName": "period",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [
+                        "Месяц"
+                      ],
+                      "multiselectable": false,
+                      "acceptableValues": [
+                        {
+                          "title": "День",
+                          "value": "День"
+                        },
+                        {
+                          "title": "Неделя",
+                          "value": "Неделя"
+                        },
+                        {
+                          "title": "Месяц",
+                          "value": "Месяц"
+                        },
+                        {
+                          "title": "Год",
+                          "value": "Год"
+                        }
+                      ]
+                    },
+                    "defaults": {
+                      "period": [
+                        "Месяц"
+                      ]
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "manual",
+                    "impactTabsIds": [
+                      "t1"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "period": [
+                  "Месяц"
+                ]
+              },
+              "namespace": "default"
+            },
+            {
+              "id": "dP",
+              "data": {
+                "group": [
+                  {
+                    "id": "dG",
+                    "title": "Дата лида",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ll8iw2n2gbv25",
+                      "showTitle": true,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-30d___relative_-0d",
+                      "datasetFieldId": "creation_date_8424"
+                    },
+                    "defaults": {
+                      "creation_date_8424": "__interval___relative_-30d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "t1"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "creation_date_8424": "__interval___relative_-30d___relative_-0d"
+              },
+              "namespace": "default"
+            },
+            {
+              "id": "Wl",
+              "data": {
+                "group": [
+                  {
+                    "id": "XX",
+                    "title": "Воронка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ll8iw2n2gbv25",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "pipeline_99f6",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "pipeline_99f6": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "t1"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "pipeline_99f6": ""
+              },
+              "namespace": "default"
+            },
+            {
+              "id": "SV",
+              "data": {
+                "group": [
+                  {
+                    "id": "bl",
+                    "title": "Сервис",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ll8iw2n2gbv25",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "leadgen_service_453d",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "leadgen_service_453d": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "t1"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "leadgen_service_453d": ""
+              },
+              "namespace": "default"
+            },
+            {
+              "id": "qO",
+              "data": {
+                "group": [
+                  {
+                    "id": "3m",
+                    "title": "Канал",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ll8iw2n2gbv25",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "leadgen_channel_d29e",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "leadgen_channel_d29e": []
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "t1"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "leadgen_channel_d29e": []
+              },
+              "namespace": "default"
+            },
+            {
+              "id": "w4",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "wt4",
+                    "title": "Сводная по дате создания без воронки",
+                    "params": {},
+                    "chartId": "yy6bw3nwm15si",
+                    "isDefault": true,
+                    "autoHeight": true,
+                    "background": {
+                      "color": "like-chart-bg"
+                    },
+                    "description": ""
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "94",
+              "data": {
+                "text": ""
+              },
+              "type": "text",
+              "namespace": "default"
+            }
+          ],
+          "title": "Сводная",
+          "layout": [
+            {
+              "h": 32,
+              "i": "w1",
+              "w": 32,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "gP",
+              "w": 6,
+              "x": 8,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "dP",
+              "w": 8,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "Wl",
+              "w": 7,
+              "x": 16,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "SV",
+              "w": 6,
+              "x": 23,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "qO",
+              "w": 6,
+              "x": 29,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 32,
+              "i": "w4",
+              "w": 32,
+              "x": 0,
+              "y": 34
+            },
+            {
+              "h": 2,
+              "i": "94",
+              "w": 36,
+              "x": 0,
+              "y": 32
+            }
+          ],
+          "aliases": {},
+          "connections": []
+        },
+        {
+          "id": "t2",
+          "items": [
+            {
+              "id": "w2",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "wt2",
+                    "title": "По лидам",
+                    "params": {},
+                    "chartId": "oob5h4tgeams8",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "d2P",
+              "data": {
+                "group": [
+                  {
+                    "id": "d2G",
+                    "title": "Дата",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ll8iw2n2gbv25",
+                      "showTitle": true,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-30d___relative_-0d",
+                      "datasetFieldId": "creation_date_8424"
+                    },
+                    "defaults": {
+                      "creation_date_8424": "__interval___relative_-30d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "creation_date_8424": "__interval___relative_-30d___relative_-0d"
+              },
+              "namespace": "default"
+            },
+            {
+              "id": "W2",
+              "data": {
+                "group": [
+                  {
+                    "id": "X2",
+                    "title": "Воронка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ll8iw2n2gbv25",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "pipeline_99f6",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "pipeline_99f6": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "t2"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "pipeline_99f6": ""
+              },
+              "namespace": "default"
+            },
+            {
+              "id": "S2",
+              "data": {
+                "group": [
+                  {
+                    "id": "b2",
+                    "title": "Сервис",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ll8iw2n2gbv25",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "leadgen_service_453d",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "leadgen_service_453d": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "t2"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "leadgen_service_453d": ""
+              },
+              "namespace": "default"
+            },
+            {
+              "id": "dQ",
+              "data": {
+                "group": [
+                  {
+                    "id": "Aq",
+                    "title": "leadgen_lead_id",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ll8iw2n2gbv25",
+                      "showTitle": true,
+                      "elementType": "input",
+                      "defaultValue": "",
+                      "datasetFieldId": "leadgen_lead_id_f9d6"
+                    },
+                    "defaults": {
+                      "leadgen_lead_id_f9d6": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "t2"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "leadgen_lead_id_f9d6": ""
+              },
+              "namespace": "default"
+            },
+            {
+              "id": "Jr",
+              "data": {
+                "group": [
+                  {
+                    "id": "lk",
+                    "title": "crm_id",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ll8iw2n2gbv25",
+                      "showTitle": true,
+                      "elementType": "input",
+                      "defaultValue": "",
+                      "datasetFieldId": "crm_id_a69b"
+                    },
+                    "defaults": {
+                      "crm_id_a69b": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "t2"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "crm_id_a69b": ""
+              },
+              "namespace": "default"
+            }
+          ],
+          "title": "По лидам",
+          "layout": [
+            {
+              "h": 26,
+              "i": "w2",
+              "w": 36,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "d2P",
+              "w": 8,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "W2",
+              "w": 7,
+              "x": 9,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "S2",
+              "w": 6,
+              "x": 16,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "dQ",
+              "w": 6,
+              "x": 23,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "Jr",
+              "w": 6,
+              "x": 29,
+              "y": 0,
+              "parent": "__fixHead"
+            }
+          ],
+          "aliases": {},
+          "connections": []
+        },
+        {
+          "id": "t3",
+          "items": [
+            {
+              "id": "w3",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "wt3",
+                    "title": "Не в CRM",
+                    "params": {},
+                    "chartId": "llcn7b5rfg7m5",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "nz",
+              "data": {
+                "group": [
+                  {
+                    "id": "4x",
+                    "title": "Сервис",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "llclzwbqf22m5",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "leadgen_service_453d",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "leadgen_service_453d": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "t3"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "leadgen_service_453d": ""
+              },
+              "namespace": "default"
+            },
+            {
+              "id": "T6",
+              "data": {
+                "group": [
+                  {
+                    "id": "wH",
+                    "title": "Дата",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "llclzwbqf22m5",
+                      "showTitle": true,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-30d___relative_-0d",
+                      "datasetFieldId": "7d7e73a5-d4cc-4f12-a637-0cdb1cf88b16"
+                    },
+                    "defaults": {
+                      "7d7e73a5-d4cc-4f12-a637-0cdb1cf88b16": "__interval___relative_-30d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "defaults": {
+                "7d7e73a5-d4cc-4f12-a637-0cdb1cf88b16": "__interval___relative_-30d___relative_-0d"
+              },
+              "namespace": "default"
+            }
+          ],
+          "title": "Не в CRM",
+          "layout": [
+            {
+              "h": 26,
+              "i": "w3",
+              "w": 36,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "nz",
+              "w": 6,
+              "x": 9,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "T6",
+              "w": 8,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            }
+          ],
+          "aliases": {},
+          "connections": []
+        }
+      ],
+      "counter": 11,
+      "settings": {
+        "hideTabs": false,
+        "expandTOC": false,
+        "globalParams": {},
+        "loadPriority": "charts",
+        "hideDashTitle": false,
+        "silentLoading": false,
+        "autoupdateInterval": null,
+        "dependentSelectors": true,
+        "maxConcurrentRequests": null
+      },
+      "schemeVersion": 8,
+      "accessDescription": "",
+      "supportDescription": ""
+    }
+  }
+}

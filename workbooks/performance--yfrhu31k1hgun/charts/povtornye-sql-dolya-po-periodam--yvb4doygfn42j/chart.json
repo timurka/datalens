@@ -1,0 +1,230 @@
+{
+  "entryId": "yvb4doygfn42j",
+  "scope": "widget",
+  "type": "graph_ql_node",
+  "key": "2021104743782288455/Повторные SQL - Доля по периодам",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-08-20T11:14:20.310Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2026-03-19T09:14:18.969Z",
+  "savedId": "sux43q4wezmoc",
+  "publishedId": "sux43q4wezmoc",
+  "revId": "sux43q4wezmoc",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "d9mdkzqj4zxsy",
+      "type": "postgres",
+      "dataExportForbidden": false
+    },
+    "colors": [
+      {
+        "guid": "Группа",
+        "title": "Группа",
+        "datasetId": "ql-mocked-dataset",
+        "data_type": "string",
+        "cast": "string",
+        "type": "DIMENSION",
+        "calc_mode": "direct",
+        "inspectHidden": true,
+        "formulaHidden": true,
+        "noEdit": true,
+        "id": "inserted-1755688259936"
+      }
+    ],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {},
+    "queryValue": "WITH\n-- 0) Параметры DataLens\nlist_p AS (\n  SELECT\n    /* мультиселектор GEO */\n    CASE\n      WHEN regexp_replace($$ {{geo_list}} $$, 'E''|''|\\(|\\)|\\s', '', 'g') = ''\n        THEN NULL\n      ELSE string_to_array(\n             regexp_replace($$ {{geo_list}} $$, 'E''|''|\\(|\\)|\\s', '', 'g'),\n             ','\n           )::text[]\n    END AS geo_arr,\n    /* мультиселектор источников UTM по ПЕРВОЙ СДЕЛКЕ */\n    CASE\n      WHEN regexp_replace($$ {{utm_list}} $$, 'E''|''|\\(|\\)|\\s', '', 'g') = ''\n        THEN NULL\n      ELSE string_to_array(\n             regexp_replace($$ {{utm_list}} $$, 'E''|''|\\(|\\)|\\s', '', 'g'),\n             ','\n           )::text[]\n    END AS utm_arr\n),\nparam_p AS (\n  -- окно склейки покупок в одну «сессию», дней (например, 14)\n  SELECT COALESCE({{date_book_interval}}, 0)::int AS book_window_days\n),\n\n/* 0a) Первая СДЕЛКА клиента (по creation_date_time) и её utmsource */\nfirst_deal_rows AS (\n  SELECT\n    cp.person_key,\n    l.crm_id,\n    l.creation_date_time::timestamp AS first_deal_dt,\n    NULLIF(trim(l.utmsource), '')   AS utmsource\n  FROM mart.parent_child_leads l\n  JOIN v_person_key cp\n    ON cp.account_id      = l.account_id\n   AND cp.contacts_amo_id = l.contacts_amo_id\n  WHERE l.creation_date_time IS NOT NULL\n),\nfirst_deal_global AS (\n  SELECT DISTINCT ON (fdr.person_key)\n         fdr.person_key,\n         fdr.first_deal_dt,\n         COALESCE(fdr.utmsource, 'unknown') AS first_deal_utmsource,\n         fdr.crm_id                          AS first_deal_crm_id\n  FROM first_deal_rows fdr\n  ORDER BY fdr.person_key, fdr.first_deal_dt, fdr.crm_id\n),\n\n-- 1) Покупки для отчёта (GEO + интервал) из мат.вью + мягкий фильтр по UTM ПЕРВОЙ СДЕЛКИ\nreport_pp AS (\n  SELECT\n    v.person_key,\n    v.crm_id,\n    v.booking_date,\n    v.deal_amount,\n    v.revenue,\n    v.geo,\n    DATE_TRUNC('month', v.booking_date)::date AS month\n  FROM v_person_purchases_prev v\n  LEFT JOIN first_deal_global fdg USING (person_key)     -- << не выкидываем клиентов при пустом UTM\n  CROSS JOIN list_p lp\n  WHERE v.geo IN ('ОАЭ','Москва','Грузия','Таиланд','Бали','Таиланд Eng')\n    AND (lp.geo_arr IS NULL OR v.geo = ANY(lp.geo_arr))  -- фильтр GEO\n    AND (lp.utm_arr IS NULL OR fdg.first_deal_utmsource = ANY(lp.utm_arr)) -- фильтр по источнику ПЕРВОЙ СДЕЛКИ\n    AND v.booking_date >= {{interval_from}}::date         -- полуинтервал [from, to)\n    AND v.booking_date <  {{interval_to}}::date\n),\n\n-- 2) Люди в отчёте\npersons_in_scope AS (\n  SELECT DISTINCT person_key FROM report_pp\n),\n\n-- 3) Глобальные старты сессий (для людей отчёта) по окну date_book_interval\nepisodes_global_scoped AS (\n  SELECT\n    v.person_key,\n    v.booking_date AS episode_start\n  FROM v_person_purchases_prev v\n  JOIN persons_in_scope s USING (person_key)\n  WHERE v.prev_booking_date IS NULL\n     OR (v.booking_date - v.prev_booking_date) >\n        ((SELECT book_window_days::text FROM param_p) || ' days')::interval\n),\n\n-- 4) Первая покупка месяца по человеку (в отчётном наборе)\nfirst_in_month AS (\n  SELECT person_key, month, MIN(booking_date) AS first_month_buy\n  FROM report_pp\n  GROUP BY person_key, month\n),\n\n-- 5) Последняя глобальная покупка ДО первой покупки месяца\nprev_global_before AS (\n  SELECT\n    fim.person_key,\n    fim.month,\n    MAX(v.booking_date) AS prev_before\n  FROM first_in_month fim\n  JOIN v_person_purchases_prev v\n    ON v.person_key = fim.person_key\n   AND v.booking_date < fim.first_month_buy\n  GROUP BY fim.person_key, fim.month\n),\n\n-- 6) Кол-во сессий, стартовавших ВНУТРИ месяца\nmonth_episodes AS (\n  SELECT\n    fim.person_key,\n    fim.month,\n    COUNT(*) FILTER (\n      WHERE eg.episode_start >= fim.month\n        AND eg.episode_start <  (fim.month + INTERVAL '1 month')\n    ) AS cnt_month_episodes\n  FROM first_in_month fim\n  LEFT JOIN episodes_global_scoped eg\n    ON eg.person_key = fim.person_key\n  GROUP BY fim.person_key, fim.month\n),\n\n-- 7) Классификация месяца по согласованной логике (как в retention)\nclassified AS (\n  SELECT\n    fim.month,\n    fim.person_key,\n    CASE\n      WHEN COALESCE(me.cnt_month_episodes, 0) >= 2 THEN 'Повторная покупка'\n      WHEN pgb.prev_before IS NOT NULL\n           AND (fim.first_month_buy - pgb.prev_before) >\n               ((SELECT book_window_days::text FROM param_p) || ' days')::interval\n        THEN 'Повторная покупка'\n      ELSE 'Одна покупка'\n    END AS purchase_group\n  FROM first_in_month fim\n  LEFT JOIN prev_global_before pgb\n    ON pgb.person_key = fim.person_key AND pgb.month = fim.month\n  LEFT JOIN month_episodes me\n    ON me.person_key = fim.person_key AND me.month = fim.month\n),\n\n-- 8) Клиенты по месяцам\nmonthly_clients AS (\n  SELECT\n    month,\n    purchase_group,\n    COUNT(DISTINCT person_key) AS clients_count\n  FROM classified\n  GROUP BY month, purchase_group\n),\n\n-- 9) Суммы по месяцам (агрегируем покупки отчётного набора по группе месяца)\nmonthly_sums AS (\n  SELECT\n    c.month,\n    c.purchase_group,\n    SUM(r.deal_amount) AS total_deal_amount,\n    SUM(r.revenue)     AS total_revenue\n  FROM classified c\n  JOIN report_pp r\n    ON r.person_key = c.person_key\n   AND r.month      = c.month\n  GROUP BY c.month, c.purchase_group\n)\n\n-- 10) Итог: клиенты + суммы + доли по месяцам\nSELECT\n  TO_CHAR(mc.month, 'MM.YYYY') AS period,\n  mc.purchase_group            AS \"Группа\",\n  mc.clients_count             AS \"Клиентов\",\n  ROUND(100.0 * mc.clients_count\n        / NULLIF(SUM(mc.clients_count) OVER (PARTITION BY mc.month), 0), 2) AS \"Доля клиентов, %\",\n  ms.total_deal_amount,\n  ROUND(100.0 * ms.total_deal_amount\n        / NULLIF(SUM(ms.total_deal_amount) OVER (PARTITION BY ms.month), 0), 2) AS \"Доля суммы сделок, %\",\n  ms.total_revenue,\n  ROUND(100.0 * ms.total_revenue\n        / NULLIF(SUM(ms.total_revenue) OVER (PARTITION BY ms.month), 0), 2)     AS \"Доля выручки, %\"\nFROM monthly_clients mc\nLEFT JOIN monthly_sums ms\n  ON ms.month = mc.month AND ms.purchase_group = mc.purchase_group\nORDER BY mc.month, CASE mc.purchase_group WHEN 'Одна покупка' THEN 1 ELSE 2 END",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2024-08-17T00:00:00.000Z",
+          "to": "2025-08-20T00:00:00.000Z"
+        }
+      },
+      {
+        "type": "string",
+        "name": "geo_list",
+        "defaultValue": ""
+      },
+      {
+        "type": "number",
+        "name": "date_book_interval",
+        "defaultValue": "14"
+      },
+      {
+        "type": "string",
+        "name": "utm_list",
+        "defaultValue": ""
+      }
+    ],
+    "visualization": {
+      "id": "line",
+      "type": "line",
+      "name": "label_visualization-line",
+      "iconProps": {
+        "id": "visLines",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "allowLabels": true,
+      "allowSegments": false,
+      "allowShapes": true,
+      "colorsCapacity": 1,
+      "shapesCapacity": 1,
+      "availableLabelModes": [
+        "absolute"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "period",
+              "title": "period",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "holidays": "off",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "period": "discrete"
+            },
+            "axisVisibility": "show",
+            "disableAxisMode": true
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "Доля клиентов, %",
+              "title": "Доля клиентов, %",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "%",
+                "labelMode": "absolute",
+                "precision": 2
+              }
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisVisibility": "show",
+            "axisModeMap": {
+              "Доля клиентов, %": "discrete"
+            }
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y2",
+          "type": "y2",
+          "title": "section_y2",
+          "iconProps": {},
+          "items": [],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisVisibility": "show"
+          }
+        }
+      ],
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7",
+    "geopointsConfig": {}
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

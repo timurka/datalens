@@ -1,0 +1,332 @@
+{
+  "datasetId": "1fkeigsoxbmip",
+  "data": {
+    "dataset": {
+      "load_preview_by_default": true,
+      "rls2": {},
+      "description": "",
+      "result_schema_aux": {
+        "inter_dependencies": {
+          "deps": []
+        }
+      },
+      "preview_enabled": true,
+      "sources": [
+        {
+          "connection_id": "g8crkisikyyc4",
+          "raw_schema": [
+            {
+              "description": "",
+              "title": "creation_date",
+              "has_auto_aggregation": false,
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "nullable": true,
+                "name": "date",
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "creation_date",
+              "user_type": "date"
+            },
+            {
+              "description": "",
+              "title": "crm_id",
+              "has_auto_aggregation": false,
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "nullable": true,
+                "name": "integer",
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "crm_id",
+              "user_type": "integer"
+            },
+            {
+              "description": "",
+              "title": "password",
+              "has_auto_aggregation": false,
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "nullable": true,
+                "name": "text",
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "password",
+              "user_type": "string"
+            },
+            {
+              "description": "",
+              "title": "qual",
+              "has_auto_aggregation": false,
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "nullable": true,
+                "name": "integer",
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "qual",
+              "user_type": "integer"
+            },
+            {
+              "description": "",
+              "title": "booking_event",
+              "has_auto_aggregation": false,
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "nullable": true,
+                "name": "integer",
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "booking_event",
+              "user_type": "integer"
+            },
+            {
+              "description": "",
+              "title": "category",
+              "has_auto_aggregation": false,
+              "nullable": true,
+              "lock_aggregation": false,
+              "native_type": {
+                "nullable": true,
+                "name": "text",
+                "native_type_class_name": "common_native_type"
+              },
+              "name": "category",
+              "user_type": "string"
+            }
+          ],
+          "valid": true,
+          "parameter_hash": "880d0f82212e39f7",
+          "managed_by": "user",
+          "title": "SQL",
+          "virtual": false,
+          "id": "6992a4e1-0970-11ef-8214-0d55d61261bf",
+          "source_type": "PG_SUBSELECT",
+          "index_info_set": null,
+          "parameters": {
+            "subsql": "-- Определение категории \"Проект\" по наличию хештега в посте\nWITH project_passwords AS (\n    SELECT DISTINCT\n        LOWER(TRIM(p.password)) AS password  -- Обработка и уникализация паролей\n    FROM\n        perfomance_all_leads p\n    INNER JOIN\n        webhook_negburo w ON p.password = w.password  -- Соединение с таблицей webhook\n    WHERE\n        p.password IS NOT NULL AND p.password <> ''  -- Исключение пустых и нулевых значений\n        AND (LOWER(w.text) LIKE '%продажаоаэ%' OR LOWER(w.text) LIKE '%вторичныйрынок%')  -- Условия для классификации \"Проект\"\n)\n\n-- Основной запрос для получения данных о лиде с присоединением категории\nSELECT \n    p.creation_date,        -- Дата создания лида\n    p.crm_id,\n    p.password,             -- Пароль лида\n    p.qual,                 -- Качество лида\n    p.booking_event,        -- Информация о бронировании события\n    -- Выбор категории по порядку: из таблицы (брать последнее при пересечении), \"Проект\", иначе \"Другое\" \n    COALESCE(MAX(s.category), CASE WHEN proj.password IS NOT NULL THEN 'Проект' END, 'Другое') AS category  \nFROM \n    perfomance_all_leads p\nLEFT JOIN \n    sheets_report_75689 s ON LOWER(TRIM(p.password)) = LOWER(TRIM(s.password))  -- Соединение с таблицей отчетов\n    AND p.creation_date >= DATE(s.date_start)  -- Условие по дате начала действия\n    AND (p.creation_date <= DATE(s.date_end) OR DATE(s.date_end) IS NULL)  -- Условие по дате окончания или его отсутствию\nLEFT JOIN \n    project_passwords proj ON LOWER(TRIM(p.password)) = proj.password  -- Дополнительное соединение для категории \"Проект\"\nWHERE \n    p.password IS NOT NULL\n    AND p.utmsource = 'zakupka'  -- Фильтр по источнику лида\n    AND s.category IS NOT NULL\n    AND p.pipeline_id = 5987164 -- Клиенты в работе\nGROUP BY p.creation_date, p.crm_id, p.password, p.qual, p.booking_event, proj.password\nORDER BY \n    p.creation_date DESC  -- Сортировка по убыванию даты создания"
+          }
+        }
+      ],
+      "template_enabled": false,
+      "data_export_forbidden": false,
+      "rls": {},
+      "component_errors": {
+        "items": []
+      },
+      "cache_invalidation_source": {
+        "sql": null,
+        "cache_invalidation_error": null,
+        "filters": [],
+        "mode": "off",
+        "last_result_timestamp": null,
+        "last_result_error": null,
+        "field": null
+      },
+      "result_schema": [
+        {
+          "description": "",
+          "aggregation_locked": true,
+          "type": "DIMENSION",
+          "valid": true,
+          "initial_data_type": "string",
+          "data_type": "string",
+          "title": "period",
+          "has_auto_aggregation": false,
+          "cast": "string",
+          "guid": "period",
+          "aggregation": "none",
+          "virtual": false,
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "managed_by": "user",
+          "hidden": false,
+          "ui_settings": "",
+          "value_constraint": null,
+          "default_value": "Неделя",
+          "template_enabled": false,
+          "calc_mode": "parameter",
+          "formula": "",
+          "guid_formula": "",
+          "source": "",
+          "avatar_id": null
+        },
+        {
+          "description": "",
+          "aggregation_locked": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "initial_data_type": "date",
+          "data_type": "date",
+          "title": "creation_date",
+          "has_auto_aggregation": false,
+          "cast": "date",
+          "guid": "creation_date",
+          "aggregation": "none",
+          "virtual": false,
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "managed_by": "user",
+          "hidden": false,
+          "ui_settings": "",
+          "avatar_id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+          "source": "creation_date",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "description": "",
+          "aggregation_locked": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "initial_data_type": "string",
+          "data_type": "string",
+          "title": "password",
+          "has_auto_aggregation": false,
+          "cast": "string",
+          "guid": "password",
+          "aggregation": "none",
+          "virtual": false,
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "managed_by": "user",
+          "hidden": false,
+          "ui_settings": "",
+          "avatar_id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+          "source": "password",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "description": "",
+          "aggregation_locked": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "initial_data_type": "integer",
+          "data_type": "integer",
+          "title": "qual",
+          "has_auto_aggregation": false,
+          "cast": "integer",
+          "guid": "qual",
+          "aggregation": "none",
+          "virtual": false,
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "managed_by": "user",
+          "hidden": false,
+          "ui_settings": "",
+          "avatar_id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+          "source": "qual",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "description": "",
+          "aggregation_locked": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "initial_data_type": "integer",
+          "data_type": "integer",
+          "title": "booking_event",
+          "has_auto_aggregation": false,
+          "cast": "integer",
+          "guid": "booking_event",
+          "aggregation": "none",
+          "virtual": false,
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "managed_by": "user",
+          "hidden": false,
+          "ui_settings": "",
+          "avatar_id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+          "source": "booking_event",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "description": "",
+          "aggregation_locked": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "initial_data_type": "string",
+          "data_type": "string",
+          "title": "category",
+          "has_auto_aggregation": false,
+          "cast": "string",
+          "guid": "category",
+          "aggregation": "none",
+          "virtual": false,
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "managed_by": "user",
+          "hidden": false,
+          "ui_settings": "",
+          "avatar_id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+          "source": "category",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "description": "",
+          "aggregation_locked": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "initial_data_type": "integer",
+          "data_type": "integer",
+          "title": "crm_id",
+          "has_auto_aggregation": false,
+          "cast": "integer",
+          "guid": "crm_id",
+          "aggregation": "none",
+          "virtual": false,
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "managed_by": "user",
+          "hidden": false,
+          "ui_settings": "",
+          "avatar_id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+          "source": "crm_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        }
+      ],
+      "revision_id": "o76PZcJRmnNY4C7iqhhehQ",
+      "avatar_relations": [],
+      "source_avatars": [
+        {
+          "valid": true,
+          "managed_by": "user",
+          "title": "SQL",
+          "virtual": false,
+          "id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+          "is_root": true,
+          "source_id": "6992a4e1-0970-11ef-8214-0d55d61261bf"
+        }
+      ],
+      "obligatory_filters": []
+    }
+  }
+}

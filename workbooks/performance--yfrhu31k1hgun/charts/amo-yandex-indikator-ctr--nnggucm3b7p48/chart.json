@@ -1,0 +1,308 @@
+{
+  "entryId": "nnggucm3b7p48",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "2030004716385078644/amo_yandex — Индикатор CTR",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-09-01T17:56:59.666Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-09-01T17:57:15.974Z",
+  "savedId": "jjccrx313o7o4",
+  "publishedId": "jjccrx313o7o4",
+  "revId": "jjccrx313o7o4",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "ttlt9zjxhdv4e"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "51a5b280-875c-11f0-8762-71e6e3b5aa5a",
+          "title": "CTR",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "bedaa820-875b-11f0-817c-5b626fda1980",
+          "title": "CPQL",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "date_b6up",
+          "title": "date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_3ffn",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_id_hz2u",
+          "title": "pipeline_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_ibso",
+          "title": "pipeline",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_g7ax",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_buz4",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "broker_zv1j",
+          "title": "broker",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contact_in_y33d",
+          "title": "contact_in",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_sw8p",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_a_pmh1",
+          "title": "qual_priority_a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_b_7dx1",
+          "title": "qual_priority_b",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_c_8giu",
+          "title": "qual_priority_c",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_hmw3",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_okaq",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "revenue_ln0s",
+          "title": "revenue",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "campaign_id_6xq7",
+          "title": "campaign_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "adgroup_id_ozjp",
+          "title": "adgroup_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "ad_id_wc06",
+          "title": "ad_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "campaign_name_0msd",
+          "title": "campaign_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "adgroup_name_w3x7",
+          "title": "adgroup_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "ad_name_hdo8",
+          "title": "ad_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "spend_m0sf",
+          "title": "spend",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "clicks_2lxb",
+          "title": "clicks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "impressions_lcip",
+          "title": "impressions",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColorPalette": "classic20",
+      "metricFontColor": "#A6A6A6"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation": "none",
+          "virtual": false,
+          "valid": true,
+          "cast": "float",
+          "ui_settings": "",
+          "description": "",
+          "aggregation_locked": true,
+          "hidden": false,
+          "has_auto_aggregation": true,
+          "data_type": "float",
+          "managed_by": "user",
+          "type": "MEASURE",
+          "autoaggregated": true,
+          "initial_data_type": "float",
+          "title": "CPQL",
+          "lock_aggregation": false,
+          "guid": "bedaa820-875b-11f0-817c-5b626fda1980",
+          "formula": "IF SUM([qual]) > 0 THEN\n    [CTR] / SUM([qual])\nEND",
+          "guid_formula": "IF SUM([qual_sw8p]) > 0 THEN\n    [51a5b280-875c-11f0-8762-71e6e3b5aa5a] / SUM([qual_sw8p])\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "ttlt9zjxhdv4e"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation": "none",
+          "virtual": false,
+          "valid": true,
+          "cast": "float",
+          "ui_settings": "",
+          "description": "",
+          "aggregation_locked": true,
+          "hidden": false,
+          "has_auto_aggregation": true,
+          "data_type": "float",
+          "managed_by": "user",
+          "type": "MEASURE",
+          "autoaggregated": true,
+          "initial_data_type": "float",
+          "title": "CTR",
+          "lock_aggregation": false,
+          "guid": "51a5b280-875c-11f0-8762-71e6e3b5aa5a",
+          "formula": "IF SUM(MAX([impressions] FIXED [date], [campaign_name], [adgroup_name], [ad_id])) > 0 THEN\n    SUM(MAX([clicks] FIXED [date], [campaign_name], [adgroup_name], [ad_id])) / SUM(MAX([impressions] FIXED [date], [campaign_name], [adgroup_name], [ad_id]))\nEND",
+          "guid_formula": "IF SUM(MAX([impressions_lcip] FIXED [date_b6up], [campaign_name_0msd], [adgroup_name_w3x7], [ad_id_wc06])) > 0 THEN\n    SUM(MAX([clicks_2lxb] FIXED [date_b6up], [campaign_name_0msd], [adgroup_name_w3x7], [ad_id_wc06])) / SUM(MAX([impressions_lcip] FIXED [date_b6up], [campaign_name_0msd], [adgroup_name_w3x7], [ad_id_wc06]))\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "ttlt9zjxhdv4e"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "51a5b280-875c-11f0-8762-71e6e3b5aa5a",
+              "hidden": false,
+              "data_type": "float",
+              "aggregation_locked": true,
+              "description": "",
+              "type": "MEASURE",
+              "has_auto_aggregation": true,
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "title": "CTR",
+              "managed_by": "user",
+              "virtual": false,
+              "aggregation": "none",
+              "valid": true,
+              "cast": "float",
+              "autoaggregated": true,
+              "initial_data_type": "float",
+              "formula": "IF SUM(MAX([impressions] FIXED [date], [campaign_name], [adgroup_name], [ad_id])) > 0 THEN\n    SUM(MAX([clicks] FIXED [date], [campaign_name], [adgroup_name], [ad_id])) / SUM(MAX([impressions] FIXED [date], [campaign_name], [adgroup_name], [ad_id]))\nEND",
+              "guid_formula": "IF SUM(MAX([impressions_lcip] FIXED [date_b6up], [campaign_name_0msd], [adgroup_name_w3x7], [ad_id_wc06])) > 0 THEN\n    SUM(MAX([clicks_2lxb] FIXED [date_b6up], [campaign_name_0msd], [adgroup_name_w3x7], [ad_id_wc06])) / SUM(MAX([impressions_lcip] FIXED [date_b6up], [campaign_name_0msd], [adgroup_name_w3x7], [ad_id_wc06]))\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "local": true,
+              "datasetId": "ttlt9zjxhdv4e",
+              "id": "measure-0",
+              "datasetName": "amo_yandex",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              }
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

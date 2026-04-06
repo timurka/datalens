@@ -1,0 +1,630 @@
+{
+  "entryId": "9jwci0oy40oyv",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1930602990197017767/email_leads — Таблица эмейлов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-04-17T14:23:30.497Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-04-17T14:23:30.497Z",
+  "savedId": "akxdj1pz51p0w",
+  "publishedId": "akxdj1pz51p0w",
+  "revId": "akxdj1pz51p0w",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "z9m28qdjuypql"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "103d29f0-fe99-11ef-b4c7-5f5e2a59e92f",
+          "title": "Электропочта",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "creation_date_time_kll6",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_5pyl",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utmsource_hqkb",
+          "title": "utmsource",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_campaign_nn5k",
+          "title": "utm_campaign",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_medium_971k",
+          "title": "utm_medium",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_term_py5t",
+          "title": "utm_term",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_2jwu",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "email_9wde",
+          "title": "email",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "formname_gbvi",
+          "title": "formname",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "formid_3ucp",
+          "title": "formid",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "referrer_dlik",
+          "title": "referrer",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "webpage_7444",
+          "title": "webpage",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "list_l2ea",
+          "title": "list",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_lutg",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "creation_date_time_kll6",
+        "datasetId": "z9m28qdjuypql",
+        "data_type": "genericdatetime",
+        "title": "creation_date_time",
+        "source": "creation_date_time",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "title": "Электропочта",
+          "type": "DIMENSION",
+          "aggregation": "none",
+          "valid": true,
+          "autoaggregated": false,
+          "lock_aggregation": false,
+          "has_auto_aggregation": false,
+          "hidden": false,
+          "cast": "string",
+          "guid": "103d29f0-fe99-11ef-b4c7-5f5e2a59e92f",
+          "description": "",
+          "initial_data_type": "string",
+          "managed_by": "user",
+          "virtual": false,
+          "aggregation_locked": true,
+          "data_type": "string",
+          "guid_formula": "[email_9wde]",
+          "formula": "[email]",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "backgroundSettings": {
+            "enabled": false,
+            "settingsId": "db0bc340-fe98-11ef-b4c7-5f5e2a59e92f",
+            "settings": {
+              "gradientState": {},
+              "paletteState": {
+                "palette": "default",
+                "mountedColors": {}
+              },
+              "isContinuous": false
+            },
+            "colorFieldGuid": "email_9wde"
+          },
+          "datasetId": "z9m28qdjuypql"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "creation_date_time",
+              "data_type": "genericdatetime",
+              "initial_data_type": "genericdatetime",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "creation_date_time_kll6",
+              "cast": "genericdatetime",
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "source": "creation_date_time",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-1",
+              "datasetName": "email_leads",
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none",
+              "fakeTitle": "Дата лида",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "cf9a8870-fe98-11ef-b4c7-5f5e2a59e92f",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "creation_date_time_kll6"
+              }
+            },
+            {
+              "title": "crm_id",
+              "data_type": "integer",
+              "initial_data_type": "integer",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "crm_id_5pyl",
+              "cast": "integer",
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "source": "crm_id",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-2",
+              "datasetName": "email_leads",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "8d921560-fe98-11ef-b4c7-5f5e2a59e92f",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "crm_id_5pyl"
+              },
+              "fakeTitle": "AMO ID"
+            },
+            {
+              "title": "webpage",
+              "data_type": "string",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "webpage_7444",
+              "cast": "string",
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "source": "webpage",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-12",
+              "datasetName": "email_leads",
+              "fakeTitle": "Лендинг",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d6d01560-fe98-11ef-b4c7-5f5e2a59e92f",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "webpage_7444"
+              }
+            },
+            {
+              "title": "Электропочта",
+              "data_type": "string",
+              "initial_data_type": "string",
+              "aggregation_locked": true,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "103d29f0-fe99-11ef-b4c7-5f5e2a59e92f",
+              "cast": "string",
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "[email]",
+              "guid_formula": "[email_9wde]",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-0",
+              "datasetName": "email_leads",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "db0bc340-fe98-11ef-b4c7-5f5e2a59e92f",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "email_9wde"
+              },
+              "local": true
+            },
+            {
+              "title": "utmsource",
+              "data_type": "string",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "utmsource_hqkb",
+              "cast": "string",
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "source": "utmsource",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-3",
+              "datasetName": "email_leads",
+              "fakeTitle": "utm_source",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "def53270-fe98-11ef-b4c7-5f5e2a59e92f",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "utmsource_hqkb"
+              }
+            },
+            {
+              "title": "utm_campaign",
+              "data_type": "string",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "utm_campaign_nn5k",
+              "cast": "string",
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "source": "utm_campaign",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-4",
+              "datasetName": "email_leads"
+            },
+            {
+              "title": "utm_term",
+              "data_type": "string",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "utm_term_py5t",
+              "cast": "string",
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "source": "utm_term",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-6",
+              "datasetName": "email_leads"
+            },
+            {
+              "title": "list",
+              "data_type": "string",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "list_l2ea",
+              "cast": "string",
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "source": "list",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-13",
+              "datasetName": "email_leads"
+            },
+            {
+              "title": "referrer",
+              "data_type": "string",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "referrer_dlik",
+              "cast": "string",
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "source": "referrer",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-11",
+              "datasetName": "email_leads"
+            },
+            {
+              "title": "formid",
+              "data_type": "string",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "formid_3ucp",
+              "cast": "string",
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "source": "formid",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-10",
+              "datasetName": "email_leads"
+            },
+            {
+              "title": "formname",
+              "data_type": "string",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "managed_by": "user",
+              "guid": "formname_gbvi",
+              "cast": "string",
+              "hidden": false,
+              "description": "",
+              "virtual": false,
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "source": "formname",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-9",
+              "datasetName": "email_leads"
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

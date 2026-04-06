@@ -1,0 +1,493 @@
+{
+  "entryId": "m0511uwka70sa",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1677747254888238282/password_type2 — Таблица лидов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-05-03T17:24:18.280Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-05-03T17:44:50.738Z",
+  "savedId": "drwwgj5iq50q1",
+  "publishedId": "drwwgj5iq50q1",
+  "revId": "drwwgj5iq50q1",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "1fkeigsoxbmip"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "d4dcef40-0974-11ef-8c3f-4366897655d6",
+          "title": "password_cut",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "ef64cd90-0971-11ef-86d8-69309073cbdb",
+          "title": "url_crm_id",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "creation_date",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "password",
+          "title": "password",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "creation_date",
+        "datasetId": "1fkeigsoxbmip",
+        "data_type": "date",
+        "title": "creation_date",
+        "source": "creation_date",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "data_type": "markup",
+          "initial_data_type": "markup",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "guid": "ef64cd90-0971-11ef-86d8-69309073cbdb",
+          "valid": true,
+          "virtual": false,
+          "aggregation_locked": true,
+          "hidden": false,
+          "cast": "markup",
+          "type": "DIMENSION",
+          "autoaggregated": false,
+          "has_auto_aggregation": false,
+          "title": "url_crm_id",
+          "aggregation": "none",
+          "formula": "URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))",
+          "guid_formula": "URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "1fkeigsoxbmip"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "data_type": "string",
+          "initial_data_type": "string",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "guid": "d4dcef40-0974-11ef-8c3f-4366897655d6",
+          "valid": true,
+          "virtual": false,
+          "aggregation_locked": true,
+          "hidden": false,
+          "cast": "string",
+          "type": "DIMENSION",
+          "autoaggregated": false,
+          "has_auto_aggregation": false,
+          "title": "password_cut",
+          "aggregation": "none",
+          "formula": "LEFT([password], 70)",
+          "guid_formula": "LEFT([password], 70)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "1fkeigsoxbmip"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "creation_date",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "date",
+              "aggregation_locked": false,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "creation_date",
+              "initial_data_type": "date",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "date",
+              "type": "DIMENSION",
+              "hidden": false,
+              "source": "creation_date",
+              "avatar_id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1fkeigsoxbmip",
+              "id": "dimension-2",
+              "datasetName": "password_type2",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Дата лида",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "0b640240-0972-11ef-86d8-69309073cbdb",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "creation_date"
+              }
+            },
+            {
+              "guid": "d4dcef40-0974-11ef-8c3f-4366897655d6",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "string",
+              "aggregation_locked": true,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "password_cut",
+              "initial_data_type": "string",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "string",
+              "type": "DIMENSION",
+              "hidden": false,
+              "source": "",
+              "avatar_id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+              "calc_mode": "formula",
+              "formula": "LEFT([password], 70)",
+              "guid_formula": "LEFT([password], 70)",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1fkeigsoxbmip",
+              "id": "dimension-0",
+              "datasetName": "password_type2",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "06367a50-0972-11ef-86d8-69309073cbdb",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "password"
+              },
+              "quickFormula": false,
+              "local": true
+            },
+            {
+              "guid": "category",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "string",
+              "aggregation_locked": false,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "category",
+              "initial_data_type": "string",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "string",
+              "type": "DIMENSION",
+              "hidden": false,
+              "source": "category",
+              "avatar_id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1fkeigsoxbmip",
+              "id": "dimension-6",
+              "datasetName": "password_type2",
+              "fakeTitle": "Тип пароля",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "101aac80-0972-11ef-86d8-69309073cbdb",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "category"
+              }
+            },
+            {
+              "guid": "qual",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "integer",
+              "aggregation_locked": false,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "qual",
+              "initial_data_type": "integer",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "integer",
+              "type": "DIMENSION",
+              "hidden": false,
+              "source": "qual",
+              "avatar_id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1fkeigsoxbmip",
+              "id": "dimension-4",
+              "datasetName": "password_type2",
+              "fakeTitle": "Квал",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "ff657b90-0971-11ef-86d8-69309073cbdb",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "qual"
+              }
+            },
+            {
+              "guid": "booking_event",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "integer",
+              "aggregation_locked": false,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "booking_event",
+              "initial_data_type": "integer",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "integer",
+              "type": "DIMENSION",
+              "hidden": false,
+              "source": "booking_event",
+              "avatar_id": "6992a4e0-0970-11ef-8214-0d55d61261bf",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1fkeigsoxbmip",
+              "id": "dimension-5",
+              "datasetName": "password_type2",
+              "fakeTitle": "Бронь",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "037844b0-0972-11ef-86d8-69309073cbdb",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "booking_event"
+              }
+            },
+            {
+              "guid": "ef64cd90-0971-11ef-86d8-69309073cbdb",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "markup",
+              "aggregation_locked": true,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "url_crm_id",
+              "initial_data_type": "markup",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "markup",
+              "type": "DIMENSION",
+              "hidden": false,
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))",
+              "guid_formula": "URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1fkeigsoxbmip",
+              "id": "dimension-1",
+              "datasetName": "password_type2",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d4c06df0-0971-11ef-86d8-69309073cbdb",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "ef64cd90-0971-11ef-86d8-69309073cbdb"
+              },
+              "fakeTitle": "CRM ID",
+              "local": true
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

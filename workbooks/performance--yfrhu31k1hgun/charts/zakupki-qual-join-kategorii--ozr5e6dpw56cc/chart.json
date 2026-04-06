@@ -1,0 +1,449 @@
+{
+  "entryId": "ozr5e6dpw56cc",
+  "scope": "widget",
+  "type": "graph_wizard_node",
+  "key": "1665157523881067784/Закупки - qual_join — Категории",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-04-16T08:30:45.390Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-05-17T11:40:22.847Z",
+  "savedId": "6nft0vkko00gu",
+  "publishedId": "6nft0vkko00gu",
+  "revId": "6nft0vkko00gu",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "n24jq7f33jvqb"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "38016fb0-1442-11ef-8739-bf03cccb78d9",
+          "title": "title-38016fb0-1442-11ef-8739-bf03cccb78d9",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "ae828320-0d23-11ef-acc6-69a0ffa79fd8",
+          "title": "labels",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "dbc5bae0-142c-11ef-887b-d3fa2725ec3b",
+          "title": "min_lead_date",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "count",
+          "title": "count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "id",
+          "title": "id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "phone",
+          "title": "phone",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_time",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "min_creation_date_time",
+          "title": "min_creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "budget",
+          "title": "budget",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "password",
+          "title": "password",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_qual",
+          "title": "sum_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_qual",
+          "title": "date_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "priority",
+          "title": "priority",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "zakupki_date",
+          "title": "zakupki_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_name",
+          "title": "channel_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_link",
+          "title": "channel_link",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost",
+          "title": "cost",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {},
+    "filters": [
+      {
+        "guid": "date_join",
+        "datasetId": "n24jq7f33jvqb",
+        "filter": {
+          "value": [],
+          "operation": {
+            "code": "ISNOTNULL"
+          }
+        },
+        "type": "DIMENSION",
+        "title": "date_join",
+        "calc_mode": "direct"
+      },
+      {
+        "guid": "category",
+        "datasetId": "n24jq7f33jvqb",
+        "filter": {
+          "value": [],
+          "operation": {
+            "code": "ISNOTNULL"
+          }
+        },
+        "type": "DIMENSION",
+        "title": "category",
+        "calc_mode": "direct"
+      }
+    ],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [
+      {
+        "description": "",
+        "data_type": "string",
+        "initial_data_type": "string",
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "guid": "ae828320-0d23-11ef-acc6-69a0ffa79fd8",
+        "valid": true,
+        "virtual": false,
+        "aggregation_locked": true,
+        "hidden": false,
+        "cast": "string",
+        "type": "MEASURE",
+        "autoaggregated": true,
+        "has_auto_aggregation": true,
+        "title": "labels",
+        "aggregation": "none",
+        "formula": "CONCAT([category], ': ', COUNTD([id]))",
+        "guid_formula": "CONCAT([category], ': ', COUNTD([id]))",
+        "calc_mode": "formula",
+        "source": "",
+        "local": true,
+        "datasetId": "n24jq7f33jvqb",
+        "id": "measure-1",
+        "datasetName": "Закупки - qual_join 2",
+        "mode": "absolute",
+        "avatar_id": null,
+        "default_value": null,
+        "value_constraint": null
+      }
+    ],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "guid": "ae828320-0d23-11ef-acc6-69a0ffa79fd8",
+          "virtual": false,
+          "autoaggregated": true,
+          "has_auto_aggregation": true,
+          "cast": "string",
+          "aggregation_locked": true,
+          "valid": true,
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "title": "labels",
+          "initial_data_type": "string",
+          "description": "",
+          "aggregation": "none",
+          "data_type": "string",
+          "type": "MEASURE",
+          "hidden": false,
+          "formula": "CONCAT([category], ': ', COUNTD([id]))",
+          "guid_formula": "CONCAT([category], ': ', COUNTD([id]))",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "n24jq7f33jvqb"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "guid": "38016fb0-1442-11ef-8739-bf03cccb78d9",
+          "virtual": false,
+          "autoaggregated": false,
+          "has_auto_aggregation": false,
+          "cast": "integer",
+          "aggregation_locked": false,
+          "valid": true,
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "title": "title-38016fb0-1442-11ef-8739-bf03cccb78d9",
+          "initial_data_type": "integer",
+          "description": "",
+          "aggregation": "count",
+          "data_type": "integer",
+          "type": "MEASURE",
+          "hidden": false,
+          "source": "id",
+          "avatar_id": "e19990c0-1433-11ef-aca5-03749946ba29",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "originalTitle": "id",
+          "fakeTitle": "id",
+          "datasetId": "n24jq7f33jvqb"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "pie",
+      "type": "pie",
+      "name": "label_visualization-pie",
+      "iconProps": {
+        "id": "visPie",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": true,
+      "allowSort": true,
+      "availableLabelModes": [
+        "absolute",
+        "percent"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "dimensions",
+          "type": "dimensions",
+          "title": "section_categories",
+          "iconProps": {},
+          "items": [
+            {
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "hidden": false,
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "valid": true,
+              "title": "category",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "string",
+              "cast": "string",
+              "guid": "category",
+              "aggregation_locked": false,
+              "avatar_id": "e19990c0-1433-11ef-aca5-03749946ba29",
+              "source": "category",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "n24jq7f33jvqb",
+              "id": "dimension-22",
+              "datasetName": "Закупки - qual_join 2"
+            }
+          ],
+          "required": false,
+          "capacity": 1,
+          "settings": {}
+        },
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "colors",
+          "type": "colors",
+          "title": "section_color",
+          "iconProps": {},
+          "items": [
+            {
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "hidden": false,
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "valid": true,
+              "title": "category",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "string",
+              "cast": "string",
+              "guid": "category",
+              "aggregation_locked": false,
+              "avatar_id": "e19990c0-1433-11ef-aca5-03749946ba29",
+              "source": "category",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "n24jq7f33jvqb",
+              "id": "dimension-22",
+              "datasetName": "Закупки - qual_join 2"
+            }
+          ],
+          "required": false,
+          "capacity": 1,
+          "settings": {}
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measures",
+          "iconProps": {},
+          "items": [
+            {
+              "description": "",
+              "data_type": "integer",
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "guid": "38016fb0-1442-11ef-8739-bf03cccb78d9",
+              "valid": true,
+              "virtual": false,
+              "aggregation_locked": false,
+              "hidden": false,
+              "cast": "integer",
+              "type": "MEASURE",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "title": "title-38016fb0-1442-11ef-8739-bf03cccb78d9",
+              "aggregation": "count",
+              "source": "id",
+              "avatar_id": "e19990c0-1433-11ef-aca5-03749946ba29",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "id",
+              "fakeTitle": "Контактов",
+              "datasetId": "n24jq7f33jvqb",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "id": "measure-0",
+              "datasetName": "Закупки - qual_join 2"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "axisModeMap": {
+              "38016fb0-1442-11ef-8739-bf03cccb78d9": "continuous"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

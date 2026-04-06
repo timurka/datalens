@@ -1,0 +1,955 @@
+{
+  "entryId": "ba2nchropqe4w",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2026198606964328368/По клиентам — Dataset",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-08-27T11:54:56.362Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-08-27T12:00:15.708Z",
+  "savedId": "hg8uguj32f8c2",
+  "publishedId": "hg8uguj32f8c2",
+  "revId": "hg8uguj32f8c2",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "fe033520ovhc0"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "6bdb15e0-8339-11f0-9098-8b65ea2ef5a6",
+          "title": "median_days",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "64894e60-8339-11f0-9098-8b65ea2ef5a6",
+          "title": "days_of_book",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "8cc73c80-8338-11f0-86ca-3bbf6ba62dc4",
+          "title": "Ср. revenue",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "41cbc750-8333-11f0-ada5-b53fe490947e",
+          "title": "Revenue на клиента",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "50d2a8d0-832f-11f0-94ad-03f77de1684f",
+          "title": "CRB",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "2a824f50-832f-11f0-94ad-03f77de1684f",
+          "title": "clients_book",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "d16f9160-8280-11f0-b2d0-3ff8b9ca143d",
+          "title": "sum_book (1)",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "last_creation_date_time_6jnr",
+          "title": "last_creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "first_creation_date_time_w8az",
+          "title": "first_creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "last_crm_id_l8a6",
+          "title": "last_crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "first_crm_id_jw7y",
+          "title": "first_crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_count_4kqn",
+          "title": "crm_id_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_book_f0wv",
+          "title": "sum_book",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_qual_s6ln",
+          "title": "sum_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contacts_amo_id_p3zw",
+          "title": "contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_7cg7",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_ruu6",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "group_name_ro82",
+          "title": "group_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "first_creation_date_cp69",
+          "title": "first_creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_deal_amount_7824",
+          "title": "sum_deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_revenue_9fx6",
+          "title": "sum_revenue",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "last_creation_date_cvsk",
+          "title": "last_creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "first_date_book_z551",
+          "title": "first_date_book",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100,
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "По клиентам — Таблица сводная",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "totals": "on",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "stacking": "on",
+      "zoomMode": "auto",
+      "mapCenterMode": "auto"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "integer",
+          "autoaggregated": false,
+          "managed_by": "user",
+          "data_type": "integer",
+          "description": "",
+          "initial_data_type": "integer",
+          "type": "MEASURE",
+          "guid": "d16f9160-8280-11f0-b2d0-3ff8b9ca143d",
+          "hidden": false,
+          "valid": true,
+          "aggregation": "sum",
+          "aggregation_locked": false,
+          "lock_aggregation": false,
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "title": "sum_book (1)",
+          "virtual": false,
+          "source": "sum_book",
+          "avatar_id": "64b51860-8280-11f0-aa25-5b9b7f6b0ed4",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "datasetId": "fe033520ovhc0"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "integer",
+          "autoaggregated": true,
+          "managed_by": "user",
+          "data_type": "integer",
+          "description": "",
+          "initial_data_type": "integer",
+          "type": "MEASURE",
+          "guid": "2a824f50-832f-11f0-94ad-03f77de1684f",
+          "hidden": false,
+          "valid": true,
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "title": "clients_book",
+          "virtual": false,
+          "guid_formula": "COUNTD_IF([contacts_amo_id_p3zw], [sum_book_f0wv] > 0)",
+          "formula": "COUNTD_IF([contacts_amo_id], [sum_book] > 0)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "fe033520ovhc0"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "float",
+          "autoaggregated": true,
+          "managed_by": "user",
+          "data_type": "float",
+          "description": "",
+          "initial_data_type": "float",
+          "type": "MEASURE",
+          "guid": "50d2a8d0-832f-11f0-94ad-03f77de1684f",
+          "hidden": false,
+          "valid": true,
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "title": "CRB",
+          "virtual": false,
+          "guid_formula": "IF COUNTD([contacts_amo_id_p3zw]) > 0 THEN\n    [2a824f50-832f-11f0-94ad-03f77de1684f] / COUNTD([contacts_amo_id_p3zw])\nELSE\n    NULL\nEND",
+          "formula": "IF COUNTD([contacts_amo_id]) > 0 THEN\n    [clients_book] / COUNTD([contacts_amo_id])\nELSE\n    NULL\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "fe033520ovhc0"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "float",
+          "autoaggregated": true,
+          "managed_by": "user",
+          "data_type": "float",
+          "description": "",
+          "initial_data_type": "float",
+          "type": "MEASURE",
+          "guid": "41cbc750-8333-11f0-ada5-b53fe490947e",
+          "hidden": false,
+          "valid": true,
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "title": "Revenue на клиента",
+          "virtual": false,
+          "guid_formula": "IF COUNTD([contacts_amo_id_p3zw]) > 0 THEN\n    sum([sum_revenue_9fx6]) / COUNTD([contacts_amo_id_p3zw])\nELSE\n    NULL\nEND",
+          "formula": "IF COUNTD([contacts_amo_id]) > 0 THEN\n    sum([sum_revenue]) / COUNTD([contacts_amo_id])\nELSE\n    NULL\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "fe033520ovhc0"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "float",
+          "autoaggregated": true,
+          "managed_by": "user",
+          "data_type": "float",
+          "description": "",
+          "initial_data_type": "float",
+          "type": "MEASURE",
+          "guid": "8cc73c80-8338-11f0-86ca-3bbf6ba62dc4",
+          "hidden": false,
+          "valid": true,
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "title": "Ср. revenue",
+          "virtual": false,
+          "guid_formula": "IF COUNTD([contacts_amo_id_p3zw]) > 0 THEN\n    sum([sum_revenue_9fx6]) / SUM([sum_book_f0wv])\nELSE\n    NULL\nEND",
+          "formula": "IF COUNTD([contacts_amo_id]) > 0 THEN\n    sum([sum_revenue]) / SUM([sum_book])\nELSE\n    NULL\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "fe033520ovhc0"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "integer",
+          "autoaggregated": false,
+          "managed_by": "user",
+          "data_type": "integer",
+          "description": "",
+          "initial_data_type": "integer",
+          "type": "MEASURE",
+          "guid": "64894e60-8339-11f0-9098-8b65ea2ef5a6",
+          "hidden": false,
+          "valid": true,
+          "aggregation": "min",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "title": "days_of_book",
+          "virtual": false,
+          "guid_formula": "IF [first_date_book_z551] IS NOT NULL THEN\n    DATE([first_date_book_z551]) - [first_creation_date_cp69]\nEND",
+          "formula": "IF [first_date_book] IS NOT NULL THEN\n    DATE([first_date_book]) - [first_creation_date]\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "fe033520ovhc0"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "cast": "integer",
+          "autoaggregated": true,
+          "managed_by": "user",
+          "data_type": "integer",
+          "description": "",
+          "initial_data_type": "integer",
+          "type": "MEASURE",
+          "guid": "6bdb15e0-8339-11f0-9098-8b65ea2ef5a6",
+          "hidden": false,
+          "valid": true,
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "lock_aggregation": false,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "title": "median_days",
+          "virtual": false,
+          "guid_formula": "MEDIAN([64894e60-8339-11f0-9098-8b65ea2ef5a6])",
+          "formula": "MEDIAN([days_of_book])",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "fe033520ovhc0"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "first_creation_date_time",
+              "cast": "genericdatetime",
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "virtual": false,
+              "type": "DIMENSION",
+              "data_type": "genericdatetime",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "aggregation_locked": false,
+              "initial_data_type": "genericdatetime",
+              "description": "",
+              "managed_by": "user",
+              "valid": true,
+              "guid": "first_creation_date_time_w8az",
+              "source": "first_creation_date_time",
+              "avatar_id": "64b51860-8280-11f0-aa25-5b9b7f6b0ed4",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "fe033520ovhc0",
+              "id": "dimension-8",
+              "datasetName": "По клиентам",
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none",
+              "fakeTitle": "Первый лид клиента",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "6cddff90-833c-11f0-bfd7-d593b9f0b486",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "first_creation_date_time_w8az"
+              }
+            },
+            {
+              "title": "first_crm_id",
+              "cast": "integer",
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "virtual": false,
+              "type": "DIMENSION",
+              "data_type": "integer",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "aggregation_locked": false,
+              "initial_data_type": "integer",
+              "description": "",
+              "managed_by": "user",
+              "valid": true,
+              "guid": "first_crm_id_jw7y",
+              "source": "first_crm_id",
+              "avatar_id": "64b51860-8280-11f0-aa25-5b9b7f6b0ed4",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "fe033520ovhc0",
+              "id": "dimension-10",
+              "datasetName": "По клиентам",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "53846f70-833c-11f0-bfd7-d593b9f0b486",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "first_crm_id_jw7y"
+              },
+              "fakeTitle": "Первый ID CRM"
+            },
+            {
+              "cast": "integer",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "data_type": "integer",
+              "description": "",
+              "initial_data_type": "integer",
+              "type": "DIMENSION",
+              "guid": "contacts_amo_id_p3zw",
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "has_auto_aggregation": false,
+              "title": "contacts_amo_id",
+              "virtual": false,
+              "source": "contacts_amo_id",
+              "avatar_id": "64b51860-8280-11f0-aa25-5b9b7f6b0ed4",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "fe033520ovhc0",
+              "id": "dimension-14",
+              "datasetName": "По клиентам",
+              "fakeTitle": "ID контакта",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "746ef2f0-833c-11f0-bfd7-d593b9f0b486",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "contacts_amo_id_p3zw"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "hidden": false,
+              "guid": "geo_7cg7",
+              "has_auto_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "virtual": false,
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "description": "",
+              "managed_by": "user",
+              "data_type": "string",
+              "ui_settings": "",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "cast": "string",
+              "type": "DIMENSION",
+              "title": "geo",
+              "avatar_id": "64b51860-8280-11f0-aa25-5b9b7f6b0ed4",
+              "source": "geo",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "fe033520ovhc0",
+              "id": "dimension-15",
+              "datasetName": "По клиентам",
+              "default_value": null,
+              "value_constraint": null,
+              "fakeTitle": "Гео",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "ea9a7ce0-832f-11f0-80e1-3b1dd97891ce",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "geo_7cg7"
+              }
+            },
+            {
+              "cast": "string",
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "type": "DIMENSION",
+              "aggregation": "none",
+              "description": "",
+              "valid": true,
+              "ui_settings": "",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "guid": "name_ruu6",
+              "title": "name",
+              "data_type": "string",
+              "avatar_id": "64b51860-8280-11f0-aa25-5b9b7f6b0ed4",
+              "source": "name",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "fe033520ovhc0",
+              "id": "dimension-16",
+              "datasetName": "По клиентам",
+              "fakeTitle": "Брокер",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "9bf0f510-8280-11f0-b2d0-3ff8b9ca143d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "name_ruu6"
+              }
+            },
+            {
+              "cast": "integer",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "data_type": "integer",
+              "description": "",
+              "initial_data_type": "integer",
+              "type": "DIMENSION",
+              "guid": "sum_book_f0wv",
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "has_auto_aggregation": false,
+              "title": "sum_book",
+              "virtual": false,
+              "source": "sum_book",
+              "avatar_id": "64b51860-8280-11f0-aa25-5b9b7f6b0ed4",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "fe033520ovhc0",
+              "id": "dimension-12",
+              "datasetName": "По клиентам",
+              "fakeTitle": "Брони",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "79e3e420-833c-11f0-bfd7-d593b9f0b486",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "sum_book_f0wv"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "title": "first_date_book",
+              "cast": "genericdatetime",
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "virtual": false,
+              "type": "DIMENSION",
+              "data_type": "genericdatetime",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "aggregation_locked": false,
+              "initial_data_type": "genericdatetime",
+              "description": "",
+              "managed_by": "user",
+              "valid": true,
+              "guid": "first_date_book_z551",
+              "source": "first_date_book",
+              "avatar_id": "64b51860-8280-11f0-aa25-5b9b7f6b0ed4",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "fe033520ovhc0",
+              "id": "inserted-1756295997952",
+              "datasetName": "По клиентам",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Первая бронь",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "5f037070-833d-11f0-89de-c382b8f91aef",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "first_date_book_z551"
+              }
+            },
+            {
+              "title": "days_of_book",
+              "cast": "integer",
+              "aggregation": "min",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "virtual": false,
+              "type": "MEASURE",
+              "data_type": "integer",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "aggregation_locked": true,
+              "initial_data_type": "integer",
+              "description": "",
+              "managed_by": "user",
+              "valid": true,
+              "guid": "64894e60-8339-11f0-9098-8b65ea2ef5a6",
+              "guid_formula": "IF [first_date_book_z551] IS NOT NULL THEN\n    DATE([first_date_book_z551]) - [first_creation_date_cp69]\nEND",
+              "formula": "IF [first_date_book] IS NOT NULL THEN\n    DATE([first_date_book]) - [first_creation_date]\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "local": true,
+              "datasetId": "fe033520ovhc0",
+              "id": "inserted-1756295980752",
+              "datasetName": "По клиентам",
+              "fakeTitle": "Срок сделки, дней",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "positiveColorIndex": 2,
+                    "negativeColorIndex": 1
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "50753e30-833d-11f0-89de-c382b8f91aef",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "64894e60-8339-11f0-9098-8b65ea2ef5a6"
+              }
+            },
+            {
+              "cast": "float",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "data_type": "float",
+              "description": "",
+              "initial_data_type": "float",
+              "type": "DIMENSION",
+              "guid": "sum_revenue_9fx6",
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "has_auto_aggregation": false,
+              "title": "sum_revenue",
+              "virtual": false,
+              "source": "sum_revenue",
+              "avatar_id": "64b51860-8280-11f0-aa25-5b9b7f6b0ed4",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "fe033520ovhc0",
+              "id": "dimension-20",
+              "datasetName": "По клиентам",
+              "fakeTitle": "Revenue",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "$",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "7ffcdd80-833c-11f0-bfd7-d593b9f0b486",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "sum_revenue_9fx6"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "cast": "float",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "data_type": "float",
+              "description": "",
+              "initial_data_type": "float",
+              "type": "DIMENSION",
+              "guid": "sum_deal_amount_7824",
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "has_auto_aggregation": false,
+              "title": "sum_deal_amount",
+              "virtual": false,
+              "source": "sum_deal_amount",
+              "avatar_id": "64b51860-8280-11f0-aa25-5b9b7f6b0ed4",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "fe033520ovhc0",
+              "id": "dimension-19",
+              "datasetName": "По клиентам",
+              "fakeTitle": "Сумма сделок",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "$",
+                "postfix": "",
+                "unit": "k",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "844ed280-833c-11f0-bfd7-d593b9f0b486",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "sum_deal_amount_7824"
+              },
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "10mo8a4aebtgm",
+  "collectionId": null
+}

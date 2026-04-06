@@ -1,0 +1,185 @@
+{
+  "entryId": "yiid08yo9vhck",
+  "scope": "widget",
+  "type": "graph_ql_node",
+  "key": "1970549398391751856/Причины отказа - Сравнение периодов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-06-11T17:09:53.480Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-06-11T17:35:14.407Z",
+  "savedId": "yiihj0yitbbkk",
+  "publishedId": "yiihj0yitbbkk",
+  "revId": "yiihj0yitbbkk",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "bpds0nslojo40",
+      "type": "postgres"
+    },
+    "colors": [
+      {
+        "guid": "period_label",
+        "title": "period_label",
+        "datasetId": "ql-mocked-dataset",
+        "data_type": "string",
+        "cast": "string",
+        "type": "DIMENSION",
+        "calc_mode": "direct",
+        "inspectHidden": true,
+        "formulaHidden": true,
+        "noEdit": true
+      }
+    ],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {},
+    "queryValue": "WITH base AS (\n    SELECT\n        id,\n        geo,\n        utmsource,\n        reason,\n        CASE\n            WHEN creation_date BETWEEN {{reason_date1_from}} AND {{reason_date1_to}}\n                 THEN to_char({{reason_date1_from}}::date, 'DD.MM.YYYY')\n                      || ' - ' ||\n                      to_char({{reason_date1_to}}  ::date, 'DD.MM.YYYY')\n            WHEN creation_date BETWEEN {{reason_date2_from}} AND {{reason_date2_to}}\n                 THEN to_char({{reason_date2_from}}::date, 'DD.MM.YYYY')\n                      || ' - ' ||\n                      to_char({{reason_date2_to}}  ::date, 'DD.MM.YYYY')\n            ELSE NULL\n        END AS period_label\n    FROM public.parent_child_leads\n    WHERE status_id = 143\n\n      -- фильтр по reason\n      AND reason NOT ILIKE 'Передано%'\n      AND reason NOT ILIKE 'Партн%'\n      AND reason NOT ILIKE 'Рефер%'\n      AND reason NOT IN (\n           'Отдел Заботы', 'ХКВ (Архив)', 'Не готовы оплачивать КВ по вторичке',\n           'Трансфер средств', 'Fake lead', 'Family Office',\n           'Not relevant at the moment', 'Postponed to a specific date'\n      )\n\n      -- обязательные пайплайны\n      AND (broker_pipeline = 1 OR valid_pipeline = 1)\n\n      -- динамический фильтр по geo\n      AND ( {{geo}} IS NULL\n            OR {{geo}} = ''\n            OR geo = {{geo}} )\n\n      -- динамический фильтр по utmsource\n      AND ( {{utmsource}} IS NULL\n            OR {{utmsource}} = ''\n            OR utmsource = {{utmsource}} )\n\n      -- широкая «рамка» по датам, чтобы сработал индекс\n      AND creation_date BETWEEN \n            LEAST({{reason_date1_from}}, {{reason_date2_from}})\n        AND GREATEST({{reason_date1_to}},   {{reason_date2_to}})\n)\nSELECT\n    geo,\n    utmsource,\n    reason,\n    period_label,               -- \"01.01.2025 - 03.01.2025\"\n    COUNT(DISTINCT id) AS id_cnt\nFROM base\nWHERE period_label IS NOT NULL\nGROUP BY geo, utmsource, reason, period_label\nORDER BY geo, utmsource, reason, period_label;",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "reason_date1",
+        "defaultValue": {
+          "from": "2025-06-08T00:00:00.000Z",
+          "to": "2025-06-11T00:00:00.000Z"
+        }
+      },
+      {
+        "type": "date-interval",
+        "name": "reason_date2",
+        "defaultValue": {
+          "from": "2025-06-01T00:00:00.000Z",
+          "to": "2025-06-03T00:00:00.000Z"
+        }
+      },
+      {
+        "type": "string",
+        "name": "geo",
+        "defaultValue": "ОАЭ"
+      },
+      {
+        "type": "string",
+        "name": "utmsource",
+        "defaultValue": "zakupka"
+      }
+    ],
+    "visualization": {
+      "id": "column100p",
+      "type": "column",
+      "name": "label_visualization-column-100p",
+      "iconProps": {
+        "id": "visColumn100p",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "allowSegments": false,
+      "allowLabels": true,
+      "availableLabelModes": [
+        "absolute",
+        "percent"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "reason",
+              "title": "reason",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            }
+          ],
+          "required": false,
+          "capacity": 2,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "angle",
+            "holidays": "off",
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "reason": "discrete"
+            },
+            "axisVisibility": "show",
+            "disableAxisMode": true
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "id_cnt",
+              "title": "id_cnt",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1749662388237"
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "angle",
+            "nulls": "ignore",
+            "axisFormatMode": "auto",
+            "axisVisibility": "show"
+          }
+        }
+      ],
+      "highchartsId": "column",
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

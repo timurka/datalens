@@ -1,0 +1,228 @@
+{
+  "datasetId": "tjelv873ie52h",
+  "data": {
+    "dataset": {
+      "component_errors": {
+        "items": []
+      },
+      "template_enabled": false,
+      "avatar_relations": [],
+      "revision_id": null,
+      "load_preview_by_default": true,
+      "rls2": {},
+      "obligatory_filters": [],
+      "cache_invalidation_source": {
+        "mode": "off",
+        "field": null,
+        "sql": null,
+        "last_result_error": null,
+        "filters": [],
+        "last_result_timestamp": null,
+        "cache_invalidation_error": null
+      },
+      "data_export_forbidden": false,
+      "preview_enabled": true,
+      "result_schema": [
+        {
+          "aggregation": "none",
+          "has_auto_aggregation": false,
+          "guid": "id_him8",
+          "ui_settings": "",
+          "aggregation_locked": false,
+          "virtual": false,
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "cast": "integer",
+          "initial_data_type": "integer",
+          "data_type": "integer",
+          "title": "id",
+          "hidden": false,
+          "description": "",
+          "managed_by": "user",
+          "source": "id",
+          "avatar_id": "1ec16370-aa75-11ee-80fb-35f98577c342",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "aggregation": "none",
+          "has_auto_aggregation": false,
+          "guid": "account_id_dfca",
+          "ui_settings": "",
+          "aggregation_locked": false,
+          "virtual": false,
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "cast": "integer",
+          "initial_data_type": "integer",
+          "data_type": "integer",
+          "title": "account_id",
+          "hidden": false,
+          "description": "",
+          "managed_by": "user",
+          "source": "account_id",
+          "avatar_id": "1ec16370-aa75-11ee-80fb-35f98577c342",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "aggregation": "none",
+          "has_auto_aggregation": false,
+          "guid": "period_teyo",
+          "ui_settings": "",
+          "aggregation_locked": false,
+          "virtual": false,
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "cast": "date",
+          "initial_data_type": "date",
+          "data_type": "date",
+          "title": "period",
+          "hidden": false,
+          "description": "",
+          "managed_by": "user",
+          "source": "period",
+          "avatar_id": "1ec16370-aa75-11ee-80fb-35f98577c342",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "aggregation": "none",
+          "has_auto_aggregation": false,
+          "guid": "participants_count_72du",
+          "ui_settings": "",
+          "aggregation_locked": false,
+          "virtual": false,
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "cast": "integer",
+          "initial_data_type": "integer",
+          "data_type": "integer",
+          "title": "participants_count",
+          "hidden": false,
+          "description": "",
+          "managed_by": "user",
+          "source": "participants_count",
+          "avatar_id": "1ec16370-aa75-11ee-80fb-35f98577c342",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        }
+      ],
+      "source_avatars": [
+        {
+          "is_root": true,
+          "source_id": "1ec16371-aa75-11ee-80fb-35f98577c342",
+          "virtual": false,
+          "valid": true,
+          "title": "public.webhook_tg_negburo_stat",
+          "id": "1ec16370-aa75-11ee-80fb-35f98577c342",
+          "managed_by": "user"
+        }
+      ],
+      "sources": [
+        {
+          "raw_schema": [
+            {
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "name": "id",
+              "user_type": "integer",
+              "nullable": false,
+              "native_type": {
+                "name": "integer",
+                "nullable": false,
+                "native_type_class_name": "common_native_type"
+              },
+              "title": "id",
+              "description": ""
+            },
+            {
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "name": "account_id",
+              "user_type": "integer",
+              "nullable": false,
+              "native_type": {
+                "name": "integer",
+                "nullable": false,
+                "native_type_class_name": "common_native_type"
+              },
+              "title": "account_id",
+              "description": ""
+            },
+            {
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "name": "period",
+              "user_type": "date",
+              "nullable": true,
+              "native_type": {
+                "name": "date",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "title": "period",
+              "description": ""
+            },
+            {
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "name": "participants_count",
+              "user_type": "integer",
+              "nullable": true,
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "title": "participants_count",
+              "description": ""
+            }
+          ],
+          "parameter_hash": "cc306ade4eaf3f29",
+          "virtual": false,
+          "parameters": {
+            "db_name": null,
+            "db_version": "PostgreSQL 14.10 (Ubuntu 14.10-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit",
+            "table_name": "webhook_tg_negburo_stat",
+            "schema_name": "public"
+          },
+          "index_info_set": null,
+          "valid": true,
+          "source_type": "PG_TABLE",
+          "connection_id": "bpds0nslojo40",
+          "title": "webhook_tg_negburo_stat",
+          "id": "1ec16371-aa75-11ee-80fb-35f98577c342",
+          "managed_by": "user"
+        }
+      ],
+      "result_schema_aux": {
+        "inter_dependencies": {
+          "deps": []
+        }
+      },
+      "description": "",
+      "rls": {}
+    }
+  }
+}

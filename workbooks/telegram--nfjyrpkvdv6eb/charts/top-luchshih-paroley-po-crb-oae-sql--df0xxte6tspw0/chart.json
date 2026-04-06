@@ -1,0 +1,184 @@
+{
+  "entryId": "df0xxte6tspw0",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "1766020273179460772/Топ лучших паролей по CRB ОАЭ (sql)",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-09-02T12:27:02.067Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-09-02T13:37:16.437Z",
+  "savedId": "acy7dv2pcjdux",
+  "publishedId": "acy7dv2pcjdux",
+  "revId": "acy7dv2pcjdux",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "g8crkisikyyc4",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "-- Топ худших паролей ОАЭ в квал (CRQ)\n\nSELECT \n    MIN(t.date_full) AS \"Дата поста\",\n    t.password_org AS \"Пароль\",\n    COUNT(DISTINCT p.leads_id) AS \"Лиды\",\n    SUM(qual) AS \"Квалы\",\n    SUM(booking_event) AS \"Брони\",\n    CASE \n        WHEN COUNT(DISTINCT p.leads_id) > 0 THEN \n            CAST((SUM(CASE WHEN p.booking_event = 1 THEN 1 ELSE 0 END)::float / COUNT(DISTINCT p.leads_id)) AS NUMERIC(5,4))\n        ELSE \n            0\n    END AS CRB\nFROM \n    webhook_negburo t\nLEFT JOIN \n    perfomance_all_leads p ON p.password = t.password\nWHERE \n    -- Посты за 2024 год\n    (creation_date >= {{interval_from}}\n            AND creation_date <= {{interval_to}})\n    -- Только с основного канала\n    AND channel_id = '12556306'\n    -- Смотрим в воронке \"Клиенты\"\n    AND (p.pipeline_id = '5987164'\n        -- Смотрим в валидации тоже, но не в статусе \"успешно\"\n        OR (p.pipeline_id = '7309478' AND p.status_id != 142))\n   -- AND (reason != 'НЕ клиент/Мусор/Застройщики'\n     --   OR reason IS NULL)\nGROUP BY \n    t.password_org\nHAVING \n    -- Там где больше 5 лидов\n   SUM(booking_event) >= 2\n    -- И не было броней\n    --AND SUM(booking_event) = 0\nORDER BY \n    CRB DESC, \n    \"Лиды\" DESC;",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2024-01-01T00:00:00.000Z",
+          "to": "__relative_-0d"
+        }
+      }
+    ],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "Дата поста",
+              "title": "Дата поста",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "date",
+              "cast": "date",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Пароль",
+              "title": "Пароль",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Лиды",
+              "title": "Лиды",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1725045933412"
+            },
+            {
+              "guid": "Квалы",
+              "title": "Квалы",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1725045945812"
+            },
+            {
+              "guid": "Брони",
+              "title": "Брони",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1725279920323"
+            },
+            {
+              "guid": "crb",
+              "title": "crb",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "302f4520-6927-11ef-ae5f-d9436882c09c",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "crb"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "Дата поста": "continuous"
+            }
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

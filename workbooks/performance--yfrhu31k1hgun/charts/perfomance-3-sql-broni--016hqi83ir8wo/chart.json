@@ -1,0 +1,381 @@
+{
+  "entryId": "016hqi83ir8wo",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "1628900620503092360/Perfomance 3 - SQL Брони",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-02-26T07:54:45.676Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-01-07T11:51:29.866Z",
+  "savedId": "c251b54vlgbcy",
+  "publishedId": "c251b54vlgbcy",
+  "revId": "c251b54vlgbcy",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "bpds0nslojo40",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "SELECT\n    p.crm_id AS \"CRM ID\",\n    p.pipeline_id,\n    MAX(p.utmsource) AS \"Последний источник\",\n    LEFT(MAX(p.password), 50) AS \"Пароль\",\n    MAX(c.name) AS \"ФИО\",\n    MAX(CASE WHEN le.attribute_id = '989731' THEN le.value END) AS \"Тип покупателя\",\n    MAX(CASE WHEN le.attribute_id = '991039' THEN le.value END) AS \"Город\",\n    MAX(CASE WHEN le.attribute_id = '991091' THEN le.value END) AS \"Застройщик\",\n    MAX(CASE WHEN le.attribute_id = '990557' THEN le.value END) AS \"Объект\",\n    MAX(CASE WHEN le.attribute_id = '991041' THEN le.value END) AS \"Тип недвижимости\",\n    MAX(CASE WHEN le.attribute_id = '990553' THEN le.value END) AS \"Тип покупки\",\n    MAX(CASE WHEN le.attribute_id = '989737' THEN le.value END) AS \"Срок сдачи\",\n    MAX(CASE WHEN le.attribute_id = '989739' THEN le.value END) AS \"Срок выхода на сделку\",\n    MAX(CASE WHEN le.attribute_id = '916379' THEN le.value END) AS \"Что важно в покупке\",\n    MAX(CASE WHEN le.attribute_id = '989743' THEN le.value END) AS \"Способ оплаты\",\n    MAX(CASE WHEN le.attribute_id = '991037' OR le.attribute_id = '673655' THEN le.value END) AS \"Сумма сделки\",\n    MAX(CASE WHEN le.attribute_id = '978575' OR le.attribute_id = '673773' THEN le.value END) AS \"Приоритет\",\n    MAX(p.date_booking) AS \"Дата брони\",\n    COALESCE(MAX(p.lead_creation_date), MAX(p.creation_date)) AS \"Дата создания лида\",\n    MAX(p.lead_source) AS \"Источник лида\"\nFROM\n    perfomance_all_leads p\nLEFT JOIN \n    amocrm_leads_facts lf ON p.leads_id = lf.leads_id\nLEFT JOIN \n    amocrm_contacts c ON c.id = lf.contacts_id\nRIGHT JOIN\n    amocrm_leads_attributes le ON p.leads_id = le.leads_id\nWHERE\n    p.booking_event = 1 AND p.date_booking IS NOT NULL\nGROUP BY\n    p.crm_id, p.pipeline_id\nHAVING \n    MAX(CASE WHEN le.attribute_id = '990539' OR le.attribute_id = '1213281' THEN DATE(le.value) END) IS NOT NULL\nORDER BY\n    \"Дата брони\" DESC",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "dates",
+        "defaultValue": {
+          "from": "__relative_-6d",
+          "to": "__relative_-0d"
+        }
+      }
+    ],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "Дата брони",
+              "title": "Дата брони",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "genericdatetime",
+              "cast": "genericdatetime",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Дата создания лида",
+              "title": "Дата создания лида",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "date",
+              "cast": "date",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Последний источник",
+              "title": "Последний источник",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "CRM ID",
+              "title": "CRM ID",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "aaf0deb0-6b9b-11ef-abf8-33a7cb24d508",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "CRM ID"
+              }
+            },
+            {
+              "guid": "Пароль",
+              "title": "Пароль",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1725639825462"
+            },
+            {
+              "guid": "pipeline_id",
+              "title": "pipeline_id",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1716215562865",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d39b32b0-16b5-11ef-bcaa-6517596236e9",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "pipeline_id-1"
+              }
+            },
+            {
+              "guid": "Источник лида",
+              "title": "Источник лида",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1716387108385"
+            },
+            {
+              "guid": "ФИО",
+              "title": "ФИО",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1716386116834"
+            },
+            {
+              "guid": "Тип покупателя",
+              "title": "Тип покупателя",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Город",
+              "title": "Город",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Застройщик",
+              "title": "Застройщик",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Объект",
+              "title": "Объект",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Тип недвижимости",
+              "title": "Тип недвижимости",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Тип покупки",
+              "title": "Тип покупки",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1716385964188"
+            },
+            {
+              "guid": "Срок сдачи",
+              "title": "Срок сдачи",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1716218101229"
+            },
+            {
+              "guid": "Срок выхода на сделку",
+              "title": "Срок выхода на сделку",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1716218246834"
+            },
+            {
+              "guid": "Что важно в покупке",
+              "title": "Что важно в покупке",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1716218260724"
+            },
+            {
+              "guid": "Способ оплаты",
+              "title": "Способ оплаты",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1716218498632"
+            },
+            {
+              "guid": "Сумма сделки",
+              "title": "Сумма сделки",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Приоритет",
+              "title": "Приоритет",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "Срок сдачи-8": "discrete",
+              "Дата брони": "continuous"
+            }
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

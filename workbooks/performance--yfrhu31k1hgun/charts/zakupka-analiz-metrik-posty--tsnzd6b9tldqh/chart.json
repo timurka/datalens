@@ -1,0 +1,624 @@
+{
+  "entryId": "tsnzd6b9tldqh",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "1620340892600633289/Закупка - Анализ метрик - Посты",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-02-14T12:28:06.588Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-02-14T12:57:24.842Z",
+  "savedId": "poj1hav5b8eed",
+  "publishedId": "poj1hav5b8eed",
+  "revId": "poj1hav5b8eed",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "bpds0nslojo40",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "WITH perfomance_leads AS (\n  SELECT creation_date,\n    COUNT(leads_id) AS leads,\n    SUM(qual) AS quals\n  FROM perfomance_all_leads\n  WHERE utmsource = 'zakupka'\n    AND pipeline_id = 5987164\n    AND first_deal = 'Да'\n  GROUP BY creation_date\n),\n\ndaily_followers AS (\n  SELECT z.date, \n         SUM(followers_msc + followers_uae + followers_bali) AS total_daily_followers,\n         AVG(p.leads) AS daily_leads,\n         AVG(p.quals) AS daily_quals\n  FROM zakupki z\n  LEFT JOIN perfomance_leads p ON p.creation_date = z.date\n  WHERE z.date >= {{interval_from}}\n    AND z.date <= {{interval_to}}\n  GROUP BY z.date\n),\n\naggregated_data AS (\nSELECT z.post,\n    LEFT(MIN(z.teaser), 30) AS \"Тизер\",\n    COUNT(z.channel_link) AS \"Размещений\",\n    SUM(z.cost) AS \"Расход\",\n    AVG(participants_count) AS \"Аудитория\",\n    SUM(z.followers_msc + z.followers_uae + z.followers_bali) AS \"F\",\n    CASE\n        WHEN SUM(z.followers_msc + z.followers_uae + z.followers_bali) > 0 THEN ROUND(SUM(z.cost) / SUM(z.followers_msc + z.followers_uae + z.followers_bali), 0)\n        ELSE SUM(z.cost)\n    END AS \"CPF\",\n    \n    SUM(df.total_daily_followers) AS \"Общее количество новых подписчиков\",\n    ROUND(SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers) * 100, 2) AS \"Доля подписчиков от всех\",\n    ROUND(SUM(z.followers_msc + z.followers_uae + z.followers_bali) / AVG(participants_count) * 100, 2) AS \"Доля от аудитории\",\n    SUM(df.daily_leads) AS \"Лидов в дни размещений\",\n    ROUND(SUM(df.daily_leads) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers)), 2) AS \"Доля лидов\",\n    \n    CASE\n        WHEN ((SUM(df.daily_leads) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers)))) > 0 THEN\n            ROUND(SUM(z.cost) / (SUM(df.daily_leads) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers))), 0)\n    END AS \"CPL\",\n    \n    SUM(df.daily_quals) AS \"Квалов в дни размещений\",\n    \n    ROUND(SUM(df.daily_quals) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers)), 2) AS \"Доля квалов\",\n    \n    CASE\n        WHEN ((SUM(df.daily_quals) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers)))) > 0 THEN\n            ROUND(SUM(z.cost) / (SUM(df.daily_quals) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers))), 0)\n    END AS \"CPQ\"\n    \nFROM zakupki z\nLEFT JOIN perfomance_leads p ON p.creation_date = z.date\nLEFT JOIN webhook_zakupki_channels_stat zc ON zc.channel_url = z.channel_link\nLEFT JOIN daily_followers df ON z.date = df.date\nWHERE z.date >= {{interval_from}}\n    AND z.date <= {{interval_to}}\n    AND z.channel_link IS NOT NULL\n   -- AND zc.channel_url IS NOT NULL\nGROUP BY z.post\n),\n\naverage_values AS (\n  SELECT\n      AVG(\"Размещений\") AS avg_placements,\n      AVG(\"Расход\") AS avg_cost,\n      AVG(\"Аудитория\") AS avg_audience,\n      AVG(\"F\") AS avg_f,\n      AVG(\"CPF\") AS avg_cpf,\n      AVG(\"Общее количество новых подписчиков\") AS avg_total_new_followers,\n      AVG(\"Доля подписчиков от всех\") AS avg_share_of_all_subscribers,\n      AVG(\"Доля от аудитории\") AS avg_share_of_audience,\n      AVG(\"Лидов в дни размещений\") AS avg_daily_leads,\n      AVG(\"Доля лидов\") AS avg_share_of_leads,\n      AVG(\"CPL\") AS avg_cpl,\n      AVG(\"Квалов в дни размещений\") AS avg_daily_quals,\n      AVG(\"Доля квалов\") AS avg_share_of_quals,\n      AVG(\"CPQ\") AS avg_cpq\n  FROM aggregated_data\n)\n\nSELECT\n    ROW_NUMBER() OVER (ORDER BY ad.\"Размещений\" DESC) AS N,\n    ad.post AS \"Пост\",\n    ad.\"Тизер\",\n    ad.\"Размещений\",\n    ad.\"Расход\",\n    ad.\"Аудитория\",\n    ad.\"F\",\n    ad.\"CPF\",\n    ad.\"Общее количество новых подписчиков\" AS \"Подписчиков в дни размещений\",\n    ad.\"Доля подписчиков от всех\",\n    ad.\"Доля от аудитории\",\n    ad.\"Лидов в дни размещений\" AS \"Лидов\",\n    ad.\"Доля лидов\",\n    ad.\"CPL\",\n    ROUND((ad.\"CPL\" - av.avg_cpl), 0) AS \"Δ CPL\",\n    ad.\"Квалов в дни размещений\" AS \"Квалов\",\n    ad.\"Доля квалов\",\n    ad.\"CPQ\",\n    ROUND((ad.\"CPQ\" - av.avg_cpq), 0) AS \"Δ CPQ\"\nFROM aggregated_data ad\nCROSS JOIN average_values av\nORDER BY ad.\"Размещений\" DESC\nLIMIT {{limits}}\n",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2023-08-01T00:00:00.000Z",
+          "to": "__relative_-2d"
+        }
+      },
+      {
+        "type": "number",
+        "name": "limits",
+        "defaultValue": "100"
+      }
+    ],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "n-4",
+              "title": "n",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1707821793375",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "10"
+                }
+              }
+            },
+            {
+              "guid": "Пост-15",
+              "title": "Пост",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Тизер-18",
+              "title": "Тизер",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1707913823972"
+            },
+            {
+              "guid": "Размещений-16",
+              "title": "Размещений",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "columnSettings": {}
+            },
+            {
+              "guid": "Расход-17",
+              "title": "Расход",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "54b8ba00-c9b5-11ee-9c0a-c9b1774e1880",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Расход-15"
+              },
+              "columnSettings": {}
+            },
+            {
+              "guid": "Аудитория-7",
+              "title": "Аудитория",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "509e4fc0-c9b5-11ee-9c0a-c9b1774e1880",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Аудитория-5"
+              },
+              "columnSettings": {}
+            },
+            {
+              "guid": "F-3",
+              "title": "F",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "5ada8d00-c9b5-11ee-9c0a-c9b1774e1880",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "F-3"
+              },
+              "columnSettings": {}
+            },
+            {
+              "guid": "CPF-0",
+              "title": "CPF",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "5f155080-c9b5-11ee-9c0a-c9b1774e1880",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "manual",
+                    "leftThreshold": "0",
+                    "middleThreshold": "2000",
+                    "rightThreshold": "4000",
+                    "gradientPalette": "red-orange-green",
+                    "gradientMode": "3-point",
+                    "reversed": true
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "CPF-0"
+              },
+              "columnSettings": {}
+            },
+            {
+              "guid": "Подписчиков в дни размещений-14",
+              "title": "Подписчиков в дни размещений",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "dcabab90-c9d1-11ee-84f5-7b892c56fe54",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Подписчиков в дни размещений-13"
+              },
+              "columnSettings": {}
+            },
+            {
+              "guid": "Доля подписчиков от всех-11",
+              "title": "Доля подписчиков от всех",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "%",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "48814900-c9b5-11ee-9c0a-c9b1774e1880",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Доля подписчиков от всех-9"
+              },
+              "columnSettings": {}
+            },
+            {
+              "guid": "Доля от аудитории-10",
+              "title": "Доля от аудитории",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "%",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "66433c50-c9b5-11ee-9c0a-c9b1774e1880",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Доля от аудитории-8"
+              },
+              "columnSettings": {}
+            },
+            {
+              "guid": "Лидов-13",
+              "title": "Лидов",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Доля лидов-9",
+              "title": "Доля лидов",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "755592b0-c9b5-11ee-9c0a-c9b1774e1880",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Доля лидов-10"
+              },
+              "columnSettings": {}
+            },
+            {
+              "guid": "CPL-1",
+              "title": "CPL",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "827e1a70-c9b5-11ee-9c0a-c9b1774e1880",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "CPL-1"
+              },
+              "columnSettings": {}
+            },
+            {
+              "guid": "Δ CPL-5",
+              "title": "Δ CPL",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1707825284670",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "1c729e60-ca67-11ee-bea6-99807dda814c",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "manual",
+                    "leftThreshold": "-10000",
+                    "middleThreshold": "0",
+                    "rightThreshold": "1",
+                    "gradientPalette": "red-orange-green",
+                    "gradientMode": "3-point",
+                    "reversed": true
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "Δ CPL-5"
+              },
+              "columnSettings": {}
+            },
+            {
+              "guid": "Квалов-12",
+              "title": "Квалов",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Доля квалов-8",
+              "title": "Доля квалов",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "columnSettings": {}
+            },
+            {
+              "guid": "CPQ-2",
+              "title": "CPQ",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "91d764e0-c9b5-11ee-9c0a-c9b1774e1880",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "CPQ-2"
+              },
+              "columnSettings": {}
+            },
+            {
+              "guid": "Δ CPQ-6",
+              "title": "Δ CPQ",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1707825299200",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "22bfa010-ca67-11ee-bea6-99807dda814c",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "manual",
+                    "leftThreshold": "-10000",
+                    "middleThreshold": "0",
+                    "rightThreshold": "1",
+                    "gradientPalette": "red-orange-green",
+                    "gradientMode": "3-point",
+                    "reversed": true
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "Δ CPQ-6"
+              },
+              "columnSettings": {}
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "n-5": "continuous",
+              "n-4": "continuous"
+            }
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

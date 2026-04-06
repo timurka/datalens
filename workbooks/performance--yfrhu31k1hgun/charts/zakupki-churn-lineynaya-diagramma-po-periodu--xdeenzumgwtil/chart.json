@@ -1,0 +1,505 @@
+{
+  "entryId": "xdeenzumgwtil",
+  "scope": "widget",
+  "type": "graph_wizard_node",
+  "key": "1684860121110286257/zakupki_churn — Линейная диаграмма по периоду",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-05-13T12:56:18.012Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-05-13T13:26:54.335Z",
+  "savedId": "2ijo8onbqs9gq",
+  "publishedId": "2ijo8onbqs9gq",
+  "revId": "2ijo8onbqs9gq",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [
+      {
+        "title": "Measure Names",
+        "type": "PSEUDO",
+        "className": "item pseudo-item dimension-item",
+        "data_type": "string"
+      }
+    ],
+    "colorsConfig": {
+      "polygonBorders": "show",
+      "palette": "classic20",
+      "mountedColors": {
+        "Ср. отток": "17",
+        "Отток": "0"
+      },
+      "coloredByMeasure": true,
+      "colorMode": "palette"
+    },
+    "datasetsIds": [
+      "p3ztkong93gyd"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "59fa8c00-112c-11ef-b0ed-65dfe7a80f29",
+          "title": "title-59fa8c00-112c-11ef-b0ed-65dfe7a80f29",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "39d15980-1128-11ef-8e9b-ab3cbc87987d",
+          "title": "avg_churn",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "b2bca940-1127-11ef-8e9b-ab3cbc87987d",
+          "title": "title-b2bca940-1127-11ef-8e9b-ab3cbc87987d",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "962e14e0-086b-11ef-8975-2f24e42b56d8",
+          "title": "F",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "name",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "user_id",
+          "title": "user_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_left",
+          "title": "date_left",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "z_invitelinks",
+          "title": "z_invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "z_invitelinks_uae",
+          "title": "z_invitelinks_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "z_invitelinks_msc",
+          "title": "z_invitelinks_msc",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "z_date",
+          "title": "z_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_name",
+          "title": "channel_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_link",
+          "title": "channel_link",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost",
+          "title": "cost",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "followers_msc",
+          "title": "followers_msc",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "followers_uae",
+          "title": "followers_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "post",
+          "title": "post",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "titleMode": "hide",
+      "title": "zakupki_churn — Линейная диаграмма по дням",
+      "legendMode": "show",
+      "tooltipSum": "off",
+      "feed": "",
+      "navigatorSettings": {
+        "navigatorMode": "hide",
+        "isNavigatorAvailable": true,
+        "selectedLines": [],
+        "linesMode": "all",
+        "periodSettings": {
+          "value": "1",
+          "period": "day",
+          "type": "date"
+        }
+      }
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [
+      {
+        "title": "Measure Names",
+        "type": "PSEUDO",
+        "className": "item pseudo-item dimension-item",
+        "data_type": "string"
+      }
+    ],
+    "shapesConfig": {
+      "mountedShapes": {
+        "Ср. отток": "Dash"
+      }
+    },
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "data_type": "integer",
+          "aggregation": "count",
+          "autoaggregated": false,
+          "type": "MEASURE",
+          "virtual": false,
+          "valid": true,
+          "description": "",
+          "managed_by": "user",
+          "guid": "b2bca940-1127-11ef-8e9b-ab3cbc87987d",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "initial_data_type": "string",
+          "cast": "string",
+          "lock_aggregation": false,
+          "title": "title-b2bca940-1127-11ef-8e9b-ab3cbc87987d",
+          "hidden": false,
+          "source": "user_id",
+          "avatar_id": "767126d0-0869-11ef-8975-2f24e42b56d8",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "p3ztkong93gyd"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "data_type": "float",
+          "aggregation": "none",
+          "autoaggregated": true,
+          "type": "MEASURE",
+          "virtual": false,
+          "valid": true,
+          "description": "",
+          "managed_by": "user",
+          "guid": "39d15980-1128-11ef-8e9b-ab3cbc87987d",
+          "aggregation_locked": true,
+          "has_auto_aggregation": true,
+          "initial_data_type": "float",
+          "cast": "float",
+          "lock_aggregation": false,
+          "title": "avg_churn",
+          "hidden": false,
+          "formula": "AVG(COUNT([user_id]) TOTAL)",
+          "guid_formula": "AVG(COUNT([user_id]) TOTAL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "p3ztkong93gyd"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "data_type": "date",
+          "aggregation": "none",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "virtual": false,
+          "valid": true,
+          "description": "",
+          "managed_by": "user",
+          "guid": "59fa8c00-112c-11ef-b0ed-65dfe7a80f29",
+          "aggregation_locked": true,
+          "has_auto_aggregation": false,
+          "initial_data_type": "date",
+          "cast": "date",
+          "lock_aggregation": false,
+          "title": "title-59fa8c00-112c-11ef-b0ed-65dfe7a80f29",
+          "hidden": false,
+          "formula": "datetrunc([date_left], \"week\")",
+          "guid_formula": "datetrunc([date_left], \"week\")",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "quickFormula": true,
+          "grouping": "trunc-week",
+          "originalDateCast": "date",
+          "originalSource": "date_left",
+          "originalTitle": "date_left",
+          "fakeTitle": "date_left",
+          "datasetId": "p3ztkong93gyd"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "line",
+      "type": "line",
+      "name": "label_visualization-line",
+      "iconProps": {
+        "id": "visLines",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "allowLabels": true,
+      "allowSegments": true,
+      "allowShapes": true,
+      "colorsCapacity": 2,
+      "shapesCapacity": 2,
+      "availableLabelModes": [
+        "absolute"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "59fa8c00-112c-11ef-b0ed-65dfe7a80f29",
+              "virtual": false,
+              "hidden": false,
+              "aggregation": "none",
+              "cast": "date",
+              "lock_aggregation": false,
+              "description": "",
+              "autoaggregated": false,
+              "title": "title-59fa8c00-112c-11ef-b0ed-65dfe7a80f29",
+              "valid": true,
+              "initial_data_type": "date",
+              "type": "DIMENSION",
+              "aggregation_locked": true,
+              "has_auto_aggregation": false,
+              "data_type": "date",
+              "managed_by": "user",
+              "avatar_id": "767126d0-0869-11ef-8975-2f24e42b56d8",
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "datetrunc([date_left], \"week\")",
+              "guid_formula": "datetrunc([date_left], \"week\")",
+              "datasetId": "p3ztkong93gyd",
+              "id": "dimension-0",
+              "datasetName": "zakupki_churn",
+              "format": "DD.MM.YYYY",
+              "grouping": "trunc-week",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "local": true,
+              "fakeTitle": "date_left",
+              "quickFormula": true,
+              "originalDateCast": "date",
+              "originalSource": "date_left",
+              "originalTitle": "date_left"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "holidays": "off",
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "59fa8c00-112c-11ef-b0ed-65dfe7a80f29": "continuous"
+            }
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "aggregation": "count",
+              "type": "MEASURE",
+              "guid": "b2bca940-1127-11ef-8e9b-ab3cbc87987d",
+              "virtual": false,
+              "managed_by": "user",
+              "lock_aggregation": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "valid": true,
+              "hidden": false,
+              "title": "title-b2bca940-1127-11ef-8e9b-ab3cbc87987d",
+              "initial_data_type": "string",
+              "data_type": "integer",
+              "aggregation_locked": false,
+              "description": "",
+              "cast": "string",
+              "source": "user_id",
+              "avatar_id": "767126d0-0869-11ef-8975-2f24e42b56d8",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "user_id",
+              "fakeTitle": "Отток",
+              "datasetId": "p3ztkong93gyd",
+              "id": "measure-2",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "datasetName": "zakupki_churn",
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "guid": "39d15980-1128-11ef-8e9b-ab3cbc87987d",
+              "aggregation_locked": true,
+              "hidden": false,
+              "cast": "float",
+              "managed_by": "user",
+              "virtual": false,
+              "type": "MEASURE",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "autoaggregated": true,
+              "title": "avg_churn",
+              "has_auto_aggregation": true,
+              "data_type": "float",
+              "initial_data_type": "float",
+              "description": "",
+              "valid": true,
+              "guid_formula": "AVG(COUNT([user_id]) TOTAL)",
+              "formula": "AVG(COUNT([user_id]) TOTAL)",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "p3ztkong93gyd",
+              "id": "measure-1",
+              "datasetName": "zakupki_churn",
+              "fakeTitle": "Ср. отток",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "ignore",
+            "axisFormatMode": "auto"
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y2",
+          "type": "y2",
+          "title": "section_y2",
+          "iconProps": {},
+          "items": [],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "ignore",
+            "axisFormatMode": "auto"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

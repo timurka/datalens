@@ -1,0 +1,961 @@
+{
+  "entryId": "mmspfg511t6i7",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2031352121915344343/Сводный по событию — Таблица датасета",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-09-03T14:34:02.994Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-11-10T15:40:30.208Z",
+  "savedId": "7lvwubq27ljos",
+  "publishedId": "7lvwubq27ljos",
+  "revId": "7lvwubq27ljos",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "55v8t5dn50xsq"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "7dc67340-88d3-11f0-b6f9-15d1f6d712e1",
+          "title": "Приоритет",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "c3254cf0-8715-11f0-982a-1be513b7a7f5",
+          "title": "month",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "449bdb60-88d2-11f0-8a89-61dd94c28d12",
+          "title": "week",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "e4aa3680-8998-11f0-beee-db4b1b3e2459",
+          "title": "year",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "date_ska4",
+          "title": "date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_6yq8",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "quals_a_6xoy",
+          "title": "quals_a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "quals_b_c3qc",
+          "title": "quals_b",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "quals_c_yds9",
+          "title": "quals_c",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invite_link_name_vm30",
+          "title": "invite_link_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category_9w3d",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_1yok",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contacts_amo_id_18u2",
+          "title": "contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "lead_sxkd",
+          "title": "lead",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_47kt",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_k7ql",
+          "title": "booking",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_60wg",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "revenue_40ts",
+          "title": "revenue",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "value_kgt3",
+          "title": "value",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id_svf5",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_username_u709",
+          "title": "telegram_username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_j5ju",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_ely5",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "date_ska4",
+        "datasetId": "55v8t5dn50xsq",
+        "data_type": "date",
+        "title": "date",
+        "source": "date",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      },
+      {
+        "guid": "geo_6yq8",
+        "datasetId": "55v8t5dn50xsq",
+        "data_type": "string",
+        "title": "geo",
+        "source": "geo",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "description": "",
+          "managed_by": "user",
+          "valid": true,
+          "cast": "string",
+          "data_type": "string",
+          "initial_data_type": "string",
+          "hidden": false,
+          "autoaggregated": false,
+          "ui_settings": "",
+          "title": "Приоритет",
+          "type": "DIMENSION",
+          "has_auto_aggregation": false,
+          "aggregation": "none",
+          "virtual": false,
+          "lock_aggregation": false,
+          "guid": "7dc67340-88d3-11f0-b6f9-15d1f6d712e1",
+          "guid_formula": "IF [quals_a_6xoy] = 1 THEN\n    'A'\nELSEIF [quals_b_c3qc] = 1 THEN\n    'B'\nELSEIF [quals_c_yds9] = 1 THEN\n    'C'\nEND",
+          "formula": "IF [quals_a] = 1 THEN\n    'A'\nELSEIF [quals_b] = 1 THEN\n    'B'\nELSEIF [quals_c] = 1 THEN\n    'C'\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "55v8t5dn50xsq"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "cast": "date",
+              "aggregation": "none",
+              "title": "date",
+              "data_type": "date",
+              "hidden": false,
+              "valid": true,
+              "ui_settings": "",
+              "managed_by": "user",
+              "guid": "date_ska4",
+              "lock_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "date",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "description": "",
+              "source": "date",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-5",
+              "datasetName": "Сводный по событию",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Дата события",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1e2b8150-88d3-11f0-b6f9-15d1f6d712e1",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "date_ska4"
+              }
+            },
+            {
+              "cast": "string",
+              "aggregation": "none",
+              "title": "geo",
+              "data_type": "string",
+              "hidden": false,
+              "valid": true,
+              "ui_settings": "",
+              "managed_by": "user",
+              "guid": "geo_6yq8",
+              "lock_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "description": "",
+              "source": "geo",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-6",
+              "datasetName": "Сводный по событию",
+              "fakeTitle": "Гео",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "493ac270-88d3-11f0-b6f9-15d1f6d712e1",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "geo_6yq8"
+              }
+            },
+            {
+              "cast": "integer",
+              "aggregation": "none",
+              "title": "crm_id",
+              "data_type": "integer",
+              "hidden": false,
+              "valid": true,
+              "ui_settings": "",
+              "managed_by": "user",
+              "guid": "crm_id_1yok",
+              "lock_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "integer",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "description": "",
+              "source": "crm_id",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-12",
+              "datasetName": "Сводный по событию",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1c1d3ac0-88d3-11f0-b6f9-15d1f6d712e1",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "crm_id_1yok"
+              }
+            },
+            {
+              "managed_by": "user",
+              "lock_aggregation": false,
+              "cast": "integer",
+              "autoaggregated": false,
+              "guid": "contacts_amo_id_18u2",
+              "ui_settings": "",
+              "initial_data_type": "integer",
+              "valid": true,
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "aggregation": "none",
+              "has_auto_aggregation": false,
+              "data_type": "integer",
+              "description": "",
+              "virtual": false,
+              "hidden": false,
+              "title": "contacts_amo_id",
+              "source": "contacts_amo_id",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-13",
+              "datasetName": "Сводный по событию",
+              "fakeTitle": "ID контакта",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "cfb51c30-8d6d-11f0-b2fe-39ff4f0db5b7",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "contacts_amo_id_18u2"
+              }
+            },
+            {
+              "type": "DIMENSION",
+              "hidden": false,
+              "description": "",
+              "title": "telegram_id",
+              "valid": true,
+              "data_type": "integer",
+              "aggregation": "none",
+              "cast": "integer",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "initial_data_type": "integer",
+              "has_auto_aggregation": false,
+              "guid": "telegram_id_svf5",
+              "aggregation_locked": false,
+              "source": "telegram_id",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "inserted-1762789222451",
+              "datasetName": "Сводный по событию",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "92a9c6b0-be4b-11f0-8c68-69bf62d3b397",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "telegram_id_svf5"
+              }
+            },
+            {
+              "guid": "date_join_j5ju",
+              "hidden": false,
+              "data_type": "genericdatetime",
+              "aggregation_locked": false,
+              "description": "",
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "title": "date_join",
+              "managed_by": "user",
+              "virtual": false,
+              "aggregation": "none",
+              "valid": true,
+              "cast": "genericdatetime",
+              "autoaggregated": false,
+              "initial_data_type": "genericdatetime",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "source": "date_join",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-22",
+              "datasetName": "Сводный по событию"
+            },
+            {
+              "autoaggregated": false,
+              "ui_settings": "",
+              "description": "",
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "hidden": false,
+              "cast": "string",
+              "data_type": "string",
+              "valid": true,
+              "aggregation_locked": false,
+              "title": "category",
+              "guid": "category_9w3d",
+              "aggregation": "none",
+              "source": "category",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-11",
+              "datasetName": "Сводный по событию",
+              "fakeTitle": "Категория",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "4bef0d00-88d3-11f0-b6f9-15d1f6d712e1",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "category_9w3d"
+              }
+            },
+            {
+              "cast": "string",
+              "aggregation": "none",
+              "title": "invite_link_name",
+              "data_type": "string",
+              "hidden": false,
+              "valid": true,
+              "ui_settings": "",
+              "managed_by": "user",
+              "guid": "invite_link_name_vm30",
+              "lock_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "description": "",
+              "source": "invite_link_name",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-10",
+              "datasetName": "Сводный по событию",
+              "fakeTitle": "Название ссылки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "4e0ae820-88d3-11f0-b6f9-15d1f6d712e1",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "invite_link_name_vm30"
+              }
+            },
+            {
+              "ui_settings": "",
+              "guid": "invitelinks_ely5",
+              "type": "DIMENSION",
+              "valid": true,
+              "managed_by": "user",
+              "data_type": "string",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "description": "",
+              "hidden": false,
+              "virtual": false,
+              "autoaggregated": false,
+              "aggregation": "none",
+              "title": "invitelinks",
+              "aggregation_locked": false,
+              "cast": "string",
+              "initial_data_type": "string",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "source": "invitelinks",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-23",
+              "datasetName": "Сводный по событию"
+            },
+            {
+              "cast": "integer",
+              "aggregation": "none",
+              "title": "lead",
+              "data_type": "integer",
+              "hidden": false,
+              "valid": true,
+              "ui_settings": "",
+              "managed_by": "user",
+              "guid": "lead_sxkd",
+              "lock_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "integer",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "description": "",
+              "source": "lead",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-14",
+              "datasetName": "Сводный по событию",
+              "fakeTitle": "Лид",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "63103950-88d3-11f0-b6f9-15d1f6d712e1",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "lead_sxkd"
+              }
+            },
+            {
+              "cast": "integer",
+              "aggregation": "none",
+              "title": "qual",
+              "data_type": "integer",
+              "hidden": false,
+              "valid": true,
+              "ui_settings": "",
+              "managed_by": "user",
+              "guid": "qual_47kt",
+              "lock_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "integer",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "description": "",
+              "source": "qual",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-15",
+              "datasetName": "Сводный по событию",
+              "fakeTitle": "Квал",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "650a0d80-88d3-11f0-b6f9-15d1f6d712e1",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "qual_47kt"
+              }
+            },
+            {
+              "cast": "string",
+              "aggregation": "none",
+              "title": "Приоритет",
+              "data_type": "string",
+              "hidden": false,
+              "valid": true,
+              "ui_settings": "",
+              "managed_by": "user",
+              "guid": "7dc67340-88d3-11f0-b6f9-15d1f6d712e1",
+              "lock_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "string",
+              "aggregation_locked": true,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "description": "",
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "IF [quals_a] = 1 THEN\n    'A'\nELSEIF [quals_b] = 1 THEN\n    'B'\nELSEIF [quals_c] = 1 THEN\n    'C'\nEND",
+              "guid_formula": "IF [quals_a_6xoy] = 1 THEN\n    'A'\nELSEIF [quals_b_c3qc] = 1 THEN\n    'B'\nELSEIF [quals_c_yds9] = 1 THEN\n    'C'\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-0",
+              "datasetName": "Сводный по событию",
+              "local": true
+            },
+            {
+              "cast": "integer",
+              "aggregation": "none",
+              "title": "booking",
+              "data_type": "integer",
+              "hidden": false,
+              "valid": true,
+              "ui_settings": "",
+              "managed_by": "user",
+              "guid": "booking_k7ql",
+              "lock_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "integer",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "description": "",
+              "source": "booking",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-16",
+              "datasetName": "Сводный по событию",
+              "fakeTitle": "Бронь",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "7eca4eb0-88d3-11f0-b6f9-15d1f6d712e1",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "booking_k7ql"
+              }
+            },
+            {
+              "aggregation_locked": false,
+              "description": "",
+              "managed_by": "user",
+              "valid": true,
+              "cast": "float",
+              "data_type": "float",
+              "initial_data_type": "float",
+              "hidden": false,
+              "autoaggregated": false,
+              "ui_settings": "",
+              "title": "revenue",
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "virtual": false,
+              "lock_aggregation": false,
+              "guid": "revenue_40ts",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "source": "revenue",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-18",
+              "datasetName": "Сводный по событию",
+              "fakeTitle": "Revenue",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "$",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "85f3a6a0-88d3-11f0-b6f9-15d1f6d712e1",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "revenue_40ts"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "aggregation_locked": false,
+              "description": "",
+              "managed_by": "user",
+              "valid": true,
+              "cast": "float",
+              "data_type": "float",
+              "initial_data_type": "float",
+              "hidden": false,
+              "autoaggregated": false,
+              "ui_settings": "",
+              "title": "deal_amount",
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "virtual": false,
+              "lock_aggregation": false,
+              "guid": "deal_amount_60wg",
+              "avatar_id": "e5d20190-870f-11f0-828b-7336fab92d7a",
+              "source": "deal_amount",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "55v8t5dn50xsq",
+              "id": "dimension-17",
+              "datasetName": "Сводный по событию",
+              "fakeTitle": "Сумма сделки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "$",
+                "postfix": "",
+                "unit": "k",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "8ac775d0-88d3-11f0-b6f9-15d1f6d712e1",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "deal_amount_60wg"
+              },
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

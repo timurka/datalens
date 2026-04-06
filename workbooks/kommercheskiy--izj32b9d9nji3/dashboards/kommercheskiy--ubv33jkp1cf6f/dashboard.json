@@ -1,0 +1,1016 @@
+{
+  "entry": {
+    "version": 1,
+    "scope": "dash",
+    "entryId": "ubv33jkp1cf6f",
+    "key": "2093017183427759787/Коммерческий",
+    "createdAt": "2025-11-27T16:31:31.163Z",
+    "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+    "updatedAt": "2026-04-06T11:58:55.309Z",
+    "updatedBy": "uid:ek0q2ng2ih4ubsq29dt8",
+    "revId": "syjevnzbncf0c",
+    "savedId": "syjevnzbncf0c",
+    "publishedId": "syjevnzbncf0c",
+    "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+    "hidden": false,
+    "public": false,
+    "workbookId": "izj32b9d9nji3",
+    "meta": {
+      "is_release": true
+    },
+    "annotation": {
+      "description": ""
+    },
+    "type": "",
+    "data": {
+      "salt": "0.3944896592500332",
+      "tabs": [
+        {
+          "id": "OG",
+          "items": [
+            {
+              "id": "XP",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "Yo",
+                    "title": "perfomance_svodny_actions — Сводная по событию",
+                    "params": {},
+                    "chartId": "evfdoxj6t48iz",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": true
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "jd",
+              "data": {
+                "group": [
+                  {
+                    "id": "yQ",
+                    "title": "Дата события",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ubvt4d2o43wmf",
+                      "showTitle": true,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-0d___relative_-0d",
+                      "datasetFieldId": "creation_date_gzep"
+                    },
+                    "defaults": {
+                      "creation_date_gzep": "__interval___relative_-0d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "kP",
+              "data": {
+                "group": [
+                  {
+                    "id": "EQ",
+                    "title": "Группировка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "fieldName": "period",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [
+                        "День"
+                      ],
+                      "titlePlacement": "left",
+                      "multiselectable": false,
+                      "acceptableValues": [
+                        {
+                          "title": "Все",
+                          "value": "Все"
+                        },
+                        {
+                          "title": "День",
+                          "value": "День"
+                        },
+                        {
+                          "title": "Неделя",
+                          "value": "Неделя"
+                        },
+                        {
+                          "title": "Месяц",
+                          "value": "Месяц"
+                        },
+                        {
+                          "title": "Год",
+                          "value": "Год"
+                        }
+                      ]
+                    },
+                    "defaults": {
+                      "period": [
+                        "День"
+                      ]
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "manual",
+                    "impactTabsIds": [
+                      "OG"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "La",
+              "data": {
+                "group": [
+                  {
+                    "id": "R8",
+                    "title": "Источник",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ubvt4d2o43wmf",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "utmsource_bt1a",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "utmsource_bt1a": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "1P",
+              "data": {
+                "group": [
+                  {
+                    "id": "Wb",
+                    "title": "Гео",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ubvt4d2o43wmf",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "geo_5gnt",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "geo_5gnt": ""
+                    },
+                    "namespace": "default",
+                    "sourceType": "dataset",
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            }
+          ],
+          "title": "По событию",
+          "layout": [
+            {
+              "h": 34,
+              "i": "XP",
+              "w": 36,
+              "x": 0,
+              "y": 12
+            },
+            {
+              "h": 2,
+              "i": "jd",
+              "w": 10,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "kP",
+              "w": 6,
+              "x": 11,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "La",
+              "w": 8,
+              "x": 17,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "1P",
+              "w": 7,
+              "x": 25,
+              "y": 0,
+              "parent": "__fixHead"
+            }
+          ],
+          "aliases": {},
+          "connections": []
+        },
+        {
+          "id": "mo",
+          "items": [
+            {
+              "id": "0a",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "lE",
+                    "title": "По дате создания",
+                    "params": {},
+                    "chartId": "2srikj2vgwpgm",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "6z",
+              "data": {
+                "group": [
+                  {
+                    "id": "BO",
+                    "title": "Дата лида",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "wyxha8yplhhcg",
+                      "showTitle": true,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-27d___relative_-0d",
+                      "datasetFieldId": "creation_date_8cue"
+                    },
+                    "defaults": {
+                      "creation_date_8cue": "__interval___relative_-27d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "mo"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "bE",
+              "data": {
+                "group": [
+                  {
+                    "id": "JP",
+                    "title": "Гео",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "wyxha8yplhhcg",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "geo_d9ua",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "geo_d9ua": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "mo"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "am",
+              "data": {
+                "group": [
+                  {
+                    "id": "VR",
+                    "title": "Источник",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "wyxha8yplhhcg",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "utmsource_puop",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "utmsource_puop": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "mo"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "gW",
+              "data": {
+                "group": [
+                  {
+                    "id": "lV",
+                    "title": "Группировка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "fieldName": "period",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [
+                        "День"
+                      ],
+                      "titlePlacement": "left",
+                      "multiselectable": false,
+                      "acceptableValues": [
+                        {
+                          "title": "День",
+                          "value": "День"
+                        },
+                        {
+                          "title": "Неделя",
+                          "value": "Неделя"
+                        },
+                        {
+                          "title": "Месяц",
+                          "value": "Месяц"
+                        },
+                        {
+                          "title": "Год",
+                          "value": "Год"
+                        },
+                        {
+                          "title": "Все",
+                          "value": "Все"
+                        }
+                      ]
+                    },
+                    "defaults": {
+                      "period": [
+                        "День"
+                      ]
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "manual",
+                    "impactTabsIds": [
+                      "mo"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            }
+          ],
+          "title": "По созданию",
+          "layout": [
+            {
+              "h": 28,
+              "i": "0a",
+              "w": 36,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "6z",
+              "w": 9,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "bE",
+              "w": 8,
+              "x": 16,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "am",
+              "w": 8,
+              "x": 24,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "gW",
+              "w": 6,
+              "x": 10,
+              "y": 0,
+              "parent": "__fixHead"
+            }
+          ],
+          "aliases": {},
+          "connections": []
+        },
+        {
+          "id": "Kz",
+          "items": [
+            {
+              "id": "kz_date_group",
+              "data": {
+                "group": [
+                  {
+                    "id": "kz_date",
+                    "title": "Дата брони",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "vz8ufup0okomf",
+                      "showTitle": true,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-27d___relative_-0d",
+                      "datasetFieldId": "b1e835b4-c60f-4c25-873a-fff8d28d425f"
+                    },
+                    "defaults": {
+                      "b1e835b4-c60f-4c25-873a-fff8d28d425f": "__interval___relative_-27d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "Kz"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "kz_geo_group",
+              "data": {
+                "group": [
+                  {
+                    "id": "kz_geo",
+                    "title": "Гео",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "vz8ufup0okomf",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "geo_cdda",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "geo_cdda": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "Kz"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "wV",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "PM",
+                    "title": "Откуда сделки",
+                    "params": {},
+                    "chartId": "fjsiuejuipoiz",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "Z6",
+              "data": {
+                "group": [
+                  {
+                    "id": "pr",
+                    "title": "Источник",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "vz8ufup0okomf",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "utmsource_a334",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "utmsource_a334": []
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "Kz"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "3q",
+              "data": {
+                "text": "**Описание некоторых полей:**\n\n* Дата появления лида в текущей воронке CRM\n* Дата (первого) появления лида в CRM\n* Дата подписки в ТГ, если известно\n* Самая старая известная дата *(выбираем наиболее старую известную дату из предыдущих 3 столбцов)*\n* Дата первой сделки клиента *(если есть другие сделки, то здесь указываем дату первой сделки)*\n* Время прогрева *(считаем от самой старой известной даты до даты первой сделки клиента; если другой предыдущей сделки не было, то считаем то даты актуальной брони)*\n* Время сделки (от квала до сделки)"
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "rn",
+              "data": {
+                "group": [
+                  {
+                    "id": "Ab",
+                    "title": "Брокер",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "vz8ufup0okomf",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [],
+                      "datasetFieldId": "broker_name_5c20",
+                      "multiselectable": true
+                    },
+                    "defaults": {
+                      "broker_name_5c20": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "Kz"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "Dr",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "op",
+                    "title": "Сводная таблица по гео",
+                    "params": {},
+                    "chartId": "mq5vtveldgm86",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "9v",
+              "data": {
+                "group": [
+                  {
+                    "id": "NY",
+                    "title": "Группировка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "fieldName": "period",
+                      "showTitle": true,
+                      "elementType": "select",
+                      "defaultValue": [
+                        "Месяц"
+                      ],
+                      "titlePlacement": "left",
+                      "multiselectable": false,
+                      "acceptableValues": [
+                        {
+                          "title": "День",
+                          "value": "День"
+                        },
+                        {
+                          "title": "Месяц",
+                          "value": "Месяц"
+                        },
+                        {
+                          "title": "Неделя",
+                          "value": "Неделя"
+                        },
+                        {
+                          "title": "Год",
+                          "value": "Год"
+                        },
+                        {
+                          "title": "Все",
+                          "value": "Все"
+                        }
+                      ]
+                    },
+                    "defaults": {
+                      "period": [
+                        "Месяц"
+                      ]
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "manual",
+                    "impactTabsIds": [
+                      "Kz"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "Ut",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "sU",
+                    "title": "Сводная таблица по источнику",
+                    "params": {},
+                    "chartId": "z4l1gc8hw0tej",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "vO",
+              "data": {
+                "size": "m",
+                "text": "По гео",
+                "showInTOC": true
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "MR",
+              "data": {
+                "size": "m",
+                "text": "По источнику",
+                "showInTOC": true
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "Gu",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "gU",
+                    "title": "Сводная таблица по гео и utmsource",
+                    "params": {},
+                    "chartId": "49q7hgt7iftgo",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "description": ""
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "na",
+              "data": {
+                "size": "m",
+                "text": "По гео и источнику",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "5G",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "z6",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            }
+          ],
+          "title": "Откуда сделки",
+          "layout": [
+            {
+              "h": 2,
+              "i": "kz_date_group",
+              "w": 9,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "kz_geo_group",
+              "w": 7,
+              "x": 16,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 26,
+              "i": "wV",
+              "w": 36,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "Z6",
+              "w": 6,
+              "x": 23,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 14,
+              "i": "3q",
+              "w": 13,
+              "x": 23,
+              "y": 150
+            },
+            {
+              "h": 2,
+              "i": "rn",
+              "w": 7,
+              "x": 29,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 24,
+              "i": "Dr",
+              "w": 36,
+              "x": 0,
+              "y": 29
+            },
+            {
+              "h": 2,
+              "i": "9v",
+              "w": 6,
+              "x": 9,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 24,
+              "i": "Ut",
+              "w": 36,
+              "x": 0,
+              "y": 58
+            },
+            {
+              "h": 3,
+              "i": "vO",
+              "w": 36,
+              "x": 0,
+              "y": 26
+            },
+            {
+              "h": 3,
+              "i": "MR",
+              "w": 36,
+              "x": 0,
+              "y": 55
+            },
+            {
+              "h": 24,
+              "i": "Gu",
+              "w": 36,
+              "x": 0,
+              "y": 87
+            },
+            {
+              "h": 3,
+              "i": "na",
+              "w": 36,
+              "x": 0,
+              "y": 84
+            },
+            {
+              "h": 2,
+              "i": "5G",
+              "w": 36,
+              "x": 0,
+              "y": 82
+            },
+            {
+              "h": 2,
+              "i": "z6",
+              "w": 36,
+              "x": 0,
+              "y": 53
+            }
+          ],
+          "aliases": {},
+          "connections": []
+        }
+      ],
+      "counter": 44,
+      "settings": {
+        "hideTabs": false,
+        "expandTOC": false,
+        "globalParams": {},
+        "loadPriority": "charts",
+        "hideDashTitle": false,
+        "silentLoading": false,
+        "autoupdateInterval": null,
+        "dependentSelectors": true,
+        "maxConcurrentRequests": null
+      },
+      "schemeVersion": 8
+    }
+  }
+}

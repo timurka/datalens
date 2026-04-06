@@ -1,0 +1,577 @@
+{
+  "entryId": "13eckof1i01ql",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2174782273226802293/parent_child_leads — Список лидов с бронью",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2026-03-20T12:04:09.374Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2026-04-06T10:12:01.780Z",
+  "savedId": "w2mzw8hv27nog",
+  "publishedId": "w2mzw8hv27nog",
+  "revId": "w2mzw8hv27nog",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "imawqwqovh0o2"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "d9756340-2d3d-11f1-bc4d-dfbde4bf7a12",
+          "title": "Медиана дней до брони",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "4bf1ef30-2a21-11f1-a14c-d3dc5269ee8a",
+          "title": "ID первого лида",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "crm_id_link_4k3n",
+          "title": "crm_id_link",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "crm_id_4v2x",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_dhe6",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_w00g",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_booking_x76x",
+          "title": "date_booking",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_9l0i",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utmsource_j5e5",
+          "title": "utmsource",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cycle_days_exact_7l2n",
+          "title": "cycle_days_exact",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "6d8b7217-0aeb-4e6b-8166-c20fe30e3c3d",
+          "title": "date_booking_date",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "cycle_start_crm_id_h8n4",
+          "title": "cycle_start_crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cycle_start_date_m1p9",
+          "title": "cycle_start_date",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100,
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "parent_child_leads — Список лидов с бронью",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "totals": "on",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "stacking": "on",
+      "zoomMode": "auto",
+      "mapCenterMode": "auto"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "date_booking_x76x",
+        "datasetId": "imawqwqovh0o2",
+        "data_type": "genericdatetime",
+        "title": "date_booking",
+        "source": "date_booking",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": false,
+          "guid": "4bf1ef30-2a21-11f1-a14c-d3dc5269ee8a",
+          "lock_aggregation": false,
+          "virtual": false,
+          "type": "DIMENSION",
+          "description": "",
+          "data_type": "markup",
+          "hidden": false,
+          "ui_settings": "",
+          "aggregation_locked": true,
+          "managed_by": "user",
+          "autoaggregated": false,
+          "aggregation": "none",
+          "initial_data_type": "markup",
+          "cast": "markup",
+          "title": "ID первого лида",
+          "valid": true,
+          "formula": "IF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id]), STR([cycle_start_crm_id]))\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id]), STR([cycle_start_crm_id]))\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id]), STR([cycle_start_crm_id]))\nEND",
+          "guid_formula": "IF [account_id_dhe6] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id_h8n4]), STR([cycle_start_crm_id_h8n4]))\nELSEIF [account_id_dhe6] = 57817 OR [account_id_dhe6] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id_h8n4]), STR([cycle_start_crm_id_h8n4]))\nELSEIF [account_id_dhe6] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id_h8n4]), STR([cycle_start_crm_id_h8n4]))\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "imawqwqovh0o2"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "guid": "d9756340-2d3d-11f1-bc4d-dfbde4bf7a12",
+          "lock_aggregation": false,
+          "virtual": false,
+          "type": "MEASURE",
+          "description": "",
+          "data_type": "float",
+          "hidden": false,
+          "ui_settings": "",
+          "aggregation_locked": true,
+          "managed_by": "user",
+          "autoaggregated": true,
+          "aggregation": "none",
+          "initial_data_type": "float",
+          "cast": "float",
+          "title": "Медиана дней до брони",
+          "valid": true,
+          "formula": "MEDIAN([cycle_days_exact])",
+          "guid_formula": "MEDIAN([cycle_days_exact_7l2n])",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "imawqwqovh0o2"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "lock_aggregation": false,
+              "description": "",
+              "has_auto_aggregation": false,
+              "data_type": "string",
+              "hidden": false,
+              "type": "DIMENSION",
+              "cast": "string",
+              "guid": "geo_9l0i",
+              "valid": true,
+              "managed_by": "user",
+              "autoaggregated": false,
+              "aggregation": "none",
+              "virtual": false,
+              "aggregation_locked": false,
+              "initial_data_type": "string",
+              "title": "geo",
+              "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+              "source": "geo",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "imawqwqovh0o2",
+              "id": "dimension-7",
+              "datasetName": "booking_cycle_leads",
+              "ui_settings": "",
+              "fakeTitle": "Гео",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "6faacd70-2459-11f1-8cbe-6f9a3f63c375",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "geo_9l0i"
+              }
+            },
+            {
+              "aggregation_locked": false,
+              "guid": "utmsource_j5e5",
+              "initial_data_type": "string",
+              "ui_settings": "",
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "data_type": "string",
+              "cast": "string",
+              "aggregation": "none",
+              "valid": true,
+              "virtual": false,
+              "autoaggregated": false,
+              "managed_by": "user",
+              "description": "",
+              "title": "utmsource",
+              "type": "DIMENSION",
+              "source": "utmsource",
+              "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "imawqwqovh0o2",
+              "datasetName": "booking_cycle_leads",
+              "fakeTitle": "Источник",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "colorFieldGuid": "utmsource_j5e5",
+                "enabled": false,
+                "settings": {
+                  "gradientState": {},
+                  "isContinuous": false,
+                  "paletteState": {
+                    "mountedColors": {},
+                    "palette": ""
+                  }
+                },
+                "settingsId": "utmsource-booking-cycle"
+              },
+              "id": "dimension-8",
+              "hideLabelMode": "show"
+            },
+            {
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "description": "",
+              "guid": "cycle_days_exact_7l2n",
+              "cast": "float",
+              "data_type": "float",
+              "ui_settings": "",
+              "title": "cycle_days_exact",
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "managed_by": "user",
+              "virtual": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "initial_data_type": "float",
+              "valid": true,
+              "hidden": false,
+              "source": "cycle_days_exact",
+              "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "imawqwqovh0o2",
+              "id": "dimension-9",
+              "datasetName": "booking_cycle_leads",
+              "default_value": null,
+              "value_constraint": null,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "79140340-2459-11f1-8cbe-6f9a3f63c375",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": true
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "cycle_days_exact_7l2n"
+              },
+              "fakeTitle": "Дней до брони"
+            },
+            {
+              "aggregation_locked": true,
+              "lock_aggregation": false,
+              "description": "",
+              "guid": "d9756340-2d3d-11f1-bc4d-dfbde4bf7a12",
+              "cast": "float",
+              "data_type": "float",
+              "ui_settings": "",
+              "title": "Медиана дней до брони",
+              "has_auto_aggregation": true,
+              "type": "MEASURE",
+              "managed_by": "user",
+              "virtual": false,
+              "aggregation": "none",
+              "autoaggregated": true,
+              "initial_data_type": "float",
+              "valid": true,
+              "hidden": false,
+              "guid_formula": "MEDIAN([cycle_days_exact_7l2n])",
+              "formula": "MEDIAN([cycle_days_exact])",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "imawqwqovh0o2",
+              "id": "measure-0",
+              "datasetName": "booking_cycle_leads",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "lock_aggregation": false,
+              "description": "",
+              "has_auto_aggregation": false,
+              "data_type": "genericdatetime",
+              "hidden": false,
+              "type": "DIMENSION",
+              "cast": "genericdatetime",
+              "guid": "date_booking_x76x",
+              "valid": true,
+              "managed_by": "user",
+              "autoaggregated": false,
+              "aggregation": "none",
+              "virtual": false,
+              "aggregation_locked": false,
+              "initial_data_type": "genericdatetime",
+              "title": "date_booking",
+              "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+              "source": "date_booking",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "imawqwqovh0o2",
+              "id": "dimension-6",
+              "datasetName": "booking_cycle_leads",
+              "ui_settings": "",
+              "fakeTitle": "Дата брони",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "719d2790-2459-11f1-8cbe-6f9a3f63c375",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "date_booking_x76x"
+              },
+              "format": "DD.MM.YYYY",
+              "grouping": "none"
+            },
+            {
+              "lock_aggregation": false,
+              "description": "",
+              "has_auto_aggregation": false,
+              "data_type": "markup",
+              "hidden": false,
+              "type": "DIMENSION",
+              "cast": "markup",
+              "guid": "4bf1ef30-2a21-11f1-a14c-d3dc5269ee8a",
+              "valid": true,
+              "managed_by": "user",
+              "autoaggregated": false,
+              "aggregation": "none",
+              "virtual": false,
+              "aggregation_locked": true,
+              "initial_data_type": "markup",
+              "title": "ID первого лида",
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "IF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id]), STR([cycle_start_crm_id]))\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id]), STR([cycle_start_crm_id]))\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id]), STR([cycle_start_crm_id]))\nEND",
+              "guid_formula": "IF [account_id_dhe6] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id_h8n4]), STR([cycle_start_crm_id_h8n4]))\nELSEIF [account_id_dhe6] = 57817 OR [account_id_dhe6] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id_h8n4]), STR([cycle_start_crm_id_h8n4]))\nELSEIF [account_id_dhe6] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([cycle_start_crm_id_h8n4]), STR([cycle_start_crm_id_h8n4]))\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "imawqwqovh0o2",
+              "id": "dimension-1",
+              "datasetName": "booking_cycle_leads",
+              "ui_settings": "",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "cycle-start-crm-booking-cycle",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "cycle_start_crm_id_h8n4"
+              },
+              "local": true
+            },
+            {
+              "aggregation_locked": false,
+              "guid": "cycle_start_date_m1p9",
+              "initial_data_type": "date",
+              "ui_settings": "",
+              "has_auto_aggregation": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "data_type": "date",
+              "cast": "date",
+              "aggregation": "none",
+              "valid": true,
+              "virtual": false,
+              "autoaggregated": false,
+              "managed_by": "user",
+              "description": "",
+              "title": "cycle_start_date",
+              "type": "DIMENSION",
+              "source": "cycle_start_date",
+              "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "imawqwqovh0o2",
+              "datasetName": "booking_cycle_leads",
+              "formatting": {
+                "format": "number",
+                "labelMode": "absolute",
+                "postfix": "",
+                "precision": 0,
+                "prefix": "",
+                "showRankDelimiter": true
+              },
+              "backgroundSettings": {
+                "colorFieldGuid": "cycle_start_date_m1p9",
+                "enabled": false,
+                "settings": {
+                  "gradientState": {},
+                  "isContinuous": false,
+                  "paletteState": {
+                    "mountedColors": {},
+                    "palette": ""
+                  }
+                },
+                "settingsId": "74652130-2459-11f1-8cbe-6f9a3f63c375"
+              },
+              "id": "dimension-12",
+              "hideLabelMode": "show",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Дата первого лида"
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

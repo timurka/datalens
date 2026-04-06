@@ -1,0 +1,394 @@
+{
+  "entryId": "f01b45rp0gg04",
+  "scope": "widget",
+  "type": "graph_wizard_node",
+  "key": "1568207042290648976/Perfomance 3 — Линейная диаграмма - Источники",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2023-12-04T14:07:27.376Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2023-12-04T14:07:27.376Z",
+  "savedId": "g12c56sq1hh25",
+  "publishedId": "g12c56sq1hh25",
+  "revId": "g12c56sq1hh25",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [
+      {
+        "valid": true,
+        "title": "utmsource",
+        "description": "",
+        "autoaggregated": false,
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "virtual": false,
+        "type": "DIMENSION",
+        "aggregation_locked": true,
+        "managed_by": "user",
+        "guid": "282a8aa0-9089-11ee-adce-3f4cebcdce6d",
+        "initial_data_type": "string",
+        "cast": "string",
+        "aggregation": "none",
+        "hidden": false,
+        "lock_aggregation": false,
+        "guid_formula": "IF [utm_source_2_5au3] IS NOT NULL THEN\n    [utm_source_2_5au3]\nELSEIF [source_1_hvm8] IS NOT NULL THEN\n    [source_1_hvm8]\nELSEIF  [utm_source_1_zenu] IS NOT NULL THEN\n    [utm_source_1_zenu]\nELSE\n    \"(не определено)\"\nEND",
+        "formula": "IF [utm_source] IS NOT NULL THEN\n    [utm_source]\nELSEIF [source] IS NOT NULL THEN\n    [source]\nELSEIF  [channel_source] IS NOT NULL THEN\n    [channel_source]\nELSE\n    \"(не определено)\"\nEND",
+        "calc_mode": "formula",
+        "source": "",
+        "datasetId": "teuc6u631rgoi",
+        "id": "inserted-1701698796259",
+        "datasetName": "Perfomance 3"
+      }
+    ],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "teuc6u631rgoi"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "51377da0-92ae-11ee-812c-f92d69e7f087",
+          "title": "title-51377da0-92ae-11ee-812c-f92d69e7f087",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "7adb2ef0-908c-11ee-adce-3f4cebcdce6d",
+          "title": "C",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "76fb0e90-908c-11ee-adce-3f4cebcdce6d",
+          "title": "B",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "63c4b100-908c-11ee-adce-3f4cebcdce6d",
+          "title": "A",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "d824fa60-908b-11ee-adce-3f4cebcdce6d",
+          "title": "amount",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "eef033f0-908a-11ee-adce-3f4cebcdce6d",
+          "title": "valid_leads",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "9dd877c0-908a-11ee-adce-3f4cebcdce6d",
+          "title": "qleads",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "539ef630-9089-11ee-adce-3f4cebcdce6d",
+          "title": "leads",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "282a8aa0-9089-11ee-adce-3f4cebcdce6d",
+          "title": "utmsource",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "f3f473e0-9088-11ee-adce-3f4cebcdce6d",
+          "title": "date",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "leads_id_bnq0",
+          "title": "leads_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_cmm4",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "validation_event_oj8w",
+          "title": "validation_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_rizs",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "priority_1_16lj",
+          "title": "priority",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_source_2_5au3",
+          "title": "utm_source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_1_hvm8",
+          "title": "source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_1_c2nr",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "duplicate_lead_id_qhim",
+          "title": "original_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "internal_lead_id_kg3t",
+          "title": "original_internal_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "external_crm_id_mljv",
+          "title": "external_crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "lead_creation_date_gwo7",
+          "title": "original_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "day_6mrt",
+          "title": "day",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_cost_ph1b",
+          "title": "total_cost",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_source_1_zenu",
+          "title": "channel_source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_campaign_3mdc",
+          "title": "utm_campaign",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {},
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "valid": true,
+          "title": "title-51377da0-92ae-11ee-812c-f92d69e7f087",
+          "description": "",
+          "autoaggregated": false,
+          "data_type": "integer",
+          "has_auto_aggregation": false,
+          "virtual": false,
+          "type": "MEASURE",
+          "aggregation_locked": true,
+          "managed_by": "user",
+          "guid": "51377da0-92ae-11ee-812c-f92d69e7f087",
+          "initial_data_type": "integer",
+          "cast": "integer",
+          "aggregation": "sum",
+          "hidden": false,
+          "lock_aggregation": false,
+          "guid_formula": "-- Считаем количество лидов без копий\nIF [internal_lead_id_kg3t] IS NOT NULL THEN\n    IF [internal_lead_id_kg3t] = [leads_id_bnq0] THEN\n        1\n    ELSE\n        0\n    END\nELSEIF [leads_id_bnq0] IS NOT NULL THEN\n    1\nELSE\n    0\nEND",
+          "formula": "-- Считаем количество лидов без копий\nIF [original_internal_id] IS NOT NULL THEN\n    IF [original_internal_id] = [leads_id] THEN\n        1\n    ELSE\n        0\n    END\nELSEIF [leads_id] IS NOT NULL THEN\n    1\nELSE\n    0\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "quickFormula": true,
+          "originalTitle": "leads",
+          "fakeTitle": "leads",
+          "datasetId": "teuc6u631rgoi",
+          "id": "inserted-1701698788489"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "line",
+      "type": "line",
+      "name": "label_visualization-line",
+      "iconProps": {
+        "id": "visLines",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "allowLabels": true,
+      "allowSegments": true,
+      "allowShapes": true,
+      "colorsCapacity": 1,
+      "shapesCapacity": 1,
+      "availableLabelModes": [
+        "absolute"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "valid": true,
+              "title": "date",
+              "description": "",
+              "autoaggregated": false,
+              "data_type": "date",
+              "has_auto_aggregation": false,
+              "virtual": false,
+              "type": "DIMENSION",
+              "aggregation_locked": true,
+              "managed_by": "user",
+              "guid": "f3f473e0-9088-11ee-adce-3f4cebcdce6d",
+              "initial_data_type": "date",
+              "cast": "date",
+              "aggregation": "none",
+              "hidden": false,
+              "lock_aggregation": false,
+              "guid_formula": "IF [duplicate_lead_id_qhim] IS NOT NULL AND [internal_lead_id_kg3t] != [leads_id_bnq0] THEN\n    [lead_creation_date_gwo7]\nELSEIF [creation_date_cmm4] IS NOT NULL THEN\n    [creation_date_cmm4]\nELSEIF [day_6mrt] IS NOT NULL AND [total_cost_ph1b] > 0 THEN\n    [day_6mrt]\nEND",
+              "formula": "IF [original_id] IS NOT NULL AND [original_internal_id] != [leads_id] THEN\n    [original_date]\nELSEIF [creation_date] IS NOT NULL THEN\n    [creation_date]\nELSEIF [day] IS NOT NULL AND [total_cost] > 0 THEN\n    [day]\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "teuc6u631rgoi",
+              "id": "dimension-9",
+              "datasetName": "Perfomance 3"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "holidays": "off",
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "f3f473e0-9088-11ee-adce-3f4cebcdce6d": "continuous"
+            }
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "valid": true,
+              "title": "title-51377da0-92ae-11ee-812c-f92d69e7f087",
+              "description": "",
+              "autoaggregated": false,
+              "data_type": "integer",
+              "has_auto_aggregation": false,
+              "virtual": false,
+              "type": "MEASURE",
+              "aggregation_locked": true,
+              "managed_by": "user",
+              "guid": "51377da0-92ae-11ee-812c-f92d69e7f087",
+              "initial_data_type": "integer",
+              "cast": "integer",
+              "aggregation": "sum",
+              "hidden": false,
+              "lock_aggregation": false,
+              "guid_formula": "-- Считаем количество лидов без копий\nIF [internal_lead_id_kg3t] IS NOT NULL THEN\n    IF [internal_lead_id_kg3t] = [leads_id_bnq0] THEN\n        1\n    ELSE\n        0\n    END\nELSEIF [leads_id_bnq0] IS NOT NULL THEN\n    1\nELSE\n    0\nEND",
+              "formula": "-- Считаем количество лидов без копий\nIF [original_internal_id] IS NOT NULL THEN\n    IF [original_internal_id] = [leads_id] THEN\n        1\n    ELSE\n        0\n    END\nELSEIF [leads_id] IS NOT NULL THEN\n    1\nELSE\n    0\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "leads",
+              "fakeTitle": "leads",
+              "datasetId": "teuc6u631rgoi",
+              "id": "inserted-1701698788489"
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "ignore",
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "51377da0-92ae-11ee-812c-f92d69e7f087": "continuous"
+            }
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y2",
+          "type": "y2",
+          "title": "section_y2",
+          "iconProps": {},
+          "items": [],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "ignore",
+            "axisFormatMode": "auto"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    },
+    "convert": false
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

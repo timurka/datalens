@@ -1,0 +1,128 @@
+{
+  "entryId": "tq81cdzpjy64e",
+  "scope": "widget",
+  "type": "metric2_ql_node",
+  "key": "2021313885000173450/Повторные SQL - retention rate",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-08-20T18:09:52.170Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-08-21T12:47:10.276Z",
+  "savedId": "zxkrvq5y0yo8k",
+  "publishedId": "zxkrvq5y0yo8k",
+  "revId": "zxkrvq5y0yo8k",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "d9mdkzqj4zxsy",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "titleMode": "hide",
+      "indicatorTitleMode": "manual",
+      "title": "Retention rate",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "feed": "",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "stacking": "on",
+      "zoomMode": "auto",
+      "mapCenterMode": "auto"
+    },
+    "queryValue": "WITH\n-- 0) Параметры\nlist_p AS (\n  SELECT\n    CASE\n      WHEN regexp_replace($$ {{geo_list}} $$, 'E''|''|\\(|\\)|\\s', '', 'g') = ''\n        THEN NULL\n      ELSE string_to_array(\n             regexp_replace($$ {{geo_list}} $$, 'E''|''|\\(|\\)|\\s', '', 'g'),\n             ','\n           )::text[]\n    END AS geo_arr\n),\nparam_p AS (\n  SELECT COALESCE({{date_book_interval}}, 0)::int AS book_window_days  -- напр.: 14\n),\n\n-- 1) Покупки отчётного набора (GEO + интервал) из вью (без функций на колонке)\nreport_pp AS (\n  SELECT\n    v.person_key,\n    v.crm_id,\n    v.booking_date,\n    v.deal_amount,\n    v.revenue,\n    v.geo\n  FROM v_person_purchases_prev v\n  CROSS JOIN list_p lp\n  WHERE v.geo IN ('ОАЭ','Москва','Грузия','Таиланд','Бали','Таиланд Eng')\n    AND (lp.geo_arr IS NULL OR v.geo = ANY(lp.geo_arr))\n    AND v.booking_date >= {{interval_from}}::date\n    AND v.booking_date <  ({{interval_to}}::date + INTERVAL '1 day')  -- полуинтервал [from, to)\n),\n\n-- 2) Люди, попавшие в отчёт\npersons_in_scope AS (\n  SELECT DISTINCT person_key FROM report_pp\n),\n\n-- 3) ГЛОБАЛЬНЫЕ старты эпизодов (только для нужных людей)\nepisodes_global_scoped AS (\n  SELECT\n    v.person_key,\n    v.booking_date AS episode_start\n  FROM v_person_purchases_prev v\n  JOIN persons_in_scope s USING (person_key)\n  WHERE v.prev_booking_date IS NULL\n     OR (v.booking_date - v.prev_booking_date) >\n        ((SELECT book_window_days::text FROM param_p) || ' days')::interval\n),\n\n-- 4) Границы эпизодов для нужных людей\nepisodes_bounds_scoped AS (\n  SELECT\n    eg.person_key,\n    eg.episode_start,\n    LEAD(eg.episode_start) OVER (PARTITION BY eg.person_key ORDER BY eg.episode_start) AS next_episode_start\n  FROM episodes_global_scoped eg\n),\n\n-- 5) Первая покупка в интервале по человеку (знаменатель RR)\nmin_interval_purchase AS (\n  SELECT person_key, MIN(booking_date) AS min_interval_booking_date\n  FROM report_pp\n  GROUP BY person_key\n),\n\n-- 6) Кол-во эпизодов, начавшихся в интервале И имеющих хотя бы одну покупку выбранного GEO внутри границ эпизода\nsessions_in_interval_geo AS (\n  SELECT\n    eb.person_key,\n    COUNT(DISTINCT eb.episode_start)                                   AS cnt_sessions_in_interval,\n    MIN(eb.episode_start)                                              AS first_session_in_interval_start\n  FROM episodes_bounds_scoped eb\n  -- берём только эпизоды, чьи старты попали в интервал\n  WHERE eb.episode_start >= {{interval_from}}::date\n    AND eb.episode_start <  ({{interval_to}}::date + INTERVAL '1 day')\n    -- и внутри эпизода есть хотя бы одна покупка из отчётного набора (выбранный GEO)\n    AND EXISTS (\n      SELECT 1\n      FROM report_pp r\n      WHERE r.person_key = eb.person_key\n        AND r.booking_date >= eb.episode_start\n        AND (eb.next_episode_start IS NULL OR r.booking_date < eb.next_episode_start)\n    )\n  GROUP BY eb.person_key\n),\n\n-- 7) Первая глобальная сессия у нужных людей (для флага \"был ранее\")\nfirst_episode_all_scoped AS (\n  SELECT person_key, MIN(episode_start) AS first_episode_start\n  FROM episodes_global_scoped\n  GROUP BY person_key\n),\n\n-- 8) Итог по людям интервала\nretention AS (\n  SELECT\n    mip.person_key,\n    COALESCE(sg.cnt_sessions_in_interval, 0)                  AS cnt_sessions_in_interval,\n    fea.first_episode_start,\n    mip.min_interval_booking_date,\n    CASE\n      WHEN COALESCE(sg.cnt_sessions_in_interval, 0) >= 2\n        OR fea.first_episode_start < mip.min_interval_booking_date\n      THEN 1 ELSE 0\n    END AS returned\n  FROM min_interval_purchase mip\n  LEFT JOIN sessions_in_interval_geo  sg  USING (person_key)\n  LEFT JOIN first_episode_all_scoped  fea USING (person_key)\n)\n\n-- 9) Индикатор RR\nSELECT\n  COUNT(*)                                              AS total_clients,        -- клиенты с покупками в интервале+GEO\n  SUM(returned)                                         AS returned_clients,     -- из них «вернулись»\n  ROUND(100.0 * SUM(returned) / NULLIF(COUNT(*), 0), 2) AS retention_rate_pct\nFROM retention\n",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2024-01-01T00:00:00.000Z",
+          "to": "2025-08-20T00:00:00.000Z"
+        }
+      },
+      {
+        "type": "string",
+        "name": "geo_list",
+        "defaultValue": ""
+      },
+      {
+        "type": "number",
+        "name": "date_book_interval",
+        "defaultValue": "1"
+      }
+    ],
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "retention_rate_pct",
+              "title": "retention_rate_pct",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "%",
+                "labelMode": "absolute",
+                "precision": 2
+              }
+            }
+          ],
+          "required": true,
+          "capacity": 1
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7",
+    "geopointsConfig": {}
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

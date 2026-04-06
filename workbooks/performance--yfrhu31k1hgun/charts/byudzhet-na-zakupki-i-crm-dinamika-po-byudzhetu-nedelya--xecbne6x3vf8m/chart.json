@@ -1,0 +1,867 @@
+{
+  "entryId": "xecbne6x3vf8m",
+  "scope": "widget",
+  "type": "graph_wizard_node",
+  "key": "1552922405750441722/Бюджет на закупки и CRM — Динамика по бюджету (неделя)",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2023-11-13T11:59:36.615Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2023-11-24T18:06:46.919Z",
+  "savedId": "sbgh2iip6tjih",
+  "publishedId": "sbgh2iip6tjih",
+  "revId": "sbgh2iip6tjih",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "6n2chcp2ryzyv"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "2a08f7b0-821c-11ee-974c-2bf53b1fe2cd",
+          "title": "title-2a08f7b0-821c-11ee-974c-2bf53b1fe2cd",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "2e0bbb40-821c-11ee-974c-2bf53b1fe2cd",
+          "title": "title-2e0bbb40-821c-11ee-974c-2bf53b1fe2cd",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "e48c6c80-821b-11ee-9f23-d5dfe4a18a8d",
+          "title": "title-e48c6c80-821b-11ee-9f23-d5dfe4a18a8d",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "e13e7a00-821b-11ee-9f23-d5dfe4a18a8d",
+          "title": "title-e13e7a00-821b-11ee-9f23-d5dfe4a18a8d",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "b39ca720-821b-11ee-9f23-d5dfe4a18a8d",
+          "title": "Процент",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "a94f2bd0-821b-11ee-9f23-d5dfe4a18a8d",
+          "title": "title-a94f2bd0-821b-11ee-9f23-d5dfe4a18a8d",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "dad15d30-853c-11ee-a85f-df271b57c8e8",
+          "title": "month_year",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "d52f6570-8203-11ee-8c2e-07e68318c1dc",
+          "title": "Факт CPQ",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "ad7f06c0-8203-11ee-8c2e-07e68318c1dc",
+          "title": "План CPQ",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "eb148190-81fe-11ee-9805-335ae1e3eada",
+          "title": "План QLeads",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "bc59d690-81fc-11ee-9805-335ae1e3eada",
+          "title": "План Leads",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "e3601650-7ffe-11ee-99ad-b3ea29004e0d",
+          "title": "Факт CPL",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "c66850d0-7ffe-11ee-99ad-b3ea29004e0d",
+          "title": "Факт CRQ",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "date_6pqd",
+          "title": "date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_nrjh",
+          "title": "Leads",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qleads_j5gp",
+          "title": "QLeads",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "plan_per_day_oh52",
+          "title": "План расход",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "fact_ukhz",
+          "title": "Факт расход",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpl_ckf5",
+          "title": "План CPL",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crq_bskf",
+          "title": "План CRQ",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_followers_uae_mf43",
+          "title": "total_followers_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpf_9goh",
+          "title": "cpf_plan",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {},
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [
+      {
+        "initial_data_type": "float",
+        "description": "",
+        "aggregation": "avg",
+        "hidden": false,
+        "valid": true,
+        "guid": "2e0bbb40-821c-11ee-974c-2bf53b1fe2cd",
+        "autoaggregated": false,
+        "type": "MEASURE",
+        "managed_by": "user",
+        "aggregation_locked": true,
+        "virtual": false,
+        "data_type": "float",
+        "lock_aggregation": false,
+        "title": "title-2e0bbb40-821c-11ee-974c-2bf53b1fe2cd",
+        "cast": "float",
+        "has_auto_aggregation": false,
+        "formula": "IF [План расход] > 0 THEN\n    [Факт расход] / [План расход]\nELSE\n    0\nEND",
+        "guid_formula": "IF [plan_per_day_oh52] > 0 THEN\n    [fact_ukhz] / [plan_per_day_oh52]\nELSE\n    0\nEND",
+        "calc_mode": "formula",
+        "source": "",
+        "local": true,
+        "quickFormula": true,
+        "originalTitle": "Процент",
+        "fakeTitle": "Процент",
+        "datasetId": "6n2chcp2ryzyv",
+        "id": "measure-0",
+        "hideLabelMode": "show",
+        "formatting": {
+          "format": "percent",
+          "showRankDelimiter": true,
+          "prefix": "",
+          "postfix": "",
+          "labelMode": "absolute",
+          "precision": 2
+        },
+        "datasetName": "Бюджет на закупки и CRM",
+        "mode": "absolute"
+      }
+    ],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "date",
+          "has_auto_aggregation": false,
+          "title": "title-a94f2bd0-821b-11ee-9f23-d5dfe4a18a8d",
+          "type": "DIMENSION",
+          "description": "",
+          "aggregation": "none",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "hidden": false,
+          "data_type": "date",
+          "aggregation_locked": true,
+          "autoaggregated": false,
+          "valid": true,
+          "virtual": false,
+          "guid": "a94f2bd0-821b-11ee-9f23-d5dfe4a18a8d",
+          "cast": "date",
+          "formula": "datetrunc([date], \"week\")",
+          "guid_formula": "datetrunc([date_6pqd], \"week\")",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "6n2chcp2ryzyv"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "float",
+          "has_auto_aggregation": false,
+          "title": "Процент",
+          "type": "DIMENSION",
+          "description": "",
+          "aggregation": "none",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "hidden": false,
+          "data_type": "float",
+          "aggregation_locked": true,
+          "autoaggregated": false,
+          "valid": true,
+          "virtual": false,
+          "guid": "b39ca720-821b-11ee-9f23-d5dfe4a18a8d",
+          "cast": "float",
+          "formula": "IF [План расход] > 0 THEN\n    [Факт расход] / [План расход]\nELSE\n    0\nEND",
+          "guid_formula": "IF [plan_per_day_oh52] > 0 THEN\n    [fact_ukhz] / [plan_per_day_oh52]\nELSE\n    0\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "6n2chcp2ryzyv"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "float",
+          "has_auto_aggregation": false,
+          "title": "title-e13e7a00-821b-11ee-9f23-d5dfe4a18a8d",
+          "type": "MEASURE",
+          "description": "",
+          "aggregation": "sum",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "hidden": false,
+          "data_type": "float",
+          "aggregation_locked": false,
+          "autoaggregated": false,
+          "valid": true,
+          "virtual": false,
+          "guid": "e13e7a00-821b-11ee-9f23-d5dfe4a18a8d",
+          "cast": "float",
+          "source": "plan_per_day",
+          "avatar_id": "8ecc52c0-7ffe-11ee-99ad-b3ea29004e0d",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "6n2chcp2ryzyv"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "float",
+          "has_auto_aggregation": false,
+          "title": "title-e48c6c80-821b-11ee-9f23-d5dfe4a18a8d",
+          "type": "MEASURE",
+          "description": "",
+          "aggregation": "sum",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "hidden": false,
+          "data_type": "float",
+          "aggregation_locked": false,
+          "autoaggregated": false,
+          "valid": true,
+          "virtual": false,
+          "guid": "e48c6c80-821b-11ee-9f23-d5dfe4a18a8d",
+          "cast": "float",
+          "source": "fact",
+          "avatar_id": "8ecc52c0-7ffe-11ee-99ad-b3ea29004e0d",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "6n2chcp2ryzyv"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "float",
+          "has_auto_aggregation": false,
+          "title": "title-2e0bbb40-821c-11ee-974c-2bf53b1fe2cd",
+          "type": "MEASURE",
+          "description": "",
+          "aggregation": "avg",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "hidden": false,
+          "data_type": "float",
+          "aggregation_locked": true,
+          "autoaggregated": false,
+          "valid": true,
+          "virtual": false,
+          "guid": "2e0bbb40-821c-11ee-974c-2bf53b1fe2cd",
+          "cast": "float",
+          "formula": "IF [План расход] > 0 THEN\n    [Факт расход] / [План расход]\nELSE\n    0\nEND",
+          "guid_formula": "IF [plan_per_day_oh52] > 0 THEN\n    [fact_ukhz] / [plan_per_day_oh52]\nELSE\n    0\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "6n2chcp2ryzyv"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "float",
+          "has_auto_aggregation": false,
+          "title": "title-2a08f7b0-821c-11ee-974c-2bf53b1fe2cd",
+          "type": "MEASURE",
+          "description": "",
+          "aggregation": "avg",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "hidden": false,
+          "data_type": "float",
+          "aggregation_locked": true,
+          "autoaggregated": false,
+          "valid": true,
+          "virtual": false,
+          "guid": "2a08f7b0-821c-11ee-974c-2bf53b1fe2cd",
+          "cast": "float",
+          "formula": "IF [План расход] > 0 THEN\n    [Факт расход] / [План расход]\nELSE\n    0\nEND",
+          "guid_formula": "IF [plan_per_day_oh52] > 0 THEN\n    [fact_ukhz] / [plan_per_day_oh52]\nELSE\n    0\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "quickFormula": true,
+          "originalTitle": "Процент",
+          "fakeTitle": "Процент",
+          "datasetId": "6n2chcp2ryzyv"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "combined-chart",
+      "highchartsId": "column",
+      "type": "geo",
+      "name": "label_visualization-combined-chart",
+      "iconProps": {
+        "id": "visCombined",
+        "width": "24"
+      },
+      "layers": [
+        {
+          "id": "column",
+          "type": "column",
+          "name": "label_visualization-column",
+          "iconProps": {
+            "id": "visColumn",
+            "width": "24"
+          },
+          "allowFilters": true,
+          "allowColors": true,
+          "allowSort": true,
+          "allowSegments": true,
+          "allowLabels": true,
+          "availableLabelModes": [
+            "absolute"
+          ],
+          "placeholders": [
+            {
+              "allowedTypes": {},
+              "allowedDataTypes": {},
+              "id": "x",
+              "type": "x",
+              "title": "section_x",
+              "iconProps": {},
+              "items": [
+                {
+                  "initial_data_type": "date",
+                  "description": "",
+                  "aggregation": "none",
+                  "hidden": false,
+                  "valid": true,
+                  "guid": "a94f2bd0-821b-11ee-9f23-d5dfe4a18a8d",
+                  "autoaggregated": false,
+                  "type": "DIMENSION",
+                  "managed_by": "user",
+                  "aggregation_locked": true,
+                  "virtual": false,
+                  "data_type": "date",
+                  "lock_aggregation": false,
+                  "title": "title-a94f2bd0-821b-11ee-9f23-d5dfe4a18a8d",
+                  "cast": "date",
+                  "has_auto_aggregation": false,
+                  "source": "",
+                  "avatar_id": null,
+                  "calc_mode": "formula",
+                  "formula": "datetrunc([date], \"week\")",
+                  "guid_formula": "datetrunc([date_6pqd], \"week\")",
+                  "default_value": null,
+                  "value_constraint": null,
+                  "datasetId": "6n2chcp2ryzyv",
+                  "id": "dimension-5",
+                  "datasetName": "Бюджет на закупки и CRM",
+                  "format": "DD.MM.YYYY",
+                  "grouping": "trunc-week",
+                  "fakeTitle": "Дата",
+                  "hideLabelMode": "show",
+                  "formatting": {
+                    "format": "number",
+                    "showRankDelimiter": true,
+                    "prefix": "",
+                    "postfix": "",
+                    "labelMode": "absolute",
+                    "precision": 0
+                  },
+                  "local": true,
+                  "quickFormula": true,
+                  "originalDateCast": "date",
+                  "originalSource": "date",
+                  "originalTitle": "date"
+                },
+                {
+                  "title": "Measure Values",
+                  "type": "PSEUDO",
+                  "className": "item pseudo-item measure-item",
+                  "data_type": "float",
+                  "id": "inserted-1699876720545"
+                }
+              ],
+              "required": false,
+              "capacity": 2,
+              "settings": {
+                "title": "off",
+                "titleValue": "",
+                "type": "linear",
+                "grid": "on",
+                "gridStep": "auto",
+                "gridStepValue": 50,
+                "hideLabels": "no",
+                "labelsView": "auto",
+                "holidays": "off",
+                "axisFormatMode": "auto",
+                "axisModeMap": {
+                  "date_6pqd": "continuous"
+                }
+              }
+            },
+            {
+              "allowedTypes": {},
+              "allowedFinalTypes": {},
+              "allowedDataTypes": {},
+              "id": "y",
+              "type": "y",
+              "title": "section_y",
+              "iconProps": {},
+              "items": [
+                {
+                  "aggregation_locked": false,
+                  "valid": true,
+                  "autoaggregated": false,
+                  "cast": "float",
+                  "aggregation": "sum",
+                  "type": "MEASURE",
+                  "lock_aggregation": false,
+                  "data_type": "float",
+                  "has_auto_aggregation": false,
+                  "initial_data_type": "float",
+                  "hidden": false,
+                  "virtual": false,
+                  "guid": "e13e7a00-821b-11ee-9f23-d5dfe4a18a8d",
+                  "managed_by": "user",
+                  "title": "title-e13e7a00-821b-11ee-9f23-d5dfe4a18a8d",
+                  "description": "",
+                  "source": "plan_per_day",
+                  "avatar_id": "8ecc52c0-7ffe-11ee-99ad-b3ea29004e0d",
+                  "calc_mode": "direct",
+                  "formula": "",
+                  "guid_formula": "",
+                  "local": true,
+                  "quickFormula": true,
+                  "originalTitle": "План расход",
+                  "fakeTitle": "План расход",
+                  "datasetId": "6n2chcp2ryzyv",
+                  "id": "measure-3",
+                  "datasetName": "Бюджет на закупки и CRM",
+                  "hideLabelMode": "show",
+                  "formatting": {
+                    "format": "number",
+                    "showRankDelimiter": true,
+                    "prefix": "",
+                    "postfix": " ₽",
+                    "labelMode": "absolute",
+                    "precision": 0
+                  },
+                  "default_value": null,
+                  "value_constraint": null
+                },
+                {
+                  "aggregation_locked": false,
+                  "valid": true,
+                  "autoaggregated": false,
+                  "cast": "float",
+                  "aggregation": "sum",
+                  "type": "MEASURE",
+                  "lock_aggregation": false,
+                  "data_type": "float",
+                  "has_auto_aggregation": false,
+                  "initial_data_type": "float",
+                  "hidden": false,
+                  "virtual": false,
+                  "guid": "e48c6c80-821b-11ee-9f23-d5dfe4a18a8d",
+                  "managed_by": "user",
+                  "title": "title-e48c6c80-821b-11ee-9f23-d5dfe4a18a8d",
+                  "description": "",
+                  "source": "fact",
+                  "avatar_id": "8ecc52c0-7ffe-11ee-99ad-b3ea29004e0d",
+                  "calc_mode": "direct",
+                  "formula": "",
+                  "guid_formula": "",
+                  "local": true,
+                  "quickFormula": true,
+                  "originalTitle": "Факт расход",
+                  "fakeTitle": "Факт расход",
+                  "datasetId": "6n2chcp2ryzyv",
+                  "id": "measure-2",
+                  "hideLabelMode": "show",
+                  "formatting": {
+                    "format": "number",
+                    "showRankDelimiter": true,
+                    "prefix": "",
+                    "postfix": " ₽",
+                    "labelMode": "absolute",
+                    "precision": 0
+                  },
+                  "default_value": null,
+                  "value_constraint": null,
+                  "datasetName": "Бюджет на закупки и CRM"
+                }
+              ],
+              "settings": {
+                "scale": "auto",
+                "scaleValue": "min-max",
+                "title": "off",
+                "titleValue": "",
+                "type": "linear",
+                "grid": "on",
+                "gridStep": "auto",
+                "gridStepValue": 50,
+                "hideLabels": "no",
+                "labelsView": "auto",
+                "nulls": "ignore",
+                "axisFormatMode": "auto"
+              }
+            }
+          ],
+          "layerSettings": {
+            "type": "column",
+            "id": "a21f6b40-821b-11ee-9f23-d5dfe4a18a8d",
+            "name": "Слой 1",
+            "alpha": 80,
+            "valid": true
+          },
+          "commonPlaceholders": {
+            "colors": [
+              {
+                "title": "Measure Names",
+                "type": "PSEUDO",
+                "className": "item pseudo-item dimension-item",
+                "data_type": "string",
+                "id": "inserted-1699876716117"
+              }
+            ],
+            "colorsConfig": {},
+            "filters": [],
+            "geopointsConfig": {},
+            "sort": [],
+            "labels": [],
+            "tooltips": [],
+            "shapes": [],
+            "shapesConfig": {}
+          },
+          "colorsCapacity": 2
+        },
+        {
+          "id": "line",
+          "type": "line",
+          "name": "label_visualization-line",
+          "iconProps": {
+            "id": "visLines",
+            "width": "24"
+          },
+          "allowFilters": true,
+          "allowColors": true,
+          "allowSort": true,
+          "allowLabels": true,
+          "allowSegments": true,
+          "allowShapes": true,
+          "colorsCapacity": 1,
+          "shapesCapacity": 1,
+          "availableLabelModes": [
+            "absolute"
+          ],
+          "placeholders": [
+            {
+              "allowedTypes": {},
+              "allowedDataTypes": {},
+              "id": "x",
+              "type": "x",
+              "title": "section_x",
+              "iconProps": {},
+              "items": [
+                {
+                  "initial_data_type": "date",
+                  "description": "",
+                  "aggregation": "none",
+                  "hidden": false,
+                  "valid": true,
+                  "guid": "a94f2bd0-821b-11ee-9f23-d5dfe4a18a8d",
+                  "autoaggregated": false,
+                  "type": "DIMENSION",
+                  "managed_by": "user",
+                  "aggregation_locked": true,
+                  "virtual": false,
+                  "data_type": "date",
+                  "lock_aggregation": false,
+                  "title": "title-a94f2bd0-821b-11ee-9f23-d5dfe4a18a8d",
+                  "cast": "date",
+                  "has_auto_aggregation": false,
+                  "source": "",
+                  "avatar_id": null,
+                  "calc_mode": "formula",
+                  "formula": "datetrunc([date], \"week\")",
+                  "guid_formula": "datetrunc([date_6pqd], \"week\")",
+                  "default_value": null,
+                  "value_constraint": null,
+                  "datasetId": "6n2chcp2ryzyv",
+                  "id": "dimension-5",
+                  "datasetName": "Бюджет на закупки и CRM",
+                  "format": "DD.MM.YYYY",
+                  "grouping": "trunc-week",
+                  "fakeTitle": "Дата",
+                  "hideLabelMode": "show",
+                  "formatting": {
+                    "format": "number",
+                    "showRankDelimiter": true,
+                    "prefix": "",
+                    "postfix": "",
+                    "labelMode": "absolute",
+                    "precision": 0
+                  },
+                  "local": true,
+                  "quickFormula": true,
+                  "originalDateCast": "date",
+                  "originalSource": "date",
+                  "originalTitle": "date"
+                },
+                {
+                  "title": "Measure Values",
+                  "type": "PSEUDO",
+                  "className": "item pseudo-item measure-item",
+                  "data_type": "float",
+                  "id": "inserted-1699876720545"
+                }
+              ],
+              "required": true,
+              "capacity": 1,
+              "settings": {
+                "title": "off",
+                "titleValue": "",
+                "type": "linear",
+                "grid": "on",
+                "gridStep": "auto",
+                "gridStepValue": 50,
+                "hideLabels": "no",
+                "labelsView": "auto",
+                "holidays": "off",
+                "axisFormatMode": "auto",
+                "axisModeMap": {
+                  "date_6pqd": "continuous"
+                }
+              }
+            },
+            {
+              "allowedTypes": {},
+              "allowedFinalTypes": {},
+              "allowedDataTypes": {},
+              "id": "y",
+              "type": "y",
+              "title": "section_y",
+              "iconProps": {},
+              "items": [],
+              "settings": {
+                "scale": "auto",
+                "scaleValue": "min-max",
+                "title": "off",
+                "titleValue": "",
+                "type": "linear",
+                "grid": "on",
+                "gridStep": "auto",
+                "gridStepValue": 50,
+                "hideLabels": "no",
+                "labelsView": "auto",
+                "nulls": "ignore",
+                "axisFormatMode": "auto"
+              }
+            },
+            {
+              "allowedTypes": {},
+              "allowedFinalTypes": {},
+              "allowedDataTypes": {},
+              "id": "y2",
+              "type": "y2",
+              "title": "section_y2",
+              "iconProps": {},
+              "items": [
+                {
+                  "valid": true,
+                  "hidden": false,
+                  "initial_data_type": "float",
+                  "lock_aggregation": false,
+                  "aggregation_locked": true,
+                  "description": "",
+                  "has_auto_aggregation": false,
+                  "cast": "float",
+                  "aggregation": "avg",
+                  "managed_by": "user",
+                  "virtual": false,
+                  "data_type": "float",
+                  "title": "title-2a08f7b0-821c-11ee-974c-2bf53b1fe2cd",
+                  "autoaggregated": false,
+                  "type": "MEASURE",
+                  "guid": "2a08f7b0-821c-11ee-974c-2bf53b1fe2cd",
+                  "guid_formula": "IF [plan_per_day_oh52] > 0 THEN\n    [fact_ukhz] / [plan_per_day_oh52]\nELSE\n    0\nEND",
+                  "formula": "IF [План расход] > 0 THEN\n    [Факт расход] / [План расход]\nELSE\n    0\nEND",
+                  "calc_mode": "formula",
+                  "source": "",
+                  "local": true,
+                  "quickFormula": true,
+                  "originalTitle": "Процент",
+                  "fakeTitle": "Процент",
+                  "datasetId": "6n2chcp2ryzyv",
+                  "id": "measure-0",
+                  "datasetName": "Бюджет на закупки и CRM",
+                  "hideLabelMode": "show",
+                  "formatting": {
+                    "format": "percent",
+                    "showRankDelimiter": true,
+                    "prefix": "",
+                    "postfix": "",
+                    "labelMode": "absolute",
+                    "precision": 2
+                  },
+                  "avatar_id": null,
+                  "default_value": null,
+                  "value_constraint": null
+                }
+              ],
+              "settings": {
+                "scale": "auto",
+                "scaleValue": "min-max",
+                "title": "off",
+                "titleValue": "",
+                "type": "linear",
+                "grid": "on",
+                "gridStep": "auto",
+                "gridStepValue": 50,
+                "hideLabels": "yes",
+                "labelsView": "auto",
+                "nulls": "ignore",
+                "axisFormatMode": "auto"
+              }
+            }
+          ],
+          "commonPlaceholders": {
+            "colors": [],
+            "colorsConfig": {},
+            "filters": [],
+            "geopointsConfig": {},
+            "sort": [],
+            "labels": [
+              {
+                "initial_data_type": "float",
+                "description": "",
+                "aggregation": "avg",
+                "hidden": false,
+                "valid": true,
+                "guid": "2e0bbb40-821c-11ee-974c-2bf53b1fe2cd",
+                "autoaggregated": false,
+                "type": "MEASURE",
+                "managed_by": "user",
+                "aggregation_locked": true,
+                "virtual": false,
+                "data_type": "float",
+                "lock_aggregation": false,
+                "title": "title-2e0bbb40-821c-11ee-974c-2bf53b1fe2cd",
+                "cast": "float",
+                "has_auto_aggregation": false,
+                "formula": "IF [План расход] > 0 THEN\n    [Факт расход] / [План расход]\nELSE\n    0\nEND",
+                "guid_formula": "IF [plan_per_day_oh52] > 0 THEN\n    [fact_ukhz] / [plan_per_day_oh52]\nELSE\n    0\nEND",
+                "calc_mode": "formula",
+                "source": "",
+                "local": true,
+                "quickFormula": true,
+                "originalTitle": "Процент",
+                "fakeTitle": "Процент",
+                "datasetId": "6n2chcp2ryzyv",
+                "id": "measure-0",
+                "hideLabelMode": "show",
+                "formatting": {
+                  "format": "percent",
+                  "showRankDelimiter": true,
+                  "prefix": "",
+                  "postfix": "",
+                  "labelMode": "absolute",
+                  "precision": 2
+                },
+                "datasetName": "Бюджет на закупки и CRM",
+                "mode": "absolute"
+              }
+            ],
+            "tooltips": [],
+            "shapes": [],
+            "shapesConfig": {}
+          },
+          "layerSettings": {
+            "type": "line",
+            "id": "26c872b0-821c-11ee-974c-2bf53b1fe2cd",
+            "name": "Слой 2",
+            "alpha": 80,
+            "valid": true
+          }
+        }
+      ],
+      "selectedLayerId": "26c872b0-821c-11ee-974c-2bf53b1fe2cd",
+      "placeholders": [],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

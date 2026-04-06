@@ -1,0 +1,650 @@
+{
+  "entryId": "fp2io6rce8061",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1930602990029245601/crm-marketing — Таблица сделок",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-04-17T14:23:30.497Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-04-17T14:23:30.497Z",
+  "savedId": "gq3jp7sdf9182",
+  "publishedId": "gq3jp7sdf9182",
+  "revId": "gq3jp7sdf9182",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "1bo4ascp2odmn"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "460d9700-fb3c-11ef-8905-69ad307e2d10",
+          "title": "CRM ID",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "crm_id_o407",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_dtyy",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utmsource_7ufk",
+          "title": "utmsource",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_campaign_siy8",
+          "title": "utm_campaign",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_y70m",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_qpbw",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_fqw6",
+          "title": "pipeline",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contact_in_5bz1",
+          "title": "contact_in",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_qdtd",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_urgh",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "formname_6y4o",
+          "title": "formname",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_a_057y",
+          "title": "qual_priority_a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_b_uj6v",
+          "title": "qual_priority_b",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_c_ml9d",
+          "title": "qual_priority_c",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_g5sq",
+          "title": "source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "formname_full_nw3b",
+          "title": "formname_full",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_content_tf99",
+          "title": "utm_content",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_oo39",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_medium_ccww",
+          "title": "utm_medium",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100,
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "crm-marketing — Таблица сделок",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "totals": "on",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "stacking": "on"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "title": "CRM ID",
+          "aggregation_locked": true,
+          "autoaggregated": false,
+          "managed_by": "user",
+          "type": "DIMENSION",
+          "has_auto_aggregation": false,
+          "initial_data_type": "markup",
+          "data_type": "markup",
+          "cast": "markup",
+          "virtual": false,
+          "lock_aggregation": false,
+          "aggregation": "none",
+          "guid": "460d9700-fb3c-11ef-8905-69ad307e2d10",
+          "valid": true,
+          "hidden": false,
+          "guid_formula": "-- Если ру-акк\nIF [account_id_oo39] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id_o407]), STR([crm_id_o407]))\n\nELSEIF [account_id_oo39] = 57817 OR [account_id_oo39] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id_o407]), STR([crm_id_o407]))\n\nELSEIF [account_id_oo39] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id_o407]), STR([crm_id_o407]))\n\nEND",
+          "formula": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "1bo4ascp2odmn"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "aggregation_locked": true,
+              "data_type": "markup",
+              "guid": "460d9700-fb3c-11ef-8905-69ad307e2d10",
+              "managed_by": "user",
+              "title": "CRM ID",
+              "cast": "markup",
+              "has_auto_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "initial_data_type": "markup",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "hidden": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "description": "",
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nEND",
+              "guid_formula": "-- Если ру-акк\nIF [account_id_oo39] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id_o407]), STR([crm_id_o407]))\n\nELSEIF [account_id_oo39] = 57817 OR [account_id_oo39] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id_o407]), STR([crm_id_o407]))\n\nELSEIF [account_id_oo39] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id_o407]), STR([crm_id_o407]))\n\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1bo4ascp2odmn",
+              "id": "dimension-0",
+              "datasetName": "crm-marketing",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "c07d6770-de3d-11ef-b3fc-5fde24685649",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "crm_id_o407"
+              },
+              "local": true
+            },
+            {
+              "aggregation_locked": false,
+              "data_type": "date",
+              "guid": "creation_date_dtyy",
+              "managed_by": "user",
+              "title": "creation_date",
+              "cast": "date",
+              "has_auto_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "initial_data_type": "date",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "hidden": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "description": "",
+              "avatar_id": "c95968c0-dd8a-11ef-a0cd-e707e28b5d7e",
+              "source": "creation_date",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1bo4ascp2odmn",
+              "id": "dimension-3",
+              "datasetName": "crm-marketing",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Дата создания",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d55e8ed0-de3d-11ef-b3fc-5fde24685649",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "creation_date_dtyy"
+              }
+            },
+            {
+              "aggregation_locked": false,
+              "data_type": "string",
+              "guid": "geo_qpbw",
+              "managed_by": "user",
+              "title": "geo",
+              "cast": "string",
+              "has_auto_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "initial_data_type": "string",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "hidden": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "description": "",
+              "avatar_id": "c95968c0-dd8a-11ef-a0cd-e707e28b5d7e",
+              "source": "geo",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1bo4ascp2odmn",
+              "id": "dimension-7",
+              "datasetName": "crm-marketing",
+              "fakeTitle": "Гео",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d8cadec0-de3d-11ef-b3fc-5fde24685649",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "geo_qpbw"
+              }
+            },
+            {
+              "valid": true,
+              "has_auto_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "string",
+              "type": "DIMENSION",
+              "aggregation": "none",
+              "cast": "string",
+              "managed_by": "user",
+              "aggregation_locked": false,
+              "title": "source",
+              "hidden": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "description": "",
+              "data_type": "string",
+              "guid": "source_g5sq",
+              "source": "source",
+              "avatar_id": "c95968c0-dd8a-11ef-a0cd-e707e28b5d7e",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1bo4ascp2odmn",
+              "id": "dimension-16",
+              "datasetName": "crm-marketing"
+            },
+            {
+              "aggregation": "none",
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "cast": "string",
+              "title": "utm_campaign",
+              "virtual": false,
+              "initial_data_type": "string",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "guid": "utm_campaign_siy8",
+              "managed_by": "user",
+              "description": "",
+              "lock_aggregation": false,
+              "aggregation_locked": false,
+              "hidden": false,
+              "avatar_id": "c95968c0-dd8a-11ef-a0cd-e707e28b5d7e",
+              "source": "utm_campaign",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1bo4ascp2odmn",
+              "id": "dimension-5",
+              "datasetName": "crm-marketing"
+            },
+            {
+              "aggregation": "none",
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "cast": "string",
+              "title": "utm_content",
+              "virtual": false,
+              "initial_data_type": "string",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "guid": "utm_content_tf99",
+              "managed_by": "user",
+              "description": "",
+              "lock_aggregation": false,
+              "aggregation_locked": false,
+              "hidden": false,
+              "avatar_id": "c95968c0-dd8a-11ef-a0cd-e707e28b5d7e",
+              "source": "utm_content",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1bo4ascp2odmn",
+              "id": "dimension-18",
+              "datasetName": "crm-marketing"
+            },
+            {
+              "initial_data_type": "string",
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "description": "",
+              "lock_aggregation": false,
+              "aggregation_locked": false,
+              "title": "utm_medium",
+              "aggregation": "none",
+              "hidden": false,
+              "guid": "utm_medium_ccww",
+              "cast": "string",
+              "valid": true,
+              "autoaggregated": false,
+              "managed_by": "user",
+              "type": "DIMENSION",
+              "virtual": false,
+              "source": "utm_medium",
+              "avatar_id": "c95968c0-dd8a-11ef-a0cd-e707e28b5d7e",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1bo4ascp2odmn",
+              "id": "dimension-20",
+              "datasetName": "crm-marketing"
+            },
+            {
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "cast": "string",
+              "valid": true,
+              "initial_data_type": "string",
+              "hidden": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "description": "",
+              "virtual": false,
+              "managed_by": "user",
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "title": "formname",
+              "aggregation": "none",
+              "guid": "formname_6y4o",
+              "source": "formname",
+              "avatar_id": "c95968c0-dd8a-11ef-a0cd-e707e28b5d7e",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1bo4ascp2odmn",
+              "id": "dimension-12",
+              "datasetName": "crm-marketing"
+            },
+            {
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "description": "",
+              "aggregation": "none",
+              "virtual": false,
+              "guid": "formname_full_nw3b",
+              "type": "DIMENSION",
+              "initial_data_type": "string",
+              "managed_by": "user",
+              "valid": true,
+              "cast": "string",
+              "title": "formname_full",
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "source": "formname_full",
+              "avatar_id": "c95968c0-dd8a-11ef-a0cd-e707e28b5d7e",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1bo4ascp2odmn",
+              "id": "dimension-17",
+              "datasetName": "crm-marketing"
+            },
+            {
+              "aggregation_locked": false,
+              "data_type": "integer",
+              "guid": "qual_urgh",
+              "managed_by": "user",
+              "title": "qual",
+              "cast": "integer",
+              "has_auto_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "initial_data_type": "integer",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "hidden": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "description": "",
+              "avatar_id": "c95968c0-dd8a-11ef-a0cd-e707e28b5d7e",
+              "source": "qual",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1bo4ascp2odmn",
+              "id": "dimension-11",
+              "datasetName": "crm-marketing",
+              "fakeTitle": "Квал",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "f4eeb270-de3d-11ef-b3fc-5fde24685649",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "qual_urgh"
+              }
+            },
+            {
+              "aggregation_locked": false,
+              "data_type": "integer",
+              "guid": "booking_event_qdtd",
+              "managed_by": "user",
+              "title": "booking_event",
+              "cast": "integer",
+              "has_auto_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "initial_data_type": "integer",
+              "autoaggregated": false,
+              "type": "DIMENSION",
+              "hidden": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "description": "",
+              "avatar_id": "c95968c0-dd8a-11ef-a0cd-e707e28b5d7e",
+              "source": "booking_event",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "1bo4ascp2odmn",
+              "id": "dimension-10",
+              "datasetName": "crm-marketing",
+              "fakeTitle": "Бронь",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "f8df2680-de3d-11ef-b3fc-5fde24685649",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "booking_event_qdtd"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

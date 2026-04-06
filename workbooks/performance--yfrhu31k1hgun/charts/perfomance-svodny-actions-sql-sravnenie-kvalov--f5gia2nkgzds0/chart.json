@@ -1,0 +1,270 @@
+{
+  "entryId": "f5gia2nkgzds0",
+  "scope": "widget",
+  "type": "graph_ql_node",
+  "key": "1994282878539663136/perfomance_svodny_actions - SQL сравнение квалов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-07-14T11:04:05.067Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2026-03-19T09:00:38.003Z",
+  "savedId": "tvy3owe665hqd",
+  "publishedId": "tvy3owe665hqd",
+  "revId": "tvy3owe665hqd",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "d9mdkzqj4zxsy",
+      "type": "postgres",
+      "dataExportForbidden": false
+    },
+    "colors": [
+      {
+        "title": "Column Names",
+        "type": "PSEUDO",
+        "className": "item pseudo-item dimension-item",
+        "data_type": "string",
+        "inspectHidden": true,
+        "formulaHidden": true,
+        "noEdit": true,
+        "guid": "",
+        "datasetId": "",
+        "cast": "string",
+        "calc_mode": "direct"
+      }
+    ],
+    "colorsConfig": {
+      "polygonBorders": "show",
+      "palette": "classic20",
+      "mountedColors": {
+        "Квалов": "3",
+        "Квалы": "3",
+        "Медиана": "1"
+      },
+      "fieldGuid": "",
+      "coloredByMeasure": true,
+      "colorMode": "palette"
+    },
+    "labels": [],
+    "tooltips": [],
+    "shapes": [
+      {
+        "title": "Column Names",
+        "type": "PSEUDO",
+        "className": "item pseudo-item dimension-item",
+        "data_type": "string",
+        "inspectHidden": true,
+        "formulaHidden": true,
+        "noEdit": true,
+        "guid": "",
+        "datasetId": "",
+        "cast": "string",
+        "calc_mode": "direct"
+      }
+    ],
+    "shapesConfig": {
+      "mountedShapes": {
+        "Медиана": "Dot"
+      },
+      "fieldGuid": ""
+    },
+    "extraSettings": {},
+    "queryValue": "/* -----------------------------------------------------------------\n   ПАРАМЕТРЫ QL-ВИДЖЕТА\n   {{interval_from}} : date-interval (начало)\n   {{interval_to}}   : date-interval (конец)\n   {{month_ago}}     : number   (≥1; сколько месяцев назад брать)\n   {{geo_list}}      : string   multi (например: ОАЭ, Бали)\n   {{utm_list}}      : string   multi (например: google, yandex)\n   {{priority_list}} : string   multi (например: A, B, C)\n------------------------------------------------------------------ */\n\nWITH\n  /* 1. Параметры по дате */\n  date_p AS (\n    SELECT\n      extract(day FROM {{interval_from}}::date)      AS d_from,\n      extract(day FROM {{interval_to}}  ::date)      AS d_to,\n      date_trunc('month', {{interval_to}}::date)     AS cur_month,\n      make_interval(months => {{month_ago}}::int - 1) AS ago_int\n  ),\n\n  /* 2. Разбор multi-select в массив text[] */\n  list_p AS (\n    SELECT\n      NULLIF(\n        ARRAY(\n          SELECT m[1]\n          FROM regexp_matches(\n                 coalesce($$ {{geo_list}} $$, ''),\n                 E'E''([^'']+)''',\n                 'g'\n               ) AS m\n        ),\n        ARRAY[]::text[]\n      ) AS geo_arr,\n      NULLIF(\n        ARRAY(\n          SELECT m[1]\n          FROM regexp_matches(\n                 coalesce($$ {{utm_list}} $$, ''),\n                 E'E''([^'']+)''',\n                 'g'\n               ) AS m\n        ),\n        ARRAY[]::text[]\n      ) AS utm_arr,\n      NULLIF(\n        ARRAY(\n          SELECT m[1]\n          FROM regexp_matches(\n                 coalesce($$ {{priority_list}} $$, ''),\n                 E'E''([^'']+)''',\n                 'g'\n               ) AS m\n        ),\n        ARRAY[]::text[]\n      ) AS pri_arr\n  ),\n\n  /* 3. Сумма квалов A/B/C по каждому дню (учитываем GEO/UTM только позже) */\n  daily AS (\n    SELECT\n      ps.creation_date::date                     AS day_date,\n      ps.geo                                      AS geo,\n      ps.utmsource                                AS utmsource,\n      sum(COALESCE(ps.quals_a,0))::int            AS daily_a,\n      sum(COALESCE(ps.quals_b,0))::int            AS daily_b,\n      sum(COALESCE(ps.quals_c,0))::int            AS daily_c,\n      date_trunc('month', ps.creation_date)::date AS month_start\n    FROM mart.perfomance_svodny_actions AS ps\n    GROUP BY 1,2,3\n  ),\n\n  /* 4. Фильтрация по дате, дням месяца, спискам и категориям */\n  filtered AS (\n    SELECT\n      d.day_date,\n      -- Считаем дневное значение с учётом выбранных категорий\n      CASE\n        WHEN lp.pri_arr IS NULL THEN d.daily_a + d.daily_b + d.daily_c\n        ELSE (CASE WHEN 'A' = ANY(lp.pri_arr) THEN d.daily_a ELSE 0 END) +\n             (CASE WHEN 'B' = ANY(lp.pri_arr) THEN d.daily_b ELSE 0 END) +\n             (CASE WHEN 'C' = ANY(lp.pri_arr) THEN d.daily_c ELSE 0 END)\n      END::int                                   AS daily_leads,\n      d.month_start\n    FROM daily AS d\n    CROSS JOIN date_p  AS dp\n    CROSS JOIN list_p  AS lp\n    WHERE\n      extract(day FROM d.day_date) BETWEEN dp.d_from AND dp.d_to\n      AND d.day_date >= dp.cur_month - dp.ago_int\n      AND d.day_date <= {{interval_to}}::date\n      AND (lp.geo_arr IS NULL      OR d.geo = ANY(lp.geo_arr))\n      AND (lp.utm_arr IS NULL      OR d.utmsource = ANY(lp.utm_arr))\n  ),\n\n  /* 5. Ежемесячная агрегация и расчёт средних/медиан */\n  monthly_agg AS (\n    SELECT\n      month_start                                   AS month_start,\n      to_char(month_start, 'MM.YYYY')               AS \"Месяц периода\",\n      sum(daily_leads)::int                         AS \"Квалы\",\n      avg(daily_leads)::numeric(10,2)               AS \"AVG_дневных\",\n      percentile_cont(0.5) WITHIN GROUP (ORDER BY daily_leads) AS \"MED_дневных\"\n    FROM filtered\n    GROUP BY month_start\n  ),\n\n  /* 6. Медиана по всем месяцам (медиана месячных итогов) */\n  overall_median AS (\n    SELECT\n      percentile_cont(0.5) WITHIN GROUP (ORDER BY \"Квалы\")::int AS \"Медиана\"\n    FROM monthly_agg\n  )\n\n/* 7. Окончательный вывод: строки по месяцам + константная медиана всех месяцев */\nSELECT\n  ma.month_start,\n  ma.\"Месяц периода\",\n  ma.\"Квалы\",\n  ma.\"AVG_дневных\",\n  ma.\"MED_дневных\",\n  om.\"Медиана\"\nFROM monthly_agg AS ma\nCROSS JOIN overall_median AS om\nORDER BY ma.month_start ASC;",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2025-07-01T00:00:00.000Z",
+          "to": "2025-07-14T23:59:59.999Z"
+        }
+      },
+      {
+        "type": "string",
+        "name": "geo_list",
+        "defaultValue": ""
+      },
+      {
+        "type": "string",
+        "name": "utm_list",
+        "defaultValue": ""
+      },
+      {
+        "type": "number",
+        "name": "month_ago",
+        "defaultValue": "12"
+      },
+      {
+        "type": "string",
+        "name": "priority_list",
+        "defaultValue": ""
+      }
+    ],
+    "visualization": {
+      "id": "line",
+      "type": "line",
+      "name": "label_visualization-line",
+      "iconProps": {
+        "id": "visLines",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "allowLabels": true,
+      "allowSegments": false,
+      "allowShapes": true,
+      "colorsCapacity": 1,
+      "shapesCapacity": 1,
+      "availableLabelModes": [
+        "absolute"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "Месяц периода",
+              "title": "Месяц периода",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "holidays": "off",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "Месяц периода": "discrete"
+            },
+            "axisVisibility": "show",
+            "disableAxisMode": true
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "Квалы",
+              "title": "Квалы",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Медиана",
+              "title": "Медиана",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "id": "inserted-1752494023917"
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisVisibility": "show",
+            "axisModeMap": {
+              "Квалы": "discrete"
+            }
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y2",
+          "type": "y2",
+          "title": "section_y2",
+          "iconProps": {},
+          "items": [],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisVisibility": "show",
+            "axisModeMap": {}
+          }
+        }
+      ],
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7",
+    "geopointsConfig": {}
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

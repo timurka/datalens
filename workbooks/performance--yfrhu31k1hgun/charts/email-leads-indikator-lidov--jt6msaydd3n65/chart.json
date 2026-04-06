@@ -1,0 +1,228 @@
+{
+  "entryId": "jt6msaydd3n65",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "1930602990205406377/email_leads — Индикатор лидов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-04-17T14:23:30.497Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-04-17T14:23:30.497Z",
+  "savedId": "ku7ntbzee4o86",
+  "publishedId": "ku7ntbzee4o86",
+  "revId": "ku7ntbzee4o86",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "z9m28qdjuypql"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "6cafd9d0-fe99-11ef-b4c7-5f5e2a59e92f",
+          "title": "title-6cafd9d0-fe99-11ef-b4c7-5f5e2a59e92f",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_time_kll6",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_5pyl",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utmsource_hqkb",
+          "title": "utmsource",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_campaign_nn5k",
+          "title": "utm_campaign",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_medium_971k",
+          "title": "utm_medium",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_term_py5t",
+          "title": "utm_term",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_2jwu",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "email_9wde",
+          "title": "email",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "formname_gbvi",
+          "title": "formname",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "formid_3ucp",
+          "title": "formid",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "referrer_dlik",
+          "title": "referrer",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "webpage_7444",
+          "title": "webpage",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "list_l2ea",
+          "title": "list",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_lutg",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "m",
+      "metricFontColor": "#4DA2F1",
+      "metricFontColorPalette": "classic20"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "guid": "6cafd9d0-fe99-11ef-b4c7-5f5e2a59e92f",
+          "title": "title-6cafd9d0-fe99-11ef-b4c7-5f5e2a59e92f",
+          "type": "MEASURE",
+          "data_type": "integer",
+          "aggregation": "countunique",
+          "hidden": false,
+          "virtual": false,
+          "valid": true,
+          "description": "",
+          "aggregation_locked": false,
+          "managed_by": "user",
+          "initial_data_type": "integer",
+          "lock_aggregation": false,
+          "has_auto_aggregation": false,
+          "cast": "integer",
+          "autoaggregated": false,
+          "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+          "source": "crm_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "fakeTitle": "Лидов",
+          "datasetId": "z9m28qdjuypql"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "data_type": "integer",
+              "has_auto_aggregation": false,
+              "cast": "integer",
+              "valid": true,
+              "initial_data_type": "integer",
+              "hidden": false,
+              "type": "MEASURE",
+              "lock_aggregation": false,
+              "description": "",
+              "virtual": false,
+              "managed_by": "user",
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "title": "title-6cafd9d0-fe99-11ef-b4c7-5f5e2a59e92f",
+              "aggregation": "countunique",
+              "guid": "6cafd9d0-fe99-11ef-b4c7-5f5e2a59e92f",
+              "source": "crm_id",
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "crm_id",
+              "fakeTitle": "Лиды",
+              "datasetId": "z9m28qdjuypql",
+              "id": "measure-0",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "datasetName": "email_leads",
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

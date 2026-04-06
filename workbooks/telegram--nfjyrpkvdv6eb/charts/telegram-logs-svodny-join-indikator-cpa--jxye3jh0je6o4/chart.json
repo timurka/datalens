@@ -1,0 +1,289 @@
+{
+  "entryId": "jxye3jh0je6o4",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "2083431938432959676/telegram_logs_svodny_join — Индикатор CPA",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-11-14T11:07:21.164Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-11-14T11:07:57.633Z",
+  "savedId": "ftub3bvntuzo0",
+  "publishedId": "ftub3bvntuzo0",
+  "revId": "ftub3bvntuzo0",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "tucn327jv02ke"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "b6bc86a0-c148-11f0-bb12-c9e350772fa9",
+          "title": "CPA",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "creation_date_time_tst6",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_c2sz",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_gemm",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contacts_amo_id_oclw",
+          "title": "contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_nwah",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_g3lq",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "revenue_30az",
+          "title": "revenue",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_9seg",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id_kk97",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_fd3g",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelink_qbm5",
+          "title": "invitelink",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invite_link_name_6fha",
+          "title": "invite_link_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "purchase_date_0g48",
+          "title": "purchase_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost_hc2o",
+          "title": "cost",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_elaz",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_a_4eot",
+          "title": "qual_priority_a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_b_bo28",
+          "title": "qual_priority_b",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_c_k5e0",
+          "title": "qual_priority_c",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost_usd_so96",
+          "title": "cost_usd",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_qual_hotn",
+          "title": "date_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_booking_jrpp",
+          "title": "date_booking",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_link_g7ht",
+          "title": "channel_link",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "priority_ph8l",
+          "title": "priority",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "subscribers_ghw8",
+          "title": "subscribers",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "subscribers_3day_13gd",
+          "title": "subscribers_3day",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontColorIndex": 1,
+      "metricFontSize": "s",
+      "metricFontColorPalette": "default20",
+      "metricFontColor": "#FF6A59"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "title": "CPA",
+          "aggregation": "none",
+          "virtual": false,
+          "type": "MEASURE",
+          "valid": true,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "aggregation_locked": true,
+          "cast": "float",
+          "initial_data_type": "float",
+          "hidden": false,
+          "guid": "b6bc86a0-c148-11f0-bb12-c9e350772fa9",
+          "data_type": "float",
+          "lock_aggregation": false,
+          "description": "",
+          "managed_by": "user",
+          "autoaggregated": true,
+          "formula": "IF(SUM([booking_event]) > 0, SUM([cost_usd]) / SUM([booking_event]), NULL)",
+          "guid_formula": "IF(SUM([booking_event_g3lq]) > 0, SUM([cost_usd_so96]) / SUM([booking_event_g3lq]), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "originalTitle": "booking_event",
+          "datasetId": "tucn327jv02ke"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "aggregation_locked": true,
+              "type": "MEASURE",
+              "guid": "b6bc86a0-c148-11f0-bb12-c9e350772fa9",
+              "description": "",
+              "has_auto_aggregation": true,
+              "title": "CPA",
+              "hidden": false,
+              "data_type": "float",
+              "initial_data_type": "float",
+              "lock_aggregation": false,
+              "cast": "float",
+              "managed_by": "user",
+              "virtual": false,
+              "aggregation": "none",
+              "valid": true,
+              "autoaggregated": true,
+              "ui_settings": "",
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "IF(SUM([booking_event]) > 0, SUM([cost_usd]) / SUM([booking_event]), NULL)",
+              "guid_formula": "IF(SUM([booking_event_g3lq]) > 0, SUM([cost_usd_so96]) / SUM([booking_event_g3lq]), NULL)",
+              "local": true,
+              "originalTitle": "booking_event",
+              "datasetId": "tucn327jv02ke",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "$",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "default_value": null,
+              "value_constraint": null,
+              "id": "measure-0",
+              "datasetName": "telegram_logs_svodny_join"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

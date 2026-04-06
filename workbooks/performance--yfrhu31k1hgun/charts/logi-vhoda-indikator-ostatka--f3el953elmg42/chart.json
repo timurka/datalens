@@ -1,0 +1,289 @@
+{
+  "entryId": "f3el953elmg42",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "1716011184118828538/Логи входа — Индикатор остатка",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-06-25T12:27:54.079Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-06-25T12:29:47.254Z",
+  "savedId": "ymx44sns2nzil",
+  "publishedId": "ymx44sns2nzil",
+  "revId": "ymx44sns2nzil",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "vh2lph3ot1laj"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "6ca5b8a0-32ee-11ef-a968-9b33fa2b769b",
+          "title": "Осталось",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "e6e57300-2964-11ef-9089-17966695baaa",
+          "title": "churn",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "b470e260-2964-11ef-9378-c3c04d9895f8",
+          "title": "users_left",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "cb646d10-28b6-11ef-ad03-053a0ef05bf2",
+          "title": "channel_name",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "user_id_6e86",
+          "title": "user_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_8h69",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "3b92a150-28bd-11ef-a579-dbd621870717",
+          "title": "date_join_short",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_left_vp75",
+          "title": "date_left",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_k3yq",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username_s00g",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_mfy4",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_eimh",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "count_2r96",
+          "title": "count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_qual_v2df",
+          "title": "sum_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_4rzv",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_qual_ofse",
+          "title": "date_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_ub7e",
+          "title": "channel",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_1_lvak",
+          "title": "source",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#54A520",
+      "metricFontColorPalette": "classic20",
+      "indicatorTitleMode": "by-field"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": false,
+          "cast": "integer",
+          "lock_aggregation": false,
+          "hidden": false,
+          "initial_data_type": "integer",
+          "managed_by": "user",
+          "data_type": "integer",
+          "valid": true,
+          "aggregation": "none",
+          "description": "",
+          "aggregation_locked": true,
+          "guid": "b470e260-2964-11ef-9378-c3c04d9895f8",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "virtual": false,
+          "title": "users_left",
+          "guid_formula": "IF [date_left_vp75] IS NOT NULL THEN\n    [user_id_6e86]\nEND",
+          "formula": "IF [date_left] IS NOT NULL THEN\n    [user_id]\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "vh2lph3ot1laj"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "cast": "float",
+          "lock_aggregation": false,
+          "hidden": false,
+          "initial_data_type": "float",
+          "managed_by": "user",
+          "data_type": "float",
+          "valid": true,
+          "aggregation": "none",
+          "description": "",
+          "aggregation_locked": true,
+          "guid": "e6e57300-2964-11ef-9089-17966695baaa",
+          "autoaggregated": true,
+          "type": "MEASURE",
+          "virtual": false,
+          "title": "churn",
+          "guid_formula": "IF COUNTD([user_id_6e86]) > 0 THEN\n    COUNTD([b470e260-2964-11ef-9378-c3c04d9895f8]) / COUNTD([user_id_6e86])\nEND",
+          "formula": "IF COUNTD([user_id]) > 0 THEN\n    COUNTD([users_left]) / COUNTD([user_id])\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "vh2lph3ot1laj"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "cast": "integer",
+          "lock_aggregation": false,
+          "hidden": false,
+          "initial_data_type": "integer",
+          "managed_by": "user",
+          "data_type": "integer",
+          "valid": true,
+          "aggregation": "none",
+          "description": "",
+          "aggregation_locked": true,
+          "guid": "6ca5b8a0-32ee-11ef-a968-9b33fa2b769b",
+          "autoaggregated": true,
+          "type": "MEASURE",
+          "virtual": false,
+          "title": "Осталось",
+          "guid_formula": "COUNTD_IF([user_id_6e86], [date_join_8h69] IS NOT NULL) - COUNTD_IF([user_id_6e86], [date_left_vp75] IS NOT NULL)",
+          "formula": "COUNTD_IF([user_id], [date_join] IS NOT NULL) - COUNTD_IF([user_id], [date_left] IS NOT NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "vh2lph3ot1laj"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "has_auto_aggregation": true,
+              "cast": "integer",
+              "lock_aggregation": false,
+              "hidden": false,
+              "initial_data_type": "integer",
+              "managed_by": "user",
+              "data_type": "integer",
+              "valid": true,
+              "aggregation": "none",
+              "description": "",
+              "aggregation_locked": true,
+              "guid": "6ca5b8a0-32ee-11ef-a968-9b33fa2b769b",
+              "autoaggregated": true,
+              "type": "MEASURE",
+              "virtual": false,
+              "title": "Осталось",
+              "guid_formula": "COUNTD_IF([user_id_6e86], [date_join_8h69] IS NOT NULL) - COUNTD_IF([user_id_6e86], [date_left_vp75] IS NOT NULL)",
+              "formula": "COUNTD_IF([user_id], [date_join] IS NOT NULL) - COUNTD_IF([user_id], [date_left] IS NOT NULL)",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "vh2lph3ot1laj",
+              "id": "measure-0",
+              "datasetName": "Логи входа"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "axisModeMap": {
+              "6ca5b8a0-32ee-11ef-a968-9b33fa2b769b": "continuous"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

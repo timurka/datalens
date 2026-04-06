@@ -1,0 +1,230 @@
+{
+  "entryId": "p3qwkszi39wca",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "2082042000470705546/Лиды и источники — Индикатор % найденных",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-11-12T13:05:47.641Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-11-12T13:26:31.603Z",
+  "savedId": "s6t2c1tl4qyed",
+  "publishedId": "s6t2c1tl4qyed",
+  "revId": "s6t2c1tl4qyed",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "t7m1qnq8870ge"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "954e2910-bfc7-11f0-afc8-8bcbdc317be0",
+          "title": "Нашлось",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "crm_id_vlk2",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contacts_amo_id_jri8",
+          "title": "contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_a92y",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_mv8g",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_q1qo",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id_h7az",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_source_xitz",
+          "title": "telegram_source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category_7g5o",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_x2sc",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_geo_3tnj",
+          "title": "source_geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_e0jc",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_2oxt",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_time_urza",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_source_status_vmhg",
+          "title": "telegram_source_status",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontColorIndex": 7,
+      "metricFontSize": "s",
+      "metricFontColor": "#54A520",
+      "metricFontColorPalette": ""
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation": "none",
+          "virtual": false,
+          "title": "Нашлось",
+          "cast": "float",
+          "type": "MEASURE",
+          "initial_data_type": "float",
+          "lock_aggregation": false,
+          "data_type": "float",
+          "managed_by": "user",
+          "valid": true,
+          "hidden": false,
+          "description": "",
+          "ui_settings": "",
+          "aggregation_locked": true,
+          "has_auto_aggregation": true,
+          "autoaggregated": true,
+          "guid": "954e2910-bfc7-11f0-afc8-8bcbdc317be0",
+          "formula": "IF COUNTD([crm_id]) > 0 THEN\n    COUNTD_IF([crm_id], [date_join] IS NOT NULL) / COUNTD([crm_id])\nEND",
+          "guid_formula": "IF COUNTD([crm_id_vlk2]) > 0 THEN\n    COUNTD_IF([crm_id_vlk2], [date_join_x2sc] IS NOT NULL) / COUNTD([crm_id_vlk2])\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "originalTitle": "crm_id",
+          "datasetId": "t7m1qnq8870ge"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "Нашлось",
+              "cast": "float",
+              "data_type": "float",
+              "initial_data_type": "float",
+              "managed_by": "user",
+              "aggregation_locked": true,
+              "valid": true,
+              "virtual": false,
+              "ui_settings": "",
+              "description": "",
+              "type": "MEASURE",
+              "guid": "954e2910-bfc7-11f0-afc8-8bcbdc317be0",
+              "aggregation": "none",
+              "autoaggregated": true,
+              "lock_aggregation": false,
+              "has_auto_aggregation": true,
+              "hidden": false,
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "IF COUNTD([crm_id]) > 0 THEN\n    COUNTD_IF([crm_id], [date_join] IS NOT NULL) / COUNTD([crm_id])\nEND",
+              "guid_formula": "IF COUNTD([crm_id_vlk2]) > 0 THEN\n    COUNTD_IF([crm_id_vlk2], [date_join_x2sc] IS NOT NULL) / COUNTD([crm_id_vlk2])\nEND",
+              "local": true,
+              "originalTitle": "crm_id",
+              "datasetId": "t7m1qnq8870ge",
+              "id": "measure-0",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "datasetName": "Лиды и источники",
+              "default_value": null,
+              "value_constraint": null,
+              "fakeTitle": "Нашлось со входом"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

@@ -1,0 +1,397 @@
+{
+  "entryId": "8ngdw4cvib32t",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2086402872227923665/Когортный брони — Таблица датасета",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-11-18T13:30:04.110Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-11-18T13:30:41.519Z",
+  "savedId": "n2vsfjzmvd1o8",
+  "publishedId": "n2vsfjzmvd1o8",
+  "revId": "n2vsfjzmvd1o8",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "7me5hxuk4tzks"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "metrics",
+          "title": "metrics",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "csum",
+          "title": "csum",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "metrics_bool",
+          "title": "metrics_bool",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "cohort_month_4phl",
+          "title": "cohort_month",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "month_bucket_75dp",
+          "title": "month_bucket",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "book_cnt_on_month_l2wx",
+          "title": "book_cnt_on_month",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_cnt_8zjc",
+          "title": "cohort_cnt",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "tg_ids_vp7r",
+          "title": "tg_ids",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_cre8",
+          "title": "geo",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "cohort_month_4phl",
+        "datasetId": "7me5hxuk4tzks",
+        "data_type": "date",
+        "title": "cohort_month",
+        "source": "cohort_month",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "valid": true,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "guid": "cohort_month_4phl",
+              "hidden": false,
+              "cast": "date",
+              "type": "DIMENSION",
+              "initial_data_type": "date",
+              "title": "cohort_month",
+              "description": "",
+              "lock_aggregation": false,
+              "data_type": "date",
+              "virtual": false,
+              "aggregation": "none",
+              "ui_settings": "",
+              "source": "cohort_month",
+              "avatar_id": "78137be0-c461-11f0-9690-2fef73e58624",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "7me5hxuk4tzks",
+              "id": "dimension-3",
+              "datasetName": "Когортный брони",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Когортный месяц",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a30c99f0-c482-11f0-8d0c-3f990261edfe",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "cohort_month_4phl"
+              }
+            },
+            {
+              "valid": true,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "guid": "geo_cre8",
+              "hidden": false,
+              "cast": "string",
+              "type": "DIMENSION",
+              "initial_data_type": "string",
+              "title": "geo",
+              "description": "",
+              "lock_aggregation": false,
+              "data_type": "string",
+              "virtual": false,
+              "aggregation": "none",
+              "ui_settings": "",
+              "source": "geo",
+              "avatar_id": "78137be0-c461-11f0-9690-2fef73e58624",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "7me5hxuk4tzks",
+              "id": "dimension-8",
+              "datasetName": "Когортный брони",
+              "fakeTitle": "Гео",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a89c3f10-c482-11f0-8d0c-3f990261edfe",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "geo_cre8"
+              }
+            },
+            {
+              "valid": true,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "guid": "month_bucket_75dp",
+              "hidden": false,
+              "cast": "integer",
+              "type": "DIMENSION",
+              "initial_data_type": "integer",
+              "title": "month_bucket",
+              "description": "",
+              "lock_aggregation": false,
+              "data_type": "integer",
+              "virtual": false,
+              "aggregation": "none",
+              "ui_settings": "",
+              "source": "month_bucket",
+              "avatar_id": "78137be0-c461-11f0-9690-2fef73e58624",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "7me5hxuk4tzks",
+              "id": "dimension-4",
+              "datasetName": "Когортный брони",
+              "fakeTitle": "Номер месяца",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "aab4bed0-c482-11f0-8d0c-3f990261edfe",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "month_bucket_75dp"
+              }
+            },
+            {
+              "valid": true,
+              "ui_settings": "",
+              "virtual": false,
+              "type": "DIMENSION",
+              "data_type": "integer",
+              "guid": "book_cnt_on_month_l2wx",
+              "cast": "integer",
+              "aggregation": "none",
+              "managed_by": "user",
+              "initial_data_type": "integer",
+              "description": "",
+              "autoaggregated": false,
+              "title": "book_cnt_on_month",
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "avatar_id": "78137be0-c461-11f0-9690-2fef73e58624",
+              "source": "book_cnt_on_month",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "7me5hxuk4tzks",
+              "id": "inserted-1763472617217",
+              "datasetName": "Когортный брони",
+              "fakeTitle": "Количество брони",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "bb47e8d0-c482-11f0-8d0c-3f990261edfe",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "book_cnt_on_month_l2wx"
+              }
+            },
+            {
+              "valid": true,
+              "ui_settings": "",
+              "virtual": false,
+              "type": "DIMENSION",
+              "data_type": "string",
+              "guid": "tg_ids_vp7r",
+              "cast": "string",
+              "aggregation": "none",
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "description": "",
+              "autoaggregated": false,
+              "title": "tg_ids",
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "avatar_id": "78137be0-c461-11f0-9690-2fef73e58624",
+              "source": "tg_ids",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "7me5hxuk4tzks",
+              "id": "inserted-1763472606999",
+              "datasetName": "Когортный брони",
+              "fakeTitle": "Telegram ID подписчиков-клиентов",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "c09f18d0-c482-11f0-8d0c-3f990261edfe",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "tg_ids_vp7r"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

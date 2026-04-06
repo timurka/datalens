@@ -1,0 +1,703 @@
+{
+  "entryId": "eyz2dlr1rfs80",
+  "scope": "widget",
+  "type": "graph_wizard_node",
+  "key": "1970574547539199400/Причины отказа — Сравнение периодов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-06-11T17:59:51.473Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-11-07T19:12:21.512Z",
+  "savedId": "6j9ivjptsheyr",
+  "publishedId": "6j9ivjptsheyr",
+  "revId": "6j9ivjptsheyr",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [
+      {
+        "title": "period_par",
+        "description": "",
+        "has_auto_aggregation": false,
+        "managed_by": "user",
+        "data_type": "string",
+        "type": "DIMENSION",
+        "autoaggregated": false,
+        "hidden": false,
+        "aggregation_locked": true,
+        "lock_aggregation": false,
+        "guid": "0179ddd0-46ee-11f0-846e-af1ab7c06ced",
+        "valid": true,
+        "initial_data_type": "string",
+        "aggregation": "none",
+        "cast": "string",
+        "virtual": false,
+        "guid_formula": "IF [creation_date_l8fk] BETWEEN [reason_date1_start] AND [reason_date1_end] THEN \n   \"Дата 1\"\nELSEIF [creation_date_l8fk] BETWEEN [reason_date2_start] AND [reason_date2_end] THEN\n   \"Дата 2\"\nEND",
+        "formula": "IF [creation_date] BETWEEN [reason_date1_start] AND [reason_date1_end] THEN \n   \"Дата 1\"\nELSEIF [creation_date] BETWEEN [reason_date2_start] AND [reason_date2_end] THEN\n   \"Дата 2\"\nEND",
+        "calc_mode": "formula",
+        "source": "",
+        "local": true,
+        "datasetId": "ue1g805ga0ocg",
+        "id": "dimension-1",
+        "datasetName": "Причины отказа",
+        "avatar_id": null,
+        "default_value": null,
+        "value_constraint": null,
+        "ui_settings": ""
+      }
+    ],
+    "colorsConfig": {
+      "polygonBorders": "show",
+      "palette": "classic20",
+      "mountedColors": {
+        "2025-06-05 - 2025-06-05": "0",
+        "2025-06-08 - 2025-06-08": "1",
+        "Дата 1": "0",
+        "Дата 2": "1"
+      },
+      "fieldGuid": "0179ddd0-46ee-11f0-846e-af1ab7c06ced",
+      "coloredByMeasure": false,
+      "colorMode": "palette"
+    },
+    "datasetsIds": [
+      "ue1g805ga0ocg"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "ac8269b0-bc0d-11f0-97d4-1d7cc15c6edf",
+          "title": "crm_id (1)",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "0179ddd0-46ee-11f0-846e-af1ab7c06ced",
+          "title": "period_par",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "a6d3b090-46ed-11f0-9b68-9dc305b55d92",
+          "title": "PeriodFlag",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "reason_date2_end",
+          "title": "reason_date2_end",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "reason_date2_start",
+          "title": "reason_date2_start",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "reason_date1_end",
+          "title": "reason_date1_end",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "reason_date1_start",
+          "title": "reason_date1_start",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "leads_id_j5ly",
+          "title": "leads_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_6e36",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_58l3",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_l8fk",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_time_o1dx",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contacts_id_0do3",
+          "title": "contacts_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contacts_amo_id_6r6z",
+          "title": "contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "status_wsh2",
+          "title": "status",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_8mhf",
+          "title": "pipeline",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_id_9pa0",
+          "title": "pipeline_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "status_id_eelb",
+          "title": "status_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_klsb",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_source_q51y",
+          "title": "utm_source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_kr1v",
+          "title": "source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "lead_source_tyam",
+          "title": "lead_source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utmsource_0mae",
+          "title": "utmsource",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_campaign_75k4",
+          "title": "utm_campaign",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_medium_yz9k",
+          "title": "utm_medium",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_content_7zgh",
+          "title": "utm_content",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_term_ikmt",
+          "title": "utm_term",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "last_reason_07p1",
+          "title": "last_reason",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "reason_mh6p",
+          "title": "reason",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_deal_1woe",
+          "title": "source_deal",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "password_uncy",
+          "title": "password",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_close_u9br",
+          "title": "date_close",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contact_in_p8wk",
+          "title": "contact_in",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_contact_jndn",
+          "title": "date_contact",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_validation_h8j1",
+          "title": "date_validation",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_qual_j27g",
+          "title": "date_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "priority_uhx3",
+          "title": "priority",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_aqd4",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_a_uk0h",
+          "title": "qual_priority_a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_b_ae2g",
+          "title": "qual_priority_b",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_c_h72q",
+          "title": "qual_priority_c",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_rxid",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_booking_qrfj",
+          "title": "date_booking",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_a0i4",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "broker_pipeline_jug8",
+          "title": "broker_pipeline",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "valid_pipeline_vbmx",
+          "title": "valid_pipeline",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "duplicate_lead_id_w2lb",
+          "title": "duplicate_lead_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "internal_lead_id_xxqp",
+          "title": "internal_lead_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "external_crm_id_0svp",
+          "title": "external_crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "lead_creation_date_nkah",
+          "title": "lead_creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "lead_creation_date_time_1an7",
+          "title": "lead_creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "tags_oxct",
+          "title": "tags",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "eff_creation_date_dhto",
+          "title": "eff_creation_date",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "labelsPosition": "outside",
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [
+      {
+        "guid": "a6d3b090-46ed-11f0-9b68-9dc305b55d92",
+        "datasetId": "ue1g805ga0ocg",
+        "filter": {
+          "value": [
+            "1"
+          ],
+          "operation": {
+            "code": "EQ"
+          }
+        },
+        "type": "DIMENSION",
+        "title": "PeriodFlag",
+        "calc_mode": "formula"
+      }
+    ],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "ac8269b0-bc0d-11f0-97d4-1d7cc15c6edf",
+        "datasetId": "ue1g805ga0ocg",
+        "data_type": "integer",
+        "title": "crm_id (1)",
+        "source": "crm_id",
+        "direction": "DESC",
+        "type": "MEASURE"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "valid": true,
+          "aggregation": "none",
+          "autoaggregated": false,
+          "description": "",
+          "hidden": false,
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "virtual": false,
+          "cast": "integer",
+          "data_type": "integer",
+          "initial_data_type": "integer",
+          "title": "PeriodFlag",
+          "has_auto_aggregation": false,
+          "aggregation_locked": true,
+          "ui_settings": "",
+          "guid": "a6d3b090-46ed-11f0-9b68-9dc305b55d92",
+          "type": "DIMENSION",
+          "guid_formula": "IF (([creation_date_l8fk] BETWEEN DATE([reason_date1_start]) AND DATE([reason_date1_end]))\n  OR ([creation_date_l8fk] BETWEEN DATE([reason_date2_start]) AND DATE([reason_date2_end])), \n  1, 0)",
+          "formula": "IF (([creation_date] BETWEEN DATE([reason_date1_start]) AND DATE([reason_date1_end]))\n  OR ([creation_date] BETWEEN DATE([reason_date2_start]) AND DATE([reason_date2_end])), \n  1, 0)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "ue1g805ga0ocg"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "valid": true,
+          "aggregation": "none",
+          "autoaggregated": false,
+          "description": "",
+          "hidden": false,
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "virtual": false,
+          "cast": "string",
+          "data_type": "string",
+          "initial_data_type": "string",
+          "title": "period_par",
+          "has_auto_aggregation": false,
+          "aggregation_locked": true,
+          "ui_settings": "",
+          "guid": "0179ddd0-46ee-11f0-846e-af1ab7c06ced",
+          "type": "DIMENSION",
+          "guid_formula": "IF [creation_date_l8fk] BETWEEN [reason_date1_start] AND [reason_date1_end] THEN \n   \"Дата 1\"\nELSEIF [creation_date_l8fk] BETWEEN [reason_date2_start] AND [reason_date2_end] THEN\n   \"Дата 2\"\nEND",
+          "formula": "IF [creation_date] BETWEEN [reason_date1_start] AND [reason_date1_end] THEN \n   \"Дата 1\"\nELSEIF [creation_date] BETWEEN [reason_date2_start] AND [reason_date2_end] THEN\n   \"Дата 2\"\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "ue1g805ga0ocg"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "title": "title-9d50cb80-bc0d-11f0-97d4-1d7cc15c6edf",
+          "cast": "integer",
+          "data_type": "integer",
+          "initial_data_type": "integer",
+          "managed_by": "user",
+          "aggregation_locked": false,
+          "valid": true,
+          "virtual": false,
+          "ui_settings": "",
+          "description": "",
+          "type": "MEASURE",
+          "guid": "9d50cb80-bc0d-11f0-97d4-1d7cc15c6edf",
+          "aggregation": "countunique",
+          "autoaggregated": false,
+          "lock_aggregation": false,
+          "has_auto_aggregation": false,
+          "hidden": false,
+          "source": "crm_id",
+          "avatar_id": "52f3e010-46b3-11f0-a64f-d30b804bcebd",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "ue1g805ga0ocg"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "valid": true,
+          "aggregation": "countunique",
+          "autoaggregated": false,
+          "description": "",
+          "hidden": false,
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "virtual": false,
+          "cast": "integer",
+          "data_type": "integer",
+          "initial_data_type": "integer",
+          "title": "crm_id (1)",
+          "has_auto_aggregation": false,
+          "aggregation_locked": false,
+          "ui_settings": "",
+          "guid": "ac8269b0-bc0d-11f0-97d4-1d7cc15c6edf",
+          "type": "MEASURE",
+          "avatar_id": "52f3e010-46b3-11f0-a64f-d30b804bcebd",
+          "source": "crm_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "datasetId": "ue1g805ga0ocg"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "column",
+      "type": "column",
+      "name": "label_visualization-column",
+      "iconProps": {
+        "id": "visColumn",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "allowSegments": true,
+      "allowLabels": true,
+      "availableLabelModes": [
+        "absolute"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "initial_data_type": "string",
+              "has_auto_aggregation": false,
+              "title": "reason",
+              "data_type": "string",
+              "hidden": false,
+              "autoaggregated": false,
+              "virtual": false,
+              "type": "DIMENSION",
+              "aggregation": "none",
+              "managed_by": "user",
+              "description": "",
+              "cast": "string",
+              "valid": true,
+              "guid": "reason_mh6p",
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "source": "reason",
+              "avatar_id": "52f3e010-46b3-11f0-a64f-d30b804bcebd",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "ue1g805ga0ocg",
+              "id": "dimension-29",
+              "datasetName": "Причины отказа",
+              "default_value": null,
+              "value_constraint": null,
+              "fakeTitle": "Причина",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "ui_settings": ""
+            },
+            {
+              "title": "period_par",
+              "description": "",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "data_type": "string",
+              "type": "DIMENSION",
+              "autoaggregated": false,
+              "hidden": false,
+              "aggregation_locked": true,
+              "lock_aggregation": false,
+              "guid": "0179ddd0-46ee-11f0-846e-af1ab7c06ced",
+              "valid": true,
+              "initial_data_type": "string",
+              "aggregation": "none",
+              "cast": "string",
+              "virtual": false,
+              "guid_formula": "IF [creation_date_l8fk] BETWEEN [reason_date1_start] AND [reason_date1_end] THEN \n   \"Дата 1\"\nELSEIF [creation_date_l8fk] BETWEEN [reason_date2_start] AND [reason_date2_end] THEN\n   \"Дата 2\"\nEND",
+              "formula": "IF [creation_date] BETWEEN [reason_date1_start] AND [reason_date1_end] THEN \n   \"Дата 1\"\nELSEIF [creation_date] BETWEEN [reason_date2_start] AND [reason_date2_end] THEN\n   \"Дата 2\"\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "ue1g805ga0ocg",
+              "id": "dimension-1",
+              "datasetName": "Причины отказа",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "ui_settings": ""
+            }
+          ],
+          "required": false,
+          "capacity": 2,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "angle",
+            "holidays": "off",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "reason_mh6p": "discrete"
+            },
+            "axisVisibility": "show"
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "local": true,
+              "quickFormula": true,
+              "guid": "9d50cb80-bc0d-11f0-97d4-1d7cc15c6edf",
+              "type": "MEASURE",
+              "datasetId": "ue1g805ga0ocg",
+              "source": "crm_id",
+              "data_type": "integer",
+              "cast": "integer",
+              "title": "title-9d50cb80-bc0d-11f0-97d4-1d7cc15c6edf",
+              "originalTitle": "crm_id",
+              "fakeTitle": "crm_id",
+              "avatar_id": "52f3e010-46b3-11f0-a64f-d30b804bcebd",
+              "aggregation": "countunique",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "calc_mode": "direct",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "valid": true,
+              "initial_data_type": "integer",
+              "managed_by": "user",
+              "virtual": false,
+              "ui_settings": "",
+              "description": "",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "formula": "",
+              "guid_formula": "",
+              "id": "measure-0",
+              "datasetName": "Причины отказа"
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "ignore",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisVisibility": "show",
+            "axisModeMap": {
+              "9d50cb80-bc0d-11f0-97d4-1d7cc15c6edf": "continuous"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false,
+      "colorsCapacity": 1,
+      "shapesCapacity": 1
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

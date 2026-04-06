@@ -1,0 +1,3301 @@
+{
+  "options": {
+    "is_cache_invalidation_enabled_in_conn": false,
+    "join": {
+      "operators": [
+        "eq"
+      ],
+      "types": [
+        "full",
+        "right",
+        "inner",
+        "left"
+      ]
+    },
+    "data_types": {
+      "items": [
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "type": "string",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "type": "integer",
+          "aggregations": [
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "type": "float",
+          "aggregations": [
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "date",
+            "genericdatetime",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "date",
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "genericdatetime",
+            "datetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "datetime",
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "casts": [
+            "boolean",
+            "integer",
+            "float",
+            "string"
+          ],
+          "type": "boolean",
+          "aggregations": [
+            "count"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "casts": [
+            "geopoint",
+            "string"
+          ],
+          "type": "geopoint",
+          "aggregations": [
+            "count"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "casts": [
+            "geopolygon",
+            "string"
+          ],
+          "type": "geopolygon",
+          "aggregations": [
+            "count"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "uuid",
+            "string"
+          ],
+          "type": "uuid",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL"
+          ],
+          "casts": [
+            "markup"
+          ],
+          "type": "markup",
+          "aggregations": [
+            "count"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "datetimetz",
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "datetimetz",
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL"
+          ],
+          "casts": [
+            "unsupported"
+          ],
+          "type": "unsupported",
+          "aggregations": []
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "casts": [
+            "array_str",
+            "string"
+          ],
+          "type": "array_str",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "casts": [
+            "array_int",
+            "string"
+          ],
+          "type": "array_int",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "casts": [
+            "array_float",
+            "string"
+          ],
+          "type": "array_float",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "casts": [
+            "tree_str"
+          ],
+          "type": "tree_str",
+          "aggregations": [
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "genericdatetime",
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ]
+        }
+      ]
+    },
+    "sources": {
+      "items": [
+        {
+          "id": "de201ff1-7c5f-11f0-bddb-177df5e746b4",
+          "schema_update_enabled": true
+        }
+      ],
+      "compatible_types": [
+        {
+          "source_type": "PG_SUBSELECT"
+        },
+        {
+          "source_type": "PG_TABLE"
+        }
+      ]
+    },
+    "supported_functions": [
+      "abs",
+      "acos",
+      "ago",
+      "all_concat",
+      "any",
+      "arr_distinct",
+      "arr_index_of",
+      "arr_intersect",
+      "arr_remove",
+      "arr_str",
+      "array",
+      "ascii",
+      "asin",
+      "at_date",
+      "atan",
+      "atan2",
+      "avg",
+      "avg_if",
+      "bold",
+      "bool",
+      "br",
+      "case",
+      "cast_arr_float",
+      "cast_arr_int",
+      "cast_arr_str",
+      "ceiling",
+      "char",
+      "color",
+      "concat",
+      "contains",
+      "contains_all",
+      "contains_any",
+      "cos",
+      "cot",
+      "count",
+      "count_if",
+      "count_item",
+      "countd",
+      "countd_if",
+      "date",
+      "dateadd",
+      "datepart",
+      "datetime",
+      "datetrunc",
+      "day",
+      "dayofweek",
+      "db_call_agg_float",
+      "db_call_agg_int",
+      "db_call_agg_string",
+      "db_call_array_float",
+      "db_call_array_int",
+      "db_call_array_string",
+      "db_call_bool",
+      "db_call_float",
+      "db_call_int",
+      "db_call_string",
+      "db_cast",
+      "degrees",
+      "div",
+      "div_safe",
+      "endswith",
+      "exp",
+      "fdiv_safe",
+      "find",
+      "first",
+      "float",
+      "floor",
+      "geopoint",
+      "geopolygon",
+      "get_item",
+      "greatest",
+      "hour",
+      "icontains",
+      "iendswith",
+      "if",
+      "ifnan",
+      "ifnull",
+      "iif",
+      "image",
+      "int",
+      "isnan",
+      "isnull",
+      "istartswith",
+      "italic",
+      "lag",
+      "last",
+      "least",
+      "left",
+      "len",
+      "ln",
+      "log",
+      "log10",
+      "lower",
+      "ltrim",
+      "markup",
+      "mavg",
+      "max",
+      "mcount",
+      "md5",
+      "median",
+      "min",
+      "minute",
+      "mmax",
+      "mmin",
+      "month",
+      "msum",
+      "notcontains",
+      "now",
+      "pi",
+      "power",
+      "quantile",
+      "quarter",
+      "radians",
+      "rank",
+      "rank_dense",
+      "rank_percentile",
+      "rank_unique",
+      "ravg",
+      "rcount",
+      "regexp_extract",
+      "regexp_extract_all",
+      "regexp_extract_nth",
+      "regexp_match",
+      "regexp_replace",
+      "replace",
+      "right",
+      "rmax",
+      "rmin",
+      "round",
+      "rsum",
+      "rtrim",
+      "second",
+      "sha1",
+      "sha256",
+      "sign",
+      "sin",
+      "size",
+      "slice",
+      "space",
+      "split",
+      "sqrt",
+      "square",
+      "startswith",
+      "stdev",
+      "stdevp",
+      "str",
+      "substr",
+      "sum",
+      "sum_if",
+      "tan",
+      "today",
+      "tooltip",
+      "tree",
+      "trim",
+      "unnest",
+      "upper",
+      "url",
+      "user_info",
+      "var",
+      "varp",
+      "week",
+      "year",
+      "zn"
+    ],
+    "source_listing": {
+      "supports_db_name_listing": false,
+      "supports_source_search": true,
+      "db_name_label": null,
+      "db_name_required_for_search": false,
+      "supports_source_pagination": true
+    },
+    "fields": {
+      "items": [
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ],
+          "casts": [
+            "date",
+            "genericdatetime",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "guid": "event_date_r5hl"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "utm_campaign_n6yy"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "adset_id_ni6u"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "ad_id_p683"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "crm_id_rba7"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "account_id_4vr0"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "pipeline_id_zfc1"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "pipeline_96gj"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "valid_lead_ue4x"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "source_crm_id_ljt4"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "geo_78cq"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "broker_slop"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ],
+          "casts": [
+            "date",
+            "genericdatetime",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "guid": "lead_original_creation_date_a026"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "is_lead_vzab"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "not_lead_c1ez"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "contact_in_2xrk"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "qual_kx7w"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "qual_priority_a_daad"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "qual_priority_b_84n4"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "qual_priority_c_dn50"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "booking_event_kkbp"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "deal_amount_l7yo"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "revenue_r0ip"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "utm_source_x2sc"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "fb_account_id_ckab"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "campaign_name_uugf"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "campaign_id_ql1s"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "adset_name_q8vd"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "ad_name_04fp"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "spend_xzk9"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "spend_usd_zwsk"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "cpm_h9g2"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "ctr_unjp"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "cpm_usd_du5z"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "clicks_p2u6"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "total_video_impressions_y4i7"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "total_video_avg_time_watched_ebzz"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "total_video_thruplay_fy00"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "total_video_3s_views_nsz6"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "creative_thumbnail_url_gmb7"
+        }
+      ]
+    },
+    "supports_offset": true,
+    "schema_update_enabled": true,
+    "connections": {
+      "items": [
+        {
+          "id": "d9mdkzqj4zxsy",
+          "replacement_types": [
+            {
+              "conn_type": "metrika_api"
+            },
+            {
+              "conn_type": "moysklad"
+            },
+            {
+              "conn_type": "file"
+            },
+            {
+              "conn_type": "trino"
+            },
+            {
+              "conn_type": "snowflake"
+            },
+            {
+              "conn_type": "appmetrica_api"
+            },
+            {
+              "conn_type": "json_api"
+            },
+            {
+              "conn_type": "ch_billing_analytics"
+            },
+            {
+              "conn_type": "ch_frozen_gkh"
+            },
+            {
+              "conn_type": "oracle"
+            },
+            {
+              "conn_type": "ch_frozen_weather"
+            },
+            {
+              "conn_type": "bigquery"
+            },
+            {
+              "conn_type": "ch_ya_music_podcast_stats"
+            },
+            {
+              "conn_type": "yadocs"
+            },
+            {
+              "conn_type": "postgres"
+            },
+            {
+              "conn_type": "greenplum"
+            },
+            {
+              "conn_type": "mssql"
+            },
+            {
+              "conn_type": "ydb"
+            },
+            {
+              "conn_type": "ch_geo_filtered"
+            },
+            {
+              "conn_type": "kontur_market"
+            },
+            {
+              "conn_type": "usage_analytics_light"
+            },
+            {
+              "conn_type": "chyt"
+            },
+            {
+              "conn_type": "ch_frozen_bumpy_roads"
+            },
+            {
+              "conn_type": "gsheets_v2"
+            },
+            {
+              "conn_type": "promql"
+            },
+            {
+              "conn_type": "mysql"
+            },
+            {
+              "conn_type": "ch_frozen_covid"
+            },
+            {
+              "conn_type": "ch_frozen_horeca"
+            },
+            {
+              "conn_type": "extractor1c"
+            },
+            {
+              "conn_type": "usage_analytics_detailed"
+            },
+            {
+              "conn_type": "gsheets"
+            },
+            {
+              "conn_type": "ch_frozen_transparency"
+            },
+            {
+              "conn_type": "ch_frozen_samples"
+            },
+            {
+              "conn_type": "equeo"
+            },
+            {
+              "conn_type": "smb_heatmaps"
+            },
+            {
+              "conn_type": "speechsense"
+            },
+            {
+              "conn_type": "ch_frozen_demo"
+            },
+            {
+              "conn_type": "clickhouse"
+            },
+            {
+              "conn_type": "yq"
+            },
+            {
+              "conn_type": "bitrix24"
+            },
+            {
+              "conn_type": "ch_frozen_dtp"
+            }
+          ]
+        }
+      ],
+      "max": 1,
+      "compatible_types": []
+    },
+    "source_avatars": {
+      "items": [
+        {
+          "id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+          "schema_update_enabled": true
+        }
+      ],
+      "max": 32
+    },
+    "preview": {
+      "enabled": true
+    }
+  },
+  "is_favorite": false,
+  "workbook_id": "yfrhu31k1hgun",
+  "dataset": {
+    "result_schema": [
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "event_date_r5hl",
+        "data_type": "date",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "date",
+        "title": "event_date",
+        "initial_data_type": "date",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "event_date",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "utm_campaign_n6yy",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "utm_campaign",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "utm_campaign",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "adset_id_ni6u",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "adset_id",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "adset_id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "ad_id_p683",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "ad_id",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "ad_id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "crm_id_rba7",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "crm_id",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "crm_id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "account_id_4vr0",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "account_id",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "account_id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "pipeline_id_zfc1",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "pipeline_id",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "pipeline_id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "pipeline_96gj",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "pipeline",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "pipeline",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "valid_lead_ue4x",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "valid_lead",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "valid_lead",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "source_crm_id_ljt4",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "source_crm_id",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "source_crm_id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "geo_78cq",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "geo",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "geo",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "broker_slop",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "broker",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "broker",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "lead_original_creation_date_a026",
+        "data_type": "date",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "date",
+        "title": "lead_original_creation_date",
+        "initial_data_type": "date",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "lead_original_creation_date",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "is_lead_vzab",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "is_lead",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "is_lead",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "not_lead_c1ez",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "not_lead",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "not_lead",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "contact_in_2xrk",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "contact_in",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "contact_in",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "qual_kx7w",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "qual",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "qual",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "qual_priority_a_daad",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "qual_priority_a",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "qual_priority_a",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "qual_priority_b_84n4",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "qual_priority_b",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "qual_priority_b",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "qual_priority_c_dn50",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "qual_priority_c",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "qual_priority_c",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "booking_event_kkbp",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "booking_event",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "booking_event",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "deal_amount_l7yo",
+        "data_type": "float",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "float",
+        "title": "deal_amount",
+        "initial_data_type": "float",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "deal_amount",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "revenue_r0ip",
+        "data_type": "float",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "float",
+        "title": "revenue",
+        "initial_data_type": "float",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "revenue",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "utm_source_x2sc",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "utm_source",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "utm_source",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "fb_account_id_ckab",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "fb_account_id",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "fb_account_id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "campaign_name_uugf",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "campaign_name",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "campaign_name",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "campaign_id_ql1s",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "campaign_id",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "campaign_id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "adset_name_q8vd",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "adset_name",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "adset_name",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "ad_name_04fp",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "ad_name",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "ad_name",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "spend_xzk9",
+        "data_type": "float",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "float",
+        "title": "spend",
+        "initial_data_type": "float",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "spend",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "spend_usd_zwsk",
+        "data_type": "float",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "float",
+        "title": "spend_usd",
+        "initial_data_type": "float",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "spend_usd",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "cpm_h9g2",
+        "data_type": "float",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "float",
+        "title": "cpm",
+        "initial_data_type": "float",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "cpm",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "ctr_unjp",
+        "data_type": "float",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "float",
+        "title": "ctr",
+        "initial_data_type": "float",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "ctr",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "cpm_usd_du5z",
+        "data_type": "float",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "float",
+        "title": "cpm_usd",
+        "initial_data_type": "float",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "cpm_usd",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "clicks_p2u6",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "clicks",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "clicks",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "total_video_impressions_y4i7",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "total_video_impressions",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "total_video_impressions",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "total_video_avg_time_watched_ebzz",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "total_video_avg_time_watched",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "total_video_avg_time_watched",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "total_video_thruplay_fy00",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "total_video_thruplay",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "total_video_thruplay",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "total_video_3s_views_nsz6",
+        "data_type": "integer",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "integer",
+        "title": "total_video_3s_views",
+        "initial_data_type": "integer",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "total_video_3s_views",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "has_auto_aggregation": false,
+        "hidden": false,
+        "type": "DIMENSION",
+        "virtual": false,
+        "guid": "creative_thumbnail_url_gmb7",
+        "data_type": "string",
+        "valid": true,
+        "aggregation_locked": false,
+        "managed_by": "user",
+        "ui_settings": "",
+        "aggregation": "none",
+        "lock_aggregation": false,
+        "cast": "string",
+        "title": "creative_thumbnail_url",
+        "initial_data_type": "string",
+        "description": "",
+        "avatar_id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "source": "creative_thumbnail_url",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      }
+    ],
+    "avatar_relations": [],
+    "rls2": {},
+    "template_enabled": false,
+    "cache_invalidation_source": {
+      "mode": "off",
+      "filters": [],
+      "last_result_timestamp": null,
+      "last_result_error": null,
+      "cache_invalidation_error": null,
+      "field": null,
+      "sql": null
+    },
+    "preview_enabled": true,
+    "component_errors": {
+      "items": []
+    },
+    "load_preview_by_default": true,
+    "sources": [
+      {
+        "parameters": {
+          "db_name": null,
+          "schema_name": "mart",
+          "db_version": "PostgreSQL 16.9 (Debian 16.9-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit",
+          "table_name": "amo_facebook"
+        },
+        "source_type": "PG_TABLE",
+        "virtual": false,
+        "id": "de201ff1-7c5f-11f0-bddb-177df5e746b4",
+        "parameter_hash": "815d3d11bd70c2ec",
+        "connection_id": "d9mdkzqj4zxsy",
+        "managed_by": "user",
+        "valid": true,
+        "index_info_set": null,
+        "title": "amo_facebook",
+        "raw_schema": [
+          {
+            "has_auto_aggregation": false,
+            "user_type": "date",
+            "native_type": {
+              "name": "date",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "event_date",
+            "lock_aggregation": false,
+            "title": "event_date",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "utm_campaign",
+            "lock_aggregation": false,
+            "title": "utm_campaign",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "adset_id",
+            "lock_aggregation": false,
+            "title": "adset_id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "ad_id",
+            "lock_aggregation": false,
+            "title": "ad_id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "crm_id",
+            "lock_aggregation": false,
+            "title": "crm_id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "account_id",
+            "lock_aggregation": false,
+            "title": "account_id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "pipeline_id",
+            "lock_aggregation": false,
+            "title": "pipeline_id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "pipeline",
+            "lock_aggregation": false,
+            "title": "pipeline",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "valid_lead",
+            "lock_aggregation": false,
+            "title": "valid_lead",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "source_crm_id",
+            "lock_aggregation": false,
+            "title": "source_crm_id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "geo",
+            "lock_aggregation": false,
+            "title": "geo",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "broker",
+            "lock_aggregation": false,
+            "title": "broker",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "date",
+            "native_type": {
+              "name": "date",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "lead_original_creation_date",
+            "lock_aggregation": false,
+            "title": "lead_original_creation_date",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "is_lead",
+            "lock_aggregation": false,
+            "title": "is_lead",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "not_lead",
+            "lock_aggregation": false,
+            "title": "not_lead",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "contact_in",
+            "lock_aggregation": false,
+            "title": "contact_in",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "qual",
+            "lock_aggregation": false,
+            "title": "qual",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "qual_priority_a",
+            "lock_aggregation": false,
+            "title": "qual_priority_a",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "qual_priority_b",
+            "lock_aggregation": false,
+            "title": "qual_priority_b",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "qual_priority_c",
+            "lock_aggregation": false,
+            "title": "qual_priority_c",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "booking_event",
+            "lock_aggregation": false,
+            "title": "booking_event",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "float",
+            "native_type": {
+              "name": "numeric",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "deal_amount",
+            "lock_aggregation": false,
+            "title": "deal_amount",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "float",
+            "native_type": {
+              "name": "numeric",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "revenue",
+            "lock_aggregation": false,
+            "title": "revenue",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "utm_source",
+            "lock_aggregation": false,
+            "title": "utm_source",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "fb_account_id",
+            "lock_aggregation": false,
+            "title": "fb_account_id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "campaign_name",
+            "lock_aggregation": false,
+            "title": "campaign_name",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "campaign_id",
+            "lock_aggregation": false,
+            "title": "campaign_id",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "adset_name",
+            "lock_aggregation": false,
+            "title": "adset_name",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "ad_name",
+            "lock_aggregation": false,
+            "title": "ad_name",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "float",
+            "native_type": {
+              "name": "numeric",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "spend",
+            "lock_aggregation": false,
+            "title": "spend",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "float",
+            "native_type": {
+              "name": "numeric",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "spend_usd",
+            "lock_aggregation": false,
+            "title": "spend_usd",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "float",
+            "native_type": {
+              "name": "numeric",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "cpm",
+            "lock_aggregation": false,
+            "title": "cpm",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "float",
+            "native_type": {
+              "name": "numeric",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "ctr",
+            "lock_aggregation": false,
+            "title": "ctr",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "float",
+            "native_type": {
+              "name": "numeric",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "cpm_usd",
+            "lock_aggregation": false,
+            "title": "cpm_usd",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "clicks",
+            "lock_aggregation": false,
+            "title": "clicks",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "total_video_impressions",
+            "lock_aggregation": false,
+            "title": "total_video_impressions",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "total_video_avg_time_watched",
+            "lock_aggregation": false,
+            "title": "total_video_avg_time_watched",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "total_video_thruplay",
+            "lock_aggregation": false,
+            "title": "total_video_thruplay",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "native_type": {
+              "name": "bigint",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "total_video_3s_views",
+            "lock_aggregation": false,
+            "title": "total_video_3s_views",
+            "description": ""
+          },
+          {
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "nullable": true,
+            "name": "creative_thumbnail_url",
+            "lock_aggregation": false,
+            "title": "creative_thumbnail_url",
+            "description": ""
+          }
+        ]
+      }
+    ],
+    "data_export_forbidden": false,
+    "obligatory_filters": [],
+    "result_schema_aux": {
+      "inter_dependencies": {
+        "deps": []
+      }
+    },
+    "rls": {},
+    "revision_id": null,
+    "source_avatars": [
+      {
+        "virtual": false,
+        "id": "de201ff0-7c5f-11f0-bddb-177df5e746b4",
+        "managed_by": "user",
+        "valid": true,
+        "is_root": true,
+        "source_id": "de201ff1-7c5f-11f0-bddb-177df5e746b4",
+        "title": "mart.amo_facebook"
+      }
+    ],
+    "description": ""
+  },
+  "permissions": {
+    "execute": true,
+    "read": true,
+    "edit": true,
+    "admin": true
+  },
+  "id": "nkon3rlh525w8",
+  "key": "2019869206320777180/neginsky_amo_facebook",
+  "full_permissions": {},
+  "name": "neginsky_amo_facebook"
+}

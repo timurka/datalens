@@ -1,0 +1,550 @@
+{
+  "entryId": "fv2v9v3l0djo4",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1550084681381184704/Бюджет на закупки — Таблица",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2023-11-09T14:01:33.571Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2023-11-10T11:34:45.837Z",
+  "savedId": "du77xt8ffj3c2",
+  "publishedId": "du77xt8ffj3c2",
+  "revId": "du77xt8ffj3c2",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "eu1tbj7buffm3"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "666851d0-7f09-11ee-aafb-09a19dea50b4",
+          "title": "title-666851d0-7f09-11ee-aafb-09a19dea50b4",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "5c412330-7f09-11ee-aafb-09a19dea50b4",
+          "title": "[Факт] / [План_на_день]",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "40f77850-7f08-11ee-b792-dbe1689d445a",
+          "title": "title-40f77850-7f08-11ee-b792-dbe1689d445a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "3c30ef90-7f08-11ee-b792-dbe1689d445a",
+          "title": "title-3c30ef90-7f08-11ee-b792-dbe1689d445a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "234c6860-7f08-11ee-b792-dbe1689d445a",
+          "title": "title-234c6860-7f08-11ee-b792-dbe1689d445a",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "9f223870-7f08-11ee-b792-dbe1689d445a",
+          "title": "%",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "data_lde1",
+          "title": "Дата",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "plan_na_den_h52k",
+          "title": "План_на_день",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "fakt_ikuw",
+          "title": "Факт",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "autoaggregated": false,
+          "guid": "234c6860-7f08-11ee-b792-dbe1689d445a",
+          "data_type": "date",
+          "aggregation_locked": true,
+          "type": "DIMENSION",
+          "initial_data_type": "date",
+          "cast": "date",
+          "aggregation": "none",
+          "hidden": false,
+          "title": "title-234c6860-7f08-11ee-b792-dbe1689d445a",
+          "valid": true,
+          "lock_aggregation": false,
+          "has_auto_aggregation": false,
+          "virtual": false,
+          "description": "",
+          "managed_by": "user",
+          "formula": "datetrunc([Дата], \"week\")",
+          "guid_formula": "datetrunc([data_lde1], \"week\")",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "eu1tbj7buffm3"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "autoaggregated": false,
+          "guid": "3c30ef90-7f08-11ee-b792-dbe1689d445a",
+          "data_type": "float",
+          "aggregation_locked": false,
+          "type": "MEASURE",
+          "initial_data_type": "float",
+          "cast": "float",
+          "aggregation": "sum",
+          "hidden": false,
+          "title": "title-3c30ef90-7f08-11ee-b792-dbe1689d445a",
+          "valid": true,
+          "lock_aggregation": false,
+          "has_auto_aggregation": false,
+          "virtual": false,
+          "description": "",
+          "managed_by": "user",
+          "source": "План_на_день",
+          "avatar_id": "b3689be0-7f07-11ee-aafb-09a19dea50b4",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "eu1tbj7buffm3"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "autoaggregated": false,
+          "guid": "40f77850-7f08-11ee-b792-dbe1689d445a",
+          "data_type": "float",
+          "aggregation_locked": false,
+          "type": "MEASURE",
+          "initial_data_type": "float",
+          "cast": "float",
+          "aggregation": "sum",
+          "hidden": false,
+          "title": "title-40f77850-7f08-11ee-b792-dbe1689d445a",
+          "valid": true,
+          "lock_aggregation": false,
+          "has_auto_aggregation": false,
+          "virtual": false,
+          "description": "",
+          "managed_by": "user",
+          "source": "Факт",
+          "avatar_id": "b3689be0-7f07-11ee-aafb-09a19dea50b4",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "eu1tbj7buffm3"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "autoaggregated": false,
+          "guid": "5c412330-7f09-11ee-aafb-09a19dea50b4",
+          "data_type": "float",
+          "aggregation_locked": true,
+          "type": "DIMENSION",
+          "initial_data_type": "float",
+          "cast": "float",
+          "aggregation": "none",
+          "hidden": false,
+          "title": "[Факт] / [План_на_день]",
+          "valid": true,
+          "lock_aggregation": false,
+          "has_auto_aggregation": false,
+          "virtual": false,
+          "description": "",
+          "managed_by": "user",
+          "formula": "[Факт] / [План_на_день]",
+          "guid_formula": "[fakt_ikuw] / [plan_na_den_h52k]",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "eu1tbj7buffm3"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "autoaggregated": false,
+          "guid": "666851d0-7f09-11ee-aafb-09a19dea50b4",
+          "data_type": "float",
+          "aggregation_locked": true,
+          "type": "MEASURE",
+          "initial_data_type": "float",
+          "cast": "float",
+          "aggregation": "avg",
+          "hidden": false,
+          "title": "title-666851d0-7f09-11ee-aafb-09a19dea50b4",
+          "valid": true,
+          "lock_aggregation": false,
+          "has_auto_aggregation": false,
+          "virtual": false,
+          "description": "",
+          "managed_by": "user",
+          "formula": "[Факт] / [План_на_день]",
+          "guid_formula": "[fakt_ikuw] / [plan_na_den_h52k]",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "quickFormula": true,
+          "originalTitle": "[Факт] / [План_на_день]",
+          "fakeTitle": "[Факт] / [План_на_день]",
+          "datasetId": "eu1tbj7buffm3"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "lock_aggregation": false,
+              "initial_data_type": "date",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "guid": "234c6860-7f08-11ee-b792-dbe1689d445a",
+              "data_type": "date",
+              "valid": true,
+              "virtual": false,
+              "title": "title-234c6860-7f08-11ee-b792-dbe1689d445a",
+              "aggregation_locked": true,
+              "cast": "date",
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "aggregation": "none",
+              "description": "",
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "datetrunc([Дата], \"week\")",
+              "guid_formula": "datetrunc([data_lde1], \"week\")",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "eu1tbj7buffm3",
+              "id": "dimension-4",
+              "datasetName": "Бюджет на закупки",
+              "format": "DD.MM.YYYY",
+              "grouping": "trunc-week",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "2067bf00-7f08-11ee-b792-dbe1689d445a",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "234c6860-7f08-11ee-b792-dbe1689d445a"
+              },
+              "local": true,
+              "fakeTitle": "Неделя",
+              "quickFormula": true,
+              "originalDateCast": "date",
+              "originalSource": "Дата",
+              "originalTitle": "Дата"
+            },
+            {
+              "initial_data_type": "float",
+              "description": "",
+              "aggregation": "sum",
+              "hidden": false,
+              "valid": true,
+              "guid": "3c30ef90-7f08-11ee-b792-dbe1689d445a",
+              "autoaggregated": false,
+              "type": "MEASURE",
+              "managed_by": "user",
+              "aggregation_locked": false,
+              "virtual": false,
+              "data_type": "float",
+              "lock_aggregation": false,
+              "title": "title-3c30ef90-7f08-11ee-b792-dbe1689d445a",
+              "cast": "float",
+              "has_auto_aggregation": false,
+              "source": "План_на_день",
+              "avatar_id": "b3689be0-7f07-11ee-aafb-09a19dea50b4",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "eu1tbj7buffm3",
+              "id": "measure-3",
+              "datasetName": "Бюджет на закупки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "381c0390-7f08-11ee-b792-dbe1689d445a",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "3c30ef90-7f08-11ee-b792-dbe1689d445a"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "План_на_день",
+              "fakeTitle": "План",
+              "default_value": null,
+              "value_constraint": null,
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "positiveColor": "#8AD554",
+                    "negativeColor": "#FF3D64"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              }
+            },
+            {
+              "lock_aggregation": false,
+              "initial_data_type": "float",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "guid": "40f77850-7f08-11ee-b792-dbe1689d445a",
+              "data_type": "float",
+              "valid": true,
+              "virtual": false,
+              "title": "title-40f77850-7f08-11ee-b792-dbe1689d445a",
+              "aggregation_locked": false,
+              "cast": "float",
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "type": "MEASURE",
+              "aggregation": "sum",
+              "description": "",
+              "avatar_id": "b3689be0-7f07-11ee-aafb-09a19dea50b4",
+              "source": "Факт",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "eu1tbj7buffm3",
+              "id": "measure-2",
+              "datasetName": "Бюджет на закупки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "3f368e70-7f08-11ee-b792-dbe1689d445a",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "40f77850-7f08-11ee-b792-dbe1689d445a"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "Факт",
+              "fakeTitle": "Факт",
+              "default_value": null,
+              "value_constraint": null,
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "positiveColor": "#8AD554",
+                    "negativeColor": "#FF3D64"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              }
+            },
+            {
+              "initial_data_type": "float",
+              "description": "",
+              "aggregation": "avg",
+              "hidden": false,
+              "valid": true,
+              "guid": "666851d0-7f09-11ee-aafb-09a19dea50b4",
+              "autoaggregated": false,
+              "type": "MEASURE",
+              "managed_by": "user",
+              "aggregation_locked": true,
+              "virtual": false,
+              "data_type": "float",
+              "lock_aggregation": false,
+              "title": "title-666851d0-7f09-11ee-aafb-09a19dea50b4",
+              "cast": "float",
+              "has_auto_aggregation": false,
+              "formula": "[Факт] / [План_на_день]",
+              "guid_formula": "[fakt_ikuw] / [plan_na_den_h52k]",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "eu1tbj7buffm3",
+              "id": "measure-0",
+              "datasetName": "Бюджет на закупки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "632bc470-7f09-11ee-aafb-09a19dea50b4",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "manual",
+                    "leftThreshold": "0",
+                    "middleThreshold": "0.5",
+                    "rightThreshold": "1",
+                    "gradientPalette": "red-orange-green",
+                    "gradientMode": "3-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "666851d0-7f09-11ee-aafb-09a19dea50b4"
+              },
+              "fakeTitle": "Процент",
+              "quickFormula": true,
+              "originalTitle": "[Факт] / [План_на_день]",
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "gradient",
+                  "settings": {
+                    "gradientType": "2-point",
+                    "thresholds": {
+                      "mode": "auto"
+                    },
+                    "palette": "blue",
+                    "reversed": false
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": true,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

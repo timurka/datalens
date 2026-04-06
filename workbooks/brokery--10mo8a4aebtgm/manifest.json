@@ -1,0 +1,931 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-04-06T18:56:32.023188Z",
+  "config": {
+    "configPath": "/Users/timur/.codex/skills/datalens/sync.config.json",
+    "datalensRoot": "/Users/timur/.codex/skills/datalens",
+    "envFile": "/Users/timur/Documents/datalens/datalens/.env",
+    "branches": {
+      "dashboard": "published",
+      "wizard": "published",
+      "ql": "published",
+      "editor": "saved"
+    }
+  },
+  "workbook": {
+    "id": "10mo8a4aebtgm",
+    "title": "Брокеры",
+    "path": "workbook.json",
+    "hashes": {
+      "path": "598912222b5071d1ce35ded0f55b81ad8f89f9816769cbe0dc0f9c79ed98306d"
+    }
+  },
+  "counts": {
+    "dashboards": 3,
+    "charts": 31,
+    "datasets": 9,
+    "connections": 4
+  },
+  "entries": {
+    "dashboards": [
+      {
+        "id": "cgwvlflenyoow",
+        "title": "SLA брокеров",
+        "type": "",
+        "scope": "dash",
+        "updatedAt": "2026-04-02T11:39:48.564Z",
+        "path": "dashboards/sla-brokerov--cgwvlflenyoow/dashboard.json",
+        "metaPath": "dashboards/sla-brokerov--cgwvlflenyoow/meta.json",
+        "hashes": {
+          "path": "b835ad7e6f7c449baa67c584f958c1c9a9023e9d9c34d296519ea8165a33e385",
+          "metaPath": "55240937bb8b86b1d2d94e173120a43277ee69c6a8b05ecfca449b7b622bdec1"
+        },
+        "refs": {
+          "dataset": [
+            "9dthyjhcxtjet",
+            "rwicz9xurz8qb"
+          ],
+          "widget": [
+            "16spbx3heasml",
+            "6awgj735kly0q",
+            "bf1l7jy6hwvuv"
+          ]
+        }
+      },
+      {
+        "id": "jpavawnucgji3",
+        "title": "Блок 1 - контроль задач по сделкам",
+        "type": "",
+        "scope": "dash",
+        "updatedAt": "2026-04-06T14:24:47.392Z",
+        "path": "dashboards/blok-1-kontrol-zadach-po-sdelkam--jpavawnucgji3/dashboard.json",
+        "metaPath": "dashboards/blok-1-kontrol-zadach-po-sdelkam--jpavawnucgji3/meta.json",
+        "hashes": {
+          "path": "c0d7fcfd441748af7a75bf9b1c856c6dc5b64a62a816a3e51c0eb6f71e3b24e4",
+          "metaPath": "daa6e7eb8c7db447a0b98de6b59dbfb896c596a1e165ed47535b28599dc1c792"
+        },
+        "refs": {
+          "dataset": [
+            "y4p7h02ve1koi"
+          ],
+          "widget": [
+            "7dyic2wzz0emr"
+          ]
+        }
+      },
+      {
+        "id": "fe6beb5nijn80",
+        "title": "Брокеры",
+        "type": "",
+        "scope": "dash",
+        "updatedAt": "2026-03-23T15:49:29.918Z",
+        "path": "dashboards/brokery--fe6beb5nijn80/dashboard.json",
+        "metaPath": "dashboards/brokery--fe6beb5nijn80/meta.json",
+        "hashes": {
+          "path": "87dbfed5250d1ea5c04dae1812b6ed1a31af69c7a765b6d4e7d2801876cf333f",
+          "metaPath": "63a027a18518151dd01deef9302863b6462a0cbfde8f6e37f49a14cee73e33fd"
+        },
+        "refs": {
+          "dataset": [
+            "fe033520ovhc0",
+            "giy5u1pyk8lq1",
+            "vf6w80lojksuf"
+          ],
+          "widget": [
+            "7riavlkkpzu6r",
+            "ba2nchropqe4w",
+            "gf7prlztzzea1",
+            "lkcousk2mgfo6",
+            "nmeq1o0who588",
+            "nqkhzfljkc9c8",
+            "pogzwhf2nbhoa",
+            "qs8m8unc2fkab",
+            "ruokjamvf9e8c",
+            "sc3z1r96lxr4c",
+            "tseinf0jhvkwe",
+            "tvbr19yoztcwe",
+            "utlylox3gamuf"
+          ]
+        }
+      }
+    ],
+    "charts": [
+      {
+        "id": "sc3z1r96lxr4c",
+        "title": "broker_leads_distrib — Таблица датасета",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2025-12-19T09:44:18.618Z",
+        "path": "charts/broker-leads-distrib-tablitsa-dataseta--sc3z1r96lxr4c/chart.json",
+        "metaPath": "charts/broker-leads-distrib-tablitsa-dataseta--sc3z1r96lxr4c/meta.json",
+        "hashes": {
+          "path": "5e59c1a7229d82e8af1fdd38ac0428431b0a97de9192f3008f8156f969cb3980",
+          "metaPath": "e0a63d77bd0bb06596f874b747527739c2d7bc297c5ec0be21e35f0b65e04b78"
+        },
+        "refs": {
+          "datasets": [
+            "vf6w80lojksuf"
+          ]
+        }
+      },
+      {
+        "id": "im8lq2l9qlwc2",
+        "title": "KPI | Взятие в работу | SLA  10 минут",
+        "type": "metric_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T08:58:50.212Z",
+        "path": "charts/kpi-vzyatie-v-rabotu-sla-10-minut--im8lq2l9qlwc2/chart.json",
+        "metaPath": "charts/kpi-vzyatie-v-rabotu-sla-10-minut--im8lq2l9qlwc2/meta.json",
+        "hashes": {
+          "path": "551f3985246a72048a28ab626b8b5156d168d7371d3948e0780d164510684fcc",
+          "metaPath": "f74cbc054736c6b9d694ea273a01f49cc256dbf00f788ba83e65635b9d350f70"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "26s52etl8tbcm",
+        "title": "KPI | Взятие в работу | SLA  5 минут",
+        "type": "metric_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T08:59:08.758Z",
+        "path": "charts/kpi-vzyatie-v-rabotu-sla-5-minut--26s52etl8tbcm/chart.json",
+        "metaPath": "charts/kpi-vzyatie-v-rabotu-sla-5-minut--26s52etl8tbcm/meta.json",
+        "hashes": {
+          "path": "85c977745fedda763eb285cea5880bc7f15b83feb1874d26e93416b1a4918ab8",
+          "metaPath": "87f0e65f03793ec1f00a3ec19a1365da8b954160037682272064f6d4bda0f27f"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "fj5j4k150yzmz",
+        "title": "KPI | Взятие в работу | Медиана времени, мин",
+        "type": "metric_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T08:07:37.110Z",
+        "path": "charts/kpi-vzyatie-v-rabotu-mediana-vremeni-min--fj5j4k150yzmz/chart.json",
+        "metaPath": "charts/kpi-vzyatie-v-rabotu-mediana-vremeni-min--fj5j4k150yzmz/meta.json",
+        "hashes": {
+          "path": "7c0e7c472523583bfbc73aa402db0b7c27679b88c89270acf9e5e1702ff745d6",
+          "metaPath": "b32452cb471bc63eca0575f888fb0661a5290eb4e6359252731a452016d64c3a"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "48u7sfom7bt4o",
+        "title": "KPI | Взятие в работу | Популяция SLA",
+        "type": "metric_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T08:01:53.050Z",
+        "path": "charts/kpi-vzyatie-v-rabotu-populyatsiya-sla--48u7sfom7bt4o/chart.json",
+        "metaPath": "charts/kpi-vzyatie-v-rabotu-populyatsiya-sla--48u7sfom7bt4o/meta.json",
+        "hashes": {
+          "path": "b464cc42dda8260cf54f483c93dd71bf1f1cd65393f5fd00e0f92aa063ec2a04",
+          "metaPath": "eeb753d333c490a67e91ee2b0d043060a3386da8f0273813b23e418d1c1abe53"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "dh3gtghmayumx",
+        "title": "KPI | Взятие в работу | Среднее время, мин",
+        "type": "metric_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T08:06:12.962Z",
+        "path": "charts/kpi-vzyatie-v-rabotu-srednee-vremya-min--dh3gtghmayumx/chart.json",
+        "metaPath": "charts/kpi-vzyatie-v-rabotu-srednee-vremya-min--dh3gtghmayumx/meta.json",
+        "hashes": {
+          "path": "8e007b07918d63b86375850e4c0ce5021574a11f5cbdda6dbe7b30aa84d6f17d",
+          "metaPath": "07c25af05bd89520161cc8d462c49defe4a32d8ee72974fade45036c97e06a5b"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "qs8m8unc2fkab",
+        "title": "parent_child_leads — Сводная таблица брокеров",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-23T15:49:06.903Z",
+        "path": "charts/parent-child-leads-svodnaya-tablitsa-brokerov--qs8m8unc2fkab/chart.json",
+        "metaPath": "charts/parent-child-leads-svodnaya-tablitsa-brokerov--qs8m8unc2fkab/meta.json",
+        "hashes": {
+          "path": "2a9fd5d243e49ccf1520cce360112edf817640c29512bde65b807683b3dfea73",
+          "metaPath": "7845dd6c49029eb92a8eeafe11c519f55e6f6f478dec41529563cfa5babb7d78"
+        },
+        "refs": {
+          "datasets": [
+            "giy5u1pyk8lq1"
+          ]
+        }
+      },
+      {
+        "id": "tvbr19yoztcwe",
+        "title": "parent_child_leads — Таблица брокеров",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-23T16:59:02.493Z",
+        "path": "charts/parent-child-leads-tablitsa-brokerov--tvbr19yoztcwe/chart.json",
+        "metaPath": "charts/parent-child-leads-tablitsa-brokerov--tvbr19yoztcwe/meta.json",
+        "hashes": {
+          "path": "a1d080f0c89b117578adb1f22e4079c9fbcd17bdad2d09e2dd90c1df817f527b",
+          "metaPath": "6bbf13302730a257c3338faff8f037b472b7e01ace1d531d29061fc0ffeafc1b"
+        },
+        "refs": {
+          "datasets": [
+            "giy5u1pyk8lq1"
+          ]
+        }
+      },
+      {
+        "id": "ruokjamvf9e8c",
+        "title": "parent_child_leads — Таблица датасета",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2025-09-17T10:37:43.465Z",
+        "path": "charts/parent-child-leads-tablitsa-dataseta--ruokjamvf9e8c/chart.json",
+        "metaPath": "charts/parent-child-leads-tablitsa-dataseta--ruokjamvf9e8c/meta.json",
+        "hashes": {
+          "path": "fda5cfd1d005bcb3acf908a6bb0fbf49edb426f94f5e549f781fc3942a7ab49c",
+          "metaPath": "78d363a03b833942c48a8d9884e6450ba6f0c8b107b366bf1c39d5308d3ffc4f"
+        },
+        "refs": {
+          "datasets": [
+            "giy5u1pyk8lq1"
+          ]
+        }
+      },
+      {
+        "id": "nqkhzfljkc9c8",
+        "title": "parent_child_leads — Таблица клиентов",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2025-09-17T10:49:15.569Z",
+        "path": "charts/parent-child-leads-tablitsa-klientov--nqkhzfljkc9c8/chart.json",
+        "metaPath": "charts/parent-child-leads-tablitsa-klientov--nqkhzfljkc9c8/meta.json",
+        "hashes": {
+          "path": "47274775232486f316b0b892962adb747a92a386a9d238ccf66e64cb84f4f7e9",
+          "metaPath": "0b6147dd9b280da396ef43157c1cef01a10beb2114a7764b7b3f11d3e1c856db"
+        },
+        "refs": {
+          "datasets": [
+            "giy5u1pyk8lq1"
+          ]
+        }
+      },
+      {
+        "id": "6awaje1anxawq",
+        "title": "SLA | Взятие в работу | По дням",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T08:11:22.471Z",
+        "path": "charts/sla-vzyatie-v-rabotu-po-dnyam--6awaje1anxawq/chart.json",
+        "metaPath": "charts/sla-vzyatie-v-rabotu-po-dnyam--6awaje1anxawq/meta.json",
+        "hashes": {
+          "path": "65890fabda5916cae5f421b39b7c90fc14c8c8c4ec5b2d9ae46b1845e66912ef",
+          "metaPath": "0a6a025618f3fbca24e05d83abd364c1b8b5c5feed9e0b217412452a7b77c54c"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "9dzf07oigf36t",
+        "title": "SLA | Первый контакт от назначения | Календарное время",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T11:53:20.913Z",
+        "path": "charts/sla-pervyy-kontakt-ot-naznacheniya-kalendarnoe-vremya--9dzf07oigf36t/chart.json",
+        "metaPath": "charts/sla-pervyy-kontakt-ot-naznacheniya-kalendarnoe-vremya--9dzf07oigf36t/meta.json",
+        "hashes": {
+          "path": "5270ce17d4919fa3515be40ab64fb90891a2270008275a2a02b013dec8855cd1",
+          "metaPath": "0a4576b5f96688f165d7aa6645c392576259f3785b3bc828a9b14dd26a458288"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "ae0hbfwy386wu",
+        "title": "SLA | Первый контакт от назначения | Рабочее и нерабочее время",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T14:49:11.931Z",
+        "path": "charts/sla-pervyy-kontakt-ot-naznacheniya-rabochee-i-nerabochee-vremya--ae0hbfwy386wu/chart.json",
+        "metaPath": "charts/sla-pervyy-kontakt-ot-naznacheniya-rabochee-i-nerabochee-vremya--ae0hbfwy386wu/meta.json",
+        "hashes": {
+          "path": "ac9bfc067b3420877f088f1bd4361049957ced349502f286b41cb630e2364e42",
+          "metaPath": "6262b1aa5ef788d976bbede491e13966cace1226944fa68800518f92574e3947"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "koasp2rr7ljc4",
+        "title": "SLA | Первый контакт от нового лида | Official | По дням",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T12:00:16.070Z",
+        "path": "charts/sla-pervyy-kontakt-ot-novogo-lida-official-po-dnyam--koasp2rr7ljc4/chart.json",
+        "metaPath": "charts/sla-pervyy-kontakt-ot-novogo-lida-official-po-dnyam--koasp2rr7ljc4/meta.json",
+        "hashes": {
+          "path": "031527e317bf762c91c375cb57003132fc180697c049ce7cab5c4f733d26159c",
+          "metaPath": "08c8ccd092afc1fd81caa07a8131eedd858b17db1c5cd17f38b07155794434e5"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "16spbx3heasml",
+        "title": "SLA датасет 2 — Таблица",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-04-02T11:39:41.726Z",
+        "path": "charts/sla-dataset-2-tablitsa--16spbx3heasml/chart.json",
+        "metaPath": "charts/sla-dataset-2-tablitsa--16spbx3heasml/meta.json",
+        "hashes": {
+          "path": "d3e10ea706c5526fdde50b93f9f1823dc71c339513a066071c47887b63524019",
+          "metaPath": "3415c51022d7b6a7c7e3aadb3353754cab36aa82a2774521fc4c85f2bdc59206"
+        },
+        "refs": {
+          "datasets": [
+            "rwicz9xurz8qb"
+          ]
+        }
+      },
+      {
+        "id": "7dyic2wzz0emr",
+        "title": "Блок 1 - список сделок по задачам",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-04-06T14:22:00.040Z",
+        "path": "charts/blok-1-spisok-sdelok-po-zadacham--7dyic2wzz0emr/chart.json",
+        "metaPath": "charts/blok-1-spisok-sdelok-po-zadacham--7dyic2wzz0emr/meta.json",
+        "hashes": {
+          "path": "474479cf168aeb433cfbdd001739d6fbb608ad7637dd372c9f53e21e82417c17",
+          "metaPath": "0fb8e6df287783942635244e8ca9e757afde73a6bea80b130d7d1e3da9486f81"
+        },
+        "refs": {
+          "datasets": [
+            "y4p7h02ve1koi"
+          ]
+        }
+      },
+      {
+        "id": "15divodvkw8ml",
+        "title": "Итоговый датасет | Детализация лидов",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-30T16:22:53.213Z",
+        "path": "charts/itogovyy-dataset-detalizatsiya-lidov--15divodvkw8ml/chart.json",
+        "metaPath": "charts/itogovyy-dataset-detalizatsiya-lidov--15divodvkw8ml/meta.json",
+        "hashes": {
+          "path": "3f073a472a2d3c42b088117cb28420650c6eb2f0ab70b9037e206fd09f1beaf6",
+          "metaPath": "38d819b5dbf9b932b84a4aa1f166627cd321a45cfc2ef96b187b5e1835e6d4c2"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "bf1l7jy6hwvuv",
+        "title": "Корреляции | Конверсии по скорости первого контакта",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T13:31:01.309Z",
+        "path": "charts/korrelyatsii-konversii-po-skorosti-pervogo-kontakta--bf1l7jy6hwvuv/chart.json",
+        "metaPath": "charts/korrelyatsii-konversii-po-skorosti-pervogo-kontakta--bf1l7jy6hwvuv/meta.json",
+        "hashes": {
+          "path": "7c01a46720ff4bc7a3404b210fcf254c446bc5061afb24d354e6410bc93d4db7",
+          "metaPath": "2161a90b173ce2eac0f76edec70287d651ffc12532b34797b92619474a73c58b"
+        },
+        "refs": {
+          "datasets": [
+            "9dthyjhcxtjet"
+          ]
+        }
+      },
+      {
+        "id": "6awgj735kly0q",
+        "title": "Корреляции | Покрытие сигнала по bucket",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T13:33:20.038Z",
+        "path": "charts/korrelyatsii-pokrytie-signala-po-bucket--6awgj735kly0q/chart.json",
+        "metaPath": "charts/korrelyatsii-pokrytie-signala-po-bucket--6awgj735kly0q/meta.json",
+        "hashes": {
+          "path": "1084080a0e6e5dd36b7263159868c06c667ced5da222019c8add393347b154ee",
+          "metaPath": "680f4772d27ba6e2b0512413d374a037d0644aa6c50d70017e30c94c255f174d"
+        },
+        "refs": {
+          "datasets": [
+            "9dthyjhcxtjet"
+          ]
+        }
+      },
+      {
+        "id": "ba2nchropqe4w",
+        "title": "По клиентам — Dataset",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2025-08-27T12:00:15.708Z",
+        "path": "charts/po-klientam-dataset--ba2nchropqe4w/chart.json",
+        "metaPath": "charts/po-klientam-dataset--ba2nchropqe4w/meta.json",
+        "hashes": {
+          "path": "123a29bb45fc31da2e36b580cb45dfcab114ff7fcad0822c490e3f341180cec2",
+          "metaPath": "e5db86f5de66c01c3aeaf7aee85606c5175d442a1c37d501c38ca8e0388a2862"
+        },
+        "refs": {
+          "datasets": [
+            "fe033520ovhc0"
+          ]
+        }
+      },
+      {
+        "id": "lkcousk2mgfo6",
+        "title": "По клиентам — Индикатор CR в покупку",
+        "type": "metric_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2025-08-27T11:07:54.836Z",
+        "path": "charts/po-klientam-indikator-cr-v-pokupku--lkcousk2mgfo6/chart.json",
+        "metaPath": "charts/po-klientam-indikator-cr-v-pokupku--lkcousk2mgfo6/meta.json",
+        "hashes": {
+          "path": "eb8bde95ce84d290ca5a859ada2c5bd2da1f56afe581815f61f5647afbd64f79",
+          "metaPath": "d43f57ba6b07711ad1ad3fb63788b5ff03296294648543c0b89c344c80b039d3"
+        },
+        "refs": {
+          "datasets": [
+            "fe033520ovhc0"
+          ]
+        }
+      },
+      {
+        "id": "nmeq1o0who588",
+        "title": "По клиентам — Индикатор Revenue",
+        "type": "metric_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2025-08-27T11:07:59.669Z",
+        "path": "charts/po-klientam-indikator-revenue--nmeq1o0who588/chart.json",
+        "metaPath": "charts/po-klientam-indikator-revenue--nmeq1o0who588/meta.json",
+        "hashes": {
+          "path": "042dba7a3e71e2194785dae2fef106de9f034edc2f5ffb78800d71457b13191e",
+          "metaPath": "2e1f115573c0fe0451441152ae1bb380e22e456f070046cd2dad345c288a98fa"
+        },
+        "refs": {
+          "datasets": [
+            "fe033520ovhc0"
+          ]
+        }
+      },
+      {
+        "id": "utlylox3gamuf",
+        "title": "По клиентам — Индикатор Revenue на клиента",
+        "type": "metric_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2025-08-27T11:09:51.703Z",
+        "path": "charts/po-klientam-indikator-revenue-na-klienta--utlylox3gamuf/chart.json",
+        "metaPath": "charts/po-klientam-indikator-revenue-na-klienta--utlylox3gamuf/meta.json",
+        "hashes": {
+          "path": "8a6fee494e36c821a9f99e96b36abd019bc8a578b2ff9877675bc0b0e3f45c44",
+          "metaPath": "30d5454e1e8782f6ac2c24971819aab5c01ed2ef538da714d766b3be4dc49081"
+        },
+        "refs": {
+          "datasets": [
+            "fe033520ovhc0"
+          ]
+        }
+      },
+      {
+        "id": "gf7prlztzzea1",
+        "title": "По клиентам — Таблица по филиалам",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2025-08-27T11:40:52.487Z",
+        "path": "charts/po-klientam-tablitsa-po-filialam--gf7prlztzzea1/chart.json",
+        "metaPath": "charts/po-klientam-tablitsa-po-filialam--gf7prlztzzea1/meta.json",
+        "hashes": {
+          "path": "a550f0c3d8b97fa91dbc6c9e0205155acf1285e5fadacaf282958123ce004ccd",
+          "metaPath": "2efbaf9fec834c692efbfd80063d7ffdec6d906a5902b3bd3b5723b8122adb13"
+        },
+        "refs": {
+          "datasets": [
+            "fe033520ovhc0"
+          ]
+        }
+      },
+      {
+        "id": "tseinf0jhvkwe",
+        "title": "По клиентам — Таблица сводная",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-23T14:51:36.130Z",
+        "path": "charts/po-klientam-tablitsa-svodnaya--tseinf0jhvkwe/chart.json",
+        "metaPath": "charts/po-klientam-tablitsa-svodnaya--tseinf0jhvkwe/meta.json",
+        "hashes": {
+          "path": "6bc37d1e9c4299ef084ec17cea2efb3d6e97b6c45974e79508173b2c9535dfe6",
+          "metaPath": "3270740dae08374257a9a4ccfe0b67bf4432c8796edb61fdb869de70a52dac9f"
+        },
+        "refs": {
+          "datasets": [
+            "fe033520ovhc0"
+          ]
+        }
+      },
+      {
+        "id": "pogzwhf2nbhoa",
+        "title": "По клиентам — Таблица сводная по месяцам",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2025-08-27T11:50:05.926Z",
+        "path": "charts/po-klientam-tablitsa-svodnaya-po-mesyatsam--pogzwhf2nbhoa/chart.json",
+        "metaPath": "charts/po-klientam-tablitsa-svodnaya-po-mesyatsam--pogzwhf2nbhoa/meta.json",
+        "hashes": {
+          "path": "ecfde83171ba32bd8ee88d4d7577d30e3ef8be33099c37697c7aaacaafd070cd",
+          "metaPath": "97e898a47e7fff5e36ea60a49a95cc0c619c61a604257da8a0ac00cf4d4de5df"
+        },
+        "refs": {
+          "datasets": [
+            "fe033520ovhc0"
+          ]
+        }
+      },
+      {
+        "id": "hl7ntw2spj061",
+        "title": "Покрытие | Первый контакт от назначения",
+        "type": "metric_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T08:58:28.630Z",
+        "path": "charts/pokrytie-pervyy-kontakt-ot-naznacheniya--hl7ntw2spj061/chart.json",
+        "metaPath": "charts/pokrytie-pervyy-kontakt-ot-naznacheniya--hl7ntw2spj061/meta.json",
+        "hashes": {
+          "path": "4380a31966a67cd8f29c4afe22805140e0c002f647c2c004f1b79f0d2d6affaf",
+          "metaPath": "76b8b3743a9b040741bc7c6b0e25caaec0770d3fed3695c0d462ce5932436138"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "mqcu3wwqoc1c6",
+        "title": "Покрытие | Первый контакт от нового лида",
+        "type": "metric_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T08:34:25.673Z",
+        "path": "charts/pokrytie-pervyy-kontakt-ot-novogo-lida--mqcu3wwqoc1c6/chart.json",
+        "metaPath": "charts/pokrytie-pervyy-kontakt-ot-novogo-lida--mqcu3wwqoc1c6/meta.json",
+        "hashes": {
+          "path": "99a7f9af12b79d47b778549b24827b9ad59d1a78e24f1a8661cd0fe63b0286e0",
+          "metaPath": "53facccaf32248bb52b9d4dd2f4cf224cde08e2d35b64b3895725b71247ba717"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "9d0lzc3f1comt",
+        "title": "Покрытие сигналов | Первый контакт от назначения",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T12:43:48.909Z",
+        "path": "charts/pokrytie-signalov-pervyy-kontakt-ot-naznacheniya--9d0lzc3f1comt/chart.json",
+        "metaPath": "charts/pokrytie-signalov-pervyy-kontakt-ot-naznacheniya--9d0lzc3f1comt/meta.json",
+        "hashes": {
+          "path": "4671f80dfe53786f62d7a80e67c4faa3dded1fd538cf658df6cbcfbaba5e4423",
+          "metaPath": "c27f12bccf9a2cca85fa3a277a6b83c767c3bfebd83b440c26269131811d00f4"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "15sepx62gp6ml",
+        "title": "Покрытие сигналов | Первый контакт от нового лида",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-27T12:43:29.154Z",
+        "path": "charts/pokrytie-signalov-pervyy-kontakt-ot-novogo-lida--15sepx62gp6ml/chart.json",
+        "metaPath": "charts/pokrytie-signalov-pervyy-kontakt-ot-novogo-lida--15sepx62gp6ml/meta.json",
+        "hashes": {
+          "path": "43de4025a91e8070285d3c5b2dd2fd7a04035e5f0535dd28c3cfad2e5376e0f3",
+          "metaPath": "e5be762377a7071bd6f69527a7bc1f5e4aa70d365683d778d3a72ba3418e3e34"
+        },
+        "refs": {
+          "datasets": [
+            "pt9xagum0zmm9"
+          ]
+        }
+      },
+      {
+        "id": "7riavlkkpzu6r",
+        "title": "Таблица распределения лидов",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2025-12-19T09:46:48.597Z",
+        "path": "charts/tablitsa-raspredeleniya-lidov--7riavlkkpzu6r/chart.json",
+        "metaPath": "charts/tablitsa-raspredeleniya-lidov--7riavlkkpzu6r/meta.json",
+        "hashes": {
+          "path": "abb02ee8876759b0c954a1aff05187ff5d1bdf1c16e9350d2dc6a6573dea731f",
+          "metaPath": "1f5bc767157fb553f38fea7ed6f880c8ec33fe9f30a5fa06c8fd0a55b99c9594"
+        },
+        "refs": {
+          "datasets": [
+            "vf6w80lojksuf"
+          ]
+        }
+      }
+    ],
+    "datasets": [
+      {
+        "id": "vf6w80lojksuf",
+        "title": "broker_leads_distrib",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/broker-leads-distrib--vf6w80lojksuf/dataset.update.json",
+        "fullPath": "datasets/broker-leads-distrib--vf6w80lojksuf/dataset.full.json",
+        "metaPath": "datasets/broker-leads-distrib--vf6w80lojksuf/meta.json",
+        "hashes": {
+          "path": "8cbd56bdc70c7a9b2338d40a12d5e1cd2f9cda45696058387d4fe5fad7edf5bd",
+          "fullPath": "ae1079a317af83470e30ce2be0044f6adee665ea88b2ed49887992753b61f868",
+          "metaPath": "8f8fd2dd47b00c8c2aa2df7e8a4f7fcba2212c4014261ba838ede21d22b8d9be"
+        },
+        "refs": {
+          "connections": [
+            "qtp2vi8ns03ka"
+          ]
+        }
+      },
+      {
+        "id": "z3jwlaszryamj",
+        "title": "brokers_dashboard_leads_stg",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/brokers-dashboard-leads-stg--z3jwlaszryamj/dataset.update.json",
+        "fullPath": "datasets/brokers-dashboard-leads-stg--z3jwlaszryamj/dataset.full.json",
+        "metaPath": "datasets/brokers-dashboard-leads-stg--z3jwlaszryamj/meta.json",
+        "hashes": {
+          "path": "37137db682bfb71e4381deb9c72bd483add8ac06a249aa77554e398886a1aaa0",
+          "fullPath": "c0bba661788a21a72a3b9acda9354c296be73402bd4de6739cd786ed153d0ea7",
+          "metaPath": "83113394557ebd6b6d61382829d460703cacc77d2a43d7c1845faf2125e9128f"
+        },
+        "refs": {
+          "connections": [
+            "qtp2vi8ns03ka"
+          ]
+        }
+      },
+      {
+        "id": "pt9xagum0zmm9",
+        "title": "brokers_dashboard_leads_stg1",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/brokers-dashboard-leads-stg1--pt9xagum0zmm9/dataset.update.json",
+        "fullPath": "datasets/brokers-dashboard-leads-stg1--pt9xagum0zmm9/dataset.full.json",
+        "metaPath": "datasets/brokers-dashboard-leads-stg1--pt9xagum0zmm9/meta.json",
+        "hashes": {
+          "path": "bb3b3d18f8222ba3849f7a5d17776364997f86e7eb414fc8324550bb67bc2b77",
+          "fullPath": "3c67c472f4250b7765585c7cac784a2c47b6c5e76353a8c4f23cfcb8cfa577f0",
+          "metaPath": "a6353c2909182044bdda6db5e5a12f0ef6979822d2d95aa15878d76f995a5f20"
+        },
+        "refs": {
+          "connections": [
+            "ko4pum7t2w8s4"
+          ]
+        }
+      },
+      {
+        "id": "w0gtoh8jv3rkg",
+        "title": "brokers_first_contact_conversions_stg",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/brokers-first-contact-conversions-stg--w0gtoh8jv3rkg/dataset.update.json",
+        "fullPath": "datasets/brokers-first-contact-conversions-stg--w0gtoh8jv3rkg/dataset.full.json",
+        "metaPath": "datasets/brokers-first-contact-conversions-stg--w0gtoh8jv3rkg/meta.json",
+        "hashes": {
+          "path": "bdf1f7255ffdf0956ebc153e2d21516e6ae3e78082d01eae1ddb2942eacbdfed",
+          "fullPath": "bb612ea5a1b1a55ffb0faebe4b56134bd2afa8641b61b25e4d0e5f45f0f61f81",
+          "metaPath": "ea603cbe22eedf26e253921edd016601dfd9cdd358df52d0c928533908432e8f"
+        },
+        "refs": {
+          "connections": [
+            "qtp2vi8ns03ka"
+          ]
+        }
+      },
+      {
+        "id": "9dthyjhcxtjet",
+        "title": "brokers_first_contact_conversions_stg1",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/brokers-first-contact-conversions-stg1--9dthyjhcxtjet/dataset.update.json",
+        "fullPath": "datasets/brokers-first-contact-conversions-stg1--9dthyjhcxtjet/dataset.full.json",
+        "metaPath": "datasets/brokers-first-contact-conversions-stg1--9dthyjhcxtjet/meta.json",
+        "hashes": {
+          "path": "b65d0364e98d4f1a40871adcbefe8d80ed9827cd0da30e86ef695074c62e0e69",
+          "fullPath": "7085004611b3c59b7fe2913e9216711780017e51685a6d75ee53670bab20dd6a",
+          "metaPath": "aa94c6ef746a587daea2ec52367024b6e1dbb8f4b3281fabe11fd6cd811a06d1"
+        },
+        "refs": {
+          "connections": [
+            "ko4pum7t2w8s4"
+          ]
+        }
+      },
+      {
+        "id": "giy5u1pyk8lq1",
+        "title": "parent_child_leads",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/parent-child-leads--giy5u1pyk8lq1/dataset.update.json",
+        "fullPath": "datasets/parent-child-leads--giy5u1pyk8lq1/dataset.full.json",
+        "metaPath": "datasets/parent-child-leads--giy5u1pyk8lq1/meta.json",
+        "hashes": {
+          "path": "99d74816253433d541b5795611a38b3fb0fabbe558edad1f12a01d33dfbe532f",
+          "fullPath": "924abfb92f0f6abf4699ea18a5e5a4fa6cde61fd9dc02a1072597c004c8db1f6",
+          "metaPath": "47d1679517e4703a298508390be1344232eeb74d4bcd415bf18a2de227a60a1b"
+        },
+        "refs": {
+          "connections": [
+            "qtp2vi8ns03ka"
+          ]
+        }
+      },
+      {
+        "id": "rwicz9xurz8qb",
+        "title": "SLA датасет 2",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/sla-dataset-2--rwicz9xurz8qb/dataset.update.json",
+        "fullPath": "datasets/sla-dataset-2--rwicz9xurz8qb/dataset.full.json",
+        "metaPath": "datasets/sla-dataset-2--rwicz9xurz8qb/meta.json",
+        "hashes": {
+          "path": "0680cf18c42634309ec1a2e99e4411cd9120d27b6c878cc3728530f836580497",
+          "fullPath": "f9d107dfbafba79f4e136ef2f679b1833dd7abbbf10e4d08de2a0c2ae20b3350",
+          "metaPath": "816e92f1822f2b6aa3538abf3de14cc5e9c008c45f65c7acea4a336931a53545"
+        },
+        "refs": {
+          "connections": [
+            "ko4pum7t2w8s4"
+          ]
+        }
+      },
+      {
+        "id": "y4p7h02ve1koi",
+        "title": "Блок 1 - сделки и задачи брокера",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/blok-1-sdelki-i-zadachi-brokera--y4p7h02ve1koi/dataset.update.json",
+        "fullPath": "datasets/blok-1-sdelki-i-zadachi-brokera--y4p7h02ve1koi/dataset.full.json",
+        "metaPath": "datasets/blok-1-sdelki-i-zadachi-brokera--y4p7h02ve1koi/meta.json",
+        "hashes": {
+          "path": "27d17af15fcc5e6fb811df60e8ee198537748b81a60150310774584f37ad91b9",
+          "fullPath": "cc514112f061d93f9457eadb345d57a02dbbc783a63f4731c2154bce5d07662f",
+          "metaPath": "3e9b8a0623a7e36e1260493c08afa110b1e6d34a89daa83c07fd00a46ba03a45"
+        },
+        "refs": {
+          "connections": [
+            "qtp2vi8ns03ka"
+          ]
+        }
+      },
+      {
+        "id": "fe033520ovhc0",
+        "title": "По клиентам",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/po-klientam--fe033520ovhc0/dataset.update.json",
+        "fullPath": "datasets/po-klientam--fe033520ovhc0/dataset.full.json",
+        "metaPath": "datasets/po-klientam--fe033520ovhc0/meta.json",
+        "hashes": {
+          "path": "210c0f59a56af3eb6b34da7e39b362a567a36866ef9d1099792085e4173fc4c0",
+          "fullPath": "570ce042d7d8d3e083de7bf09a24fb10e09c723b6738503c924ea5e18c3ab174",
+          "metaPath": "546a803acd4e2e53d57d8adb3bcf212e94690e25d6efff031d0a820016d6e9ff"
+        },
+        "refs": {
+          "connections": [
+            "qtp2vi8ns03ka"
+          ]
+        }
+      }
+    ],
+    "connections": [
+      {
+        "id": "65rtgrphypqmr",
+        "title": "mybi",
+        "scope": "connection",
+        "updatedAt": null,
+        "path": "connections/mybi--65rtgrphypqmr/connection.redacted.json",
+        "metaPath": "connections/mybi--65rtgrphypqmr/meta.json",
+        "hashes": {
+          "path": "da374767bf9ab690b612cdd72a6c423589bd3f638253087c956dd0959633cb08",
+          "metaPath": "dfb3c00058c332a94eb54b0b037815dfbc916be127433894d203ced7d3d7be26"
+        },
+        "redacted": true
+      },
+      {
+        "id": "ik07w3rlmwk23",
+        "title": "mybi (COPY 1)",
+        "scope": "connection",
+        "updatedAt": null,
+        "path": "connections/mybi-copy-1--ik07w3rlmwk23/connection.redacted.json",
+        "metaPath": "connections/mybi-copy-1--ik07w3rlmwk23/meta.json",
+        "hashes": {
+          "path": "90b81efbe02e322b22fac208e879019556a1223e9d8a5fe26de46a379fff5006",
+          "metaPath": "905b8a8952a72e01102335e09d4df59f0e49574bdd2c9cd962b990bda29e0880"
+        },
+        "redacted": true
+      },
+      {
+        "id": "qtp2vi8ns03ka",
+        "title": "neginsky.ru",
+        "scope": "connection",
+        "updatedAt": null,
+        "path": "connections/neginsky-ru--qtp2vi8ns03ka/connection.redacted.json",
+        "metaPath": "connections/neginsky-ru--qtp2vi8ns03ka/meta.json",
+        "hashes": {
+          "path": "2019665324b765fbcb532b0a0b9d7b03075b0278a983ade3d19ae4c2dbfb9f74",
+          "metaPath": "9358867cd56cc632e33e370b3a88528726f1de63de32c442c989292fcbda5497"
+        },
+        "redacted": true
+      },
+      {
+        "id": "ko4pum7t2w8s4",
+        "title": "test_dwh",
+        "scope": "connection",
+        "updatedAt": null,
+        "path": "connections/test-dwh--ko4pum7t2w8s4/connection.redacted.json",
+        "metaPath": "connections/test-dwh--ko4pum7t2w8s4/meta.json",
+        "hashes": {
+          "path": "d13d68051f7870398cbab37959380c3fd69d6c011cc9871bec52ef8e6b8c46d4",
+          "metaPath": "f4003b56836e35074d7f264d2de72ee0a1e2cb1c9ca5703e01a9e0f7793f253c"
+        },
+        "redacted": true
+      }
+    ]
+  }
+}

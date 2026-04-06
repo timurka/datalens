@@ -1,0 +1,287 @@
+{
+  "entryId": "5f2uokxe1zyqt",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "1660815280848242229/Закупки - qual_join — Индикатор сделок",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-04-10T08:43:29.692Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-05-17T11:39:38.160Z",
+  "savedId": "fwo24cl6z4x63",
+  "publishedId": "fwo24cl6z4x63",
+  "revId": "fwo24cl6z4x63",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "n24jq7f33jvqb"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "a5d9e430-1434-11ef-a580-27a1e0678fdd",
+          "title": "title-a5d9e430-1434-11ef-a580-27a1e0678fdd",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "dbc5bae0-142c-11ef-887b-d3fa2725ec3b",
+          "title": "min_lead_date",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "count",
+          "title": "count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "id",
+          "title": "id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "phone",
+          "title": "phone",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_time",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "min_creation_date_time",
+          "title": "min_creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "budget",
+          "title": "budget",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "password",
+          "title": "password",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_qual",
+          "title": "sum_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_qual",
+          "title": "date_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "priority",
+          "title": "priority",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "zakupki_date",
+          "title": "zakupki_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_name",
+          "title": "channel_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_link",
+          "title": "channel_link",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost",
+          "title": "cost",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#4DA2F1",
+      "metricFontColorPalette": "classic20",
+      "indicatorTitleMode": "by-field"
+    },
+    "filters": [
+      {
+        "guid": "date_join",
+        "datasetId": "n24jq7f33jvqb",
+        "filter": {
+          "value": [],
+          "operation": {
+            "code": "ISNOTNULL"
+          }
+        },
+        "type": "DIMENSION",
+        "title": "date_join",
+        "calc_mode": "direct"
+      }
+    ],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "guid": "a5d9e430-1434-11ef-a580-27a1e0678fdd",
+          "virtual": false,
+          "hidden": false,
+          "aggregation": "countunique",
+          "cast": "integer",
+          "lock_aggregation": false,
+          "description": "",
+          "autoaggregated": false,
+          "title": "title-a5d9e430-1434-11ef-a580-27a1e0678fdd",
+          "valid": true,
+          "initial_data_type": "integer",
+          "type": "MEASURE",
+          "aggregation_locked": false,
+          "has_auto_aggregation": false,
+          "data_type": "integer",
+          "managed_by": "user",
+          "avatar_id": "e19990c0-1433-11ef-aca5-03749946ba29",
+          "source": "id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "fakeTitle": "Брони",
+          "datasetId": "n24jq7f33jvqb"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "valid": true,
+              "hidden": false,
+              "aggregation": "countunique",
+              "autoaggregated": false,
+              "data_type": "integer",
+              "cast": "integer",
+              "aggregation_locked": false,
+              "virtual": false,
+              "description": "",
+              "managed_by": "user",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "type": "MEASURE",
+              "initial_data_type": "integer",
+              "guid": "a5d9e430-1434-11ef-a580-27a1e0678fdd",
+              "title": "title-a5d9e430-1434-11ef-a580-27a1e0678fdd",
+              "source": "id",
+              "avatar_id": "e19990c0-1433-11ef-aca5-03749946ba29",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "id",
+              "fakeTitle": "Контактов",
+              "datasetId": "n24jq7f33jvqb",
+              "id": "measure-0",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "datasetName": "Закупки - qual_join 2",
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

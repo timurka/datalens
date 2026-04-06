@@ -1,0 +1,235 @@
+{
+  "entryId": "m0nsb1oefgvu7",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "2082038734810779143/Лиды и источники — Индикатор лидов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-11-12T12:59:18.044Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-11-12T12:59:18.044Z",
+  "savedId": "ftgl4ui66uiw0",
+  "publishedId": "ftgl4ui66uiw0",
+  "revId": "ftgl4ui66uiw0",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "t7m1qnq8870ge"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "5a235ef0-bfc7-11f0-8658-87912e2b0ed2",
+          "title": "title-5a235ef0-bfc7-11f0-8658-87912e2b0ed2",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_vlk2",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contacts_amo_id_jri8",
+          "title": "contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_a92y",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_mv8g",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_q1qo",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id_h7az",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_source_xitz",
+          "title": "telegram_source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category_7g5o",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_x2sc",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_geo_3tnj",
+          "title": "source_geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_e0jc",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_2oxt",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_time_urza",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_source_status_vmhg",
+          "title": "telegram_source_status",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontColorIndex": 0,
+      "metricFontSize": "s",
+      "metricFontColor": "#4DA2F1"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "valid": true,
+          "aggregation": "countunique",
+          "autoaggregated": false,
+          "description": "",
+          "hidden": false,
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "virtual": false,
+          "cast": "integer",
+          "data_type": "integer",
+          "initial_data_type": "integer",
+          "title": "title-5a235ef0-bfc7-11f0-8658-87912e2b0ed2",
+          "has_auto_aggregation": false,
+          "aggregation_locked": false,
+          "ui_settings": "",
+          "guid": "5a235ef0-bfc7-11f0-8658-87912e2b0ed2",
+          "type": "MEASURE",
+          "avatar_id": "88bdfa80-bee7-11f0-a8d1-bb612cfecc84",
+          "source": "crm_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "fakeTitle": "Лидов",
+          "datasetId": "t7m1qnq8870ge"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "title-5a235ef0-bfc7-11f0-8658-87912e2b0ed2",
+              "cast": "integer",
+              "data_type": "integer",
+              "initial_data_type": "integer",
+              "managed_by": "user",
+              "aggregation_locked": false,
+              "valid": true,
+              "virtual": false,
+              "ui_settings": "",
+              "description": "",
+              "type": "MEASURE",
+              "guid": "5a235ef0-bfc7-11f0-8658-87912e2b0ed2",
+              "aggregation": "countunique",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "hidden": false,
+              "source": "crm_id",
+              "avatar_id": "88bdfa80-bee7-11f0-a8d1-bb612cfecc84",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "crm_id",
+              "fakeTitle": "Лидов",
+              "datasetId": "t7m1qnq8870ge",
+              "id": "measure-0",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "datasetName": "Лиды и источники"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "axisModeMap": {
+              "5a235ef0-bfc7-11f0-8658-87912e2b0ed2": "continuous"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    },
+    "convert": false
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

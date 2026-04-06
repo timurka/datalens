@@ -1,0 +1,181 @@
+{
+  "entryId": "ycayh44dm22al",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "1812376651384751821/perfomance_svodny_actions - SQL таблица",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-11-05T11:28:52.868Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-11-05T11:31:59.379Z",
+  "savedId": "ycaz12dzk0tml",
+  "publishedId": "ycaz12dzk0tml",
+  "revId": "ycaz12dzk0tml",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "bpds0nslojo40",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "WITH quals AS (\n    -- Количество квалифицированных лидов\n    SELECT \n        DATE(date_qual) as date_qual,\n        pipeline_id,\n        utmsource,\n        COUNT(leads_id) as qualifications\n    FROM perfomance_all_leads\n    WHERE date_qual IS NOT NULL\n        AND (pipeline_id = 5987164 OR pipeline_id = 8650122)\n    GROUP BY DATE(date_qual), pipeline_id, utmsource\n),\nbookings AS (\n    -- Количество броней\n    SELECT \n        DATE(date_booking) as date_booking,\n        pipeline_id,\n        utmsource,\n        COUNT(leads_id) as bookings\n    FROM perfomance_all_leads\n    WHERE date_booking IS NOT NULL\n        AND (pipeline_id = 5987164 OR pipeline_id = 8650122)\n    GROUP BY DATE(date_booking), pipeline_id, utmsource\n),\nvalidations AS (\n    -- Количество валидаций\n    SELECT \n        DATE(le.created_at) as date_validation,\n        p.pipeline_id,\n        p.utmsource,\n        COUNT(p.leads_id) as validations\n    FROM perfomance_all_leads p\n    JOIN amocrm_leads_events le ON p.leads_id = le.leads_id\n    WHERE le.type = 'lead_status_changed' \n        AND le.value_after LIKE '%7309478%' \n        AND le.value_after LIKE '%142%' -- Ру-воронка\n    GROUP BY DATE(le.created_at), p.pipeline_id, p.utmsource\n)\nSELECT \n    p.creation_date,\n    p.pipeline_id,\n    p.utmsource,\n    COUNT(p.leads_id) as leads,\n    COALESCE(q.qualifications, 0) as quals,\n    COALESCE(b.bookings, 0) as bookings,\n    COALESCE(v.validations, 0) as validations\nFROM perfomance_all_leads p\nLEFT JOIN quals q ON p.creation_date = q.date_qual \n    AND p.pipeline_id = q.pipeline_id \n    AND p.utmsource = q.utmsource\nLEFT JOIN bookings b ON p.creation_date = b.date_booking\n    AND p.pipeline_id = b.pipeline_id \n    AND p.utmsource = b.utmsource\nLEFT JOIN validations v ON p.creation_date = v.date_validation\n    AND p.pipeline_id = v.pipeline_id \n    AND p.utmsource = v.utmsource\nWHERE (\n    (p.pipeline_id = 5987164 AND (p.source_deal IS NULL OR p.source_deal != 'Валидация'))\n    OR p.pipeline_id = 7309478\n    OR p.pipeline_id = 8650122\n)\nGROUP BY p.creation_date, \n         p.pipeline_id,\n         p.utmsource,\n         q.qualifications,\n         b.bookings,\n         v.validations\nORDER BY p.creation_date DESC",
+    "queries": [],
+    "params": [],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "creation_date",
+              "title": "creation_date",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "date",
+              "cast": "date",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "pipeline_id",
+              "title": "pipeline_id",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1702b720-9b69-11ef-9c3a-e9f02d9bdc9e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "pipeline_id"
+              }
+            },
+            {
+              "guid": "utmsource",
+              "title": "utmsource",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "leads",
+              "title": "leads",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "validations",
+              "title": "validations",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "quals",
+              "title": "quals",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "bookings",
+              "title": "bookings",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

@@ -1,0 +1,243 @@
+{
+  "entryId": "dbps0eaywu7cy",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "2024682561766164434/Повторные SQL - По источникам первой сделки",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-08-25T09:42:49.376Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2026-03-19T09:15:58.918Z",
+  "savedId": "pru2bc6pqa4m9",
+  "publishedId": "pru2bc6pqa4m9",
+  "revId": "pru2bc6pqa4m9",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "d9mdkzqj4zxsy",
+      "type": "postgres",
+      "dataExportForbidden": false
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "WITH\n-- 0) Параметры\nlist_p AS (\n  SELECT\n    CASE\n      WHEN regexp_replace($$ {{geo_list}} $$,'E''|''|\\(|\\)|\\s','', 'g') = ''\n        THEN NULL\n      ELSE string_to_array(\n             regexp_replace($$ {{geo_list}} $$,'E''|''|\\(|\\)|\\s','', 'g'),\n             ','\n           )::text[]\n    END AS geo_arr\n),\nparam_p AS (\n  SELECT COALESCE({{date_book_interval}}, 14)::int AS book_window_days\n),\n\n-- 1) Глобальные старты сессий (по всей истории)\nsession_starts AS (\n  SELECT\n    v.person_key,\n    v.crm_id,\n    v.geo,\n    v.booking_date::date AS episode_start\n  FROM v_person_purchases_prev v\n  WHERE v.prev_booking_date IS NULL\n     OR (v.booking_date::date - v.prev_booking_date::date) > (SELECT book_window_days FROM param_p)\n),\n\n-- 2) Первая сессия (когорта)\nfirst_session AS (\n  SELECT DISTINCT ON (s.person_key)\n         s.person_key,\n         s.episode_start                            AS first_session_date,\n         s.geo                                      AS first_geo,\n         date_trunc('month', s.episode_start)::date AS cohort_month\n  FROM session_starts s\n  ORDER BY s.person_key, s.episode_start, s.geo\n),\n\n-- 3) ✨ Первая СДЕЛКА (создание) в жизни клиента → utmsource первой сделки\nfirst_deal_rows AS (\n  SELECT\n    cp.person_key,\n    l.creation_date_time::timestamp AS first_deal_dt,\n    NULLIF(trim(l.utmsource), '')   AS utmsource\n  FROM mart.parent_child_leads l\n  JOIN v_person_key cp\n    ON cp.account_id      = l.account_id\n   AND cp.contacts_amo_id = l.contacts_amo_id\n  WHERE l.creation_date_time IS NOT NULL\n),\nfirst_deal_global AS (\n  SELECT DISTINCT ON (f.person_key)\n         f.person_key,\n         f.first_deal_dt,\n         COALESCE(f.utmsource, 'unknown') AS first_deal_utmsource\n  FROM first_deal_rows f\n  ORDER BY f.person_key, f.first_deal_dt\n),\n\n-- 4) Сколько сессий всего у клиента (вернулся ли когда-нибудь)\nsessions_per_person AS (\n  SELECT person_key, COUNT(*) AS total_sessions\n  FROM session_starts\n  GROUP BY person_key\n),\n\n-- 5) Когорты, прошедшие фильтр по GEO первой сессии и дате первой сессии + utmsource первой СДЕЛКИ\ncohort_scoped AS (\n  SELECT\n    fs.person_key,\n    fs.first_session_date,\n    fs.cohort_month,\n    fs.first_geo,\n    COALESCE(fdg.first_deal_utmsource, 'unknown') AS utmsource,\n    sp.total_sessions\n  FROM first_session fs\n  JOIN sessions_per_person sp USING (person_key)\n  LEFT JOIN first_deal_global fdg USING (person_key)\n  CROSS JOIN list_p lp\n  WHERE fs.first_geo IN ('ОАЭ','Москва','Грузия','Таиланд','Бали','Таиланд Eng')\n    AND (lp.geo_arr IS NULL OR fs.first_geo = ANY(lp.geo_arr))\n    AND fs.first_session_date >= {{interval_from}}::date\n    AND fs.first_session_date <  {{interval_to}}::date\n),\n\n-- 6) Покупки этих клиентов в выбранных GEO и интервале (для сумм/медиан чеков)\nreport_pp AS (\n  SELECT\n    v.person_key,\n    v.deal_amount\n  FROM v_person_purchases_prev v\n  CROSS JOIN list_p lp\n  WHERE v.geo IN ('ОАЭ','Москва','Грузия','Таиланд','Бали','Таиланд Eng')\n    AND (lp.geo_arr IS NULL OR v.geo = ANY(lp.geo_arr))\n    AND v.booking_date >= {{interval_from}}::date\n    AND v.booking_date <  {{interval_to}}::date\n)\n\n-- 7) Итог по источникам (источник = utmsource ПЕРВОЙ СДЕЛКИ клиента)\nSELECT\n  c.utmsource                                      AS utmsource,\n  COUNT(*)                                         AS \"Уник. контактов\",\n  COUNT(*) FILTER (WHERE c.total_sessions >= 2)    AS \"Повторно купили\",\n  ROUND(100.0 * COUNT(*) FILTER (WHERE c.total_sessions >= 2)\n        / NULLIF(COUNT(*), 0), 2)                  AS \"Retention rate, %\",\n  SUM(r.deal_amount)                               AS \"Сумма всех сделок\",\n  percentile_disc(0.5) WITHIN GROUP (ORDER BY r.deal_amount)\n                                                   AS \"Медианный чек\"\nFROM cohort_scoped c\nLEFT JOIN report_pp r USING (person_key)\nGROUP BY c.utmsource\nORDER BY \"Повторно купили\" DESC",
+    "queries": [],
+    "params": [
+      {
+        "type": "number",
+        "name": "date_book_interval",
+        "defaultValue": "14"
+      },
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2025-01-31T00:00:00.000Z",
+          "to": "2025-08-25T00:00:00.000Z"
+        }
+      },
+      {
+        "type": "string",
+        "name": "geo_list",
+        "defaultValue": ""
+      }
+    ],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "utmsource",
+              "title": "utmsource",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "string",
+              "cast": "string",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Уник. контактов",
+              "title": "Уник. контактов",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Повторно купили",
+              "title": "Повторно купили",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Retention rate, %",
+              "title": "Retention rate, %",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "%",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "e8de45b0-81b5-11f0-8edb-dd757681a775",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": true
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "Retention rate, %"
+              }
+            },
+            {
+              "guid": "Сумма всех сделок",
+              "title": "Сумма всех сделок",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "$",
+                "postfix": "",
+                "unit": "k",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a2834160-81b5-11f0-a180-0567ae50ba04",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Сумма всех сделок"
+              }
+            },
+            {
+              "guid": "Медианный чек",
+              "title": "Медианный чек",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "$",
+                "postfix": "",
+                "unit": "k",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "09f641d0-81b6-11f0-8edb-dd757681a775",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Медианный чек"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "utmsource": "discrete"
+            }
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7",
+    "geopointsConfig": {}
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

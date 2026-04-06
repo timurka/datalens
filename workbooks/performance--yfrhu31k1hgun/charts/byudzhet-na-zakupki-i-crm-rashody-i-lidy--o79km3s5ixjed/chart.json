@@ -1,0 +1,471 @@
+{
+  "entryId": "o79km3s5ixjed",
+  "scope": "widget",
+  "type": "graph_wizard_node",
+  "key": "1560793924677668185/Бюджет на закупки и CRM — Расходы и лиды",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2023-11-24T08:38:54.879Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2023-11-24T18:04:39.579Z",
+  "savedId": "gz45cjee1em25",
+  "publishedId": "gz45cjee1em25",
+  "revId": "gz45cjee1em25",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [
+      {
+        "title": "Measure Names",
+        "type": "PSEUDO",
+        "className": "item pseudo-item dimension-item",
+        "data_type": "string"
+      }
+    ],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "6n2chcp2ryzyv"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "f0043020-8aa4-11ee-bb05-dbf75a92ee83",
+          "title": "title-f0043020-8aa4-11ee-bb05-dbf75a92ee83",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "1d4efe10-8a10-11ee-ab11-3fe050c348c5",
+          "title": "title-1d4efe10-8a10-11ee-ab11-3fe050c348c5",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "09613760-8a10-11ee-ab11-3fe050c348c5",
+          "title": "title-09613760-8a10-11ee-ab11-3fe050c348c5",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "dad15d30-853c-11ee-a85f-df271b57c8e8",
+          "title": "month_year",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "d52f6570-8203-11ee-8c2e-07e68318c1dc",
+          "title": "Факт CPQ",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "ad7f06c0-8203-11ee-8c2e-07e68318c1dc",
+          "title": "План CPQ",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "eb148190-81fe-11ee-9805-335ae1e3eada",
+          "title": "План QLeads",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "bc59d690-81fc-11ee-9805-335ae1e3eada",
+          "title": "План Leads",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "e3601650-7ffe-11ee-99ad-b3ea29004e0d",
+          "title": "Факт CPL",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "c66850d0-7ffe-11ee-99ad-b3ea29004e0d",
+          "title": "Факт CRQ",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "date_6pqd",
+          "title": "date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_nrjh",
+          "title": "Leads",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qleads_j5gp",
+          "title": "QLeads",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "plan_per_day_oh52",
+          "title": "План расход",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "fact_ukhz",
+          "title": "Факт расход",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpl_ckf5",
+          "title": "План CPL",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crq_bskf",
+          "title": "План CRQ",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_followers_uae_mf43",
+          "title": "total_followers_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpf_9goh",
+          "title": "cpf_plan",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "titleMode": "hide",
+      "title": "Бюджет на закупки и CRM — Расходы и лиды",
+      "legendMode": "show",
+      "tooltipSum": "off",
+      "feed": "",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      }
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [
+      {
+        "title": "Measure Names",
+        "type": "PSEUDO",
+        "className": "item pseudo-item dimension-item",
+        "data_type": "string"
+      }
+    ],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": false,
+          "aggregation_locked": true,
+          "data_type": "date",
+          "valid": true,
+          "description": "",
+          "hidden": false,
+          "cast": "date",
+          "type": "DIMENSION",
+          "virtual": false,
+          "initial_data_type": "date",
+          "lock_aggregation": false,
+          "guid": "09613760-8a10-11ee-ab11-3fe050c348c5",
+          "autoaggregated": false,
+          "title": "title-09613760-8a10-11ee-ab11-3fe050c348c5",
+          "aggregation": "none",
+          "managed_by": "user",
+          "formula": "datetrunc([date], \"week\")",
+          "guid_formula": "datetrunc([date_6pqd], \"week\")",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "6n2chcp2ryzyv"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": false,
+          "aggregation_locked": false,
+          "data_type": "integer",
+          "valid": true,
+          "description": "",
+          "hidden": false,
+          "cast": "integer",
+          "type": "MEASURE",
+          "virtual": false,
+          "initial_data_type": "integer",
+          "lock_aggregation": false,
+          "guid": "1d4efe10-8a10-11ee-ab11-3fe050c348c5",
+          "autoaggregated": false,
+          "title": "title-1d4efe10-8a10-11ee-ab11-3fe050c348c5",
+          "aggregation": "sum",
+          "managed_by": "user",
+          "source": "leads",
+          "avatar_id": "8ecc52c0-7ffe-11ee-99ad-b3ea29004e0d",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "6n2chcp2ryzyv"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": false,
+          "aggregation_locked": false,
+          "data_type": "float",
+          "valid": true,
+          "description": "",
+          "hidden": false,
+          "cast": "float",
+          "type": "MEASURE",
+          "virtual": false,
+          "initial_data_type": "float",
+          "lock_aggregation": false,
+          "guid": "f0043020-8aa4-11ee-bb05-dbf75a92ee83",
+          "autoaggregated": false,
+          "title": "title-f0043020-8aa4-11ee-bb05-dbf75a92ee83",
+          "aggregation": "sum",
+          "managed_by": "user",
+          "source": "fact",
+          "avatar_id": "8ecc52c0-7ffe-11ee-99ad-b3ea29004e0d",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "6n2chcp2ryzyv"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "line",
+      "type": "line",
+      "name": "label_visualization-line",
+      "iconProps": {
+        "id": "visLines",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "allowLabels": true,
+      "allowSegments": true,
+      "allowShapes": true,
+      "colorsCapacity": 2,
+      "shapesCapacity": 2,
+      "availableLabelModes": [
+        "absolute"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "description": "",
+              "cast": "date",
+              "has_auto_aggregation": false,
+              "virtual": false,
+              "guid": "09613760-8a10-11ee-ab11-3fe050c348c5",
+              "hidden": false,
+              "type": "DIMENSION",
+              "data_type": "date",
+              "initial_data_type": "date",
+              "title": "title-09613760-8a10-11ee-ab11-3fe050c348c5",
+              "aggregation_locked": true,
+              "managed_by": "user",
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "valid": true,
+              "autoaggregated": false,
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "datetrunc([date], \"week\")",
+              "guid_formula": "datetrunc([date_6pqd], \"week\")",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "6n2chcp2ryzyv",
+              "id": "dimension-2",
+              "datasetName": "Бюджет на закупки и CRM",
+              "format": "DD.MM.YYYY",
+              "grouping": "trunc-week",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "local": true,
+              "fakeTitle": "Неделя",
+              "quickFormula": true,
+              "originalDateCast": "date",
+              "originalSource": "date",
+              "originalTitle": "date"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "holidays": "off",
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "date_6pqd": "continuous"
+            }
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "type": "MEASURE",
+              "lock_aggregation": false,
+              "cast": "float",
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "title": "title-f0043020-8aa4-11ee-bb05-dbf75a92ee83",
+              "valid": true,
+              "has_auto_aggregation": false,
+              "aggregation": "sum",
+              "initial_data_type": "float",
+              "hidden": false,
+              "description": "",
+              "data_type": "float",
+              "autoaggregated": false,
+              "virtual": false,
+              "guid": "f0043020-8aa4-11ee-bb05-dbf75a92ee83",
+              "source": "fact",
+              "avatar_id": "8ecc52c0-7ffe-11ee-99ad-b3ea29004e0d",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "Факт расход",
+              "fakeTitle": "Факт расход",
+              "datasetId": "6n2chcp2ryzyv",
+              "default_value": null,
+              "value_constraint": null,
+              "id": "measure-0",
+              "datasetName": "Бюджет на закупки и CRM"
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "manual",
+            "titleValue": "Расход",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "ignore",
+            "axisFormatMode": "auto"
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y2",
+          "type": "y2",
+          "title": "section_y2",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "title-1d4efe10-8a10-11ee-ab11-3fe050c348c5",
+              "initial_data_type": "integer",
+              "data_type": "integer",
+              "managed_by": "user",
+              "virtual": false,
+              "description": "",
+              "guid": "1d4efe10-8a10-11ee-ab11-3fe050c348c5",
+              "valid": true,
+              "lock_aggregation": false,
+              "autoaggregated": false,
+              "cast": "integer",
+              "aggregation": "sum",
+              "has_auto_aggregation": false,
+              "type": "MEASURE",
+              "aggregation_locked": false,
+              "hidden": false,
+              "avatar_id": "8ecc52c0-7ffe-11ee-99ad-b3ea29004e0d",
+              "source": "leads",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "Leads",
+              "fakeTitle": "Лидов",
+              "datasetId": "6n2chcp2ryzyv",
+              "id": "measure-1",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "default_value": null,
+              "value_constraint": null,
+              "datasetName": "Бюджет на закупки и CRM"
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "manual",
+            "titleValue": "Лидов",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "ignore",
+            "axisFormatMode": "auto"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

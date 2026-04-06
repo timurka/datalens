@@ -1,0 +1,668 @@
+{
+  "entryId": "qva3reqoxtzce",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1644936605426782150/Закупки - конкуренты — Таблица",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-03-19T10:55:24.070Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-03-19T11:02:35.568Z",
+  "savedId": "kp4yvfhz9rm08",
+  "publishedId": "kp4yvfhz9rm08",
+  "revId": "kp4yvfhz9rm08",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "fkzrqn1r63km3"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "171b1570-e5e0-11ee-8849-975c4e738bdf",
+          "title": "Прирост через 2 дня",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "e98a0b70-e5df-11ee-8849-975c4e738bdf",
+          "title": "Прирост через 1 день",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "95bad060-e5df-11ee-8849-975c4e738bdf",
+          "title": "url_source",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "73347730-e5df-11ee-8849-975c4e738bdf",
+          "title": "url",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "50bff850-e5df-11ee-8849-975c4e738bdf",
+          "title": "date (1)",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_za8d",
+          "title": "channel",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "postlink_xk3y",
+          "title": "postlink",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_962o",
+          "title": "source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_nd6k",
+          "title": "date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_id_jj51",
+          "title": "source_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "subscriber_change_1day_heu2",
+          "title": "subscriber_change_1day",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "subscriber_change_2days_kvsm",
+          "title": "subscriber_change_2days",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "date_nd6k",
+        "datasetId": "fkzrqn1r63km3",
+        "data_type": "genericdatetime",
+        "title": "date",
+        "source": "date",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "type": "DIMENSION",
+          "has_auto_aggregation": false,
+          "aggregation_locked": false,
+          "initial_data_type": "genericdatetime",
+          "valid": true,
+          "title": "date (1)",
+          "data_type": "genericdatetime",
+          "managed_by": "user",
+          "description": "",
+          "cast": "genericdatetime",
+          "hidden": false,
+          "virtual": false,
+          "autoaggregated": false,
+          "guid": "50bff850-e5df-11ee-8849-975c4e738bdf",
+          "aggregation": "none",
+          "source": "date",
+          "avatar_id": "9e1fab00-e5de-11ee-8068-23fa9faffcc3",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "datasetId": "fkzrqn1r63km3"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "type": "DIMENSION",
+          "has_auto_aggregation": false,
+          "aggregation_locked": true,
+          "initial_data_type": "markup",
+          "valid": true,
+          "title": "url",
+          "data_type": "markup",
+          "managed_by": "user",
+          "description": "",
+          "cast": "markup",
+          "hidden": false,
+          "virtual": false,
+          "autoaggregated": false,
+          "guid": "73347730-e5df-11ee-8849-975c4e738bdf",
+          "aggregation": "none",
+          "guid_formula": "URL('https://t.me/' + [channel_za8d], [channel_za8d])",
+          "formula": "URL('https://t.me/' + [channel], [channel])",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "fkzrqn1r63km3"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "type": "DIMENSION",
+          "has_auto_aggregation": false,
+          "aggregation_locked": true,
+          "initial_data_type": "markup",
+          "valid": true,
+          "title": "url_source",
+          "data_type": "markup",
+          "managed_by": "user",
+          "description": "",
+          "cast": "markup",
+          "hidden": false,
+          "virtual": false,
+          "autoaggregated": false,
+          "guid": "95bad060-e5df-11ee-8849-975c4e738bdf",
+          "aggregation": "none",
+          "guid_formula": "URL('https://t.me/' + [source_962o], [source_962o])",
+          "formula": "URL('https://t.me/' + [source], [source])",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "fkzrqn1r63km3"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "type": "DIMENSION",
+          "has_auto_aggregation": false,
+          "aggregation_locked": true,
+          "initial_data_type": "string",
+          "valid": true,
+          "title": "Прирост через 1 день",
+          "data_type": "string",
+          "managed_by": "user",
+          "description": "",
+          "cast": "string",
+          "hidden": false,
+          "virtual": false,
+          "autoaggregated": false,
+          "guid": "e98a0b70-e5df-11ee-8849-975c4e738bdf",
+          "aggregation": "none",
+          "guid_formula": "IF [subscriber_change_1day_heu2] < 0 THEN\n    CONCAT('🔻', INT([subscriber_change_1day_heu2]))\nELSE\n    CONCAT('▲', INT([subscriber_change_1day_heu2]))\nEND",
+          "formula": "IF [subscriber_change_1day] < 0 THEN\n    CONCAT('🔻', INT([subscriber_change_1day]))\nELSE\n    CONCAT('▲', INT([subscriber_change_1day]))\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "fkzrqn1r63km3"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "type": "DIMENSION",
+          "has_auto_aggregation": false,
+          "aggregation_locked": true,
+          "initial_data_type": "string",
+          "valid": true,
+          "title": "Прирост через 2 дня",
+          "data_type": "string",
+          "managed_by": "user",
+          "description": "",
+          "cast": "string",
+          "hidden": false,
+          "virtual": false,
+          "autoaggregated": false,
+          "guid": "171b1570-e5e0-11ee-8849-975c4e738bdf",
+          "aggregation": "none",
+          "guid_formula": "IF [subscriber_change_2days_kvsm] < 0 THEN\n    CONCAT('🔻', INT([subscriber_change_2days_kvsm]))\nELSE\n    CONCAT('▲', INT([subscriber_change_2days_kvsm]))\nEND",
+          "formula": "IF [subscriber_change_2days] < 0 THEN\n    CONCAT('🔻', INT([subscriber_change_2days]))\nELSE\n    CONCAT('▲', INT([subscriber_change_2days]))\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "backgroundSettings": {
+            "enabled": false,
+            "settingsId": "24e7e8f0-e5df-11ee-8849-975c4e738bdf",
+            "settings": {
+              "gradientState": {},
+              "paletteState": {
+                "palette": "default",
+                "mountedColors": {}
+              },
+              "isContinuous": false
+            },
+            "colorFieldGuid": "subscriber_change_2days_kvsm"
+          },
+          "datasetId": "fkzrqn1r63km3"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "73347730-e5df-11ee-8849-975c4e738bdf",
+              "initial_data_type": "markup",
+              "cast": "markup",
+              "aggregation": "none",
+              "description": "",
+              "data_type": "markup",
+              "valid": true,
+              "autoaggregated": false,
+              "hidden": false,
+              "aggregation_locked": true,
+              "virtual": false,
+              "managed_by": "user",
+              "has_auto_aggregation": false,
+              "title": "url",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "source": "",
+              "avatar_id": "9e1fab00-e5de-11ee-8068-23fa9faffcc3",
+              "calc_mode": "formula",
+              "formula": "URL('https://t.me/' + [channel], [channel])",
+              "guid_formula": "URL('https://t.me/' + [channel_za8d], [channel_za8d])",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "fkzrqn1r63km3",
+              "id": "dimension-3",
+              "datasetName": "Закупки - конкуренты",
+              "fakeTitle": "Конкурент",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "5dda9d60-e5df-11ee-8849-975c4e738bdf",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "73347730-e5df-11ee-8849-975c4e738bdf"
+              },
+              "quickFormula": false,
+              "local": true
+            },
+            {
+              "guid": "date_nd6k",
+              "initial_data_type": "genericdatetime",
+              "cast": "genericdatetime",
+              "aggregation": "none",
+              "description": "",
+              "data_type": "genericdatetime",
+              "valid": true,
+              "autoaggregated": false,
+              "hidden": false,
+              "aggregation_locked": false,
+              "virtual": false,
+              "managed_by": "user",
+              "has_auto_aggregation": false,
+              "title": "date",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "source": "date",
+              "avatar_id": "9e1fab00-e5de-11ee-8068-23fa9faffcc3",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "fkzrqn1r63km3",
+              "id": "dimension-8",
+              "datasetName": "Закупки - конкуренты",
+              "format": "DD.MM.YYYY HH:mm",
+              "grouping": "none",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "4ac2eb60-e5df-11ee-8849-975c4e738bdf",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "date_nd6k"
+              },
+              "fakeTitle": "Дата поста"
+            },
+            {
+              "guid": "95bad060-e5df-11ee-8849-975c4e738bdf",
+              "initial_data_type": "markup",
+              "cast": "markup",
+              "aggregation": "none",
+              "description": "",
+              "data_type": "markup",
+              "valid": true,
+              "autoaggregated": false,
+              "hidden": false,
+              "aggregation_locked": true,
+              "virtual": false,
+              "managed_by": "user",
+              "has_auto_aggregation": false,
+              "title": "url_source",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "source": "",
+              "avatar_id": "9e1fab00-e5de-11ee-8068-23fa9faffcc3",
+              "calc_mode": "formula",
+              "formula": "URL('https://t.me/' + [source], [source])",
+              "guid_formula": "URL('https://t.me/' + [source_962o], [source_962o])",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "fkzrqn1r63km3",
+              "id": "dimension-2",
+              "datasetName": "Закупки - конкуренты",
+              "fakeTitle": "Площадка",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "819557e0-e5df-11ee-8849-975c4e738bdf",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "95bad060-e5df-11ee-8849-975c4e738bdf"
+              },
+              "quickFormula": false,
+              "local": true
+            },
+            {
+              "guid": "source_id_jj51",
+              "initial_data_type": "integer",
+              "cast": "integer",
+              "aggregation": "none",
+              "description": "",
+              "data_type": "integer",
+              "valid": true,
+              "autoaggregated": false,
+              "hidden": false,
+              "aggregation_locked": false,
+              "virtual": false,
+              "managed_by": "user",
+              "has_auto_aggregation": false,
+              "title": "source_id",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "source": "source_id",
+              "avatar_id": "9e1fab00-e5de-11ee-8068-23fa9faffcc3",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "fkzrqn1r63km3",
+              "id": "dimension-9",
+              "datasetName": "Закупки - конкуренты",
+              "fakeTitle": "ID Площадки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "84f60f10-e5df-11ee-8849-975c4e738bdf",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "source_id_jj51"
+              }
+            },
+            {
+              "guid": "postlink_xk3y",
+              "initial_data_type": "string",
+              "cast": "string",
+              "aggregation": "none",
+              "description": "",
+              "data_type": "string",
+              "valid": true,
+              "autoaggregated": false,
+              "hidden": false,
+              "aggregation_locked": false,
+              "virtual": false,
+              "managed_by": "user",
+              "has_auto_aggregation": false,
+              "title": "postlink",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "source": "postlink",
+              "avatar_id": "9e1fab00-e5de-11ee-8068-23fa9faffcc3",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "fkzrqn1r63km3",
+              "id": "dimension-6",
+              "datasetName": "Закупки - конкуренты",
+              "fakeTitle": "Пост",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "9a16fe90-e5df-11ee-8849-975c4e738bdf",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "postlink_xk3y"
+              }
+            },
+            {
+              "guid": "e98a0b70-e5df-11ee-8849-975c4e738bdf",
+              "initial_data_type": "string",
+              "cast": "string",
+              "aggregation": "none",
+              "description": "",
+              "data_type": "string",
+              "valid": true,
+              "autoaggregated": false,
+              "hidden": false,
+              "aggregation_locked": true,
+              "virtual": false,
+              "managed_by": "user",
+              "has_auto_aggregation": false,
+              "title": "Прирост через 1 день",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "source": "",
+              "avatar_id": "9e1fab00-e5de-11ee-8068-23fa9faffcc3",
+              "calc_mode": "formula",
+              "formula": "IF [subscriber_change_1day] < 0 THEN\n    CONCAT('🔻', INT([subscriber_change_1day]))\nELSE\n    CONCAT('▲', INT([subscriber_change_1day]))\nEND",
+              "guid_formula": "IF [subscriber_change_1day_heu2] < 0 THEN\n    CONCAT('🔻', INT([subscriber_change_1day_heu2]))\nELSE\n    CONCAT('▲', INT([subscriber_change_1day_heu2]))\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "fkzrqn1r63km3",
+              "id": "dimension-1",
+              "datasetName": "Закупки - конкуренты",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "22f71570-e5df-11ee-8849-975c4e738bdf",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "subscriber_change_1day_heu2"
+              },
+              "quickFormula": false,
+              "local": true
+            },
+            {
+              "guid": "171b1570-e5e0-11ee-8849-975c4e738bdf",
+              "initial_data_type": "string",
+              "cast": "string",
+              "aggregation": "none",
+              "description": "",
+              "data_type": "string",
+              "valid": true,
+              "autoaggregated": false,
+              "hidden": false,
+              "aggregation_locked": true,
+              "virtual": false,
+              "managed_by": "user",
+              "has_auto_aggregation": false,
+              "title": "Прирост через 2 дня",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "source": "",
+              "avatar_id": "9e1fab00-e5de-11ee-8068-23fa9faffcc3",
+              "calc_mode": "formula",
+              "formula": "IF [subscriber_change_2days] < 0 THEN\n    CONCAT('🔻', INT([subscriber_change_2days]))\nELSE\n    CONCAT('▲', INT([subscriber_change_2days]))\nEND",
+              "guid_formula": "IF [subscriber_change_2days_kvsm] < 0 THEN\n    CONCAT('🔻', INT([subscriber_change_2days_kvsm]))\nELSE\n    CONCAT('▲', INT([subscriber_change_2days_kvsm]))\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "fkzrqn1r63km3",
+              "id": "dimension-0",
+              "datasetName": "Закупки - конкуренты",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "24e7e8f0-e5df-11ee-8849-975c4e738bdf",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "subscriber_change_2days_kvsm"
+              },
+              "quickFormula": false,
+              "local": true
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "73347730-e5df-11ee-8849-975c4e738bdf": "discrete"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

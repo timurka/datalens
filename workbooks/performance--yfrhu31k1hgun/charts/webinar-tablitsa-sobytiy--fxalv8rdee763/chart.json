@@ -1,0 +1,573 @@
+{
+  "entryId": "fxalv8rdee763",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1689909105533126403/webinar — Таблица событий",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-05-20T12:07:43.854Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-05-20T12:11:51.149Z",
+  "savedId": "2kx98ccuim40q",
+  "publishedId": "2kx98ccuim40q",
+  "revId": "2kx98ccuim40q",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "oqiclv8avlnkc"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "86248b80-d70e-11ee-9248-bbc1b3e6b134",
+          "title": "actions",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "id_hafk",
+          "title": "id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "full_date_7q2q",
+          "title": "full_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_num_4pba",
+          "title": "deal_num",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "users_id_2lj9",
+          "title": "users_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "title_ro34",
+          "title": "title",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "source_52zs",
+          "title": "source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_count_1mqv",
+          "title": "leads_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_ykem",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "book_wwv0",
+          "title": "book",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "keyword_sjn4",
+          "title": "keyword",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "webinar_6wwb",
+          "title": "webinar",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "type_kewt",
+          "title": "type",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_2nq9",
+          "title": "date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "webinar_date",
+          "title": "webinar_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "medium",
+          "title": "medium",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "campaign",
+          "title": "campaign",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "content",
+          "title": "content",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "full_date_7q2q",
+        "datasetId": "oqiclv8avlnkc",
+        "data_type": "genericdatetime",
+        "title": "full_date",
+        "source": "full_date",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "webinar_date",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "string",
+              "aggregation_locked": false,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "webinar_date",
+              "initial_data_type": "string",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "string",
+              "type": "DIMENSION",
+              "hidden": false,
+              "source": "webinar_date",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "dimension-14",
+              "datasetName": "webinar",
+              "fakeTitle": "Дата вебинара",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "134affd0-16a2-11ef-af79-0b0ac2614ece",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "webinar_date"
+              }
+            },
+            {
+              "cast": "integer",
+              "title": "deal_num",
+              "guid": "deal_num_4pba",
+              "autoaggregated": false,
+              "description": "",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "hidden": false,
+              "initial_data_type": "integer",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "data_type": "integer",
+              "source": "deal_num",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "inserted-1716206937633",
+              "datasetName": "webinar",
+              "fakeTitle": "N заказа",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "15adcf00-16a2-11ef-af79-0b0ac2614ece",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "deal_num_4pba"
+              }
+            },
+            {
+              "cast": "genericdatetime",
+              "title": "full_date",
+              "guid": "full_date_7q2q",
+              "autoaggregated": false,
+              "description": "",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "hidden": false,
+              "initial_data_type": "genericdatetime",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "data_type": "genericdatetime",
+              "source": "full_date",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "dimension-2",
+              "datasetName": "webinar",
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none",
+              "fakeTitle": "Дата события",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "10d17450-16a2-11ef-af79-0b0ac2614ece",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "full_date_7q2q"
+              }
+            },
+            {
+              "guid": "webinar_6wwb",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "string",
+              "aggregation_locked": false,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "webinar",
+              "initial_data_type": "string",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "string",
+              "type": "DIMENSION",
+              "hidden": false,
+              "source": "webinar",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "dimension-11",
+              "datasetName": "webinar",
+              "fakeTitle": "Вебинар",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "19670670-16a2-11ef-af79-0b0ac2614ece",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "webinar_6wwb"
+              }
+            },
+            {
+              "guid": "title_ro34",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "string",
+              "aggregation_locked": false,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "title",
+              "initial_data_type": "string",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "string",
+              "type": "DIMENSION",
+              "hidden": false,
+              "source": "title",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "dimension-5",
+              "datasetName": "webinar",
+              "fakeTitle": "Название события",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1d02cad0-16a2-11ef-af79-0b0ac2614ece",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "title_ro34"
+              }
+            },
+            {
+              "guid": "type_kewt",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "string",
+              "aggregation_locked": false,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "type",
+              "initial_data_type": "string",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "string",
+              "type": "DIMENSION",
+              "hidden": false,
+              "source": "type",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "dimension-12",
+              "datasetName": "webinar",
+              "fakeTitle": "Тип события",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "1f9b01e0-16a2-11ef-af79-0b0ac2614ece",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "type_kewt"
+              }
+            },
+            {
+              "guid": "source_52zs",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "string",
+              "aggregation_locked": false,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "source",
+              "initial_data_type": "string",
+              "description": "",
+              "aggregation": "none",
+              "data_type": "string",
+              "type": "DIMENSION",
+              "hidden": false,
+              "source": "source",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "dimension-6",
+              "datasetName": "webinar"
+            },
+            {
+              "cast": "string",
+              "title": "medium",
+              "guid": "medium",
+              "autoaggregated": false,
+              "description": "",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "hidden": false,
+              "initial_data_type": "string",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "data_type": "string",
+              "source": "medium",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "inserted-1716206916613",
+              "datasetName": "webinar"
+            },
+            {
+              "cast": "string",
+              "title": "campaign",
+              "guid": "campaign",
+              "autoaggregated": false,
+              "description": "",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "hidden": false,
+              "initial_data_type": "string",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "data_type": "string",
+              "source": "campaign",
+              "avatar_id": "3f31b0d0-d70a-11ee-9ab2-5bba3ccea967",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "oqiclv8avlnkc",
+              "id": "inserted-1716206922708",
+              "datasetName": "webinar"
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "webinar_date": "discrete"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

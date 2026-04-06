@@ -1,0 +1,124 @@
+{
+  "entryId": "1w0ipa51yhe0m",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "2012399545454954222/QL-чарт - Купившие",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-08-08T10:58:39.765Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-08-08T10:58:39.765Z",
+  "savedId": "idhz6rnwdxse3",
+  "publishedId": "idhz6rnwdxse3",
+  "revId": "idhz6rnwdxse3",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "bpds0nslojo40",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "/* ===  Датасет: воронка 9816674 + лиды с тегом «работа с купив»  === */\n\n--------------------------------------------------------------------\n-- Часть 1. Лиды из воронки 9816674, статус «Взяли в работу»\n--------------------------------------------------------------------\nWITH target_leads AS (\n    SELECT id   AS leads_id,\n           account_id,\n           lead_id\n    FROM amocrm_leads\n    WHERE pipeline_id = 9816674\n),\n\nLeadEvents AS (\n    SELECT\n        e.leads_id,\n        e.account_id,\n        e.type,\n        e.created_at,\n        /* status_id нужен только для lead_status_changed */\n        CASE WHEN e.type = 'lead_status_changed'\n             THEN ((e.value_after::json->0->>'lead_status')::json->>'id')::int\n        END AS status_id\n    FROM amocrm_leads_events e\n    JOIN target_leads tl ON tl.leads_id = e.leads_id\n                        AND tl.account_id = e.account_id\n    WHERE e.type IN ('lead_added', 'lead_status_changed')\n),\n\ncreation AS (\n    SELECT leads_id, account_id, MIN(created_at) AS creation_dt\n    FROM LeadEvents\n    WHERE type = 'lead_added'\n    GROUP BY leads_id, account_id\n),\n\nwork_taken AS (\n    SELECT leads_id, account_id, MIN(created_at) AS work_taken_dt\n    FROM LeadEvents\n    WHERE type = 'lead_status_changed'\n      AND status_id = 78200678   -- «Взяли в работу»\n    GROUP BY leads_id, account_id\n),\n\npipeline_dataset AS (\n    SELECT\n        tl.lead_id                     AS crm_id,\n        DATE(cr.creation_dt)           AS creation_date,\n        cr.creation_dt                 AS creation_date_time,\n        wt.work_taken_dt               AS work_taken_datetime,\n        NULL::timestamp                AS date_qual,\n        NULL::timestamp                AS date_booking,\n        NULL::int                      AS qual,\n        NULL::int                      AS booking_event\n    FROM work_taken wt\n    JOIN creation   cr USING (leads_id, account_id)\n    JOIN target_leads tl USING (leads_id, account_id)\n),\n\n--------------------------------------------------------------------\n-- Часть 2. Данные из perfomance_all_leads (по тегу)\n--------------------------------------------------------------------\nperf_dataset AS (\n    SELECT\n        crm_id,\n        creation_date,\n        creation_date_time,\n        NULL::timestamp                AS work_taken_datetime,\n        date_qual,\n        date_booking,\n        qual,\n        booking_event\n    FROM perfomance_all_leads\n    WHERE tags ILIKE '%работа с купив%'\n),\n\n--------------------------------------------------------------------\n-- Объединяем оба набора данных\n--------------------------------------------------------------------\nall_leads AS (\n    SELECT * FROM pipeline_dataset\n    UNION ALL\n    SELECT * FROM perf_dataset\n)\n\n--------------------------------------------------------------------\n-- Итог: агрегация по месяцам\n--------------------------------------------------------------------\nSELECT\n    DATE_TRUNC('month', creation_date_time)::date AS month,\n    COUNT(DISTINCT crm_id) FILTER (WHERE work_taken_datetime IS NOT NULL) AS leads_in_work,\n    COUNT(DISTINCT crm_id) FILTER (WHERE date_qual IS NOT NULL)           AS leads_qualed,\n    COUNT(DISTINCT crm_id) FILTER (WHERE date_booking IS NOT NULL)        AS bookings\nFROM all_leads\nGROUP BY 1\nORDER BY 1;",
+    "queries": [],
+    "params": [],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "month",
+              "title": "month",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "date",
+              "cast": "date",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "leads_in_work",
+              "title": "leads_in_work",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "leads_qualed",
+              "title": "leads_qualed",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "bookings",
+              "title": "bookings",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "integer",
+              "cast": "integer",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7",
+    "geopointsConfig": {}
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

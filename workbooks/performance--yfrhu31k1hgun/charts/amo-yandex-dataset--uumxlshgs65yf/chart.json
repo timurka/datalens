@@ -1,0 +1,763 @@
+{
+  "entryId": "uumxlshgs65yf",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2029930132516374187/amo_yandex — Датасет",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-09-01T15:28:48.920Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-10-10T08:42:00.996Z",
+  "savedId": "3ajht25ylz9ko",
+  "publishedId": "3ajht25ylz9ko",
+  "revId": "3ajht25ylz9ko",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "ttlt9zjxhdv4e"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "fb41dfa0-a5b4-11f0-8d74-f172e8d224d6",
+          "title": "AMO ID",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "d8a0ab70-a5b4-11f0-ba96-d3bb4e3878c3",
+          "title": "Сумма сделок",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "date_b6up",
+          "title": "date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_3ffn",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_id_hz2u",
+          "title": "pipeline_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_ibso",
+          "title": "pipeline",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_g7ax",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_buz4",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "broker_zv1j",
+          "title": "broker",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contact_in_y33d",
+          "title": "contact_in",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_sw8p",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_a_pmh1",
+          "title": "qual_priority_a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_b_7dx1",
+          "title": "qual_priority_b",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_c_8giu",
+          "title": "qual_priority_c",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_hmw3",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_okaq",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "revenue_ln0s",
+          "title": "revenue",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "campaign_id_6xq7",
+          "title": "campaign_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "adgroup_id_ozjp",
+          "title": "adgroup_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "ad_id_wc06",
+          "title": "ad_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "campaign_name_0msd",
+          "title": "campaign_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "adgroup_name_w3x7",
+          "title": "adgroup_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "ad_name_hdo8",
+          "title": "ad_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "spend_m0sf",
+          "title": "spend",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "clicks_2lxb",
+          "title": "clicks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "impressions_lcip",
+          "title": "impressions",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [
+      {
+        "guid": "crm_id_3ffn",
+        "datasetId": "ttlt9zjxhdv4e",
+        "filter": {
+          "value": [],
+          "operation": {
+            "code": "ISNOTNULL"
+          }
+        },
+        "type": "DIMENSION",
+        "title": "crm_id",
+        "calc_mode": "direct"
+      }
+    ],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "date_b6up",
+        "datasetId": "ttlt9zjxhdv4e",
+        "data_type": "date",
+        "title": "date",
+        "source": "date",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "float",
+          "guid": "d8a0ab70-a5b4-11f0-ba96-d3bb4e3878c3",
+          "has_auto_aggregation": false,
+          "aggregation": "none",
+          "title": "Сумма сделок",
+          "aggregation_locked": true,
+          "managed_by": "user",
+          "description": "",
+          "type": "DIMENSION",
+          "cast": "float",
+          "virtual": false,
+          "data_type": "float",
+          "valid": true,
+          "ui_settings": "",
+          "autoaggregated": false,
+          "hidden": false,
+          "lock_aggregation": false,
+          "guid_formula": "IF ([deal_amount_okaq] > 0) THEN [deal_amount_okaq] END",
+          "formula": "IF ([deal_amount] > 0) THEN [deal_amount] END",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "ttlt9zjxhdv4e"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "initial_data_type": "markup",
+          "guid": "fb41dfa0-a5b4-11f0-8d74-f172e8d224d6",
+          "has_auto_aggregation": false,
+          "aggregation": "none",
+          "title": "AMO ID",
+          "aggregation_locked": true,
+          "managed_by": "user",
+          "description": "",
+          "type": "DIMENSION",
+          "cast": "markup",
+          "virtual": false,
+          "data_type": "markup",
+          "valid": true,
+          "ui_settings": "",
+          "autoaggregated": false,
+          "hidden": false,
+          "lock_aggregation": false,
+          "guid_formula": "-- Если ру-акк\nIF [account_id_g7ax] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id_3ffn]), STR([crm_id_3ffn]))\n\nELSEIF [account_id_g7ax] = 57817 OR [account_id_g7ax] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id_3ffn]), STR([crm_id_3ffn]))\n\nELSEIF [account_id_g7ax] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id_3ffn]), STR([crm_id_3ffn]))\n\nEND",
+          "formula": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "ttlt9zjxhdv4e"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "has_auto_aggregation": false,
+              "initial_data_type": "date",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "virtual": false,
+              "title": "date",
+              "type": "DIMENSION",
+              "data_type": "date",
+              "aggregation_locked": false,
+              "cast": "date",
+              "description": "",
+              "hidden": false,
+              "guid": "date_b6up",
+              "lock_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "source": "date",
+              "avatar_id": "55cc7ad0-8746-11f0-90e0-636741aca0ec",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ttlt9zjxhdv4e",
+              "id": "dimension-2",
+              "datasetName": "amo_yandex",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Дата лида",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "35143b20-a5b4-11f0-ba96-d3bb4e3878c3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "date_b6up"
+              }
+            },
+            {
+              "has_auto_aggregation": false,
+              "initial_data_type": "markup",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "virtual": false,
+              "title": "AMO ID",
+              "type": "DIMENSION",
+              "data_type": "markup",
+              "aggregation_locked": true,
+              "cast": "markup",
+              "description": "",
+              "hidden": false,
+              "guid": "fb41dfa0-a5b4-11f0-8d74-f172e8d224d6",
+              "lock_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "source": "",
+              "avatar_id": "55cc7ad0-8746-11f0-90e0-636741aca0ec",
+              "calc_mode": "formula",
+              "formula": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nEND",
+              "guid_formula": "-- Если ру-акк\nIF [account_id_g7ax] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id_3ffn]), STR([crm_id_3ffn]))\n\nELSEIF [account_id_g7ax] = 57817 OR [account_id_g7ax] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id_3ffn]), STR([crm_id_3ffn]))\n\nELSEIF [account_id_g7ax] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id_3ffn]), STR([crm_id_3ffn]))\n\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ttlt9zjxhdv4e",
+              "id": "dimension-0",
+              "datasetName": "amo_yandex",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "3007d4a0-8748-11f0-9beb-d5122cdfb38f",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "crm_id_3ffn"
+              },
+              "quickFormula": false,
+              "local": true
+            },
+            {
+              "has_auto_aggregation": false,
+              "initial_data_type": "string",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "virtual": false,
+              "title": "campaign_name",
+              "type": "DIMENSION",
+              "data_type": "string",
+              "aggregation_locked": false,
+              "cast": "string",
+              "description": "",
+              "hidden": false,
+              "guid": "campaign_name_0msd",
+              "lock_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "source": "campaign_name",
+              "avatar_id": "55cc7ad0-8746-11f0-90e0-636741aca0ec",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ttlt9zjxhdv4e",
+              "id": "dimension-20",
+              "datasetName": "amo_yandex",
+              "fakeTitle": "Название кампании",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "3e5a7fa0-a5b4-11f0-ba96-d3bb4e3878c3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "campaign_name_0msd"
+              }
+            },
+            {
+              "has_auto_aggregation": false,
+              "initial_data_type": "string",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "virtual": false,
+              "title": "adgroup_name",
+              "type": "DIMENSION",
+              "data_type": "string",
+              "aggregation_locked": false,
+              "cast": "string",
+              "description": "",
+              "hidden": false,
+              "guid": "adgroup_name_w3x7",
+              "lock_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "source": "adgroup_name",
+              "avatar_id": "55cc7ad0-8746-11f0-90e0-636741aca0ec",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ttlt9zjxhdv4e",
+              "id": "dimension-21",
+              "datasetName": "amo_yandex",
+              "fakeTitle": "Группа объявлений",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "4a58df40-a5b4-11f0-ba96-d3bb4e3878c3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "adgroup_name_w3x7"
+              }
+            },
+            {
+              "has_auto_aggregation": false,
+              "initial_data_type": "string",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "virtual": false,
+              "title": "adgroup_id",
+              "type": "DIMENSION",
+              "data_type": "string",
+              "aggregation_locked": false,
+              "cast": "string",
+              "description": "",
+              "hidden": false,
+              "guid": "adgroup_id_ozjp",
+              "lock_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "source": "adgroup_id",
+              "avatar_id": "55cc7ad0-8746-11f0-90e0-636741aca0ec",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ttlt9zjxhdv4e",
+              "id": "dimension-18",
+              "datasetName": "amo_yandex",
+              "fakeTitle": "ID группы объявлений",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "42016790-a5b4-11f0-ba96-d3bb4e3878c3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "adgroup_id_ozjp"
+              }
+            },
+            {
+              "has_auto_aggregation": false,
+              "initial_data_type": "string",
+              "autoaggregated": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "virtual": false,
+              "title": "ad_id",
+              "type": "DIMENSION",
+              "data_type": "string",
+              "aggregation_locked": false,
+              "cast": "string",
+              "description": "",
+              "hidden": false,
+              "guid": "ad_id_wc06",
+              "lock_aggregation": false,
+              "valid": true,
+              "aggregation": "none",
+              "source": "ad_id",
+              "avatar_id": "55cc7ad0-8746-11f0-90e0-636741aca0ec",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ttlt9zjxhdv4e",
+              "id": "dimension-19",
+              "datasetName": "amo_yandex",
+              "fakeTitle": "ID объявлений",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "511ff2f0-a5b4-11f0-ba96-d3bb4e3878c3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "ad_id_wc06"
+              }
+            },
+            {
+              "cast": "integer",
+              "aggregation": "none",
+              "title": "qual",
+              "data_type": "integer",
+              "hidden": false,
+              "valid": true,
+              "ui_settings": "",
+              "managed_by": "user",
+              "guid": "qual_sw8p",
+              "lock_aggregation": false,
+              "virtual": false,
+              "initial_data_type": "integer",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "type": "DIMENSION",
+              "description": "",
+              "source": "qual",
+              "avatar_id": "55cc7ad0-8746-11f0-90e0-636741aca0ec",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ttlt9zjxhdv4e",
+              "id": "dimension-10",
+              "datasetName": "amo_yandex",
+              "fakeTitle": "Квалы",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "54c09950-a5b4-11f0-ba96-d3bb4e3878c3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "qual_sw8p"
+              }
+            },
+            {
+              "initial_data_type": "integer",
+              "guid": "booking_event_hmw3",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "title": "booking_event",
+              "aggregation_locked": false,
+              "managed_by": "user",
+              "description": "",
+              "type": "DIMENSION",
+              "cast": "integer",
+              "virtual": false,
+              "data_type": "integer",
+              "valid": true,
+              "ui_settings": "",
+              "autoaggregated": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": "55cc7ad0-8746-11f0-90e0-636741aca0ec",
+              "source": "booking_event",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ttlt9zjxhdv4e",
+              "id": "dimension-14",
+              "datasetName": "amo_yandex",
+              "fakeTitle": "Брони",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "58bf1720-a5b4-11f0-ba96-d3bb4e3878c3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "booking_event_hmw3"
+              }
+            },
+            {
+              "initial_data_type": "float",
+              "guid": "d8a0ab70-a5b4-11f0-ba96-d3bb4e3878c3",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "title": "Сумма сделок",
+              "aggregation_locked": true,
+              "managed_by": "user",
+              "description": "",
+              "type": "DIMENSION",
+              "cast": "float",
+              "virtual": false,
+              "data_type": "float",
+              "valid": true,
+              "ui_settings": "",
+              "autoaggregated": false,
+              "hidden": false,
+              "lock_aggregation": false,
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "IF ([deal_amount] > 0) THEN [deal_amount] END",
+              "guid_formula": "IF ([deal_amount_okaq] > 0) THEN [deal_amount_okaq] END",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ttlt9zjxhdv4e",
+              "id": "dimension-1",
+              "datasetName": "amo_yandex",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "$",
+                "postfix": "",
+                "unit": "k",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "5cdba440-a5b4-11f0-ba96-d3bb4e3878c3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "deal_amount_okaq"
+              },
+              "local": true
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

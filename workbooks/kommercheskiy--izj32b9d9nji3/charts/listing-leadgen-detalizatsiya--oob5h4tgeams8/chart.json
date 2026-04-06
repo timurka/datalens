@@ -1,0 +1,831 @@
+{
+  "entryId": "oob5h4tgeams8",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2164844349232254380/listing_leadgen — Детализация",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2026-03-06T18:59:16.530Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2026-03-09T12:21:41.568Z",
+  "savedId": "iipf4sewrveg2",
+  "publishedId": "iipf4sewrveg2",
+  "revId": "iipf4sewrveg2",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "ll8iw2n2gbv25"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "f2c2a0d0-1d7e-4e6f-a58a-cb9c9f0e3d21",
+          "title": "Дата создания в лидгене (МСК)",
+          "fakeTitle": "Дата создания в лидгене",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "9ecfc511-8870-4844-8f0f-597f4693149a",
+          "title": "crm_id_url",
+          "calc_mode": "formula",
+          "fakeTitle": "crm_id"
+        },
+        {
+          "guid": "pipeline_99f6",
+          "title": "Воронка",
+          "calc_mode": "direct",
+          "fakeTitle": "Воронка"
+        },
+        {
+          "guid": "creation_date_8424",
+          "title": "Дата создания в CRM",
+          "calc_mode": "direct",
+          "fakeTitle": "Дата создания в CRM"
+        },
+        {
+          "guid": "leadgen_service_453d",
+          "title": "Сервис",
+          "calc_mode": "direct",
+          "fakeTitle": "Сервис"
+        },
+        {
+          "guid": "leadgen_channel_d29e",
+          "title": "Канал лидгена",
+          "calc_mode": "direct",
+          "fakeTitle": "Канал лидгена"
+        },
+        {
+          "guid": "contact_in_3de9",
+          "title": "Контакт",
+          "calc_mode": "direct",
+          "fakeTitle": "Контакт"
+        },
+        {
+          "guid": "qual_final_7d41",
+          "title": "Квал финальный",
+          "calc_mode": "direct",
+          "fakeTitle": "Квал финальный"
+        },
+        {
+          "guid": "booking_event_final_a4f8",
+          "title": "Бронь финальная",
+          "calc_mode": "direct",
+          "fakeTitle": "Бронь финальная"
+        },
+        {
+          "guid": "status_9acb",
+          "title": "Статус",
+          "calc_mode": "direct",
+          "fakeTitle": "Статус"
+        },
+        {
+          "guid": "leadgen_lead_id_f9d6",
+          "title": "leadgen_lead_id",
+          "calc_mode": "direct",
+          "fakeTitle": "leadgen_lead_id"
+        },
+        {
+          "guid": "leadgen_listing_id_0f01",
+          "title": "leadgen_listing_id",
+          "calc_mode": "direct",
+          "fakeTitle": "leadgen_listing_id"
+        },
+        {
+          "guid": "leadgen_listing_referenc_4f02",
+          "title": "leadgen_listing_reference",
+          "calc_mode": "direct",
+          "fakeTitle": "leadgen_listing_reference"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "listing_leadgen — Детализация",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "pagination": "on",
+      "limit": 200,
+      "totals": "off",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "pinnedColumns": 3
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "f2c2a0d0-1d7e-4e6f-a58a-cb9c9f0e3d21",
+        "datasetId": "ll8iw2n2gbv25",
+        "fakeTitle": "Дата создания в лидгене",
+        "data_type": "genericdatetime",
+        "title": "Дата создания в лидгене (МСК)",
+        "source": "",
+        "type": "DIMENSION",
+        "direction": "DESC"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "lock_aggregation": false,
+          "description": "",
+          "hidden": false,
+          "initial_data_type": "markup",
+          "cast": "markup",
+          "ui_settings": "",
+          "valid": true,
+          "data_type": "markup",
+          "aggregation_locked": true,
+          "has_auto_aggregation": false,
+          "type": "DIMENSION",
+          "aggregation": "none",
+          "managed_by": "user",
+          "virtual": false,
+          "title": "crm_id_url",
+          "guid": "9ecfc511-8870-4844-8f0f-597f4693149a",
+          "autoaggregated": false,
+          "guid_formula": "-- Если ру-акк\nIF [account_id_8a08] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id_a69b]), STR([crm_id_a69b]))\n\nELSEIF [account_id_8a08] = 57817 OR [account_id_8a08] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id_a69b]), STR([crm_id_a69b]))\n\nELSEIF [account_id_8a08] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id_a69b]), STR([crm_id_a69b]))\n\nEND",
+          "formula": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "fakeTitle": "crm_id",
+          "columnSettings": {},
+          "backgroundSettings": {
+            "enabled": false,
+            "settingsId": "5a7c9b6c-6f24-4e02-a8ce-9c0de48c6157",
+            "settings": {
+              "gradientState": {},
+              "paletteState": {
+                "palette": "classic20",
+                "mountedColors": {}
+              },
+              "isContinuous": false
+            },
+            "colorFieldGuid": "9ecfc511-8870-4844-8f0f-597f4693149a"
+          },
+          "datasetId": "ll8iw2n2gbv25",
+          "datasetName": "listing_leadgen"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "title": "Дата создания в лидгене (МСК)",
+          "fakeTitle": "Дата создания в лидгене",
+          "type": "DIMENSION",
+          "lock_aggregation": false,
+          "initial_data_type": "genericdatetime",
+          "aggregation": "none",
+          "cast": "genericdatetime",
+          "managed_by": "user",
+          "hidden": false,
+          "guid": "f2c2a0d0-1d7e-4e6f-a58a-cb9c9f0e3d21",
+          "autoaggregated": false,
+          "data_type": "genericdatetime",
+          "has_auto_aggregation": false,
+          "description": "",
+          "virtual": false,
+          "aggregation_locked": false,
+          "valid": true,
+          "avatar_id": null,
+          "source": "",
+          "calc_mode": "formula",
+          "formula": "DATEADD([leadgen_created_at], \"hour\", 3)",
+          "guid_formula": "DATEADD([leadgen_created_at_3c8f], \"hour\", 3)",
+          "default_value": null,
+          "value_constraint": null,
+          "datasetId": "ll8iw2n2gbv25",
+          "id": "dimension-1",
+          "datasetName": "listing_leadgen",
+          "hideLabelMode": "show",
+          "local": true,
+          "ui_settings": "",
+          "columnSettings": {
+            "width": {
+              "mode": "auto",
+              "value": "12"
+            }
+          },
+          "subTotalsSettings": {
+            "enabled": true
+          }
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "pivotTable",
+      "type": "table",
+      "name": "label_visualization-pivot-table",
+      "iconProps": {
+        "id": "visPivot",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "pivot-table-columns",
+          "type": "pivot-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [],
+          "settings": {}
+        },
+        {
+          "allowedDataTypes": {},
+          "id": "rows",
+          "type": "rows",
+          "title": "section_rows",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "Дата создания в лидгене (МСК)",
+              "fakeTitle": "Дата создания в лидгене",
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "initial_data_type": "genericdatetime",
+              "aggregation": "none",
+              "cast": "genericdatetime",
+              "managed_by": "user",
+              "hidden": false,
+              "guid": "f2c2a0d0-1d7e-4e6f-a58a-cb9c9f0e3d21",
+              "autoaggregated": false,
+              "data_type": "genericdatetime",
+              "has_auto_aggregation": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": false,
+              "valid": true,
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "DATEADD([leadgen_created_at], \"hour\", 3)",
+              "guid_formula": "DATEADD([leadgen_created_at_3c8f], \"hour\", 3)",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "id": "dimension-3",
+              "datasetName": "listing_leadgen",
+              "hideLabelMode": "show",
+              "local": true,
+              "ui_settings": "",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            },
+            {
+              "title": "crm_id_url",
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "initial_data_type": "markup",
+              "aggregation": "none",
+              "cast": "markup",
+              "managed_by": "user",
+              "hidden": false,
+              "guid": "9ecfc511-8870-4844-8f0f-597f4693149a",
+              "autoaggregated": false,
+              "data_type": "markup",
+              "has_auto_aggregation": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": true,
+              "valid": true,
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "-- Если ру-акк\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nEND",
+              "guid_formula": "-- Если ру-акк\nIF [account_id_8a08] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id_a69b]), STR([crm_id_a69b]))\n\nELSEIF [account_id_8a08] = 57817 OR [account_id_8a08] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id_a69b]), STR([crm_id_a69b]))\n\nELSEIF [account_id_8a08] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id_a69b]), STR([crm_id_a69b]))\n\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "id": "dimension-1",
+              "datasetName": "listing_leadgen",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "0a7903e2-cbbf-4871-9ec5-3f4ec25ee680",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "9ecfc511-8870-4844-8f0f-597f4693149a"
+              },
+              "fakeTitle": "crm_id",
+              "local": true,
+              "ui_settings": "",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            },
+            {
+              "title": "Воронка",
+              "cast": "string",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "string",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "pipeline_99f6",
+              "managed_by": "user",
+              "avatar_id": "93343742-c232-49a3-9cb6-e524e0ab529d",
+              "source": "pipeline",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "datasetName": "listing_leadgen",
+              "id": "dimension-2",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Воронка"
+            },
+            {
+              "title": "Дата создания в CRM",
+              "cast": "date",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "date",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "date",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "creation_date_8424",
+              "managed_by": "user",
+              "avatar_id": "93343742-c232-49a3-9cb6-e524e0ab529d",
+              "source": "creation_date",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "datasetName": "listing_leadgen",
+              "id": "dimension-4",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Дата создания в CRM"
+            },
+            {
+              "title": "Сервис",
+              "cast": "string",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "string",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "leadgen_service_453d",
+              "managed_by": "user",
+              "avatar_id": "93343742-c232-49a3-9cb6-e524e0ab529d",
+              "source": "leadgen_service",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "datasetName": "listing_leadgen",
+              "id": "dimension-5",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Сервис"
+            },
+            {
+              "title": "Канал лидгена",
+              "cast": "string",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "string",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "leadgen_channel_d29e",
+              "managed_by": "user",
+              "avatar_id": "93343742-c232-49a3-9cb6-e524e0ab529d",
+              "source": "leadgen_channel",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "datasetName": "listing_leadgen",
+              "id": "dimension-6",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Канал лидгена"
+            },
+            {
+              "title": "Контакт",
+              "cast": "integer",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "integer",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "integer",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "contact_in_3de9",
+              "managed_by": "user",
+              "avatar_id": "93343742-c232-49a3-9cb6-e524e0ab529d",
+              "source": "contact_in",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "datasetName": "listing_leadgen",
+              "id": "dimension-7",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Контакт"
+            },
+            {
+              "managed_by": "user",
+              "initial_data_type": "integer",
+              "autoaggregated": false,
+              "guid": "qual_final_7d41",
+              "ui_settings": "",
+              "cast": "integer",
+              "has_auto_aggregation": false,
+              "virtual": false,
+              "lock_aggregation": false,
+              "data_type": "integer",
+              "type": "DIMENSION",
+              "aggregation_locked": false,
+              "title": "Квал финальный",
+              "description": "",
+              "valid": true,
+              "aggregation": "none",
+              "hidden": false,
+              "avatar_id": "93343742-c232-49a3-9cb6-e524e0ab529d",
+              "source": "qual_final",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "datasetName": "listing_leadgen",
+              "id": "dimension-8",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Квал финальный"
+            },
+            {
+              "managed_by": "user",
+              "initial_data_type": "integer",
+              "autoaggregated": false,
+              "guid": "booking_event_final_a4f8",
+              "ui_settings": "",
+              "cast": "integer",
+              "has_auto_aggregation": false,
+              "virtual": false,
+              "lock_aggregation": false,
+              "data_type": "integer",
+              "type": "DIMENSION",
+              "aggregation_locked": false,
+              "title": "Бронь финальная",
+              "description": "",
+              "valid": true,
+              "aggregation": "none",
+              "hidden": false,
+              "avatar_id": "93343742-c232-49a3-9cb6-e524e0ab529d",
+              "source": "booking_event_final",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "datasetName": "listing_leadgen",
+              "id": "dimension-9",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Бронь финальная"
+            },
+            {
+              "title": "Статус",
+              "cast": "string",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "string",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "status_9acb",
+              "managed_by": "user",
+              "avatar_id": "93343742-c232-49a3-9cb6-e524e0ab529d",
+              "source": "status",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "datasetName": "listing_leadgen",
+              "id": "dimension-10",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Статус"
+            },
+            {
+              "title": "leadgen_lead_id",
+              "cast": "string",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "string",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "leadgen_lead_id_f9d6",
+              "managed_by": "user",
+              "avatar_id": "93343742-c232-49a3-9cb6-e524e0ab529d",
+              "source": "leadgen_lead_id",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "datasetName": "listing_leadgen",
+              "id": "dimension-11",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "leadgen_lead_id"
+            },
+            {
+              "title": "leadgen_listing_id",
+              "cast": "string",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "string",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "leadgen_listing_id_0f01",
+              "managed_by": "user",
+              "avatar_id": "93343742-c232-49a3-9cb6-e524e0ab529d",
+              "source": "leadgen_listing_id",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "datasetName": "listing_leadgen",
+              "id": "dimension-12",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "leadgen_listing_id"
+            },
+            {
+              "title": "leadgen_listing_reference",
+              "cast": "string",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "ui_settings": "",
+              "initial_data_type": "string",
+              "type": "DIMENSION",
+              "description": "",
+              "data_type": "string",
+              "virtual": false,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "aggregation_locked": false,
+              "guid": "leadgen_listing_referenc_4f02",
+              "managed_by": "user",
+              "avatar_id": "93343742-c232-49a3-9cb6-e524e0ab529d",
+              "source": "leadgen_listing_reference",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "ll8iw2n2gbv25",
+              "datasetName": "listing_leadgen",
+              "id": "dimension-13",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "leadgen_listing_reference"
+            }
+          ],
+          "settings": {}
+        },
+        {
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measures",
+          "iconProps": {},
+          "items": [],
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "izj32b9d9nji3",
+  "collectionId": null
+}

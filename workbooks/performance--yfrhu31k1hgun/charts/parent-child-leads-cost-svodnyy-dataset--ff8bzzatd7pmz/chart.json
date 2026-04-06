@@ -1,0 +1,925 @@
+{
+  "entryId": "ff8bzzatd7pmz",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2165393690162367935/parent_child_leads_cost — Сводный датасет",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2026-03-07T13:10:43.070Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2026-03-07T13:20:42.358Z",
+  "savedId": "hhaet5k7nbe61",
+  "publishedId": "hhaet5k7nbe61",
+  "revId": "hhaet5k7nbe61",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "scahbajdyvx0e"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "creation_date_time_j9wh",
+          "title": "Дата создания",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "b6f6d5c4-9b41-4b1a-a4eb-6c9f7b57b91f",
+          "title": "crm_id_link",
+          "fakeTitle": "crm_id",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "geo_3c6c",
+          "title": "Гео",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utmsource_b2bf",
+          "title": "Источник",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_jotz",
+          "title": "Квал",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_arry",
+          "title": "Бронь",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100,
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "parent_child_leads — Сводная таблица по дате создания",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "totals": "on",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "stacking": "on",
+      "zoomMode": "auto",
+      "mapCenterMode": "auto"
+    },
+    "filters": [
+      {
+        "guid": "creation_date_alsk",
+        "datasetId": "scahbajdyvx0e",
+        "filter": {
+          "value": [
+            "__interval___relative_-89d___relative_-0d"
+          ],
+          "operation": {
+            "code": "BETWEEN"
+          }
+        },
+        "type": "DIMENSION",
+        "title": "creation_date",
+        "calc_mode": "direct"
+      }
+    ],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "creation_date_time_j9wh",
+        "datasetId": "scahbajdyvx0e",
+        "fakeTitle": "Дата создания",
+        "data_type": "genericdatetime",
+        "title": "Дата создания",
+        "source": "creation_date_time",
+        "type": "DIMENSION",
+        "direction": "DESC"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "Квалы",
+          "guid": "5aeb7e40-5d8d-11f0-b431-2bcce8683ce3",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "integer",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "integer",
+          "type": "MEASURE",
+          "cast": "integer",
+          "valid": true,
+          "formula": "IF(sum([qual]) > 0, sum([qual]), NULL)",
+          "guid_formula": "IF(sum([qual_jotz]) > 0, sum([qual_jotz]), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "CRQL",
+          "guid": "7797e2e0-5d8d-11f0-b431-2bcce8683ce3",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "float",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "float",
+          "type": "MEASURE",
+          "cast": "float",
+          "valid": true,
+          "formula": "IF(COUNT([crm_id]) > 0 AND (sum([qual]) / COUNT([crm_id])) > 0, \n    sum([qual]) / COUNT([crm_id]), NULL)",
+          "guid_formula": "IF(COUNT([crm_id_y45m]) > 0 AND (sum([qual_jotz]) / COUNT([crm_id_y45m])) > 0, \n    sum([qual_jotz]) / COUNT([crm_id_y45m]), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "A",
+          "guid": "be5d68d0-5d8d-11f0-b431-2bcce8683ce3",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "integer",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "integer",
+          "type": "MEASURE",
+          "cast": "integer",
+          "valid": true,
+          "formula": "IF(sum([qual_priority_a]) > 0, sum([qual_priority_a]), NULL)",
+          "guid_formula": "IF(sum([qual_priority_a_oe09]) > 0, sum([qual_priority_a_oe09]), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "B",
+          "guid": "c30fa640-5d8d-11f0-b431-2bcce8683ce3",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "integer",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "integer",
+          "type": "MEASURE",
+          "cast": "integer",
+          "valid": true,
+          "formula": "IF(sum([qual_priority_b]) > 0, sum([qual_priority_b]), NULL)",
+          "guid_formula": "IF(sum([qual_priority_b_2ycx]) > 0, sum([qual_priority_b_2ycx]), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "C",
+          "guid": "cb48e790-5d8d-11f0-b431-2bcce8683ce3",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "integer",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "integer",
+          "type": "MEASURE",
+          "cast": "integer",
+          "valid": true,
+          "formula": "IF(sum([qual_priority_c]) > 0, sum([qual_priority_c]), NULL)",
+          "guid_formula": "IF(sum([qual_priority_c_sdp7]) > 0, sum([qual_priority_c_sdp7]), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "Брони",
+          "guid": "3e4f50d0-5d8e-11f0-b431-2bcce8683ce3",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "integer",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "integer",
+          "type": "MEASURE",
+          "cast": "integer",
+          "valid": true,
+          "formula": "IF(sum([booking_event]) > 0, sum([booking_event]), NULL)",
+          "guid_formula": "IF(sum([booking_event_arry]) > 0, sum([booking_event_arry]), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "Период",
+          "guid": "84f7fff0-5d8e-11f0-b431-2bcce8683ce3",
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "description": "",
+          "initial_data_type": "date",
+          "virtual": false,
+          "has_auto_aggregation": false,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "date",
+          "type": "DIMENSION",
+          "cast": "date",
+          "valid": true,
+          "formula": "IF [period] = 'День' THEN\n    [creation_date]\nELSEIF [period] = 'Неделя' THEN\n    DATETRUNC([creation_date], 'week')\nELSEIF [period] = 'Месяц' THEN\n    DATETRUNC([creation_date], 'month')\nEND",
+          "guid_formula": "IF [period] = 'День' THEN\n    [creation_date_alsk]\nELSEIF [period] = 'Неделя' THEN\n    DATETRUNC([creation_date_alsk], 'week')\nELSEIF [period] = 'Месяц' THEN\n    DATETRUNC([creation_date_alsk], 'month')\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "period",
+          "guid": "period",
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "description": "",
+          "initial_data_type": "string",
+          "virtual": false,
+          "has_auto_aggregation": false,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "string",
+          "type": "DIMENSION",
+          "cast": "string",
+          "valid": true,
+          "default_value": "Неделя",
+          "template_enabled": false,
+          "calc_mode": "parameter",
+          "formula": "",
+          "guid_formula": "",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "CRR",
+          "guid": "e0c63270-5d8e-11f0-b431-2bcce8683ce3",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "float",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "float",
+          "type": "MEASURE",
+          "cast": "float",
+          "valid": true,
+          "formula": "IF sum([booking_event]) > 0 AND SUM([qual]) > 0  THEN\n    SUM([booking_event]) / SUM([qual])\nELSE\n    NULL\nEND",
+          "guid_formula": "IF sum([booking_event_arry]) > 0 AND SUM([qual_jotz]) > 0  THEN\n    SUM([booking_event_arry]) / SUM([qual_jotz])\nELSE\n    NULL\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "Гео",
+          "guid": "6718d5c0-5d90-11f0-b45e-87ab4b475001",
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "description": "",
+          "initial_data_type": "string",
+          "virtual": false,
+          "has_auto_aggregation": false,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "string",
+          "type": "DIMENSION",
+          "cast": "string",
+          "valid": true,
+          "formula": "CASE [geo]\n    WHEN 'Бали' THEN '​​​🇮🇩 Бали'\n    WHEN 'Таиланд' THEN '​​​​🇹🇭 Таиланд'\n    WHEN 'ОАЭ' THEN '🇦🇪 ОАЭ'\n    WHEN 'Москва' THEN '​​🇷🇺 Москва'\n    WHEN 'СПб' THEN '​​​​​​​​​🏛️ СПб'\n    WHEN 'Грузия' THEN '​​​​​🇬🇪 Грузия'\n    WHEN 'Сочи' THEN '​​​​​​🏖 Сочи'\n    WHEN 'Кипр' THEN '​​​​​​​​🇨🇾 Кипр'\n    WHEN 'Турция' THEN '​​​​​​​🇹🇷 Турция'\n    ELSE [geo]\nEND",
+          "guid_formula": "CASE [geo_3c6c]\n    WHEN 'Бали' THEN '​​​🇮🇩 Бали'\n    WHEN 'Таиланд' THEN '​​​​🇹🇭 Таиланд'\n    WHEN 'ОАЭ' THEN '🇦🇪 ОАЭ'\n    WHEN 'Москва' THEN '​​🇷🇺 Москва'\n    WHEN 'СПб' THEN '​​​​​​​​​🏛️ СПб'\n    WHEN 'Грузия' THEN '​​​​​🇬🇪 Грузия'\n    WHEN 'Сочи' THEN '​​​​​​🏖 Сочи'\n    WHEN 'Кипр' THEN '​​​​​​​​🇨🇾 Кипр'\n    WHEN 'Турция' THEN '​​​​​​​🇹🇷 Турция'\n    ELSE [geo_3c6c]\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "Расход",
+          "guid": "9f49d920-5d96-11f0-b48f-a1891a117e74",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "float",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "float",
+          "type": "MEASURE",
+          "cast": "float",
+          "valid": true,
+          "formula": "SUM(MIN([cost_usd] FIXED [creation_date], [utmsource], [geo]))",
+          "guid_formula": "SUM(MIN([cost_usd_wfdg] FIXED [creation_date_alsk], [utmsource_b2bf], [geo_3c6c]))",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "CPL",
+          "guid": "4fd1ff60-5d98-11f0-8c12-dbc3028fd3ae",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "float",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "float",
+          "type": "MEASURE",
+          "cast": "float",
+          "valid": true,
+          "formula": "IF COUNT([crm_id]) > 0 THEN\n    [Расход] / COUNT([crm_id])\nEND",
+          "guid_formula": "IF COUNT([crm_id_y45m]) > 0 THEN\n    [9f49d920-5d96-11f0-b48f-a1891a117e74] / COUNT([crm_id_y45m])\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "CPQL",
+          "guid": "a6e9fcd0-5d98-11f0-8c12-dbc3028fd3ae",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "float",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "float",
+          "type": "MEASURE",
+          "cast": "float",
+          "valid": true,
+          "formula": "IF SUM([qual]) > 0 THEN\n    [Расход] / SUM([qual])\nEND",
+          "guid_formula": "IF SUM([qual_jotz]) > 0 THEN\n    [9f49d920-5d96-11f0-b48f-a1891a117e74] / SUM([qual_jotz])\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "CPA",
+          "guid": "c50f6ce0-5d98-11f0-8c12-dbc3028fd3ae",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "float",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "float",
+          "type": "MEASURE",
+          "cast": "float",
+          "valid": true,
+          "formula": "IF SUM([booking_event]) > 0 THEN\n    [Расход] / SUM([booking_event])\nEND",
+          "guid_formula": "IF SUM([booking_event_arry]) > 0 THEN\n    [9f49d920-5d96-11f0-b48f-a1891a117e74] / SUM([booking_event_arry])\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "aggregation_locked": true,
+          "hidden": false,
+          "ui_settings": "",
+          "title": "Value",
+          "guid": "394e3fc0-76ab-11f0-afc3-3f675a0f73e8",
+          "lock_aggregation": false,
+          "autoaggregated": true,
+          "description": "",
+          "initial_data_type": "float",
+          "virtual": false,
+          "has_auto_aggregation": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "data_type": "integer",
+          "type": "MEASURE",
+          "cast": "integer",
+          "valid": true,
+          "formula": "IF(sum([value]) > 0, sum([value]), NULL)",
+          "guid_formula": "IF(sum([value_fhh0]) > 0, sum([value_fhh0]), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "scahbajdyvx0e"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "guid": "b6f6d5c4-9b41-4b1a-a4eb-6c9f7b57b91f",
+          "title": "crm_id_link",
+          "fakeTitle": "crm_id",
+          "calc_mode": "formula",
+          "formula": "-- Ссылочный crm_id в amoCRM\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nEND",
+          "guid_formula": "-- Ссылочный crm_id в amoCRM\nIF [account_id_p080] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id_y45m]), STR([crm_id_y45m]))\n\nELSEIF [account_id_p080] = 57817 OR [account_id_p080] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id_y45m]), STR([crm_id_y45m]))\n\nELSEIF [account_id_p080] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id_y45m]), STR([crm_id_y45m]))\n\nEND",
+          "source": "",
+          "datasetId": "scahbajdyvx0e",
+          "datasetName": "parent_child_leads (и доп таблицы)",
+          "local": true,
+          "type": "DIMENSION",
+          "data_type": "markup",
+          "initial_data_type": "markup",
+          "cast": "markup",
+          "aggregation": "none",
+          "aggregation_locked": true,
+          "has_auto_aggregation": false,
+          "autoaggregated": false,
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "hidden": false,
+          "valid": true,
+          "description": "",
+          "ui_settings": "",
+          "columnSettings": {
+            "width": {
+              "mode": "auto",
+              "value": "12"
+            }
+          },
+          "subTotalsSettings": {
+            "enabled": true
+          },
+          "hideLabelMode": "show",
+          "formatting": {
+            "format": "number",
+            "showRankDelimiter": false,
+            "prefix": "",
+            "postfix": "",
+            "labelMode": "absolute",
+            "precision": 0
+          },
+          "backgroundSettings": {
+            "enabled": false,
+            "settingsId": "c8502117-cab0-4bd0-9e06-2142cd92d9f8",
+            "settings": {
+              "gradientState": {},
+              "paletteState": {
+                "palette": "classic20",
+                "mountedColors": {}
+              },
+              "isContinuous": false
+            },
+            "colorFieldGuid": "b6f6d5c4-9b41-4b1a-a4eb-6c9f7b57b91f"
+          }
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "creation_date_time_j9wh",
+              "description": "",
+              "cast": "genericdatetime",
+              "managed_by": "user",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "type": "DIMENSION",
+              "valid": true,
+              "ui_settings": "",
+              "hidden": false,
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "title": "Дата создания",
+              "data_type": "genericdatetime",
+              "initial_data_type": "genericdatetime",
+              "aggregation_locked": false,
+              "source": "creation_date_time",
+              "avatar_id": "82a38db0-469a-11f0-ad51-8fc451b04876",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "scahbajdyvx0e",
+              "datasetName": "parent_child_leads (и доп таблицы)",
+              "id": "dimension-1",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Дата создания"
+            },
+            {
+              "title": "crm_id_link",
+              "fakeTitle": "crm_id",
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "initial_data_type": "markup",
+              "aggregation": "none",
+              "cast": "markup",
+              "managed_by": "user",
+              "hidden": false,
+              "guid": "b6f6d5c4-9b41-4b1a-a4eb-6c9f7b57b91f",
+              "autoaggregated": false,
+              "data_type": "markup",
+              "has_auto_aggregation": false,
+              "description": "",
+              "virtual": false,
+              "aggregation_locked": true,
+              "valid": true,
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "-- Ссылочный crm_id в amoCRM\nIF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\n\nEND",
+              "guid_formula": "-- Ссылочный crm_id в amoCRM\nIF [account_id_p080] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id_y45m]), STR([crm_id_y45m]))\n\nELSEIF [account_id_p080] = 57817 OR [account_id_p080] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id_y45m]), STR([crm_id_y45m]))\n\nELSEIF [account_id_p080] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id_y45m]), STR([crm_id_y45m]))\n\nEND",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "scahbajdyvx0e",
+              "id": "dimension-2",
+              "datasetName": "parent_child_leads (и доп таблицы)",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a0d91c99-4098-47f0-a6bb-8fab8cd9b613",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "b6f6d5c4-9b41-4b1a-a4eb-6c9f7b57b91f"
+              },
+              "local": true,
+              "ui_settings": "",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "subTotalsSettings": {
+                "enabled": true
+              }
+            },
+            {
+              "data_type": "string",
+              "has_auto_aggregation": false,
+              "guid": "geo_3c6c",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "virtual": false,
+              "hidden": false,
+              "description": "",
+              "autoaggregated": false,
+              "initial_data_type": "string",
+              "title": "Гео",
+              "ui_settings": "",
+              "cast": "string",
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "type": "DIMENSION",
+              "source": "geo",
+              "avatar_id": "e5b34633-79d4-4acb-a937-d197252516da",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "scahbajdyvx0e",
+              "datasetName": "parent_child_leads (и доп таблицы)",
+              "id": "dimension-3",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Гео"
+            },
+            {
+              "initial_data_type": "string",
+              "data_type": "string",
+              "title": "Источник",
+              "guid": "utmsource_b2bf",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "hidden": false,
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "valid": true,
+              "managed_by": "user",
+              "cast": "string",
+              "lock_aggregation": false,
+              "description": "",
+              "type": "DIMENSION",
+              "aggregation_locked": false,
+              "avatar_id": "82a38db0-469a-11f0-ad51-8fc451b04876",
+              "source": "utmsource",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "scahbajdyvx0e",
+              "id": "dimension-4",
+              "datasetName": "parent_child_leads (и доп таблицы)",
+              "fakeTitle": "Источник",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "379762e0-5d8f-11f0-b431-2bcce8683ce3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "utmsource_b2bf"
+              },
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "ui_settings": "",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              }
+            },
+            {
+              "data_type": "integer",
+              "has_auto_aggregation": false,
+              "guid": "qual_jotz",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "virtual": false,
+              "hidden": false,
+              "description": "",
+              "autoaggregated": false,
+              "initial_data_type": "integer",
+              "title": "Квал",
+              "ui_settings": "",
+              "cast": "integer",
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "type": "DIMENSION",
+              "source": "qual",
+              "avatar_id": "e5b34633-79d4-4acb-a937-d197252516da",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "scahbajdyvx0e",
+              "datasetName": "parent_child_leads (и доп таблицы)",
+              "id": "dimension-5",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Квал"
+            },
+            {
+              "data_type": "integer",
+              "has_auto_aggregation": false,
+              "guid": "booking_event_arry",
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "virtual": false,
+              "hidden": false,
+              "description": "",
+              "autoaggregated": false,
+              "initial_data_type": "integer",
+              "title": "Бронь",
+              "ui_settings": "",
+              "cast": "integer",
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "type": "DIMENSION",
+              "source": "booking_event",
+              "avatar_id": "e5b34633-79d4-4acb-a937-d197252516da",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "scahbajdyvx0e",
+              "datasetName": "parent_child_leads (и доп таблицы)",
+              "id": "dimension-6",
+              "columnSettings": {
+                "width": {
+                  "mode": "auto",
+                  "value": "12"
+                }
+              },
+              "hideLabelMode": "show",
+              "subTotalsSettings": {
+                "enabled": true
+              },
+              "fakeTitle": "Бронь"
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

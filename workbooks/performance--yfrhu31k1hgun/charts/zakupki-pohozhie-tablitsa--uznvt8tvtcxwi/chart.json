@@ -1,0 +1,632 @@
+{
+  "entryId": "uznvt8tvtcxwi",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1642160533090076618/Закупки - Похожие — Таблица",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-03-15T14:59:50.466Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-03-19T14:11:51.273Z",
+  "savedId": "fk0rhvqkna3i3",
+  "publishedId": "fk0rhvqkna3i3",
+  "revId": "fk0rhvqkna3i3",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "y3ryirwxxeswm"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "bf6d1460-e5f1-11ee-80e6-bb2a61f806f5",
+          "title": "verification",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "4e1f6230-e5f2-11ee-8383-e564bb80e98a",
+          "title": "title_username",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "11f10030-e5f1-11ee-b69e-4d7251dcf88a",
+          "title": "username_url",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "f7cc09c0-e5f0-11ee-b69e-4d7251dcf88a",
+          "title": "source_url",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "source_5y2m",
+          "title": "source",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "n_do65",
+          "title": "N",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "id_ujwa",
+          "title": "id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username_icnc",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "title_dpc4",
+          "title": "title",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "verified_t62y",
+          "title": "verified",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "participants_count_batr",
+          "title": "similar_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "url_fvm7",
+          "title": "url",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "mention_count_nxig",
+          "title": "mention_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "sum_uae_5mkl",
+          "title": "sum_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category_ro9l",
+          "title": "category",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": false,
+          "guid": "bf6d1460-e5f1-11ee-80e6-bb2a61f806f5",
+          "cast": "string",
+          "valid": true,
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "description": "",
+          "autoaggregated": false,
+          "initial_data_type": "string",
+          "title": "verification",
+          "type": "DIMENSION",
+          "hidden": false,
+          "aggregation_locked": true,
+          "virtual": false,
+          "aggregation": "none",
+          "data_type": "string",
+          "formula": "IF [verified] THEN\n    '✔️ '\nEND",
+          "guid_formula": "IF [verified_ovjz] THEN\n    '✔️ '\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "backgroundSettings": {
+            "enabled": false,
+            "settingsId": "8616bc20-e5f1-11ee-80e6-bb2a61f806f5",
+            "settings": {
+              "gradientState": {},
+              "paletteState": {
+                "palette": "default",
+                "mountedColors": {}
+              },
+              "isContinuous": false
+            },
+            "colorFieldGuid": "title_c5i0"
+          },
+          "datasetId": "y3ryirwxxeswm"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation_locked": true,
+              "initial_data_type": "markup",
+              "valid": true,
+              "title": "source_url",
+              "data_type": "markup",
+              "managed_by": "user",
+              "description": "",
+              "cast": "markup",
+              "hidden": false,
+              "virtual": false,
+              "autoaggregated": false,
+              "guid": "f7cc09c0-e5f0-11ee-b69e-4d7251dcf88a",
+              "aggregation": "none",
+              "guid_formula": "URL('https://t.me/' + [source_5y2m], [source_5y2m])",
+              "formula": "URL('https://t.me/' + [source], [source])",
+              "calc_mode": "formula",
+              "source": "",
+              "datasetId": "y3ryirwxxeswm",
+              "id": "dimension-3",
+              "datasetName": "Закупки - Похожие каналы",
+              "fakeTitle": "Источник",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "90ea5760-e5f1-11ee-80e6-bb2a61f806f5",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "f7cc09c0-e5f0-11ee-b69e-4d7251dcf88a"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "initial_data_type": "integer",
+              "valid": true,
+              "title": "N",
+              "data_type": "integer",
+              "managed_by": "user",
+              "description": "",
+              "cast": "integer",
+              "hidden": false,
+              "virtual": false,
+              "autoaggregated": false,
+              "guid": "n_do65",
+              "aggregation": "none",
+              "source": "N",
+              "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "y3ryirwxxeswm",
+              "id": "dimension-5",
+              "datasetName": "Закупки - Похожие каналы"
+            },
+            {
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "initial_data_type": "string",
+              "valid": true,
+              "title": "title",
+              "data_type": "string",
+              "managed_by": "user",
+              "description": "",
+              "cast": "string",
+              "hidden": false,
+              "virtual": false,
+              "autoaggregated": false,
+              "guid": "title_dpc4",
+              "aggregation": "none",
+              "source": "title",
+              "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "y3ryirwxxeswm",
+              "id": "dimension-8",
+              "datasetName": "Закупки - Похожие каналы",
+              "fakeTitle": "Похожий",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "9b8937f0-e5fa-11ee-a42c-37e29c7ed8e3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "title_dpc4"
+              }
+            },
+            {
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation_locked": true,
+              "initial_data_type": "markup",
+              "valid": true,
+              "title": "username_url",
+              "data_type": "markup",
+              "managed_by": "user",
+              "description": "",
+              "cast": "markup",
+              "hidden": false,
+              "virtual": false,
+              "autoaggregated": false,
+              "guid": "11f10030-e5f1-11ee-b69e-4d7251dcf88a",
+              "aggregation": "none",
+              "guid_formula": "URL('https://t.me/' + [username_icnc], [username_icnc])",
+              "formula": "URL('https://t.me/' + [username], [username])",
+              "calc_mode": "formula",
+              "source": "",
+              "datasetId": "y3ryirwxxeswm",
+              "id": "dimension-2",
+              "datasetName": "Закупки - Похожие каналы",
+              "fakeTitle": "Аккаунт похожего",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "8d9d9d60-e5f1-11ee-80e6-bb2a61f806f5",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "11f10030-e5f1-11ee-b69e-4d7251dcf88a"
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "initial_data_type": "integer",
+              "valid": true,
+              "title": "similar_count",
+              "data_type": "integer",
+              "managed_by": "user",
+              "description": "",
+              "cast": "integer",
+              "hidden": false,
+              "virtual": false,
+              "autoaggregated": false,
+              "guid": "participants_count_batr",
+              "aggregation": "none",
+              "source": "participants_count",
+              "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "y3ryirwxxeswm",
+              "id": "dimension-10",
+              "datasetName": "Закупки - Похожие каналы",
+              "fakeTitle": "Подписчиков",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "fecc18b0-e5f9-11ee-af6f-4de3fbb3a17d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "participants_count_batr"
+              }
+            },
+            {
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation_locked": true,
+              "initial_data_type": "string",
+              "valid": true,
+              "title": "verification",
+              "data_type": "string",
+              "managed_by": "user",
+              "description": "",
+              "cast": "string",
+              "hidden": false,
+              "virtual": false,
+              "autoaggregated": false,
+              "guid": "bf6d1460-e5f1-11ee-80e6-bb2a61f806f5",
+              "aggregation": "none",
+              "source": "",
+              "avatar_id": null,
+              "calc_mode": "formula",
+              "formula": "IF [verified] THEN\n    '✔️ '\nEND",
+              "guid_formula": "IF [verified_t62y] THEN\n    '✔️ '\nEND",
+              "datasetId": "y3ryirwxxeswm",
+              "id": "dimension-0",
+              "datasetName": "Закупки - Похожие каналы",
+              "fakeTitle": "verify",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "8616bc20-e5f1-11ee-80e6-bb2a61f806f5",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "bf6d1460-e5f1-11ee-80e6-bb2a61f806f5"
+              },
+              "local": true,
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "initial_data_type": "integer",
+              "valid": true,
+              "title": "mention_count",
+              "data_type": "integer",
+              "managed_by": "user",
+              "description": "",
+              "cast": "integer",
+              "hidden": false,
+              "virtual": false,
+              "autoaggregated": false,
+              "guid": "mention_count_nxig",
+              "aggregation": "none",
+              "source": "mention_count",
+              "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "y3ryirwxxeswm",
+              "id": "dimension-12",
+              "datasetName": "Закупки - Похожие каналы",
+              "fakeTitle": "Размещений",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "03f24da0-e5fa-11ee-af6f-4de3fbb3a17d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "mention_count_nxig"
+              }
+            },
+            {
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "initial_data_type": "float",
+              "valid": true,
+              "title": "sum_uae",
+              "data_type": "integer",
+              "managed_by": "user",
+              "description": "",
+              "cast": "integer",
+              "hidden": false,
+              "virtual": false,
+              "autoaggregated": false,
+              "guid": "sum_uae_5mkl",
+              "aggregation": "none",
+              "source": "sum_uae",
+              "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "y3ryirwxxeswm",
+              "id": "dimension-13",
+              "datasetName": "Закупки - Похожие каналы",
+              "fakeTitle": "F ОАЭ",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "0e23b570-e5fa-11ee-af6f-4de3fbb3a17d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "sum_uae_5mkl"
+              }
+            },
+            {
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "aggregation_locked": false,
+              "initial_data_type": "string",
+              "valid": true,
+              "title": "category",
+              "data_type": "string",
+              "managed_by": "user",
+              "description": "",
+              "cast": "string",
+              "hidden": false,
+              "virtual": false,
+              "autoaggregated": false,
+              "guid": "category_ro9l",
+              "aggregation": "none",
+              "source": "category",
+              "avatar_id": "c31206e0-e5f9-11ee-8186-afe96c7c07cc",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "y3ryirwxxeswm",
+              "id": "dimension-14",
+              "datasetName": "Закупки - Похожие каналы",
+              "fakeTitle": "Категория",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "087f9df0-e5fa-11ee-af6f-4de3fbb3a17d",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "category_ro9l"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

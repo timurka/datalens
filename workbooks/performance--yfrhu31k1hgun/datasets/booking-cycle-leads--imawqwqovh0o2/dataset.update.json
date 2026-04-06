@@ -1,0 +1,760 @@
+{
+  "datasetId": "imawqwqovh0o2",
+  "data": {
+    "dataset": {
+      "component_errors": {
+        "items": []
+      },
+      "preview_enabled": true,
+      "template_enabled": false,
+      "sources": [
+        {
+          "index_info_set": null,
+          "parameters": {
+            "schema_name": "mart",
+            "db_version": "PostgreSQL 16.11 (Debian 16.11-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+            "table_name": "booking_cycle_leads",
+            "db_name": null
+          },
+          "virtual": false,
+          "id": "b0656aad-011c-4daf-9417-7e1a32439f65",
+          "raw_schema": [
+            {
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "integer",
+              "title": "leads_id",
+              "name": "leads_id",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "integer",
+              "title": "crm_id",
+              "name": "crm_id",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "integer",
+              "title": "account_id",
+              "name": "account_id",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "integer",
+              "title": "contacts_id",
+              "name": "contacts_id",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "integer",
+              "title": "contacts_amo_id",
+              "name": "contacts_amo_id",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "text",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "string",
+              "title": "geo",
+              "name": "geo",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "text",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "string",
+              "title": "utmsource",
+              "name": "utmsource",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "date",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "date",
+              "title": "creation_date",
+              "name": "creation_date",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "genericdatetime",
+              "title": "creation_date_time",
+              "name": "creation_date_time",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "genericdatetime",
+              "title": "date_booking",
+              "name": "date_booking",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "integer",
+              "title": "booking_event",
+              "name": "booking_event",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "text",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "string",
+              "title": "pipeline",
+              "name": "pipeline",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "text",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "string",
+              "title": "status",
+              "name": "status",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "numeric",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "float",
+              "title": "deal_amount",
+              "name": "deal_amount",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "numeric",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "float",
+              "title": "revenue",
+              "name": "revenue",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "numeric",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "float",
+              "title": "profit",
+              "name": "profit",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "bigint",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "integer",
+              "title": "lead_contacts_count",
+              "name": "lead_contacts_count",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "text",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "string",
+              "title": "cycle_contacts_amo_ids",
+              "name": "cycle_contacts_amo_ids",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "text",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "string",
+              "title": "cycle_key_type",
+              "name": "cycle_key_type",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "integer",
+              "title": "purchase_seq",
+              "name": "purchase_seq",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "integer",
+              "title": "booking_row_in_purchase_seq",
+              "name": "booking_row_in_purchase_seq",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "boolean",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "boolean",
+              "title": "is_primary_booking_in_purchase_seq",
+              "name": "is_primary_booking_in_purchase_seq",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "genericdatetime",
+              "title": "prev_booking_ts",
+              "name": "prev_booking_ts",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "date",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "date",
+              "title": "cycle_start_date",
+              "name": "cycle_start_date",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "timestamp",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "genericdatetime",
+              "title": "cycle_start_ts",
+              "name": "cycle_start_ts",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "bigint",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "integer",
+              "title": "cycle_start_crm_id",
+              "name": "cycle_start_crm_id",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "numeric",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "float",
+              "title": "cycle_days_exact",
+              "name": "cycle_days_exact",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "integer",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "integer",
+              "title": "cycle_days_calendar",
+              "name": "cycle_days_calendar",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            },
+            {
+              "native_type": {
+                "name": "text",
+                "nullable": true,
+                "native_type_class_name": "common_native_type"
+              },
+              "lock_aggregation": false,
+              "user_type": "string",
+              "title": "cycle_calc_status",
+              "name": "cycle_calc_status",
+              "has_auto_aggregation": false,
+              "description": "",
+              "nullable": true
+            }
+          ],
+          "title": "booking_cycle_leads",
+          "connection_id": "d9mdkzqj4zxsy",
+          "valid": true,
+          "managed_by": "user",
+          "parameter_hash": "8b519967e8be150e",
+          "source_type": "PG_TABLE"
+        }
+      ],
+      "data_export_forbidden": false,
+      "source_avatars": [
+        {
+          "is_root": true,
+          "virtual": false,
+          "id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+          "title": "mart.booking_cycle_leads",
+          "source_id": "b0656aad-011c-4daf-9417-7e1a32439f65",
+          "valid": true,
+          "managed_by": "user"
+        }
+      ],
+      "avatar_relations": [],
+      "rls2": {},
+      "result_schema_aux": {
+        "inter_dependencies": {
+          "deps": []
+        }
+      },
+      "cache_invalidation_source": {
+        "cache_invalidation_error": null,
+        "sql": null,
+        "last_result_error": null,
+        "mode": "off",
+        "last_result_timestamp": null,
+        "filters": [],
+        "field": null
+      },
+      "result_schema": [
+        {
+          "lock_aggregation": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "markup",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "guid": "crm_id_link_4k3n",
+          "virtual": false,
+          "title": "crm_id_link",
+          "valid": true,
+          "aggregation_locked": true,
+          "initial_data_type": "markup",
+          "managed_by": "user",
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "description": "",
+          "data_type": "markup",
+          "formula": "IF [account_id] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\nELSEIF [account_id] = 57817 OR [account_id] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\nELSEIF [account_id] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id]), STR([crm_id]))\nEND",
+          "guid_formula": "IF [account_id_dhe6] = 53859 THEN\n    URL('https://bneginskogo.amocrm.ru/leads/detail/' + STR([crm_id_4v2x]), STR([crm_id_4v2x]))\nELSEIF [account_id_dhe6] = 57817 OR [account_id_dhe6] = 54744 THEN\n    URL('https://bneginskogoeng.amocrm.ru/leads/detail/' + STR([crm_id_4v2x]), STR([crm_id_4v2x]))\nELSEIF [account_id_dhe6] = 55639 THEN\n    URL('https://bneginskogomsk.amocrm.ru/leads/detail/' + STR([crm_id_4v2x]), STR([crm_id_4v2x]))\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "avatar_id": null,
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "lock_aggregation": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "integer",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "guid": "crm_id_4v2x",
+          "virtual": false,
+          "title": "crm_id",
+          "valid": true,
+          "aggregation_locked": false,
+          "initial_data_type": "integer",
+          "managed_by": "user",
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "description": "",
+          "data_type": "integer",
+          "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+          "source": "crm_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "lock_aggregation": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "integer",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "guid": "account_id_dhe6",
+          "virtual": false,
+          "title": "account_id",
+          "valid": true,
+          "aggregation_locked": false,
+          "initial_data_type": "integer",
+          "managed_by": "user",
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "description": "",
+          "data_type": "integer",
+          "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+          "source": "account_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "lock_aggregation": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "date",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "guid": "creation_date_w00g",
+          "virtual": false,
+          "title": "creation_date",
+          "valid": true,
+          "aggregation_locked": false,
+          "initial_data_type": "date",
+          "managed_by": "user",
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "description": "",
+          "data_type": "date",
+          "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+          "source": "creation_date",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "lock_aggregation": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "genericdatetime",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "guid": "date_booking_x76x",
+          "virtual": false,
+          "title": "date_booking",
+          "valid": true,
+          "aggregation_locked": false,
+          "initial_data_type": "genericdatetime",
+          "managed_by": "user",
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "description": "",
+          "data_type": "genericdatetime",
+          "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+          "source": "date_booking",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "lock_aggregation": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "string",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "guid": "geo_9l0i",
+          "virtual": false,
+          "title": "geo",
+          "valid": true,
+          "aggregation_locked": false,
+          "initial_data_type": "string",
+          "managed_by": "user",
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "description": "",
+          "data_type": "string",
+          "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+          "source": "geo",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "lock_aggregation": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "string",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "guid": "utmsource_j5e5",
+          "virtual": false,
+          "title": "utmsource",
+          "valid": true,
+          "aggregation_locked": false,
+          "initial_data_type": "string",
+          "managed_by": "user",
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "description": "",
+          "data_type": "string",
+          "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+          "source": "utmsource",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "lock_aggregation": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "float",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "guid": "cycle_days_exact_7l2n",
+          "virtual": false,
+          "title": "cycle_days_exact",
+          "valid": true,
+          "aggregation_locked": false,
+          "initial_data_type": "float",
+          "managed_by": "user",
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "description": "",
+          "data_type": "float",
+          "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+          "source": "cycle_days_exact",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "lock_aggregation": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "date",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "guid": "6d8b7217-0aeb-4e6b-8166-c20fe30e3c3d",
+          "virtual": false,
+          "title": "date_booking_date",
+          "valid": true,
+          "aggregation_locked": true,
+          "initial_data_type": "date",
+          "managed_by": "user",
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "description": "",
+          "data_type": "date",
+          "formula": "DATE([date_booking])",
+          "guid_formula": "DATE([date_booking_x76x])",
+          "calc_mode": "formula",
+          "source": "",
+          "avatar_id": null,
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "lock_aggregation": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "integer",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "guid": "cycle_start_crm_id_h8n4",
+          "virtual": false,
+          "title": "cycle_start_crm_id",
+          "valid": true,
+          "aggregation_locked": false,
+          "initial_data_type": "integer",
+          "managed_by": "user",
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "description": "",
+          "data_type": "integer",
+          "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+          "source": "cycle_start_crm_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "lock_aggregation": false,
+          "hidden": false,
+          "aggregation": "none",
+          "cast": "date",
+          "autoaggregated": false,
+          "type": "DIMENSION",
+          "guid": "cycle_start_date_m1p9",
+          "virtual": false,
+          "title": "cycle_start_date",
+          "valid": true,
+          "aggregation_locked": false,
+          "initial_data_type": "date",
+          "managed_by": "user",
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "description": "",
+          "data_type": "date",
+          "avatar_id": "b3ff716a-0c6a-4c8e-a254-748ce9d3c5ae",
+          "source": "cycle_start_date",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        }
+      ],
+      "obligatory_filters": [],
+      "rls": {},
+      "description": "Список брокерских броней с циклом сделки до брони для вкладки До брони.",
+      "revision_id": "88PzWq6B5qyBJpQEuXopR8",
+      "load_preview_by_default": true
+    }
+  }
+}

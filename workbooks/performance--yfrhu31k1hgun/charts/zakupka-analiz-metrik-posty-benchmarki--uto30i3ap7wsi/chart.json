@@ -1,0 +1,370 @@
+{
+  "entryId": "uto30i3ap7wsi",
+  "scope": "widget",
+  "type": "table_ql_node",
+  "key": "1620348203868097618/Закупка - Анализ метрик - Посты - Бенчмарки",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-02-14T12:42:38.154Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-03-06T14:25:31.134Z",
+  "savedId": "ili4546uye846",
+  "publishedId": "ili4546uye846",
+  "revId": "ili4546uye846",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "type": "ql",
+    "chartType": "sql",
+    "connection": {
+      "entryId": "bpds0nslojo40",
+      "type": "postgres"
+    },
+    "colors": [],
+    "colorsConfig": {},
+    "labels": [],
+    "tooltips": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "queryValue": "WITH perfomance_leads AS (\n  SELECT creation_date,\n    COUNT(leads_id) AS leads,\n    SUM(qual) AS quals\n  FROM perfomance_all_leads\n  WHERE utmsource = 'zakupka'\n    AND pipeline_id = 5987164\n    AND first_deal = 'Да'\n  GROUP BY creation_date\n),\n\ndaily_followers AS (\n  SELECT z.date, \n         SUM(followers_msc + followers_uae + followers_bali) AS total_daily_followers,\n         AVG(p.leads) AS daily_leads,\n         AVG(p.quals) AS daily_quals\n  FROM zakupki z\n  LEFT JOIN perfomance_leads p ON p.creation_date = z.date\n  WHERE z.date >= {{interval_from}}\n    AND z.date <= {{interval_to}}\n  GROUP BY z.date\n),\n\naggregated_data AS (\nSELECT z.post,\n    COUNT(z.channel_link) AS \"Размещений\",\n    SUM(z.cost) AS \"Расход\",\n    AVG(participants_count) AS \"Аудитория\",\n    SUM(z.followers_msc + z.followers_uae + z.followers_bali) AS \"F\",\n    CASE\n        WHEN SUM(z.followers_msc + z.followers_uae + z.followers_bali) > 0 THEN ROUND(SUM(z.cost) / SUM(z.followers_msc + z.followers_uae + z.followers_bali), 0)\n        ELSE SUM(z.cost)\n    END AS \"CPF\",\n    \n    SUM(df.total_daily_followers) AS \"Общее количество новых подписчиков\",\n    ROUND(SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers) * 100, 2) AS \"Доля подписчиков от всех\",\n    ROUND(SUM(z.followers_msc + z.followers_uae + z.followers_bali) / AVG(participants_count) * 100, 2) AS \"Доля от аудитории\",\n    SUM(df.daily_leads) AS \"Лидов в дни размещений\",\n    ROUND(SUM(df.daily_leads) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers)), 2) AS \"Доля лидов\",\n    \n    CASE\n        WHEN ((SUM(df.daily_leads) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers)))) > 0 THEN\n            ROUND(SUM(z.cost) / (SUM(df.daily_leads) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers))), 0)\n    END AS \"CPL\",\n    \n    SUM(df.daily_quals) AS \"Квалов в дни размещений\",\n    \n    ROUND(SUM(df.daily_quals) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers)), 2) AS \"Доля квалов\",\n    \n    CASE\n        WHEN ((SUM(df.daily_quals) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers)))) > 0 THEN\n            ROUND(SUM(z.cost) / (SUM(df.daily_quals) * (SUM(z.followers_msc + z.followers_uae + z.followers_bali) / SUM(df.total_daily_followers))), 0)\n    END AS \"CPQ\"\n    \nFROM zakupki z\nLEFT JOIN perfomance_leads p ON p.creation_date = z.date\nLEFT JOIN webhook_zakupki_channels_stat zc ON zc.channel_url = z.channel_link\nLEFT JOIN daily_followers df ON z.date = df.date\nWHERE z.date >= {{interval_from}}\n    AND z.date <= {{interval_to}}\n    AND z.channel_link IS NOT NULL\n --   AND zc.channel_url IS NOT NULL\nGROUP BY z.post\n)\n\nSELECT\n    AVG(\"Размещений\") AS \"Среднее число размещений\",\n    AVG(\"Расход\") AS \"Средний расход\",\n    AVG(\"Аудитория\") AS \"Средняя аудитория\",\n    AVG(\"F\") AS \"Среднее F\",\n    -- AVG(\"CPF\") AS \"Средний CPF\",\n    ROUND(SUM(\"Расход\") / NULLIF(SUM(\"F\"), 0), 0) AS \"Средний CPF\",\n    AVG(\"Общее количество новых подписчиков\") AS \"Ср. общее количество новых F\",\n    AVG(\"Доля подписчиков от всех\") AS \"Ср. доля F от всех\",\n    AVG(\"Доля от аудитории\") AS \"Средняя доля от аудитории\",\n    AVG(\"Лидов в дни размещений\") AS \"Ср. кол-во лидов в дни размещений\",\n    AVG(\"Доля лидов\") AS \"Средняя доля лидов\",\n    AVG(\"CPL\") AS \"Средний CPL\",\n    AVG(\"Квалов в дни размещений\") AS \"Ср. кол-во квалов в дни размещений\",\n    AVG(\"Доля квалов\") AS \"Средняя доля квалов\",\n    AVG(\"CPQ\") AS \"Средний CPQ\"\nFROM aggregated_data",
+    "queries": [],
+    "params": [
+      {
+        "type": "date-interval",
+        "name": "interval",
+        "defaultValue": {
+          "from": "2023-08-01T00:00:00.000Z",
+          "to": "__relative_-2d"
+        }
+      },
+      {
+        "type": "number",
+        "name": "limits",
+        "defaultValue": "100"
+      }
+    ],
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": false,
+      "allowColors": true,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "Среднее число размещений-5",
+              "title": "Среднее число размещений",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Средний расход-9",
+              "title": "Средний расход",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "f8c286f0-c9d1-11ee-84f5-7b892c56fe54",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Средний расход-8"
+              }
+            },
+            {
+              "guid": "Средняя аудитория-10",
+              "title": "Средняя аудитория",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Среднее F-4",
+              "title": "Среднее F",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Средний CPF-6",
+              "title": "Средний CPF",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "fbb009f0-c9d1-11ee-84f5-7b892c56fe54",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Средний CPF-5"
+              }
+            },
+            {
+              "guid": "Ср. общее количество новых F-3",
+              "title": "Ср. общее количество новых F",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Ср. доля F от всех-0",
+              "title": "Ср. доля F от всех",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Средняя доля от аудитории-13",
+              "title": "Средняя доля от аудитории",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "%",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "04f8b3b0-c9b7-11ee-b92b-23f87664901f",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Средняя доля от аудитории-12"
+              }
+            },
+            {
+              "guid": "Ср. кол-во лидов в дни размещений-2",
+              "title": "Ср. кол-во лидов в дни размещений",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Средняя доля лидов-12",
+              "title": "Средняя доля лидов",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Средний CPL-7",
+              "title": "Средний CPL",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "025f01c0-c9d2-11ee-84f5-7b892c56fe54",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Средний CPL-6"
+              }
+            },
+            {
+              "guid": "Ср. кол-во квалов в дни размещений-1",
+              "title": "Ср. кол-во квалов в дни размещений",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Средняя доля квалов-11",
+              "title": "Средняя доля квалов",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true
+            },
+            {
+              "guid": "Средний CPQ-8",
+              "title": "Средний CPQ",
+              "datasetId": "ql-mocked-dataset",
+              "data_type": "float",
+              "cast": "float",
+              "type": "DIMENSION",
+              "calc_mode": "direct",
+              "inspectHidden": true,
+              "formulaHidden": true,
+              "noEdit": true,
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "06c0fc50-c9d2-11ee-84f5-7b892c56fe54",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "Средний CPQ-7"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on",
+            "axisModeMap": {
+              "Среднее число размещений-4": "continuous"
+            }
+          }
+        }
+      ],
+      "allowSegments": false,
+      "allowAvailable": true,
+      "allowLayerFilters": false
+    },
+    "order": null,
+    "version": "7"
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

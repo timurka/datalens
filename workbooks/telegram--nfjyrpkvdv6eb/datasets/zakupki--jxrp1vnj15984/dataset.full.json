@@ -1,0 +1,3097 @@
+{
+  "full_permissions": {},
+  "options": {
+    "connections": {
+      "items": [
+        {
+          "id": "g8crkisikyyc4",
+          "replacement_types": [
+            {
+              "conn_type": "snowflake"
+            },
+            {
+              "conn_type": "ydb"
+            },
+            {
+              "conn_type": "mysql"
+            },
+            {
+              "conn_type": "usage_analytics_light"
+            },
+            {
+              "conn_type": "ch_frozen_bumpy_roads"
+            },
+            {
+              "conn_type": "bitrix24"
+            },
+            {
+              "conn_type": "trino"
+            },
+            {
+              "conn_type": "ch_frozen_demo"
+            },
+            {
+              "conn_type": "promql"
+            },
+            {
+              "conn_type": "ch_ya_music_podcast_stats"
+            },
+            {
+              "conn_type": "postgres"
+            },
+            {
+              "conn_type": "ch_frozen_transparency"
+            },
+            {
+              "conn_type": "ch_frozen_horeca"
+            },
+            {
+              "conn_type": "appmetrica_api"
+            },
+            {
+              "conn_type": "yq"
+            },
+            {
+              "conn_type": "json_api"
+            },
+            {
+              "conn_type": "usage_analytics_detailed"
+            },
+            {
+              "conn_type": "ch_frozen_samples"
+            },
+            {
+              "conn_type": "smb_heatmaps"
+            },
+            {
+              "conn_type": "gsheets_v2"
+            },
+            {
+              "conn_type": "mssql"
+            },
+            {
+              "conn_type": "ch_frozen_gkh"
+            },
+            {
+              "conn_type": "extractor1c"
+            },
+            {
+              "conn_type": "kontur_market"
+            },
+            {
+              "conn_type": "gsheets"
+            },
+            {
+              "conn_type": "ch_frozen_weather"
+            },
+            {
+              "conn_type": "clickhouse"
+            },
+            {
+              "conn_type": "greenplum"
+            },
+            {
+              "conn_type": "moysklad"
+            },
+            {
+              "conn_type": "oracle"
+            },
+            {
+              "conn_type": "ch_geo_filtered"
+            },
+            {
+              "conn_type": "file"
+            },
+            {
+              "conn_type": "chyt"
+            },
+            {
+              "conn_type": "ch_billing_analytics"
+            },
+            {
+              "conn_type": "yadocs"
+            },
+            {
+              "conn_type": "equeo"
+            },
+            {
+              "conn_type": "ch_frozen_covid"
+            },
+            {
+              "conn_type": "metrika_api"
+            },
+            {
+              "conn_type": "bigquery"
+            },
+            {
+              "conn_type": "speechsense"
+            },
+            {
+              "conn_type": "ch_frozen_dtp"
+            }
+          ]
+        }
+      ],
+      "compatible_types": [],
+      "max": 1
+    },
+    "is_cache_invalidation_enabled_in_conn": false,
+    "fields": {
+      "items": [
+        {
+          "guid": "date_98it",
+          "casts": [
+            "date",
+            "genericdatetime",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ]
+        },
+        {
+          "guid": "city_8k9k",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "channel_name_dyzw",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "channel_link_ordq",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "post_link_coee",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "cost_u80x",
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "views_pdhb",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "followers_msc_3kyw",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "followers_uae_97aa",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "post_xfh7",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "test_b5c7",
+          "casts": [
+            "boolean",
+            "integer",
+            "float",
+            "string"
+          ],
+          "aggregations": [
+            "none",
+            "count"
+          ]
+        },
+        {
+          "guid": "teaser_lnln",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "followers_bali_hpem",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "time_8db3",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "invitelinks_uae_3j95",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "invitelinks_msc_5ydo",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "buyer_pbeu",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "invitelinks_oj6w",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "hash_9tzx",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "full_hash_b7mu",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "followers_thai_shyi",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "invitelinks_bali_zmmi",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "invitelinks_thai_t7kh",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "invitelinks_cyprus_azth",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "invitelinks_sochi_ke7w",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "invitelinks_spb_1zld",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "invitelinks_batumi_u7qt",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "invitelinks_turkey_2khm",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "followers_cyprus_scjm",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "followers_sochi_760l",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "followers_spb_6jed",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "followers_batumi_hcg9",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "followers_turkey_lnn1",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "channel_link_part_rct6",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "id_t0xx",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "followers_msc_elite_ae8f",
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ]
+        },
+        {
+          "guid": "invitelinks_msc_elite_qsk4",
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ]
+        }
+      ]
+    },
+    "supported_functions": [
+      "abs",
+      "acos",
+      "ago",
+      "all_concat",
+      "any",
+      "arr_distinct",
+      "arr_index_of",
+      "arr_intersect",
+      "arr_remove",
+      "arr_str",
+      "array",
+      "ascii",
+      "asin",
+      "at_date",
+      "atan",
+      "atan2",
+      "avg",
+      "avg_if",
+      "bold",
+      "bool",
+      "br",
+      "case",
+      "cast_arr_float",
+      "cast_arr_int",
+      "cast_arr_str",
+      "ceiling",
+      "char",
+      "color",
+      "concat",
+      "contains",
+      "contains_all",
+      "contains_any",
+      "cos",
+      "cot",
+      "count",
+      "count_if",
+      "count_item",
+      "countd",
+      "countd_if",
+      "date",
+      "dateadd",
+      "datepart",
+      "datetime",
+      "datetrunc",
+      "day",
+      "dayofweek",
+      "db_call_agg_float",
+      "db_call_agg_int",
+      "db_call_agg_string",
+      "db_call_array_float",
+      "db_call_array_int",
+      "db_call_array_string",
+      "db_call_bool",
+      "db_call_float",
+      "db_call_int",
+      "db_call_string",
+      "db_cast",
+      "degrees",
+      "div",
+      "div_safe",
+      "endswith",
+      "exp",
+      "fdiv_safe",
+      "find",
+      "first",
+      "float",
+      "floor",
+      "geopoint",
+      "geopolygon",
+      "get_item",
+      "greatest",
+      "hour",
+      "icontains",
+      "iendswith",
+      "if",
+      "ifnan",
+      "ifnull",
+      "iif",
+      "image",
+      "int",
+      "isnan",
+      "isnull",
+      "istartswith",
+      "italic",
+      "lag",
+      "last",
+      "least",
+      "left",
+      "len",
+      "ln",
+      "log",
+      "log10",
+      "lower",
+      "ltrim",
+      "markup",
+      "mavg",
+      "max",
+      "mcount",
+      "md5",
+      "median",
+      "min",
+      "minute",
+      "mmax",
+      "mmin",
+      "month",
+      "msum",
+      "notcontains",
+      "now",
+      "pi",
+      "power",
+      "quantile",
+      "quarter",
+      "radians",
+      "rank",
+      "rank_dense",
+      "rank_percentile",
+      "rank_unique",
+      "ravg",
+      "rcount",
+      "regexp_extract",
+      "regexp_extract_all",
+      "regexp_extract_nth",
+      "regexp_match",
+      "regexp_replace",
+      "replace",
+      "right",
+      "rmax",
+      "rmin",
+      "round",
+      "rsum",
+      "rtrim",
+      "second",
+      "sha1",
+      "sha256",
+      "sign",
+      "sin",
+      "size",
+      "slice",
+      "space",
+      "split",
+      "sqrt",
+      "square",
+      "startswith",
+      "stdev",
+      "stdevp",
+      "str",
+      "substr",
+      "sum",
+      "sum_if",
+      "tan",
+      "today",
+      "tooltip",
+      "tree",
+      "trim",
+      "unnest",
+      "upper",
+      "url",
+      "user_info",
+      "var",
+      "varp",
+      "week",
+      "year",
+      "zn"
+    ],
+    "source_listing": {
+      "db_name_label": null,
+      "db_name_required_for_search": false,
+      "supports_source_pagination": true,
+      "supports_db_name_listing": false,
+      "supports_source_search": true
+    },
+    "sources": {
+      "items": [
+        {
+          "id": "53e0f9a1-c08d-11f0-9487-59a227b3c818",
+          "schema_update_enabled": true
+        }
+      ],
+      "compatible_types": [
+        {
+          "source_type": "PG_TABLE"
+        },
+        {
+          "source_type": "PG_SUBSELECT"
+        }
+      ]
+    },
+    "supports_offset": true,
+    "schema_update_enabled": true,
+    "preview": {
+      "enabled": true
+    },
+    "data_types": {
+      "items": [
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "type": "string",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ]
+        },
+        {
+          "aggregations": [
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "type": "integer",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ]
+        },
+        {
+          "aggregations": [
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "type": "float",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ]
+        },
+        {
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ],
+          "casts": [
+            "date",
+            "genericdatetime",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "date",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ]
+        },
+        {
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ],
+          "casts": [
+            "genericdatetime",
+            "datetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "datetime",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ]
+        },
+        {
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "boolean",
+            "integer",
+            "float",
+            "string"
+          ],
+          "type": "boolean",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ]
+        },
+        {
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "geopoint",
+            "string"
+          ],
+          "type": "geopoint",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ]
+        },
+        {
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "geopolygon",
+            "string"
+          ],
+          "type": "geopolygon",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ]
+        },
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "uuid",
+            "string"
+          ],
+          "type": "uuid",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ]
+        },
+        {
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "markup"
+          ],
+          "type": "markup",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL"
+          ]
+        },
+        {
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ],
+          "casts": [
+            "datetimetz",
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "datetimetz",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ]
+        },
+        {
+          "aggregations": [],
+          "casts": [
+            "unsupported"
+          ],
+          "type": "unsupported",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL"
+          ]
+        },
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "array_str",
+            "string"
+          ],
+          "type": "array_str",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ]
+        },
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "array_int",
+            "string"
+          ],
+          "type": "array_int",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ]
+        },
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "array_float",
+            "string"
+          ],
+          "type": "array_float",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ]
+        },
+        {
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "tree_str"
+          ],
+          "type": "tree_str",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ]
+        },
+        {
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "genericdatetime",
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ]
+        }
+      ]
+    },
+    "join": {
+      "operators": [
+        "eq"
+      ],
+      "types": [
+        "left",
+        "inner",
+        "full",
+        "right"
+      ]
+    },
+    "source_avatars": {
+      "items": [
+        {
+          "id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+          "schema_update_enabled": true
+        }
+      ],
+      "max": 32
+    }
+  },
+  "is_favorite": false,
+  "permissions": {
+    "execute": true,
+    "read": true,
+    "edit": true,
+    "admin": true
+  },
+  "dataset": {
+    "result_schema": [
+      {
+        "autoaggregated": false,
+        "title": "date",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "date_98it",
+        "type": "DIMENSION",
+        "data_type": "date",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "date",
+        "cast": "date",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "date",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "city",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "city_8k9k",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "city",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "channel_name",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "channel_name_dyzw",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "channel_name",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "channel_link",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "channel_link_ordq",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "channel_link",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "post_link",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "post_link_coee",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "post_link",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "cost",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "cost_u80x",
+        "type": "DIMENSION",
+        "data_type": "float",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "float",
+        "cast": "float",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "cost",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "views",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "views_pdhb",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "views",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "followers_msc",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "followers_msc_3kyw",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "followers_msc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "followers_uae",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "followers_uae_97aa",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "followers_uae",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "post",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "post_xfh7",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "post",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "test",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "test_b5c7",
+        "type": "DIMENSION",
+        "data_type": "boolean",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "boolean",
+        "cast": "boolean",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "test",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "teaser",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "teaser_lnln",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "teaser",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "followers_bali",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "followers_bali_hpem",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "followers_bali",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "time",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "time_8db3",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "time",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "invitelinks_uae",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "invitelinks_uae_3j95",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "invitelinks_uae",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "invitelinks_msc",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "invitelinks_msc_5ydo",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "invitelinks_msc",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "buyer",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "buyer_pbeu",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "buyer",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "invitelinks",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "invitelinks_oj6w",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "invitelinks",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "hash",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "hash_9tzx",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "hash",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "full_hash",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "full_hash_b7mu",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "full_hash",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "followers_thai",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "followers_thai_shyi",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "followers_thai",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "invitelinks_bali",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "invitelinks_bali_zmmi",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "invitelinks_bali",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "invitelinks_thai",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "invitelinks_thai_t7kh",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "invitelinks_thai",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "invitelinks_cyprus",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "invitelinks_cyprus_azth",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "invitelinks_cyprus",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "invitelinks_sochi",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "invitelinks_sochi_ke7w",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "invitelinks_sochi",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "invitelinks_spb",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "invitelinks_spb_1zld",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "invitelinks_spb",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "invitelinks_batumi",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "invitelinks_batumi_u7qt",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "invitelinks_batumi",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "invitelinks_turkey",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "invitelinks_turkey_2khm",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "invitelinks_turkey",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "followers_cyprus",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "followers_cyprus_scjm",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "followers_cyprus",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "followers_sochi",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "followers_sochi_760l",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "followers_sochi",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "followers_spb",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "followers_spb_6jed",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "followers_spb",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "followers_batumi",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "followers_batumi_hcg9",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "followers_batumi",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "followers_turkey",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "followers_turkey_lnn1",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "followers_turkey",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "channel_link_part",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "channel_link_part_rct6",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "channel_link_part",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "id",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "id_t0xx",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "id",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "followers_msc_elite",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "followers_msc_elite_ae8f",
+        "type": "DIMENSION",
+        "data_type": "integer",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "integer",
+        "cast": "integer",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "followers_msc_elite",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "autoaggregated": false,
+        "title": "invitelinks_msc_elite",
+        "ui_settings": "",
+        "aggregation_locked": false,
+        "guid": "invitelinks_msc_elite_qsk4",
+        "type": "DIMENSION",
+        "data_type": "string",
+        "has_auto_aggregation": false,
+        "description": "",
+        "hidden": false,
+        "aggregation": "none",
+        "valid": true,
+        "virtual": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "initial_data_type": "string",
+        "cast": "string",
+        "avatar_id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source": "invitelinks_msc_elite",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      }
+    ],
+    "rls": {},
+    "cache_invalidation_source": {
+      "mode": "off",
+      "last_result_error": null,
+      "field": null,
+      "sql": null,
+      "cache_invalidation_error": null,
+      "last_result_timestamp": null,
+      "filters": []
+    },
+    "rls2": {},
+    "data_export_forbidden": false,
+    "avatar_relations": [],
+    "revision_id": null,
+    "obligatory_filters": [],
+    "result_schema_aux": {
+      "inter_dependencies": {
+        "deps": []
+      }
+    },
+    "sources": [
+      {
+        "raw_schema": [
+          {
+            "title": "date",
+            "native_type": {
+              "nullable": true,
+              "name": "date",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "date",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "date",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "city",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "city",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "channel_name",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "channel_name",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "channel_link",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "channel_link",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "post_link",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "post_link",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "cost",
+            "native_type": {
+              "nullable": true,
+              "name": "numeric",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "cost",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "float",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "views",
+            "native_type": {
+              "nullable": true,
+              "name": "bigint",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "views",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "followers_msc",
+            "native_type": {
+              "nullable": true,
+              "name": "bigint",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "followers_msc",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "followers_uae",
+            "native_type": {
+              "nullable": true,
+              "name": "bigint",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "followers_uae",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "post",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "post",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "test",
+            "native_type": {
+              "nullable": true,
+              "name": "boolean",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "test",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "boolean",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "teaser",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "teaser",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "followers_bali",
+            "native_type": {
+              "nullable": true,
+              "name": "bigint",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "followers_bali",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "time",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "time",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "invitelinks_uae",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "invitelinks_uae",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "invitelinks_msc",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "invitelinks_msc",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "buyer",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "buyer",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "invitelinks",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "invitelinks",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "hash",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "hash",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "full_hash",
+            "native_type": {
+              "nullable": true,
+              "name": "varchar",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "full_hash",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "followers_thai",
+            "native_type": {
+              "nullable": true,
+              "name": "integer",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "followers_thai",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "invitelinks_bali",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "invitelinks_bali",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "invitelinks_thai",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "invitelinks_thai",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "invitelinks_cyprus",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "invitelinks_cyprus",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "invitelinks_sochi",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "invitelinks_sochi",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "invitelinks_spb",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "invitelinks_spb",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "invitelinks_batumi",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "invitelinks_batumi",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "invitelinks_turkey",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "invitelinks_turkey",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "followers_cyprus",
+            "native_type": {
+              "nullable": true,
+              "name": "integer",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "followers_cyprus",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "followers_sochi",
+            "native_type": {
+              "nullable": true,
+              "name": "integer",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "followers_sochi",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "followers_spb",
+            "native_type": {
+              "nullable": true,
+              "name": "integer",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "followers_spb",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "followers_batumi",
+            "native_type": {
+              "nullable": true,
+              "name": "integer",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "followers_batumi",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "followers_turkey",
+            "native_type": {
+              "nullable": true,
+              "name": "integer",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "followers_turkey",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "channel_link_part",
+            "native_type": {
+              "nullable": true,
+              "name": "text",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "channel_link_part",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "id",
+            "native_type": {
+              "nullable": false,
+              "name": "integer",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "id",
+            "nullable": false,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "followers_msc_elite",
+            "native_type": {
+              "nullable": true,
+              "name": "integer",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "followers_msc_elite",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "integer",
+            "description": "",
+            "lock_aggregation": false
+          },
+          {
+            "title": "invitelinks_msc_elite",
+            "native_type": {
+              "nullable": true,
+              "name": "varchar",
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "invitelinks_msc_elite",
+            "nullable": true,
+            "has_auto_aggregation": false,
+            "user_type": "string",
+            "description": "",
+            "lock_aggregation": false
+          }
+        ],
+        "connection_id": "g8crkisikyyc4",
+        "title": "zakupki",
+        "source_type": "PG_TABLE",
+        "index_info_set": null,
+        "valid": true,
+        "managed_by": "user",
+        "virtual": false,
+        "id": "53e0f9a1-c08d-11f0-9487-59a227b3c818",
+        "parameter_hash": "b76e415dec5dc31f",
+        "parameters": {
+          "db_version": "PostgreSQL 14.18 (Ubuntu 14.18-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit",
+          "table_name": "zakupki",
+          "schema_name": "public",
+          "db_name": null
+        }
+      }
+    ],
+    "load_preview_by_default": true,
+    "template_enabled": false,
+    "description": "",
+    "component_errors": {
+      "items": []
+    },
+    "preview_enabled": true,
+    "source_avatars": [
+      {
+        "title": "public.zakupki",
+        "is_root": true,
+        "valid": true,
+        "managed_by": "user",
+        "virtual": false,
+        "id": "53e0f9a0-c08d-11f0-9487-59a227b3c818",
+        "source_id": "53e0f9a1-c08d-11f0-9487-59a227b3c818"
+      }
+    ]
+  },
+  "name": "zakupki",
+  "key": "2082751920673394440/zakupki",
+  "workbook_id": "nfjyrpkvdv6eb",
+  "id": "jxrp1vnj15984"
+}

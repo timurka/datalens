@@ -1,0 +1,441 @@
+{
+  "entryId": "d2x266doc93w0",
+  "scope": "widget",
+  "type": "graph_wizard_node",
+  "key": "1721752071692092700/Закупки - CPF — Линейная по месяцам ОАЭ",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-07-03T10:34:00.992Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-07-03T10:53:53.719Z",
+  "savedId": "xmhp9degyizok",
+  "publishedId": "xmhp9degyizok",
+  "revId": "xmhp9degyizok",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [
+      {
+        "title": "Measure Names",
+        "type": "PSEUDO",
+        "className": "item pseudo-item dimension-item",
+        "data_type": "string"
+      }
+    ],
+    "colorsConfig": {
+      "polygonBorders": "show",
+      "palette": "classic20",
+      "mountedColors": {
+        "Средний CPF": "0"
+      },
+      "coloredByMeasure": true,
+      "colorMode": "palette"
+    },
+    "datasetsIds": [
+      "lz2y1j0rwu2a9"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "4490cc70-3928-11ef-b040-b1281bd6fdd1",
+          "title": "Среднее",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "cb3c01f0-3927-11ef-b040-b1281bd6fdd1",
+          "title": "title-cb3c01f0-3927-11ef-b040-b1281bd6fdd1",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "month_year",
+          "title": "month_year",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_followers_msc",
+          "title": "total_followers_msc",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_followers_uae",
+          "title": "total_followers_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_followers_bali",
+          "title": "total_followers_bali",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_cost_msc",
+          "title": "total_cost_msc",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_cost_uae",
+          "title": "total_cost_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_cost_bali",
+          "title": "total_cost_bali",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpf_msc",
+          "title": "cpf_msc",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpf_uae",
+          "title": "cpf_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpf_bali",
+          "title": "cpf_bali",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "msc_placements_count",
+          "title": "msc_placements_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "uae_placements_count",
+          "title": "uae_placements_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "bali_placements_count",
+          "title": "bali_placements_count",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [
+      {
+        "title": "Measure Names",
+        "type": "PSEUDO",
+        "className": "item pseudo-item dimension-item",
+        "data_type": "string"
+      }
+    ],
+    "shapesConfig": {
+      "mountedShapes": {
+        "Средний CPF": "Dot"
+      }
+    },
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": false,
+          "guid": "cb3c01f0-3927-11ef-b040-b1281bd6fdd1",
+          "title": "title-cb3c01f0-3927-11ef-b040-b1281bd6fdd1",
+          "aggregation_locked": false,
+          "cast": "float",
+          "autoaggregated": false,
+          "managed_by": "user",
+          "initial_data_type": "float",
+          "data_type": "float",
+          "valid": true,
+          "virtual": false,
+          "aggregation": "sum",
+          "lock_aggregation": false,
+          "hidden": false,
+          "description": "",
+          "type": "MEASURE",
+          "avatar_id": "026ea940-0938-11ef-8998-41df399dd867",
+          "source": "cpf_uae",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "lz2y1j0rwu2a9"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "has_auto_aggregation": true,
+          "guid": "4490cc70-3928-11ef-b040-b1281bd6fdd1",
+          "title": "Среднее",
+          "aggregation_locked": true,
+          "cast": "float",
+          "autoaggregated": true,
+          "managed_by": "user",
+          "initial_data_type": "float",
+          "data_type": "float",
+          "valid": true,
+          "virtual": false,
+          "aggregation": "none",
+          "lock_aggregation": false,
+          "hidden": false,
+          "description": "",
+          "type": "MEASURE",
+          "formula": "AVG(AVG([cpf_uae]) TOTAL)",
+          "guid_formula": "AVG(AVG([cpf_uae]) TOTAL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "lz2y1j0rwu2a9"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "line",
+      "type": "line",
+      "name": "label_visualization-line",
+      "iconProps": {
+        "id": "visLines",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "allowLabels": true,
+      "allowSegments": true,
+      "allowShapes": true,
+      "colorsCapacity": 2,
+      "shapesCapacity": 2,
+      "availableLabelModes": [
+        "absolute"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "hidden": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "virtual": false,
+              "description": "",
+              "valid": true,
+              "cast": "date",
+              "data_type": "date",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "aggregation": "none",
+              "autoaggregated": false,
+              "guid": "month_year",
+              "title": "month_year",
+              "aggregation_locked": false,
+              "initial_data_type": "date",
+              "avatar_id": "026ea940-0938-11ef-8998-41df399dd867",
+              "source": "month_year",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "lz2y1j0rwu2a9",
+              "id": "dimension-2",
+              "datasetName": "Закупки - CPF",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Месяц",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "d5ccebd0-0938-11ef-a93b-1b0cc89b0336",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "default",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "month_year"
+              }
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "holidays": "off",
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "month_year": "continuous"
+            }
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "description": "",
+              "autoaggregated": false,
+              "initial_data_type": "float",
+              "managed_by": "user",
+              "has_auto_aggregation": false,
+              "aggregation": "sum",
+              "aggregation_locked": false,
+              "type": "MEASURE",
+              "guid": "cb3c01f0-3927-11ef-b040-b1281bd6fdd1",
+              "valid": true,
+              "data_type": "float",
+              "virtual": false,
+              "title": "title-cb3c01f0-3927-11ef-b040-b1281bd6fdd1",
+              "cast": "float",
+              "lock_aggregation": false,
+              "hidden": false,
+              "avatar_id": "026ea940-0938-11ef-8998-41df399dd867",
+              "source": "cpf_uae",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "cpf_uae",
+              "fakeTitle": "CPF ОАЭ",
+              "datasetId": "lz2y1j0rwu2a9",
+              "id": "measure-1",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "datasetName": "Закупки - CPF",
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "initial_data_type": "float",
+              "managed_by": "user",
+              "cast": "float",
+              "hidden": false,
+              "aggregation_locked": true,
+              "title": "Среднее",
+              "type": "MEASURE",
+              "data_type": "float",
+              "valid": true,
+              "aggregation": "none",
+              "autoaggregated": true,
+              "virtual": false,
+              "has_auto_aggregation": true,
+              "lock_aggregation": false,
+              "guid": "4490cc70-3928-11ef-b040-b1281bd6fdd1",
+              "description": "",
+              "guid_formula": "AVG(AVG([cpf_uae]) TOTAL)",
+              "formula": "AVG(AVG([cpf_uae]) TOTAL)",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "lz2y1j0rwu2a9",
+              "id": "measure-0",
+              "datasetName": "Закупки - CPF",
+              "fakeTitle": "Средний CPF",
+              "hideLabelMode": "hide",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisFormatMode": "auto"
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y2",
+          "type": "y2",
+          "title": "section_y2",
+          "iconProps": {},
+          "items": [],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisFormatMode": "auto"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

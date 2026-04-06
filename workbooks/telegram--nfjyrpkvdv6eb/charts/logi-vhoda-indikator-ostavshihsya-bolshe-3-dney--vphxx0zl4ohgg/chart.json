@@ -1,0 +1,448 @@
+{
+  "entryId": "vphxx0zl4ohgg",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "2007381879304490916/Логи входа — Индикатор оставшихся больше 3 дней %",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-08-01T12:49:27.641Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-08-01T12:52:40.517Z",
+  "savedId": "ic4l5as16wny3",
+  "publishedId": "ic4l5as16wny3",
+  "revId": "ic4l5as16wny3",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "br8azf59xj5ky"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "090e1560-6ed6-11f0-9e78-e9fc5479fde9",
+          "title": "%",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "5b2a1b80-ace1-11ef-a71d-51b0615541c8",
+          "title": "> 3 дней",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "4fe69ce0-ace0-11ef-a71d-51b0615541c8",
+          "title": "IF [lifetime] >= 3 THEN\n        [user_id]\nEND",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "1d06c750-ace0-11ef-a71d-51b0615541c8",
+          "title": "lifetime",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "c8bc1180-4422-11ef-a800-395509ff8bf1",
+          "title": "lifetime_3",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "9d2d5940-41e0-11f0-b5ef-abfd1480a4f1",
+          "title": "first_book",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "1a914d80-f91e-11ef-8357-175e64176e93",
+          "title": "is_zakupka",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "user_id_zqij",
+          "title": "user_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "chat_id_adeh",
+          "title": "chat_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_wihq",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_n2mt",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_r5u6",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username_k7wu",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "premium_l0hl",
+          "title": "premium",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "folder_lznt",
+          "title": "folder",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_list_b0nb",
+          "title": "invitelinks_list",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invite_link_name_list_1phf",
+          "title": "invite_link_name_list",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_only_join_agsh",
+          "title": "date_only_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_left_d5cn",
+          "title": "date_left",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_omot",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invite_link_name_0op2",
+          "title": "invite_link_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "any_contacts_amo_id_7pdt",
+          "title": "any_contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_mdbs",
+          "title": "leads",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_qual_j6ew",
+          "title": "total_qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_book_7n7w",
+          "title": "total_book",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_deal_amount_2x4s",
+          "title": "total_deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_dates_9eok",
+          "title": "qual_dates",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_dates_0fqn",
+          "title": "booking_dates",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_geos_xazm",
+          "title": "booking_geos",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "passwords_9n8f",
+          "title": "passwords",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category_qpxj",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "adv_reach_ej5d",
+          "title": "adv_reach",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost_5hxy",
+          "title": "cost",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "zakupki_id_xzkr",
+          "title": "zakupki_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_dates_6a08",
+          "title": "leads_dates",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_last_leads_gwpg",
+          "title": "date_last_leads",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_last_qual_xn68",
+          "title": "date_last_qual",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#8AD554",
+      "metricFontColorPalette": "classic20",
+      "indicatorTitleMode": "by-field"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "type": "DIMENSION",
+          "guid": "c8bc1180-4422-11ef-a800-395509ff8bf1",
+          "autoaggregated": false,
+          "lock_aggregation": false,
+          "cast": "integer",
+          "title": "lifetime_3",
+          "hidden": false,
+          "aggregation": "none",
+          "valid": true,
+          "has_auto_aggregation": false,
+          "aggregation_locked": true,
+          "data_type": "integer",
+          "managed_by": "user",
+          "initial_data_type": "integer",
+          "virtual": false,
+          "description": "",
+          "formula": "IF [date_left] IS NULL\n    OR [lifetime] >= 3 THEN\n        [user_id]\nEND",
+          "guid_formula": "IF [date_left_d5cn] IS NULL\n    OR [1d06c750-ace0-11ef-a71d-51b0615541c8] >= 3 THEN\n        [user_id_zqij]\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "br8azf59xj5ky"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "type": "DIMENSION",
+          "guid": "1d06c750-ace0-11ef-a71d-51b0615541c8",
+          "autoaggregated": false,
+          "lock_aggregation": false,
+          "cast": "float",
+          "title": "lifetime",
+          "hidden": false,
+          "aggregation": "none",
+          "valid": true,
+          "has_auto_aggregation": false,
+          "aggregation_locked": true,
+          "data_type": "float",
+          "managed_by": "user",
+          "initial_data_type": "float",
+          "virtual": false,
+          "description": "",
+          "formula": "[date_left] - [date_join]",
+          "guid_formula": "[date_left_d5cn] - [date_join_n2mt]",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "br8azf59xj5ky"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "type": "MEASURE",
+          "guid": "4fe69ce0-ace0-11ef-a71d-51b0615541c8",
+          "autoaggregated": false,
+          "lock_aggregation": false,
+          "cast": "integer",
+          "title": "IF [lifetime] >= 3 THEN\n        [user_id]\nEND",
+          "hidden": false,
+          "aggregation": "countunique",
+          "valid": true,
+          "has_auto_aggregation": false,
+          "aggregation_locked": true,
+          "data_type": "integer",
+          "managed_by": "user",
+          "initial_data_type": "integer",
+          "virtual": false,
+          "description": "",
+          "formula": "IF [lifetime] >= 3 THEN\n        [user_id]\nEND",
+          "guid_formula": "IF [1d06c750-ace0-11ef-a71d-51b0615541c8] >= 3 THEN\n        [user_id_zqij]\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "br8azf59xj5ky"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "type": "MEASURE",
+          "guid": "5b2a1b80-ace1-11ef-a71d-51b0615541c8",
+          "autoaggregated": false,
+          "lock_aggregation": false,
+          "cast": "integer",
+          "title": "> 3 дней",
+          "hidden": false,
+          "aggregation": "countunique",
+          "valid": true,
+          "has_auto_aggregation": false,
+          "aggregation_locked": true,
+          "data_type": "integer",
+          "managed_by": "user",
+          "initial_data_type": "integer",
+          "virtual": false,
+          "description": "",
+          "formula": "-- Если не выходили или выходили позже чем 3 дня\nIF [date_left] IS NULL OR [lifetime] >= 3 THEN\n        [user_id]\nEND",
+          "guid_formula": "-- Если не выходили или выходили позже чем 3 дня\nIF [date_left_d5cn] IS NULL OR [1d06c750-ace0-11ef-a71d-51b0615541c8] >= 3 THEN\n        [user_id_zqij]\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "br8azf59xj5ky"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "type": "MEASURE",
+          "guid": "090e1560-6ed6-11f0-9e78-e9fc5479fde9",
+          "autoaggregated": true,
+          "lock_aggregation": false,
+          "cast": "float",
+          "title": "%",
+          "hidden": false,
+          "aggregation": "none",
+          "valid": true,
+          "has_auto_aggregation": true,
+          "aggregation_locked": true,
+          "data_type": "float",
+          "managed_by": "user",
+          "initial_data_type": "float",
+          "virtual": false,
+          "description": "",
+          "formula": "IF countd([user_id]) > 0 THEN\n    COUNTD([> 3 дней]) / countd([user_id])\nEND",
+          "guid_formula": "IF countd([user_id_zqij]) > 0 THEN\n    COUNTD([5b2a1b80-ace1-11ef-a71d-51b0615541c8]) / countd([user_id_zqij])\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "br8azf59xj5ky"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "type": "MEASURE",
+              "guid": "090e1560-6ed6-11f0-9e78-e9fc5479fde9",
+              "autoaggregated": true,
+              "lock_aggregation": false,
+              "cast": "float",
+              "title": "%",
+              "hidden": false,
+              "aggregation": "none",
+              "valid": true,
+              "has_auto_aggregation": true,
+              "aggregation_locked": true,
+              "data_type": "float",
+              "managed_by": "user",
+              "initial_data_type": "float",
+              "virtual": false,
+              "description": "",
+              "formula": "IF countd([user_id]) > 0 THEN\n    COUNTD([> 3 дней]) / countd([user_id])\nEND",
+              "guid_formula": "IF countd([user_id_zqij]) > 0 THEN\n    COUNTD([5b2a1b80-ace1-11ef-a71d-51b0615541c8]) / countd([user_id_zqij])\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "br8azf59xj5ky",
+              "id": "inserted-1754052644745",
+              "datasetName": "telegram_logs_leads 11.24",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 1
+              },
+              "fakeTitle": "%  3 дней"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "axisModeMap": {
+              "090e1560-6ed6-11f0-9e78-e9fc5479fde9": "discrete"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

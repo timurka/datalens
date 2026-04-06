@@ -1,0 +1,822 @@
+{
+  "entry": {
+    "version": 1,
+    "scope": "dash",
+    "entryId": "dv37kr41jfl2z",
+    "key": "1960131439483684635/Статистика neginski.com",
+    "createdAt": "2025-05-28T08:11:16.027Z",
+    "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+    "updatedAt": "2026-01-16T15:31:23.617Z",
+    "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+    "revId": "3t0u5c4rawzan",
+    "savedId": "3t0u5c4rawzan",
+    "publishedId": "3t0u5c4rawzan",
+    "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+    "hidden": false,
+    "public": false,
+    "workbookId": "s9bl5v77coboe",
+    "meta": {
+      "is_release": true
+    },
+    "annotation": {
+      "description": ""
+    },
+    "type": "",
+    "data": {
+      "salt": "0.10750097763962119",
+      "tabs": [
+        {
+          "id": "Yqo",
+          "items": [
+            {
+              "id": "nE6",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "6Jb",
+                    "hint": "",
+                    "title": "Сводная по гео из url",
+                    "params": {},
+                    "chartId": "6qqu4l12couar",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "1KL",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "Lwx",
+                    "hint": "",
+                    "title": "neginski.com - Сводная по языку из url",
+                    "params": {},
+                    "chartId": "5pp5j0xebluwq",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "Alw",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "NEj",
+              "data": {
+                "group": [
+                  {
+                    "id": "m5j",
+                    "title": "Дата лида",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "2mmpuqo4qi8an",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "defaultValue": "__interval___relative_-89d___relative_-0d",
+                      "datasetFieldId": "creation_date_3oqi",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "creation_date_3oqi": "__interval___relative_-89d___relative_-0d"
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "Yqo"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "jj8",
+              "data": {
+                "group": [
+                  {
+                    "id": "K7l",
+                    "title": "Группировка",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "fieldName": "period",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "titlePlacement": "left",
+                      "acceptableValues": [
+                        {
+                          "title": "День",
+                          "value": "День"
+                        },
+                        {
+                          "title": "Месяц",
+                          "value": "Месяц"
+                        },
+                        {
+                          "title": "Год",
+                          "value": "Год"
+                        }
+                      ],
+                      "multiselectable": false
+                    },
+                    "defaults": {
+                      "period": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "manual",
+                    "impactTabsIds": [
+                      "Yqo"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "BkY",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "x2w",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "kEb",
+                    "hint": "",
+                    "title": "neginski.com - Сводная по form_id",
+                    "params": {},
+                    "chartId": "7rr8l2mpwasws",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "aXe",
+              "data": {
+                "size": "m",
+                "text": "RU / EN",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "lqB",
+              "data": {
+                "size": "m",
+                "text": "Гео",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "yaL",
+              "data": {
+                "size": "m",
+                "text": "Form ID",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "8Pw",
+              "data": {
+                "group": [
+                  {
+                    "id": "wx7",
+                    "title": "URL",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "2mmpuqo4qi8an",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "referrer_711y",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "referrer_711y": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "Yqo"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "Wb6",
+              "data": {
+                "group": [
+                  {
+                    "id": "0AE",
+                    "title": "referrer",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "2mmpuqo4qi8an",
+                      "fieldType": "string",
+                      "operation": "ICONTAINS",
+                      "showTitle": true,
+                      "accentType": null,
+                      "innerTitle": "ICONTAINS",
+                      "elementType": "input",
+                      "datasetFieldId": "referrer_711y",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "referrer_711y": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "Yqo"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "5eG",
+              "data": {
+                "group": [
+                  {
+                    "id": "Ov7",
+                    "title": "Гео CRM",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "2mmpuqo4qi8an",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "geo_ryd1",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "geo_ryd1": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "Yqo"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "PGB",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "qX3",
+                    "hint": "",
+                    "title": "neginski.com - Сводная по url",
+                    "params": {},
+                    "chartId": "vflswceine22f",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "Xvz",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            },
+            {
+              "id": "bo9",
+              "data": {
+                "size": "m",
+                "text": "Датасет",
+                "showInTOC": true,
+                "textColor": "var(--g-color-text-primary)",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "title",
+              "namespace": "default"
+            },
+            {
+              "id": "oA6",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "3A1",
+                    "hint": "",
+                    "title": "neginski.com - Сводная по url - датасет",
+                    "params": {},
+                    "chartId": "0kro7mt0k0zwk",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "transparent"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "DrV",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "R8X",
+                    "hint": "",
+                    "title": "Плоская",
+                    "params": {},
+                    "chartId": "wl1rrwpgkd5gg",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "like-chart-bg"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "v0m",
+              "data": {
+                "text": "",
+                "autoHeight": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "text",
+              "namespace": "default"
+            }
+          ],
+          "title": "Сводная по лидам",
+          "layout": [
+            {
+              "h": 26,
+              "i": "nE6",
+              "w": 28,
+              "x": 0,
+              "y": 30
+            },
+            {
+              "h": 22,
+              "i": "1KL",
+              "w": 28,
+              "x": 0,
+              "y": 60
+            },
+            {
+              "h": 2,
+              "i": "Alw",
+              "w": 36,
+              "x": 0,
+              "y": 56
+            },
+            {
+              "h": 2,
+              "i": "NEj",
+              "w": 8,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "jj8",
+              "w": 6,
+              "x": 8,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "BkY",
+              "w": 36,
+              "x": 0,
+              "y": 82
+            },
+            {
+              "h": 26,
+              "i": "x2w",
+              "w": 28,
+              "x": 0,
+              "y": 86
+            },
+            {
+              "h": 2,
+              "i": "aXe",
+              "w": 36,
+              "x": 0,
+              "y": 58
+            },
+            {
+              "h": 2,
+              "i": "lqB",
+              "w": 36,
+              "x": 0,
+              "y": 28
+            },
+            {
+              "h": 2,
+              "i": "yaL",
+              "w": 36,
+              "x": 0,
+              "y": 84
+            },
+            {
+              "h": 2,
+              "i": "8Pw",
+              "w": 9,
+              "x": 15,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "Wb6",
+              "w": 7,
+              "x": 15,
+              "y": 0,
+              "parent": "__fixGCont"
+            },
+            {
+              "h": 2,
+              "i": "5eG",
+              "w": 7,
+              "x": 24,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 24,
+              "i": "PGB",
+              "w": 36,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "Xvz",
+              "w": 36,
+              "x": 0,
+              "y": 112
+            },
+            {
+              "h": 2,
+              "i": "bo9",
+              "w": 36,
+              "x": 0,
+              "y": 139
+            },
+            {
+              "h": 27,
+              "i": "oA6",
+              "w": 36,
+              "x": 0,
+              "y": 141
+            },
+            {
+              "h": 25,
+              "i": "DrV",
+              "w": 36,
+              "x": 0,
+              "y": 114
+            },
+            {
+              "h": 2,
+              "i": "v0m",
+              "w": 36,
+              "x": 0,
+              "y": 26
+            }
+          ],
+          "aliases": {},
+          "settings": {
+            "fixedHeaderCollapsedDefault": true
+          },
+          "connections": []
+        },
+        {
+          "id": "dYO",
+          "items": [
+            {
+              "id": "43k",
+              "data": {
+                "tabs": [
+                  {
+                    "id": "zEa",
+                    "hint": "",
+                    "title": "Страница входа - Яндекс.Метрика",
+                    "params": {},
+                    "chartId": "yovosxhp1v5ci",
+                    "isDefault": true,
+                    "autoHeight": false,
+                    "background": {
+                      "color": "like-chart-bg"
+                    },
+                    "enableHint": false,
+                    "description": "",
+                    "enableDescription": false
+                  }
+                ],
+                "hideTitle": false,
+                "background": {
+                  "color": "transparent"
+                }
+              },
+              "type": "widget",
+              "namespace": "default"
+            },
+            {
+              "id": "rdk",
+              "data": {
+                "group": [
+                  {
+                    "id": "7YY",
+                    "title": "Дата",
+                    "width": "",
+                    "source": {
+                      "isRange": true,
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ndk95cqms56y7",
+                      "fieldType": "date",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "date",
+                      "datasetFieldId": "date_fhr7",
+                      "titlePlacement": "left",
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "date_fhr7": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "dYO"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            },
+            {
+              "id": "2GN",
+              "data": {
+                "group": [
+                  {
+                    "id": "9my",
+                    "title": "Страница входа",
+                    "width": "",
+                    "source": {
+                      "required": false,
+                      "showHint": false,
+                      "datasetId": "ndk95cqms56y7",
+                      "fieldType": "string",
+                      "showTitle": true,
+                      "accentType": null,
+                      "elementType": "select",
+                      "datasetFieldId": "start_url_path_name_ow02",
+                      "titlePlacement": "left",
+                      "multiselectable": true,
+                      "datasetFieldType": "DIMENSION"
+                    },
+                    "defaults": {
+                      "start_url_path_name_ow02": ""
+                    },
+                    "namespace": "default",
+                    "impactType": "currentTab",
+                    "sourceType": "dataset",
+                    "impactTabsIds": [
+                      "dYO"
+                    ],
+                    "placementMode": "auto"
+                  }
+                ],
+                "autoHeight": false,
+                "buttonApply": false,
+                "buttonReset": false,
+                "showGroupName": false,
+                "updateControlsOnChange": false
+              },
+              "type": "group_control",
+              "namespace": "default"
+            }
+          ],
+          "title": "Яндекс.Метрика",
+          "layout": [
+            {
+              "h": 27,
+              "i": "43k",
+              "w": 34,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2,
+              "i": "rdk",
+              "w": 9,
+              "x": 0,
+              "y": 0,
+              "parent": "__fixHead"
+            },
+            {
+              "h": 2,
+              "i": "2GN",
+              "w": 9,
+              "x": 11,
+              "y": 0,
+              "parent": "__fixHead"
+            }
+          ],
+          "aliases": {},
+          "connections": []
+        }
+      ],
+      "counter": 93,
+      "settings": {
+        "hideTabs": false,
+        "expandTOC": false,
+        "globalParams": {},
+        "loadPriority": "charts",
+        "hideDashTitle": false,
+        "silentLoading": false,
+        "autoupdateInterval": null,
+        "dependentSelectors": true,
+        "loadOnlyVisibleCharts": true,
+        "maxConcurrentRequests": null
+      },
+      "schemeVersion": 8
+    }
+  }
+}

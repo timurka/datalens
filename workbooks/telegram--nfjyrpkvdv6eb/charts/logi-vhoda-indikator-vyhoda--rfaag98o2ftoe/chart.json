@@ -1,0 +1,272 @@
+{
+  "entryId": "rfaag98o2ftoe",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "1718078728560447286/Логи входа — Индикатор выхода",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-06-28T08:55:44.560Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-11-27T16:46:05.715Z",
+  "savedId": "9szufrjhkd3ow",
+  "publishedId": "9szufrjhkd3ow",
+  "revId": "9szufrjhkd3ow",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "br8azf59xj5ky"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "6427d890-3530-11ef-96cf-ad11c2d0f9b1",
+          "title": "title-6427d890-3530-11ef-96cf-ad11c2d0f9b1",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "602fc360-3530-11ef-96cf-ad11c2d0f9b1",
+          "title": "Из них вышло",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "user_id_94gr",
+          "title": "user_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "chat_id_sk8j",
+          "title": "chat_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_8feq",
+          "title": "invitelinks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_uf43",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_neo2",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "username_hs72",
+          "title": "username",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "premium_aik4",
+          "title": "premium",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_left_w24q",
+          "title": "date_left",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_1_dnwe",
+          "title": "invitelinks (1)",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invite_link_name_ep3l",
+          "title": "dict_invite_link_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "telegram_id_gu40",
+          "title": "telegram_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_pjws",
+          "title": "leads",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "quals_gpyh",
+          "title": "quals",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "bookings_pnmu",
+          "title": "bookings",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_f74z",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "folder_0zgi",
+          "title": "folder",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_only_join_x86z",
+          "title": "date_only_join",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#878787",
+      "metricFontColorPalette": "neutral20",
+      "indicatorTitleMode": "by-field"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "autoaggregated": false,
+          "initial_data_type": "integer",
+          "type": "DIMENSION",
+          "aggregation": "none",
+          "title": "Из них вышло",
+          "virtual": false,
+          "lock_aggregation": false,
+          "aggregation_locked": true,
+          "hidden": false,
+          "description": "",
+          "valid": true,
+          "cast": "integer",
+          "has_auto_aggregation": false,
+          "managed_by": "user",
+          "data_type": "integer",
+          "guid": "602fc360-3530-11ef-96cf-ad11c2d0f9b1",
+          "guid_formula": "IF [date_left_w24q] IS NOT NULL THEN\n    [user_id_94gr]\nEND",
+          "formula": "IF [date_left] IS NOT NULL THEN\n    [user_id]\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "br8azf59xj5ky"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "autoaggregated": false,
+          "initial_data_type": "integer",
+          "type": "MEASURE",
+          "aggregation": "countunique",
+          "title": "title-6427d890-3530-11ef-96cf-ad11c2d0f9b1",
+          "virtual": false,
+          "lock_aggregation": false,
+          "aggregation_locked": true,
+          "hidden": false,
+          "description": "",
+          "valid": true,
+          "cast": "integer",
+          "has_auto_aggregation": false,
+          "managed_by": "user",
+          "data_type": "integer",
+          "guid": "6427d890-3530-11ef-96cf-ad11c2d0f9b1",
+          "guid_formula": "IF [date_left_w24q] IS NOT NULL THEN\n    [user_id_94gr]\nEND",
+          "formula": "IF [date_left] IS NOT NULL THEN\n    [user_id]\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "br8azf59xj5ky"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "lock_aggregation": false,
+              "aggregation_locked": true,
+              "hidden": false,
+              "has_auto_aggregation": false,
+              "autoaggregated": false,
+              "description": "",
+              "valid": true,
+              "title": "",
+              "guid": "6427d890-3530-11ef-96cf-ad11c2d0f9b1",
+              "initial_data_type": "integer",
+              "cast": "integer",
+              "type": "MEASURE",
+              "data_type": "integer",
+              "managed_by": "user",
+              "virtual": false,
+              "aggregation": "countunique",
+              "formula": "IF [date_left] IS NOT NULL THEN\n    [user_id]\nEND",
+              "guid_formula": "IF [date_left_w24q] IS NOT NULL THEN\n    [user_id_94gr]\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null,
+              "local": true,
+              "quickFormula": true,
+              "datasetId": "br8azf59xj5ky",
+              "fakeTitle": "Из них вышло",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "id": "measure-0",
+              "datasetName": "sql_telegram_logs"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

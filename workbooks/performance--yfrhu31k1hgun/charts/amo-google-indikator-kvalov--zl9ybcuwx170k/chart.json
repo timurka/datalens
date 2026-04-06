@@ -1,0 +1,275 @@
+{
+  "entryId": "zl9ybcuwx170k",
+  "scope": "widget",
+  "type": "metric_wizard_node",
+  "key": "1980562387937267356/amo_google — Индикатор квалов",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-06-25T12:43:55.147Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-08-15T11:07:45.884Z",
+  "savedId": "hduy5vicwvv82",
+  "publishedId": "hduy5vicwvv82",
+  "revId": "hduy5vicwvv82",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "ws9biku1xv1uh"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "0d56fc70-79c8-11f0-964b-537d2ae31bf0",
+          "title": "sum([qual])",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "date_rxgs",
+          "title": "date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_hi2l",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_id_npab",
+          "title": "pipeline_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_e6uh",
+          "title": "pipeline",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "account_id_aswz",
+          "title": "account_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_4dcf",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "broker_1y0q",
+          "title": "broker",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "contact_in_6vp5",
+          "title": "contact_in",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_ot53",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_a_75j0",
+          "title": "qual_priority_a",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_b_tf2p",
+          "title": "qual_priority_b",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_priority_c_tbk7",
+          "title": "qual_priority_c",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_2kay",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deal_amount_4i9p",
+          "title": "deal_amount",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "revenue_xhau",
+          "title": "revenue",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "campaign_id_dees",
+          "title": "campaign_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "adgroup_id_s1jo",
+          "title": "adgroup_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "ad_id_lkwl",
+          "title": "ad_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "campaign_name_p8vx",
+          "title": "campaign_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "adgroup_name_fjuc",
+          "title": "adgroup_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "ad_name_tkl0",
+          "title": "ad_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "spend_z3ff",
+          "title": "spend",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "clicks_spwg",
+          "title": "clicks",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "impressions_af0d",
+          "title": "impressions",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "metricFontSize": "s",
+      "metricFontColor": "#FFC636",
+      "metricFontColorPalette": "classic20"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "type": "MEASURE",
+          "lock_aggregation": false,
+          "ui_settings": "",
+          "hidden": false,
+          "has_auto_aggregation": true,
+          "title": "sum([qual])",
+          "aggregation": "none",
+          "autoaggregated": true,
+          "data_type": "integer",
+          "aggregation_locked": true,
+          "managed_by": "user",
+          "virtual": false,
+          "description": "",
+          "initial_data_type": "integer",
+          "cast": "integer",
+          "guid": "0d56fc70-79c8-11f0-964b-537d2ae31bf0",
+          "valid": true,
+          "guid_formula": "sum([qual_ot53])",
+          "formula": "sum([qual])",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "ws9biku1xv1uh"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "metric",
+      "type": "metric",
+      "name": "label_visualization-metric",
+      "iconProps": {
+        "id": "visMetric",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowLabels": false,
+      "allowSort": false,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measure",
+          "iconProps": {},
+          "items": [
+            {
+              "description": "",
+              "has_auto_aggregation": true,
+              "aggregation": "none",
+              "hidden": false,
+              "data_type": "integer",
+              "guid": "0d56fc70-79c8-11f0-964b-537d2ae31bf0",
+              "valid": true,
+              "aggregation_locked": true,
+              "cast": "integer",
+              "ui_settings": "",
+              "virtual": false,
+              "initial_data_type": "integer",
+              "managed_by": "user",
+              "autoaggregated": true,
+              "type": "MEASURE",
+              "title": "sum([qual])",
+              "lock_aggregation": false,
+              "avatar_id": "9e6fca40-5108-11f0-bcf7-e5367764f3fb",
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "sum([qual])",
+              "guid_formula": "sum([qual_ot53])",
+              "default_value": null,
+              "value_constraint": null,
+              "local": true,
+              "quickFormula": false,
+              "datasetId": "ws9biku1xv1uh",
+              "fakeTitle": "Квалы",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "id": "measure-0",
+              "datasetName": "neginsky_amo_google",
+              "hideLabelMode": "show"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

@@ -1,0 +1,384 @@
+{
+  "entryId": "3dq6cui7x8kmp",
+  "scope": "widget",
+  "type": "graph_wizard_node",
+  "key": "1930602990222183597/email_leads — Диаграма источников",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-04-17T14:23:30.497Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-04-17T14:23:30.497Z",
+  "savedId": "4er7dvj8y9loq",
+  "publishedId": "4er7dvj8y9loq",
+  "revId": "4er7dvj8y9loq",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [
+      {
+        "valid": true,
+        "type": "DIMENSION",
+        "guid": "utmsource_hqkb",
+        "data_type": "string",
+        "hidden": false,
+        "aggregation": "none",
+        "has_auto_aggregation": false,
+        "title": "utmsource",
+        "autoaggregated": false,
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "description": "",
+        "cast": "string",
+        "virtual": false,
+        "initial_data_type": "string",
+        "aggregation_locked": false,
+        "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+        "source": "utmsource",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null,
+        "datasetId": "z9m28qdjuypql",
+        "id": "dimension-3",
+        "datasetName": "email_leads"
+      }
+    ],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "z9m28qdjuypql"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "6b8da080-ff13-11ef-aadd-a78533143c04",
+          "title": "crm",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "creation_date_time_kll6",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_5pyl",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utmsource_hqkb",
+          "title": "utmsource",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_campaign_nn5k",
+          "title": "utm_campaign",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_medium_971k",
+          "title": "utm_medium",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "utm_term_py5t",
+          "title": "utm_term",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "name_2jwu",
+          "title": "name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "email_9wde",
+          "title": "email",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "formname_gbvi",
+          "title": "formname",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "formid_3ucp",
+          "title": "formid",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "referrer_dlik",
+          "title": "referrer",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "webpage_7444",
+          "title": "webpage",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "list_l2ea",
+          "title": "list",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_lutg",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "labelsPosition": "outside",
+      "titleMode": "hide",
+      "indicatorTitleMode": "by-field",
+      "title": "email_leads — Диаграма лендосов",
+      "legendMode": "hide",
+      "tooltipSum": "on",
+      "feed": "",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      },
+      "pivotInlineSort": "on",
+      "stacking": "on"
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [
+      {
+        "description": "",
+        "title": "crm",
+        "aggregation_locked": true,
+        "autoaggregated": true,
+        "managed_by": "user",
+        "type": "MEASURE",
+        "has_auto_aggregation": true,
+        "initial_data_type": "integer",
+        "data_type": "integer",
+        "cast": "integer",
+        "virtual": false,
+        "lock_aggregation": false,
+        "aggregation": "none",
+        "guid": "6b8da080-ff13-11ef-aadd-a78533143c04",
+        "valid": true,
+        "hidden": false,
+        "guid_formula": "COUNTD([crm_id_5pyl])",
+        "formula": "COUNTD([crm_id])",
+        "calc_mode": "formula",
+        "source": "",
+        "avatar_id": null,
+        "default_value": null,
+        "value_constraint": null,
+        "local": true,
+        "datasetId": "z9m28qdjuypql",
+        "id": "measure-0",
+        "datasetName": "email_leads",
+        "mode": "absolute"
+      }
+    ],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "6b8da080-ff13-11ef-aadd-a78533143c04",
+        "datasetId": "z9m28qdjuypql",
+        "data_type": "integer",
+        "title": "crm",
+        "source": "",
+        "direction": "DESC",
+        "type": "MEASURE"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "title": "crm",
+          "data_type": "integer",
+          "initial_data_type": "integer",
+          "aggregation_locked": true,
+          "autoaggregated": true,
+          "has_auto_aggregation": true,
+          "lock_aggregation": false,
+          "type": "MEASURE",
+          "valid": true,
+          "aggregation": "none",
+          "managed_by": "user",
+          "guid": "6b8da080-ff13-11ef-aadd-a78533143c04",
+          "cast": "integer",
+          "hidden": false,
+          "description": "",
+          "virtual": false,
+          "formula": "COUNTD([crm_id])",
+          "guid_formula": "COUNTD([crm_id_5pyl])",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "z9m28qdjuypql"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "bar",
+      "type": "column",
+      "name": "label_visualization-bar",
+      "iconProps": {
+        "id": "visBar",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "allowLabels": true,
+      "availableLabelModes": [
+        "absolute"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "valid": true,
+              "type": "DIMENSION",
+              "guid": "utmsource_hqkb",
+              "data_type": "string",
+              "hidden": false,
+              "aggregation": "none",
+              "has_auto_aggregation": false,
+              "title": "utmsource",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "description": "",
+              "cast": "string",
+              "virtual": false,
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "avatar_id": "7c1ec490-fe98-11ef-afb8-1bdb2d262e8a",
+              "source": "utmsource",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "z9m28qdjuypql",
+              "id": "dimension-3",
+              "datasetName": "email_leads",
+              "fakeTitle": "Источник",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              }
+            }
+          ],
+          "required": false,
+          "capacity": 2,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "utmsource_hqkb": "discrete"
+            },
+            "axisVisibility": "show"
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "valid": true,
+              "initial_data_type": "integer",
+              "aggregation_locked": true,
+              "guid": "6b8da080-ff13-11ef-aadd-a78533143c04",
+              "type": "MEASURE",
+              "hidden": false,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "aggregation": "none",
+              "cast": "integer",
+              "description": "",
+              "autoaggregated": true,
+              "data_type": "integer",
+              "virtual": false,
+              "has_auto_aggregation": true,
+              "title": "crm",
+              "guid_formula": "COUNTD([crm_id_5pyl])",
+              "formula": "COUNTD([crm_id])",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "z9m28qdjuypql",
+              "id": "measure-0",
+              "datasetName": "email_leads",
+              "fakeTitle": "Подписок",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "avatar_id": null,
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "ignore",
+            "holidays": "off",
+            "axisFormatMode": "auto",
+            "axisVisibility": "show"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

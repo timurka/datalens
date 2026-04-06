@@ -1,0 +1,475 @@
+{
+  "entryId": "p1drw543wxqca",
+  "scope": "widget",
+  "type": "graph_wizard_node",
+  "key": "2073396267609752882/date_booking_join — Линейная медианы",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-10-31T14:48:16.001Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-10-31T15:03:01.968Z",
+  "savedId": "nzbshy9pl0ak8",
+  "publishedId": "nzbshy9pl0ak8",
+  "revId": "nzbshy9pl0ak8",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [
+      {
+        "title": "Measure Names",
+        "type": "PSEUDO",
+        "className": "item pseudo-item dimension-item",
+        "data_type": "string"
+      }
+    ],
+    "colorsConfig": {
+      "polygonBorders": "show",
+      "palette": "",
+      "mountedColors": {
+        "Сделок": "19",
+        "Общая медиана": "0"
+      },
+      "coloredByMeasure": true,
+      "colorMode": "palette"
+    },
+    "datasetsIds": [
+      "w8kxqdruvuquh"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "c3023080-b668-11f0-bbbc-57c9ffac2e3d",
+          "title": "title-c3023080-b668-11f0-bbbc-57c9ffac2e3d",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "8d3b4090-b668-11f0-bbbc-57c9ffac2e3d",
+          "title": "title-8d3b4090-b668-11f0-bbbc-57c9ffac2e3d",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "70fdca60-b668-11f0-bbbc-57c9ffac2e3d",
+          "title": "title-70fdca60-b668-11f0-bbbc-57c9ffac2e3d",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "contacts_amo_id_iiud",
+          "title": "contacts_amo_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_booking_fa0c",
+          "title": "date_booking",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date_join_x83v",
+          "title": "date_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "days_join_to_booking_qvqx",
+          "title": "days_join_to_booking",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "user_id_hw8y",
+          "title": "user_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invite_link_name_xdp7",
+          "title": "invite_link_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_booking_jjjk",
+          "title": "geo_booking",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_join_hxu0",
+          "title": "geo_join",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "median_days_join_to_booking_mon_n5hu",
+          "title": "median_days_join_to_booking_month",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "median_days_join_to_booking_mon_a4kg",
+          "title": "median_days_join_to_booking_month_geo",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {},
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [
+      {
+        "title": "Measure Names",
+        "type": "PSEUDO",
+        "className": "item pseudo-item dimension-item",
+        "data_type": "string"
+      }
+    ],
+    "shapesConfig": {
+      "mountedShapes": {
+        "Сделок": "Dot"
+      }
+    },
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "type": "DIMENSION",
+          "aggregation": "none",
+          "autoaggregated": false,
+          "managed_by": "user",
+          "hidden": false,
+          "cast": "date",
+          "description": "",
+          "data_type": "date",
+          "virtual": false,
+          "ui_settings": "",
+          "aggregation_locked": true,
+          "title": "title-70fdca60-b668-11f0-bbbc-57c9ffac2e3d",
+          "guid": "70fdca60-b668-11f0-bbbc-57c9ffac2e3d",
+          "has_auto_aggregation": false,
+          "lock_aggregation": false,
+          "valid": true,
+          "initial_data_type": "date",
+          "formula": "datetrunc([date_booking], \"month\")",
+          "guid_formula": "datetrunc([date_booking_fa0c], \"month\")",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "w8kxqdruvuquh"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "type": "MEASURE",
+          "aggregation": "min",
+          "autoaggregated": false,
+          "managed_by": "user",
+          "hidden": false,
+          "cast": "float",
+          "description": "",
+          "data_type": "float",
+          "virtual": false,
+          "ui_settings": "",
+          "aggregation_locked": false,
+          "title": "title-8d3b4090-b668-11f0-bbbc-57c9ffac2e3d",
+          "guid": "8d3b4090-b668-11f0-bbbc-57c9ffac2e3d",
+          "has_auto_aggregation": false,
+          "lock_aggregation": false,
+          "valid": true,
+          "initial_data_type": "float",
+          "avatar_id": "723ef260-b667-11f0-9296-0139131e776e",
+          "source": "median_days_join_to_booking_month",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "w8kxqdruvuquh"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "type": "MEASURE",
+          "aggregation": "countunique",
+          "autoaggregated": false,
+          "managed_by": "user",
+          "hidden": false,
+          "cast": "integer",
+          "description": "",
+          "data_type": "integer",
+          "virtual": false,
+          "ui_settings": "",
+          "aggregation_locked": false,
+          "title": "title-c3023080-b668-11f0-bbbc-57c9ffac2e3d",
+          "guid": "c3023080-b668-11f0-bbbc-57c9ffac2e3d",
+          "has_auto_aggregation": false,
+          "lock_aggregation": false,
+          "valid": true,
+          "initial_data_type": "integer",
+          "avatar_id": "723ef260-b667-11f0-9296-0139131e776e",
+          "source": "contacts_amo_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "w8kxqdruvuquh"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "line",
+      "type": "line",
+      "name": "label_visualization-line",
+      "iconProps": {
+        "id": "visLines",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "allowLabels": true,
+      "allowSegments": true,
+      "allowShapes": true,
+      "colorsCapacity": 1,
+      "shapesCapacity": 1,
+      "availableLabelModes": [
+        "absolute"
+      ],
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "x",
+          "type": "x",
+          "title": "section_x",
+          "iconProps": {},
+          "items": [
+            {
+              "title": "title-70fdca60-b668-11f0-bbbc-57c9ffac2e3d",
+              "description": "",
+              "cast": "date",
+              "ui_settings": "",
+              "aggregation": "none",
+              "virtual": false,
+              "lock_aggregation": false,
+              "autoaggregated": false,
+              "initial_data_type": "date",
+              "valid": true,
+              "data_type": "date",
+              "aggregation_locked": true,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "guid": "70fdca60-b668-11f0-bbbc-57c9ffac2e3d",
+              "hidden": false,
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "datetrunc([date_booking], \"month\")",
+              "guid_formula": "datetrunc([date_booking_fa0c], \"month\")",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "w8kxqdruvuquh",
+              "id": "dimension-2",
+              "datasetName": "date_booking_join",
+              "format": "DD.MM.YYYY",
+              "grouping": "trunc-month",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "local": true,
+              "fakeTitle": "date_booking",
+              "quickFormula": true,
+              "originalDateCast": "date",
+              "originalSource": "date_booking",
+              "originalTitle": "date_booking"
+            }
+          ],
+          "required": true,
+          "capacity": 1,
+          "settings": {
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "holidays": "off",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisModeMap": {
+              "70fdca60-b668-11f0-bbbc-57c9ffac2e3d": "continuous"
+            },
+            "axisVisibility": "show"
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y",
+          "type": "y",
+          "title": "section_y",
+          "iconProps": {},
+          "items": [
+            {
+              "type": "MEASURE",
+              "hidden": false,
+              "description": "",
+              "title": "title-8d3b4090-b668-11f0-bbbc-57c9ffac2e3d",
+              "valid": true,
+              "data_type": "float",
+              "aggregation": "min",
+              "cast": "float",
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "virtual": false,
+              "managed_by": "user",
+              "ui_settings": "",
+              "initial_data_type": "float",
+              "has_auto_aggregation": false,
+              "guid": "8d3b4090-b668-11f0-bbbc-57c9ffac2e3d",
+              "aggregation_locked": false,
+              "source": "median_days_join_to_booking_month",
+              "avatar_id": "723ef260-b667-11f0-9296-0139131e776e",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "median_days_join_to_booking_month",
+              "fakeTitle": "Общая медиана",
+              "datasetId": "w8kxqdruvuquh",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "id": "measure-1",
+              "datasetName": "date_booking_join",
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisVisibility": "show"
+          }
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "allowedDataTypes": {},
+          "id": "y2",
+          "type": "y2",
+          "title": "section_y2",
+          "iconProps": {},
+          "items": [
+            {
+              "valid": true,
+              "guid": "c3023080-b668-11f0-bbbc-57c9ffac2e3d",
+              "description": "",
+              "hidden": false,
+              "autoaggregated": false,
+              "cast": "integer",
+              "type": "MEASURE",
+              "has_auto_aggregation": false,
+              "data_type": "integer",
+              "aggregation": "countunique",
+              "virtual": false,
+              "lock_aggregation": false,
+              "aggregation_locked": false,
+              "ui_settings": "",
+              "managed_by": "user",
+              "title": "title-c3023080-b668-11f0-bbbc-57c9ffac2e3d",
+              "initial_data_type": "integer",
+              "avatar_id": "723ef260-b667-11f0-9296-0139131e776e",
+              "source": "contacts_amo_id",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "contacts_amo_id",
+              "fakeTitle": "Сделок",
+              "datasetId": "w8kxqdruvuquh",
+              "id": "measure-0",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "datasetName": "date_booking_join",
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "settings": {
+            "scale": "auto",
+            "scaleValue": "min-max",
+            "title": "off",
+            "titleValue": "",
+            "type": "linear",
+            "grid": "on",
+            "gridStep": "auto",
+            "gridStepValue": 50,
+            "hideLabels": "no",
+            "labelsView": "auto",
+            "nulls": "connect",
+            "axisLabelDateFormat": "DD.MM.YYYY",
+            "axisLabelFormating": {},
+            "axisFormatMode": "auto",
+            "axisVisibility": "show",
+            "axisModeMap": {
+              "c3023080-b668-11f0-bbbc-57c9ffac2e3d": "continuous"
+            }
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

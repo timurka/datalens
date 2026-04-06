@@ -1,0 +1,501 @@
+{
+  "entryId": "yb2kcrmenjuuj",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2078632744451048855/SMM-IG — Таблица датасета",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-11-07T20:12:12.371Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-11-07T20:12:24.639Z",
+  "savedId": "v8zhayph1i3gg",
+  "publishedId": "v8zhayph1i3gg",
+  "revId": "v8zhayph1i3gg",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "xa0arkhbkarsi"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "period",
+          "title": "period",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "creation_date_tfjb",
+          "title": "creation_date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "creation_date_time_hd02",
+          "title": "creation_date_time",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "crm_id_0f0b",
+          "title": "crm_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leads_id_tkwp",
+          "title": "leads_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_bm1y",
+          "title": "geo",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "pipeline_id_weuv",
+          "title": "pipeline_id",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "qual_arc5",
+          "title": "qual",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "booking_event_8bxd",
+          "title": "booking_event",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "password_x33m",
+          "title": "password",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "broker_pipeline_6so4",
+          "title": "broker_pipeline",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "hidden": false,
+              "guid": "creation_date_time_hd02",
+              "title": "creation_date_time",
+              "description": "",
+              "cast": "genericdatetime",
+              "aggregation": "none",
+              "managed_by": "user",
+              "virtual": false,
+              "data_type": "genericdatetime",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "initial_data_type": "genericdatetime",
+              "aggregation_locked": false,
+              "valid": true,
+              "ui_settings": "",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "avatar_id": "876f0790-bc0e-11f0-a170-e513e6c28ccd",
+              "source": "creation_date_time",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xa0arkhbkarsi",
+              "id": "dimension-2",
+              "datasetName": "SMM-IG",
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none",
+              "fakeTitle": "Дата и время",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "ebd6e6b0-bc15-11f0-971e-4d9c18ac3c7e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "creation_date_time_hd02"
+              }
+            },
+            {
+              "hidden": false,
+              "guid": "crm_id_0f0b",
+              "title": "crm_id",
+              "description": "",
+              "cast": "integer",
+              "aggregation": "none",
+              "managed_by": "user",
+              "virtual": false,
+              "data_type": "integer",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "initial_data_type": "integer",
+              "aggregation_locked": false,
+              "valid": true,
+              "ui_settings": "",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "avatar_id": "876f0790-bc0e-11f0-a170-e513e6c28ccd",
+              "source": "crm_id",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xa0arkhbkarsi",
+              "id": "dimension-3",
+              "datasetName": "SMM-IG",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "e615f860-bc15-11f0-971e-4d9c18ac3c7e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "crm_id_0f0b"
+              },
+              "fakeTitle": "CRM ID"
+            },
+            {
+              "hidden": false,
+              "guid": "geo_bm1y",
+              "title": "geo",
+              "description": "",
+              "cast": "string",
+              "aggregation": "none",
+              "managed_by": "user",
+              "virtual": false,
+              "data_type": "string",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "valid": true,
+              "ui_settings": "",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "avatar_id": "876f0790-bc0e-11f0-a170-e513e6c28ccd",
+              "source": "geo",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xa0arkhbkarsi",
+              "id": "dimension-5",
+              "datasetName": "SMM-IG",
+              "fakeTitle": "Гео",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "05b25100-bc16-11f0-971e-4d9c18ac3c7e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "geo_bm1y"
+              }
+            },
+            {
+              "hidden": false,
+              "guid": "password_x33m",
+              "title": "password",
+              "description": "",
+              "cast": "string",
+              "aggregation": "none",
+              "managed_by": "user",
+              "virtual": false,
+              "data_type": "string",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "initial_data_type": "string",
+              "aggregation_locked": false,
+              "valid": true,
+              "ui_settings": "",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "avatar_id": "876f0790-bc0e-11f0-a170-e513e6c28ccd",
+              "source": "password",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xa0arkhbkarsi",
+              "id": "dimension-9",
+              "datasetName": "SMM-IG",
+              "fakeTitle": "Пароль",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "f1a394d0-bc15-11f0-971e-4d9c18ac3c7e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "password_x33m"
+              }
+            },
+            {
+              "hidden": false,
+              "guid": "pipeline_id_weuv",
+              "title": "pipeline_id",
+              "description": "",
+              "cast": "integer",
+              "aggregation": "none",
+              "managed_by": "user",
+              "virtual": false,
+              "data_type": "integer",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "initial_data_type": "integer",
+              "aggregation_locked": false,
+              "valid": true,
+              "ui_settings": "",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "avatar_id": "876f0790-bc0e-11f0-a170-e513e6c28ccd",
+              "source": "pipeline_id",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xa0arkhbkarsi",
+              "id": "dimension-6",
+              "datasetName": "SMM-IG",
+              "fakeTitle": "ID воронки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": false,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "fb118590-bc15-11f0-971e-4d9c18ac3c7e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "pipeline_id_weuv"
+              }
+            },
+            {
+              "hidden": false,
+              "guid": "qual_arc5",
+              "title": "qual",
+              "description": "",
+              "cast": "integer",
+              "aggregation": "none",
+              "managed_by": "user",
+              "virtual": false,
+              "data_type": "integer",
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "initial_data_type": "integer",
+              "aggregation_locked": false,
+              "valid": true,
+              "ui_settings": "",
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "avatar_id": "876f0790-bc0e-11f0-a170-e513e6c28ccd",
+              "source": "qual",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xa0arkhbkarsi",
+              "id": "dimension-7",
+              "datasetName": "SMM-IG",
+              "fakeTitle": "Квал",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "f6450960-bc15-11f0-971e-4d9c18ac3c7e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "qual_arc5"
+              }
+            },
+            {
+              "title": "booking_event",
+              "description": "",
+              "cast": "integer",
+              "ui_settings": "",
+              "aggregation": "none",
+              "virtual": false,
+              "lock_aggregation": false,
+              "autoaggregated": false,
+              "initial_data_type": "integer",
+              "valid": true,
+              "data_type": "integer",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "managed_by": "user",
+              "guid": "booking_event_8bxd",
+              "hidden": false,
+              "avatar_id": "876f0790-bc0e-11f0-a170-e513e6c28ccd",
+              "source": "booking_event",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "xa0arkhbkarsi",
+              "id": "inserted-1762546336044",
+              "datasetName": "SMM-IG",
+              "fakeTitle": "Бронь",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "0f486330-bc16-11f0-971e-4d9c18ac3c7e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "booking_event_8bxd"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

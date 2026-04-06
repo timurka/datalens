@@ -1,0 +1,388 @@
+{
+  "datasetId": "ndk95cqms56y7",
+  "data": {
+    "dataset": {
+      "rls2": {},
+      "cache_invalidation_source": {
+        "mode": "off",
+        "sql": null,
+        "last_result_error": null,
+        "last_result_timestamp": null,
+        "filters": [],
+        "cache_invalidation_error": null,
+        "field": null
+      },
+      "source_avatars": [
+        {
+          "is_root": true,
+          "id": "d030ad20-f2ec-11f0-8675-7fa435f303a8",
+          "source_id": "d030ad21-f2ec-11f0-8675-7fa435f303a8",
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "title": "public.metrika_neginski_start_path"
+        }
+      ],
+      "sources": [
+        {
+          "id": "d030ad21-f2ec-11f0-8675-7fa435f303a8",
+          "source_type": "PG_TABLE",
+          "parameter_hash": "09f5983fe2946b00",
+          "managed_by": "user",
+          "valid": true,
+          "virtual": false,
+          "title": "metrika_neginski_start_path",
+          "parameters": {
+            "db_version": "PostgreSQL 14.18 (Ubuntu 14.18-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit",
+            "schema_name": "public",
+            "db_name": null,
+            "table_name": "metrika_neginski_start_path"
+          },
+          "raw_schema": [
+            {
+              "lock_aggregation": false,
+              "nullable": true,
+              "name": "date",
+              "has_auto_aggregation": false,
+              "description": "",
+              "title": "date",
+              "native_type": {
+                "nullable": true,
+                "name": "date",
+                "native_type_class_name": "common_native_type"
+              },
+              "user_type": "date"
+            },
+            {
+              "lock_aggregation": false,
+              "nullable": true,
+              "name": "counter_id",
+              "has_auto_aggregation": false,
+              "description": "",
+              "title": "counter_id",
+              "native_type": {
+                "nullable": true,
+                "name": "bigint",
+                "native_type_class_name": "common_native_type"
+              },
+              "user_type": "integer"
+            },
+            {
+              "lock_aggregation": false,
+              "nullable": true,
+              "name": "attribution",
+              "has_auto_aggregation": false,
+              "description": "",
+              "title": "attribution",
+              "native_type": {
+                "nullable": true,
+                "name": "text",
+                "native_type_class_name": "common_native_type"
+              },
+              "user_type": "string"
+            },
+            {
+              "lock_aggregation": false,
+              "nullable": true,
+              "name": "goal366436462reaches",
+              "has_auto_aggregation": false,
+              "description": "",
+              "title": "goal366436462reaches",
+              "native_type": {
+                "nullable": true,
+                "name": "numeric",
+                "native_type_class_name": "common_native_type"
+              },
+              "user_type": "float"
+            },
+            {
+              "lock_aggregation": false,
+              "nullable": true,
+              "name": "goal366436462users",
+              "has_auto_aggregation": false,
+              "description": "",
+              "title": "goal366436462users",
+              "native_type": {
+                "nullable": true,
+                "name": "numeric",
+                "native_type_class_name": "common_native_type"
+              },
+              "user_type": "float"
+            },
+            {
+              "lock_aggregation": false,
+              "nullable": true,
+              "name": "start_url_path_name",
+              "has_auto_aggregation": false,
+              "description": "",
+              "title": "start_url_path_name",
+              "native_type": {
+                "nullable": true,
+                "name": "text",
+                "native_type_class_name": "common_native_type"
+              },
+              "user_type": "string"
+            },
+            {
+              "lock_aggregation": false,
+              "nullable": true,
+              "name": "users",
+              "has_auto_aggregation": false,
+              "description": "",
+              "title": "users",
+              "native_type": {
+                "nullable": true,
+                "name": "numeric",
+                "native_type_class_name": "common_native_type"
+              },
+              "user_type": "float"
+            },
+            {
+              "lock_aggregation": false,
+              "nullable": true,
+              "name": "visits",
+              "has_auto_aggregation": false,
+              "description": "",
+              "title": "visits",
+              "native_type": {
+                "nullable": true,
+                "name": "numeric",
+                "native_type_class_name": "common_native_type"
+              },
+              "user_type": "float"
+            }
+          ],
+          "connection_id": "zgitniborj0yl",
+          "index_info_set": null
+        }
+      ],
+      "avatar_relations": [],
+      "rls": {},
+      "revision_id": null,
+      "template_enabled": false,
+      "description": "",
+      "obligatory_filters": [],
+      "preview_enabled": true,
+      "load_preview_by_default": true,
+      "result_schema_aux": {
+        "inter_dependencies": {
+          "deps": []
+        }
+      },
+      "data_export_forbidden": false,
+      "component_errors": {
+        "items": []
+      },
+      "result_schema": [
+        {
+          "cast": "date",
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "guid": "date_fhr7",
+          "has_auto_aggregation": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "managed_by": "user",
+          "aggregation_locked": false,
+          "initial_data_type": "date",
+          "virtual": false,
+          "description": "",
+          "aggregation": "none",
+          "title": "date",
+          "data_type": "date",
+          "ui_settings": "",
+          "hidden": false,
+          "avatar_id": "d030ad20-f2ec-11f0-8675-7fa435f303a8",
+          "source": "date",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "cast": "integer",
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "guid": "counter_id_ckah",
+          "has_auto_aggregation": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "managed_by": "user",
+          "aggregation_locked": false,
+          "initial_data_type": "integer",
+          "virtual": false,
+          "description": "",
+          "aggregation": "none",
+          "title": "counter_id",
+          "data_type": "integer",
+          "ui_settings": "",
+          "hidden": false,
+          "avatar_id": "d030ad20-f2ec-11f0-8675-7fa435f303a8",
+          "source": "counter_id",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "cast": "string",
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "guid": "attribution_d2fq",
+          "has_auto_aggregation": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "managed_by": "user",
+          "aggregation_locked": false,
+          "initial_data_type": "string",
+          "virtual": false,
+          "description": "",
+          "aggregation": "none",
+          "title": "attribution",
+          "data_type": "string",
+          "ui_settings": "",
+          "hidden": false,
+          "avatar_id": "d030ad20-f2ec-11f0-8675-7fa435f303a8",
+          "source": "attribution",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "cast": "float",
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "guid": "goal366436462reaches_czs1",
+          "has_auto_aggregation": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "managed_by": "user",
+          "aggregation_locked": false,
+          "initial_data_type": "float",
+          "virtual": false,
+          "description": "",
+          "aggregation": "none",
+          "title": "goal366436462reaches",
+          "data_type": "float",
+          "ui_settings": "",
+          "hidden": false,
+          "avatar_id": "d030ad20-f2ec-11f0-8675-7fa435f303a8",
+          "source": "goal366436462reaches",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "cast": "float",
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "guid": "goal366436462users_z9nm",
+          "has_auto_aggregation": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "managed_by": "user",
+          "aggregation_locked": false,
+          "initial_data_type": "float",
+          "virtual": false,
+          "description": "",
+          "aggregation": "none",
+          "title": "goal366436462users",
+          "data_type": "float",
+          "ui_settings": "",
+          "hidden": false,
+          "avatar_id": "d030ad20-f2ec-11f0-8675-7fa435f303a8",
+          "source": "goal366436462users",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "cast": "string",
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "guid": "start_url_path_name_ow02",
+          "has_auto_aggregation": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "managed_by": "user",
+          "aggregation_locked": false,
+          "initial_data_type": "string",
+          "virtual": false,
+          "description": "",
+          "aggregation": "none",
+          "title": "start_url_path_name",
+          "data_type": "string",
+          "ui_settings": "",
+          "hidden": false,
+          "avatar_id": "d030ad20-f2ec-11f0-8675-7fa435f303a8",
+          "source": "start_url_path_name",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "cast": "float",
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "guid": "users_6hyd",
+          "has_auto_aggregation": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "managed_by": "user",
+          "aggregation_locked": false,
+          "initial_data_type": "float",
+          "virtual": false,
+          "description": "",
+          "aggregation": "none",
+          "title": "users",
+          "data_type": "float",
+          "ui_settings": "",
+          "hidden": false,
+          "avatar_id": "d030ad20-f2ec-11f0-8675-7fa435f303a8",
+          "source": "users",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        },
+        {
+          "cast": "float",
+          "lock_aggregation": false,
+          "autoaggregated": false,
+          "guid": "visits_ylvy",
+          "has_auto_aggregation": false,
+          "type": "DIMENSION",
+          "valid": true,
+          "managed_by": "user",
+          "aggregation_locked": false,
+          "initial_data_type": "float",
+          "virtual": false,
+          "description": "",
+          "aggregation": "none",
+          "title": "visits",
+          "data_type": "float",
+          "ui_settings": "",
+          "hidden": false,
+          "avatar_id": "d030ad20-f2ec-11f0-8675-7fa435f303a8",
+          "source": "visits",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "default_value": null,
+          "value_constraint": null
+        }
+      ]
+    }
+  }
+}

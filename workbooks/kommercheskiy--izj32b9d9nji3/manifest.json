@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-04-06T18:57:10.356787Z",
+  "config": {
+    "configPath": "/Users/timur/.codex/skills/datalens/sync.config.json",
+    "datalensRoot": "/Users/timur/.codex/skills/datalens",
+    "envFile": "/Users/timur/Documents/datalens/datalens/.env",
+    "branches": {
+      "dashboard": "published",
+      "wizard": "published",
+      "ql": "published",
+      "editor": "saved"
+    }
+  },
+  "workbook": {
+    "id": "izj32b9d9nji3",
+    "title": "Коммерческий",
+    "path": "workbook.json",
+    "hashes": {
+      "path": "7199485eaa0db654ce4981becb0071bc92495a0ce1d612e6c5b377d05a3ee061"
+    }
+  },
+  "counts": {
+    "dashboards": 2,
+    "charts": 14,
+    "datasets": 8,
+    "connections": 3
+  },
+  "entries": {
+    "dashboards": [
+      {
+        "id": "cczhc74ozlxkw",
+        "title": "listing_leadgen — Дашборд",
+        "type": "",
+        "scope": "dash",
+        "updatedAt": "2026-03-09T19:15:04.450Z",
+        "path": "dashboards/listing-leadgen-dashbord--cczhc74ozlxkw/dashboard.json",
+        "metaPath": "dashboards/listing-leadgen-dashbord--cczhc74ozlxkw/meta.json",
+        "hashes": {
+          "path": "96855d5bac4e57420f1afc27e0e48a72ef9bdf1ea1f1a6f4bfa0e379239da3c8",
+          "metaPath": "7a5ef2e8c569919d03d6b9565fb5e619eb1c728c262213ce168747f28fe24fcb"
+        },
+        "refs": {
+          "dataset": [
+            "ll8iw2n2gbv25",
+            "llclzwbqf22m5"
+          ],
+          "widget": [
+            "llcn7b5rfg7m5",
+            "oob5h4tgeams8",
+            "oobm6gd8dm4k8",
+            "yy6bw3nwm15si"
+          ]
+        }
+      },
+      {
+        "id": "ubv33jkp1cf6f",
+        "title": "Коммерческий",
+        "type": "",
+        "scope": "dash",
+        "updatedAt": "2026-04-06T11:58:55.309Z",
+        "path": "dashboards/kommercheskiy--ubv33jkp1cf6f/dashboard.json",
+        "metaPath": "dashboards/kommercheskiy--ubv33jkp1cf6f/meta.json",
+        "hashes": {
+          "path": "545004583d630e4635822216947d528bf5ab35b0cb35f652a369504014a1f70c",
+          "metaPath": "2c2edc938900d72cfa6101e31061de99bf164fa09c789b475c2ff1fbbd38615c"
+        },
+        "refs": {
+          "dataset": [
+            "ubvt4d2o43wmf",
+            "vz8ufup0okomf",
+            "wyxha8yplhhcg"
+          ],
+          "widget": [
+            "2srikj2vgwpgm",
+            "49q7hgt7iftgo",
+            "evfdoxj6t48iz",
+            "fjsiuejuipoiz",
+            "mq5vtveldgm86",
+            "z4l1gc8hw0tej"
+          ]
+        }
+      }
+    ],
+    "charts": [
+      {
+        "id": "mq5vtveldgm86",
+        "title": "booking_sources — Сводная таблица по гео",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-04-06T08:31:22.440Z",
+        "path": "charts/booking-sources-svodnaya-tablitsa-po-geo--mq5vtveldgm86/chart.json",
+        "metaPath": "charts/booking-sources-svodnaya-tablitsa-po-geo--mq5vtveldgm86/meta.json",
+        "hashes": {
+          "path": "d8ba116f5bac8e3b4649d658582feeb90d0ab67b988a473ec61cc1039a749be9",
+          "metaPath": "5ca87412b077274465dc5032aff00dbc61a5d5beded611f1e5d71d4f39220b92"
+        },
+        "refs": {
+          "datasets": [
+            "vz8ufup0okomf"
+          ]
+        }
+      },
+      {
+        "id": "fjsiuejuipoiz",
+        "title": "booking_sources — Таблица",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-04-06T12:02:32.839Z",
+        "path": "charts/booking-sources-tablitsa--fjsiuejuipoiz/chart.json",
+        "metaPath": "charts/booking-sources-tablitsa--fjsiuejuipoiz/meta.json",
+        "hashes": {
+          "path": "fd57b68f43991ccea881b7c6deadb788bcc7f27a2e0b3432339d7109f80db7a8",
+          "metaPath": "515275201da67a2a444cb1d6079c6a4bcee7973b9ee7fd6dc950a328356d9898"
+        },
+        "refs": {
+          "datasets": [
+            "vz8ufup0okomf"
+          ]
+        }
+      },
+      {
+        "id": "syi92nb03gz8c",
+        "title": "commercial_booking_sources",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-04-06T11:31:59.268Z",
+        "path": "charts/commercial-booking-sources--syi92nb03gz8c/chart.json",
+        "metaPath": "charts/commercial-booking-sources--syi92nb03gz8c/meta.json",
+        "hashes": {
+          "path": "b3fa5c1597607d21a1717ad3b0b3548233a7117976dbfa99e62f4b93049b5fe2",
+          "metaPath": "25167ecb5194eae0294fde39a9eafc683e8241db215c1f6538c96636d2f4a71b"
+        },
+        "refs": {
+          "datasets": [
+            "vz8ufup0okomf"
+          ]
+        }
+      },
+      {
+        "id": "oob5h4tgeams8",
+        "title": "listing_leadgen — Детализация",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-09T12:21:41.568Z",
+        "path": "charts/listing-leadgen-detalizatsiya--oob5h4tgeams8/chart.json",
+        "metaPath": "charts/listing-leadgen-detalizatsiya--oob5h4tgeams8/meta.json",
+        "hashes": {
+          "path": "40dd3e324c9258c6833456d08039ac388f3b614203a55346ba72596516d750d9",
+          "metaPath": "9cf62f0aacd3b64a606dd7c71a15068218fefed8abab109fb8100221688b7e24"
+        },
+        "refs": {
+          "datasets": [
+            "ll8iw2n2gbv25"
+          ]
+        }
+      },
+      {
+        "id": "qqhop4hngx2ka",
+        "title": "listing_leadgen — Не в CRM",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-07T06:55:27.671Z",
+        "path": "charts/listing-leadgen-ne-v-crm--qqhop4hngx2ka/chart.json",
+        "metaPath": "charts/listing-leadgen-ne-v-crm--qqhop4hngx2ka/meta.json",
+        "hashes": {
+          "path": "f6af94f757ccd5f906186614ce2a0e444f37fd6ddfbf352d23ec77c75f73929b",
+          "metaPath": "abf890f88706a8a6d07c98eecf3b26121e10b6c9cfa64f1effae6b0bf7994943"
+        },
+        "refs": {
+          "datasets": [
+            "ll8iw2n2gbv25",
+            "llclzwbqf22m5"
+          ]
+        }
+      },
+      {
+        "id": "llcn7b5rfg7m5",
+        "title": "listing_leadgen — Не в CRM v2",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-09T20:00:12.708Z",
+        "path": "charts/listing-leadgen-ne-v-crm-v2--llcn7b5rfg7m5/chart.json",
+        "metaPath": "charts/listing-leadgen-ne-v-crm-v2--llcn7b5rfg7m5/meta.json",
+        "hashes": {
+          "path": "ef2375562d96a64bae49c571e4b342706d54296016e0b6d3c882d217b018f036",
+          "metaPath": "f63a34d10096514937e770bb28a28c07b90c9e554bb1de335a210a305d99850c"
+        },
+        "refs": {
+          "datasets": [
+            "llclzwbqf22m5"
+          ]
+        }
+      },
+      {
+        "id": "oobm6gd8dm4k8",
+        "title": "listing_leadgen — Сводная по лидам",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-09T19:13:33.424Z",
+        "path": "charts/listing-leadgen-svodnaya-po-lidam--oobm6gd8dm4k8/chart.json",
+        "metaPath": "charts/listing-leadgen-svodnaya-po-lidam--oobm6gd8dm4k8/meta.json",
+        "hashes": {
+          "path": "f4493723292a70a206ec20159dc41139b765026497c9f6d83417a2a86aa5c3d6",
+          "metaPath": "c006205c1f8c8d75dd4b9ba47c2ea1706560eb750d47f6f73611c82b252f91dd"
+        },
+        "refs": {
+          "datasets": [
+            "ll8iw2n2gbv25"
+          ]
+        }
+      },
+      {
+        "id": "evfdoxj6t48iz",
+        "title": "perfomance_svodny_actions — Сводная по событию",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-04-06T08:27:50.618Z",
+        "path": "charts/perfomance-svodny-actions-svodnaya-po-sobytiyu--evfdoxj6t48iz/chart.json",
+        "metaPath": "charts/perfomance-svodny-actions-svodnaya-po-sobytiyu--evfdoxj6t48iz/meta.json",
+        "hashes": {
+          "path": "073dea23b59b25ed97741b736e697898c6a1d7bfecf4e96a6af3d252b5302478",
+          "metaPath": "7bafa81671102b5951bfbc1857ed427bccd60581eb72927e375c8c7c86decb42"
+        },
+        "refs": {
+          "datasets": [
+            "ubvt4d2o43wmf"
+          ]
+        }
+      },
+      {
+        "id": "g0qx9e0vzo980",
+        "title": "svodny_indicator_books",
+        "type": "advanced-chart_node",
+        "kind": "editor",
+        "scope": "widget",
+        "updatedAt": "2025-12-19T07:14:01.687Z",
+        "path": "charts/svodny-indicator-books--g0qx9e0vzo980/chart.json",
+        "metaPath": "charts/svodny-indicator-books--g0qx9e0vzo980/meta.json",
+        "hashes": {
+          "path": "1b3d9402031a431365f0f6846fad6f68cfd49ae10f9791d22d128d8529e62c4e",
+          "metaPath": "f2e9fd8be683d88b64353571b241221dab0e1ea2d2d1b803e7ee83714a16880f"
+        },
+        "refs": {
+          "datasets": []
+        }
+      },
+      {
+        "id": "l5v2fveojfue5",
+        "title": "svodny_indicator_quals",
+        "type": "advanced-chart_node",
+        "kind": "editor",
+        "scope": "widget",
+        "updatedAt": "2025-12-19T07:14:14.194Z",
+        "path": "charts/svodny-indicator-quals--l5v2fveojfue5/chart.json",
+        "metaPath": "charts/svodny-indicator-quals--l5v2fveojfue5/meta.json",
+        "hashes": {
+          "path": "dcd2cba8dbb159e9ed47518f397c6fb7f5bba878d9438b9071e2d77bb7a9e515",
+          "metaPath": "c6bff58b36dd47ab28b00d154de1ee9ca343da9952510f96e825f2058f16c753"
+        },
+        "refs": {
+          "datasets": []
+        }
+      },
+      {
+        "id": "2srikj2vgwpgm",
+        "title": "По дате создания",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-04-06T08:29:08.803Z",
+        "path": "charts/po-date-sozdaniya--2srikj2vgwpgm/chart.json",
+        "metaPath": "charts/po-date-sozdaniya--2srikj2vgwpgm/meta.json",
+        "hashes": {
+          "path": "11bd885e512102c61c22fcf3e9bd8c61c6e31183a76bc0ea049adb33371afddf",
+          "metaPath": "fb1573c33a7f312a0b7278423cf7876d7f4121ea24fe6dc05cee6a5ed29676f1"
+        },
+        "refs": {
+          "datasets": [
+            "wyxha8yplhhcg"
+          ]
+        }
+      },
+      {
+        "id": "yy6bw3nwm15si",
+        "title": "Сводная по сервисам",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-03-09T19:14:53.944Z",
+        "path": "charts/svodnaya-po-servisam--yy6bw3nwm15si/chart.json",
+        "metaPath": "charts/svodnaya-po-servisam--yy6bw3nwm15si/meta.json",
+        "hashes": {
+          "path": "81b65395ce680dd62307952dfb17fdf5ed0d9b30c29e8aae61ce3930eef8df3d",
+          "metaPath": "e7937a93ea0f2d4095b982c455bf4566d1fa0f9c324162a26ffb23b211be59a6"
+        },
+        "refs": {
+          "datasets": [
+            "ll8iw2n2gbv25"
+          ]
+        }
+      },
+      {
+        "id": "49q7hgt7iftgo",
+        "title": "Сводная таблица по гео и utmsource",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-04-06T08:32:04.792Z",
+        "path": "charts/svodnaya-tablitsa-po-geo-i-utmsource--49q7hgt7iftgo/chart.json",
+        "metaPath": "charts/svodnaya-tablitsa-po-geo-i-utmsource--49q7hgt7iftgo/meta.json",
+        "hashes": {
+          "path": "a106bd51eb9958cc447ef9d727e5fd2a78e77bb6f4de31d95b7c8905e00d3107",
+          "metaPath": "98d6ba9b7ba980923d4d0ae4a14e63562f338db0ce88e3aaa50b7fea51b1ab7d"
+        },
+        "refs": {
+          "datasets": [
+            "vz8ufup0okomf"
+          ]
+        }
+      },
+      {
+        "id": "z4l1gc8hw0tej",
+        "title": "Сводная таблица по источнику utmsource",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-04-06T08:31:40.912Z",
+        "path": "charts/svodnaya-tablitsa-po-istochniku-utmsource--z4l1gc8hw0tej/chart.json",
+        "metaPath": "charts/svodnaya-tablitsa-po-istochniku-utmsource--z4l1gc8hw0tej/meta.json",
+        "hashes": {
+          "path": "058668a58785f44294accd629deccefd08abe1ee019f7cb3eedbce28b3bdfc05",
+          "metaPath": "8f1f16425da3a6b97037899490a14e81f4c59d16f425bf0d4929704bef94ad4a"
+        },
+        "refs": {
+          "datasets": [
+            "vz8ufup0okomf"
+          ]
+        }
+      }
+    ],
+    "datasets": [
+      {
+        "id": "vz8ufup0okomf",
+        "title": "booking_sources",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/booking-sources--vz8ufup0okomf/dataset.update.json",
+        "fullPath": "datasets/booking-sources--vz8ufup0okomf/dataset.full.json",
+        "metaPath": "datasets/booking-sources--vz8ufup0okomf/meta.json",
+        "hashes": {
+          "path": "bc408e0fdde55fc1d85b55fd2325196ef5f14d49a740bd6b91eb01ff881a6a54",
+          "fullPath": "62a3b80711935b65340b08fe9033c69a48a4f69736d6705ce730608a63bb0bb2",
+          "metaPath": "eb611fea7cd95ddf51eefb37d533dd25abf6b569b5a46777f68089ef82579c53"
+        },
+        "refs": {
+          "connections": [
+            "z3crp0zdap1aj"
+          ]
+        }
+      },
+      {
+        "id": "ll8iw2n2gbv25",
+        "title": "listing_leadgen",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/listing-leadgen--ll8iw2n2gbv25/dataset.update.json",
+        "fullPath": "datasets/listing-leadgen--ll8iw2n2gbv25/dataset.full.json",
+        "metaPath": "datasets/listing-leadgen--ll8iw2n2gbv25/meta.json",
+        "hashes": {
+          "path": "a25923b1b151488b551000adde12bbd497ce6984525e781eb1a21b6c27143718",
+          "fullPath": "dc4dbd06391f3fcee4fd89084cc2e6cbddcbb2f9e7768b370b6107eca19ac31e",
+          "metaPath": "ec82035f83ffd7d6cf1b90425a9d7dbaed7024b5f7046b860f2965063d17377a"
+        },
+        "refs": {
+          "connections": [
+            "4l53enafglk2p"
+          ]
+        }
+      },
+      {
+        "id": "llclzwbqf22m5",
+        "title": "listing_leadgen_not_in_crm",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/listing-leadgen-not-in-crm--llclzwbqf22m5/dataset.update.json",
+        "fullPath": "datasets/listing-leadgen-not-in-crm--llclzwbqf22m5/dataset.full.json",
+        "metaPath": "datasets/listing-leadgen-not-in-crm--llclzwbqf22m5/meta.json",
+        "hashes": {
+          "path": "6e04a2ebe8c41ef80997954d672559d20d2e7d726fdc8d51611bc1db55f213ca",
+          "fullPath": "eceb5e9569f4939f29b504d1f9a992ba173072919f93ba9a062971c8c6c6a596",
+          "metaPath": "868f08632af225637a645fd88f31b05f02f048d1edc805ee0e9e187b9d91528f"
+        },
+        "refs": {
+          "connections": [
+            "4l53enafglk2p"
+          ]
+        }
+      },
+      {
+        "id": "wyw3as6g8po0g",
+        "title": "neginski_perfomance_svodny_actions — Коммерческий",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/neginski-perfomance-svodny-actions-kommercheskiy--wyw3as6g8po0g/dataset.update.json",
+        "fullPath": "datasets/neginski-perfomance-svodny-actions-kommercheskiy--wyw3as6g8po0g/dataset.full.json",
+        "metaPath": "datasets/neginski-perfomance-svodny-actions-kommercheskiy--wyw3as6g8po0g/meta.json",
+        "hashes": {
+          "path": "f1edac0b7c20eeda8a1f6fce8e01231d8cb70ff67ac4487f974948929dc24475",
+          "fullPath": "307123673f54cd15b3d38ae6d34bc4c0e935beeab0a641aa55adf5180e9dac32",
+          "metaPath": "d457432448430d3c492f9a86805ed4b95c13e1e83c18899bbcdc838b264bf5dc"
+        },
+        "refs": {
+          "connections": [
+            "4l53enafglk2p"
+          ]
+        }
+      },
+      {
+        "id": "ubvt4d2o43wmf",
+        "title": "neginsky_perfomance_svodny_actions",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/neginsky-perfomance-svodny-actions--ubvt4d2o43wmf/dataset.update.json",
+        "fullPath": "datasets/neginsky-perfomance-svodny-actions--ubvt4d2o43wmf/dataset.full.json",
+        "metaPath": "datasets/neginsky-perfomance-svodny-actions--ubvt4d2o43wmf/meta.json",
+        "hashes": {
+          "path": "fcdf956cac233d2fab9596de0f9137dabffb34ad9090f6696f27971854c8183c",
+          "fullPath": "18cfc1c94876b0a13da9849d5a3ff127987e1c8d051340815062745f3937c4ae",
+          "metaPath": "177bed5ff0d7ea7e7dda1e41e6004bbbc5577f83bb921e26840fdf12f7d98761"
+        },
+        "refs": {
+          "connections": [
+            "4l53enafglk2p"
+          ]
+        }
+      },
+      {
+        "id": "xnmda521ouq2h",
+        "title": "parent_child_leads",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/parent-child-leads--xnmda521ouq2h/dataset.update.json",
+        "fullPath": "datasets/parent-child-leads--xnmda521ouq2h/dataset.full.json",
+        "metaPath": "datasets/parent-child-leads--xnmda521ouq2h/meta.json",
+        "hashes": {
+          "path": "29288b1923157697b6fc6ebe18d459a90e458ea725a44537640c33f73cbca1f6",
+          "fullPath": "3e567c6970ebffa235bc1d6ae7651f4e7d1d61a46c99bd9a487587a7b6447b47",
+          "metaPath": "41916604306fb35c2e2c95ec9a3e689d45d0103138a1173e23fabeb772b12175"
+        },
+        "refs": {
+          "connections": [
+            "4l53enafglk2p"
+          ]
+        }
+      },
+      {
+        "id": "bdaztubjaaimv",
+        "title": "parent_child_leads (и доп таблицы) — Коммерческий",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/parent-child-leads-i-dop-tablitsy-kommercheskiy--bdaztubjaaimv/dataset.update.json",
+        "fullPath": "datasets/parent-child-leads-i-dop-tablitsy-kommercheskiy--bdaztubjaaimv/dataset.full.json",
+        "metaPath": "datasets/parent-child-leads-i-dop-tablitsy-kommercheskiy--bdaztubjaaimv/meta.json",
+        "hashes": {
+          "path": "aefc784302694c78c63c7bda87f9bfc37836dc2a6ff9f4ed22416e5919b5db99",
+          "fullPath": "4c78086bb8243ffa183c0d23b2b6230fb5dcf5ed6ff6bb39b9529b1a0c1cd3b0",
+          "metaPath": "ba98acee2b0c6f1bfdd1193417c8a44e79601072bdaa99942239a8a229763e1f"
+        },
+        "refs": {
+          "connections": [
+            "4l53enafglk2p"
+          ]
+        }
+      },
+      {
+        "id": "wyxha8yplhhcg",
+        "title": "parent_child_leads_cost",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/parent-child-leads-cost--wyxha8yplhhcg/dataset.update.json",
+        "fullPath": "datasets/parent-child-leads-cost--wyxha8yplhhcg/dataset.full.json",
+        "metaPath": "datasets/parent-child-leads-cost--wyxha8yplhhcg/meta.json",
+        "hashes": {
+          "path": "079e3b1cb716a00b344faa0c62e768d6c534352bd908c198ddc1ee2d569132b1",
+          "fullPath": "6a4f601164435b84df927c24939e770a9f1116a43e644d1e7731b10f0dc74cc1",
+          "metaPath": "78d9c0404e0e0fecf6b5fcaaf597d0b945a3f42aed16aeb7fe68938de14d43ac"
+        },
+        "refs": {
+          "connections": [
+            "4l53enafglk2p"
+          ]
+        }
+      }
+    ],
+    "connections": [
+      {
+        "id": "4l53enafglk2p",
+        "title": "neginsky.ru",
+        "scope": "connection",
+        "updatedAt": null,
+        "path": "connections/neginsky-ru--4l53enafglk2p/connection.redacted.json",
+        "metaPath": "connections/neginsky-ru--4l53enafglk2p/meta.json",
+        "hashes": {
+          "path": "fd6abba07119e10e22f496656df44df4529e25cfa0f0a75388a761b2f70b06b7",
+          "metaPath": "538a90720e699ba7ca9ffb396a584ce394c862cf05bf2e1a179b6ed3cc6f8b42"
+        },
+        "redacted": true
+      },
+      {
+        "id": "gkt6g8e8akmg0",
+        "title": "neginsky_staging",
+        "scope": "connection",
+        "updatedAt": null,
+        "path": "connections/neginsky-staging--gkt6g8e8akmg0/connection.redacted.json",
+        "metaPath": "connections/neginsky-staging--gkt6g8e8akmg0/meta.json",
+        "hashes": {
+          "path": "fda7ccf204e810b9e9b6f8f5d085de9481871985fad206c44d2718bbe6027c5f",
+          "metaPath": "92ce198fd2d342dbfbf75cf2b4bd7eae5252766de725929865ee84713ede2798"
+        },
+        "redacted": true
+      },
+      {
+        "id": "z3crp0zdap1aj",
+        "title": "test_dwh",
+        "scope": "connection",
+        "updatedAt": null,
+        "path": "connections/test-dwh--z3crp0zdap1aj/connection.redacted.json",
+        "metaPath": "connections/test-dwh--z3crp0zdap1aj/meta.json",
+        "hashes": {
+          "path": "14b6ec345c18993b48c8271be62f0c32d3e293c7ecaed0b38a27061880e56e5f",
+          "metaPath": "2092800668edd2e133887018f649ee9f16078ad48bf1795b67121417a11e40d5"
+        },
+        "redacted": true
+      }
+    ]
+  }
+}

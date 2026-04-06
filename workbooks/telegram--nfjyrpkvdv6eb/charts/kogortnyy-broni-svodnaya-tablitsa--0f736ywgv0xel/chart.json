@@ -1,0 +1,611 @@
+{
+  "entryId": "0f736ywgv0xel",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2086297084524234557/Когортный брони — Сводная таблица",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2025-11-18T09:59:52.936Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2025-11-18T13:03:14.157Z",
+  "savedId": "hwphc1hvp8782",
+  "publishedId": "hwphc1hvp8782",
+  "revId": "hwphc1hvp8782",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [
+      {
+        "hidden": false,
+        "type": "MEASURE",
+        "ui_settings": "",
+        "autoaggregated": true,
+        "has_auto_aggregation": true,
+        "initial_data_type": "float",
+        "data_type": "float",
+        "aggregation_locked": true,
+        "lock_aggregation": false,
+        "description": "",
+        "cast": "float",
+        "valid": true,
+        "managed_by": "user",
+        "virtual": false,
+        "title": "Цвета",
+        "guid": "d701ea10-c475-11f0-9379-afb81d0c4a5a",
+        "aggregation": "none",
+        "guid_formula": "IF [month_bucket_75dp] = 0 THEN\n-- Показываем сколько всего броней за месяц\n    NULL\n\n-- По месяцам\nELSE\n    -- По процентам\n    IF [metrics_bool] THEN\n        [7a582c00-c472-11f0-98ce-83b9cb1fd9b3]\n    ELSE\n        IF [csum] THEN\n            [0a02b1f0-c472-11f0-98ce-83b9cb1fd9b3]\n        ELSE\n            [45ef4570-c472-11f0-98ce-83b9cb1fd9b3]\n        END\n    END\nEND",
+        "formula": "IF [month_bucket] = 0 THEN\n-- Показываем сколько всего броней за месяц\n    NULL\n\n-- По месяцам\nELSE\n    -- По процентам\n    IF [metrics_bool] THEN\n        [Кум. конверсия]\n    ELSE\n        IF [csum] THEN\n            [Кум. брони]\n        ELSE\n            [Дневные брони]\n        END\n    END\nEND",
+        "calc_mode": "formula",
+        "source": "",
+        "local": true,
+        "datasetId": "7me5hxuk4tzks",
+        "id": "measure-0",
+        "datasetName": "Когортный брони",
+        "avatar_id": null,
+        "default_value": null,
+        "value_constraint": null
+      }
+    ],
+    "colorsConfig": {
+      "gradientMode": "2-point",
+      "gradientPalette": "blue",
+      "polygonBorders": "show",
+      "reversed": true,
+      "thresholdsMode": "auto",
+      "colorMode": "gradient",
+      "fieldGuid": "d701ea10-c475-11f0-9379-afb81d0c4a5a"
+    },
+    "datasetsIds": [
+      "7me5hxuk4tzks"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "d701ea10-c475-11f0-9379-afb81d0c4a5a",
+          "title": "Цвета",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "6adb3fe0-c465-11f0-abfb-e979d84d4258",
+          "title": "Показатель",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "58d49570-c475-11f0-8086-11a952040c53",
+          "title": "Дневная конверсия",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "7a582c00-c472-11f0-98ce-83b9cb1fd9b3",
+          "title": "Кум. конверсия",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "45ef4570-c472-11f0-98ce-83b9cb1fd9b3",
+          "title": "Дневные брони",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "0a02b1f0-c472-11f0-98ce-83b9cb1fd9b3",
+          "title": "Кум. брони",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "metrics",
+          "title": "metrics",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "csum",
+          "title": "csum",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "metrics_bool",
+          "title": "metrics_bool",
+          "calc_mode": "parameter"
+        },
+        {
+          "guid": "cohort_month_4phl",
+          "title": "cohort_month",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "month_bucket_75dp",
+          "title": "month_bucket",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "book_cnt_on_month_l2wx",
+          "title": "book_cnt_on_month",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cohort_cnt_8zjc",
+          "title": "cohort_cnt",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "tg_ids_vp7r",
+          "title": "tg_ids",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "geo_cre8",
+          "title": "geo",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {},
+    "filters": [
+      {
+        "guid": "geo_cre8",
+        "datasetId": "7me5hxuk4tzks",
+        "filter": {
+          "value": [
+            "ОАЭ"
+          ],
+          "operation": {
+            "code": "IN"
+          }
+        },
+        "type": "DIMENSION",
+        "title": "geo",
+        "calc_mode": "direct"
+      },
+      {
+        "guid": "cohort_month_4phl",
+        "datasetId": "7me5hxuk4tzks",
+        "filter": {
+          "value": [
+            "__interval_2024-01-01T00:00:00.000Z_2024-12-31T00:00:00.000Z"
+          ],
+          "operation": {
+            "code": "BETWEEN"
+          }
+        },
+        "type": "DIMENSION",
+        "title": "cohort_month",
+        "calc_mode": "direct"
+      }
+    ],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "cohort_month_4phl",
+        "datasetId": "7me5hxuk4tzks",
+        "data_type": "date",
+        "title": "cohort_month",
+        "source": "cohort_month",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "virtual": false,
+          "managed_by": "user",
+          "autoaggregated": true,
+          "data_type": "integer",
+          "valid": true,
+          "type": "MEASURE",
+          "cast": "integer",
+          "aggregation_locked": true,
+          "guid": "0a02b1f0-c472-11f0-98ce-83b9cb1fd9b3",
+          "description": "",
+          "title": "Кум. брони",
+          "hidden": false,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "lock_aggregation": false,
+          "initial_data_type": "integer",
+          "aggregation": "none",
+          "formula": "IF sum([book_cnt_on_month]) > 0 THEN\n    RSUM(SUM([book_cnt_on_month]) WITHIN [cohort_month] ORDER BY [month_bucket])\nEND",
+          "guid_formula": "IF sum([book_cnt_on_month_l2wx]) > 0 THEN\n    RSUM(SUM([book_cnt_on_month_l2wx]) WITHIN [cohort_month_4phl] ORDER BY [month_bucket_75dp])\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "7me5hxuk4tzks"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "virtual": false,
+          "managed_by": "user",
+          "autoaggregated": true,
+          "data_type": "float",
+          "valid": true,
+          "type": "MEASURE",
+          "cast": "float",
+          "aggregation_locked": true,
+          "guid": "7a582c00-c472-11f0-98ce-83b9cb1fd9b3",
+          "description": "",
+          "title": "Кум. конверсия",
+          "hidden": false,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "lock_aggregation": false,
+          "initial_data_type": "float",
+          "aggregation": "none",
+          "formula": "IF sum([book_cnt_on_month]) > 0 THEN\n    ROUND(\n            (100 * RSUM(SUM([book_cnt_on_month]) WITHIN [cohort_month] ORDER BY [month_bucket]) / SUM(SUM([cohort_cnt])))\n            * 100\n        ) / 100.0\nEND",
+          "guid_formula": "IF sum([book_cnt_on_month_l2wx]) > 0 THEN\n    ROUND(\n            (100 * RSUM(SUM([book_cnt_on_month_l2wx]) WITHIN [cohort_month_4phl] ORDER BY [month_bucket_75dp]) / SUM(SUM([cohort_cnt_8zjc])))\n            * 100\n        ) / 100.0\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "7me5hxuk4tzks"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "virtual": false,
+          "managed_by": "user",
+          "autoaggregated": true,
+          "data_type": "float",
+          "valid": true,
+          "type": "MEASURE",
+          "cast": "float",
+          "aggregation_locked": true,
+          "guid": "58d49570-c475-11f0-8086-11a952040c53",
+          "description": "",
+          "title": "Дневная конверсия",
+          "hidden": false,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "lock_aggregation": false,
+          "initial_data_type": "float",
+          "aggregation": "none",
+          "formula": "IF sum([book_cnt_on_month]) > 0 THEN\n    ROUND(\n                (100 * sum([book_cnt_on_month]) / SUM(SUM([cohort_cnt]))) * 100\n            ) / 100.0\nEND",
+          "guid_formula": "IF sum([book_cnt_on_month_l2wx]) > 0 THEN\n    ROUND(\n                (100 * sum([book_cnt_on_month_l2wx]) / SUM(SUM([cohort_cnt_8zjc]))) * 100\n            ) / 100.0\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "7me5hxuk4tzks"
+        }
+      },
+      {
+        "action": "update_field",
+        "field": {
+          "virtual": false,
+          "managed_by": "user",
+          "autoaggregated": false,
+          "data_type": "boolean",
+          "valid": true,
+          "type": "DIMENSION",
+          "cast": "boolean",
+          "aggregation_locked": true,
+          "guid": "csum",
+          "description": "",
+          "title": "csum",
+          "hidden": false,
+          "ui_settings": "",
+          "has_auto_aggregation": false,
+          "lock_aggregation": false,
+          "initial_data_type": "boolean",
+          "aggregation": "none",
+          "default_value": false,
+          "template_enabled": false,
+          "calc_mode": "parameter",
+          "formula": "",
+          "guid_formula": "",
+          "source": "",
+          "datasetId": "7me5hxuk4tzks"
+        },
+        "deleteUpdateAfterValidation": false
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "virtual": false,
+          "managed_by": "user",
+          "autoaggregated": true,
+          "data_type": "string",
+          "valid": true,
+          "type": "MEASURE",
+          "cast": "string",
+          "aggregation_locked": true,
+          "guid": "6adb3fe0-c465-11f0-abfb-e979d84d4258",
+          "description": "",
+          "title": "Показатель",
+          "hidden": false,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "lock_aggregation": false,
+          "initial_data_type": "string",
+          "aggregation": "none",
+          "formula": "IF [month_bucket] = 0 THEN\n-- Показываем сколько всего броней за месяц\n    STR(SUM([cohort_cnt]))\n\n-- По месяцам\nELSE\n    -- По процентам\n    IF [metrics_bool] THEN\n        CONCAT(STR([Кум. конверсия]), '%')\n    ELSE\n        IF [csum] THEN\n            STR([Кум. брони])\n        ELSE\n            STR([Дневные брони])\n        END\n    END\nEND",
+          "guid_formula": "IF [month_bucket_75dp] = 0 THEN\n-- Показываем сколько всего броней за месяц\n    STR(SUM([cohort_cnt_8zjc]))\n\n-- По месяцам\nELSE\n    -- По процентам\n    IF [metrics_bool] THEN\n        CONCAT(STR([7a582c00-c472-11f0-98ce-83b9cb1fd9b3]), '%')\n    ELSE\n        IF [csum] THEN\n            STR([0a02b1f0-c472-11f0-98ce-83b9cb1fd9b3])\n        ELSE\n            STR([45ef4570-c472-11f0-98ce-83b9cb1fd9b3])\n        END\n    END\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "7me5hxuk4tzks"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "virtual": false,
+          "managed_by": "user",
+          "autoaggregated": true,
+          "data_type": "float",
+          "valid": true,
+          "type": "MEASURE",
+          "cast": "float",
+          "aggregation_locked": true,
+          "guid": "d701ea10-c475-11f0-9379-afb81d0c4a5a",
+          "description": "",
+          "title": "Цвета",
+          "hidden": false,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "lock_aggregation": false,
+          "initial_data_type": "float",
+          "aggregation": "none",
+          "formula": "IF [month_bucket] = 0 THEN\n-- Показываем сколько всего броней за месяц\n    NULL\n\n-- По месяцам\nELSE\n    -- По процентам\n    IF [metrics_bool] THEN\n        [Кум. конверсия]\n    ELSE\n        IF [csum] THEN\n            [Кум. брони]\n        ELSE\n            [Дневные брони]\n        END\n    END\nEND",
+          "guid_formula": "IF [month_bucket_75dp] = 0 THEN\n-- Показываем сколько всего броней за месяц\n    NULL\n\n-- По месяцам\nELSE\n    -- По процентам\n    IF [metrics_bool] THEN\n        [7a582c00-c472-11f0-98ce-83b9cb1fd9b3]\n    ELSE\n        IF [csum] THEN\n            [0a02b1f0-c472-11f0-98ce-83b9cb1fd9b3]\n        ELSE\n            [45ef4570-c472-11f0-98ce-83b9cb1fd9b3]\n        END\n    END\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "7me5hxuk4tzks"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "virtual": false,
+          "managed_by": "user",
+          "autoaggregated": true,
+          "data_type": "integer",
+          "valid": true,
+          "type": "MEASURE",
+          "cast": "integer",
+          "aggregation_locked": true,
+          "guid": "45ef4570-c472-11f0-98ce-83b9cb1fd9b3",
+          "description": "",
+          "title": "Дневные брони",
+          "hidden": false,
+          "ui_settings": "",
+          "has_auto_aggregation": true,
+          "lock_aggregation": false,
+          "initial_data_type": "integer",
+          "aggregation": "none",
+          "formula": "IF(SUM([book_cnt_on_month]) > 0, SUM([book_cnt_on_month]), NULL)",
+          "guid_formula": "IF(SUM([book_cnt_on_month_l2wx]) > 0, SUM([book_cnt_on_month_l2wx]), NULL)",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "7me5hxuk4tzks"
+        },
+        "debug_info": "merged-update"
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "pivotTable",
+      "type": "table",
+      "name": "label_visualization-pivot-table",
+      "iconProps": {
+        "id": "visPivot",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "allowedDataTypes": {},
+          "id": "pivot-table-columns",
+          "type": "pivot-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "month_bucket_75dp",
+              "title": "month_bucket",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "ui_settings": "",
+              "hidden": false,
+              "data_type": "integer",
+              "initial_data_type": "integer",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "description": "",
+              "cast": "integer",
+              "lock_aggregation": false,
+              "virtual": false,
+              "valid": true,
+              "managed_by": "user",
+              "type": "DIMENSION",
+              "source": "month_bucket",
+              "avatar_id": "78137be0-c461-11f0-9690-2fef73e58624",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "7me5hxuk4tzks",
+              "id": "dimension-10",
+              "datasetName": "Когортный брони"
+            }
+          ],
+          "settings": {}
+        },
+        {
+          "allowedDataTypes": {},
+          "id": "rows",
+          "type": "rows",
+          "title": "section_rows",
+          "iconProps": {},
+          "items": [
+            {
+              "guid": "cohort_month_4phl",
+              "title": "cohort_month",
+              "has_auto_aggregation": false,
+              "aggregation": "none",
+              "ui_settings": "",
+              "hidden": false,
+              "data_type": "date",
+              "initial_data_type": "date",
+              "aggregation_locked": false,
+              "autoaggregated": false,
+              "description": "",
+              "cast": "date",
+              "lock_aggregation": false,
+              "virtual": false,
+              "valid": true,
+              "managed_by": "user",
+              "type": "DIMENSION",
+              "source": "cohort_month",
+              "avatar_id": "78137be0-c461-11f0-9690-2fef73e58624",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "7me5hxuk4tzks",
+              "id": "dimension-9",
+              "datasetName": "Когортный брони",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Месяц подписки",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "e3281040-c465-11f0-abfb-e979d84d4258",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "cohort_month_4phl"
+              },
+              "subTotalsSettings": {
+                "enabled": false
+              }
+            }
+          ],
+          "settings": {}
+        },
+        {
+          "allowedTypes": {},
+          "allowedFinalTypes": {},
+          "id": "measures",
+          "type": "measures",
+          "title": "section_measures",
+          "iconProps": {},
+          "items": [
+            {
+              "virtual": false,
+              "managed_by": "user",
+              "autoaggregated": true,
+              "data_type": "string",
+              "valid": true,
+              "type": "MEASURE",
+              "cast": "string",
+              "aggregation_locked": true,
+              "guid": "6adb3fe0-c465-11f0-abfb-e979d84d4258",
+              "description": "",
+              "title": "Показатель",
+              "hidden": false,
+              "ui_settings": "",
+              "has_auto_aggregation": true,
+              "lock_aggregation": false,
+              "initial_data_type": "string",
+              "aggregation": "none",
+              "avatar_id": null,
+              "source": "",
+              "calc_mode": "formula",
+              "formula": "IF [month_bucket] = 0 THEN\n-- Показываем сколько всего броней за месяц\n    STR(SUM([cohort_cnt]))\n\n-- По месяцам\nELSE\n    -- По процентам\n    IF [metrics_bool] THEN\n        CONCAT(STR([Кум. конверсия]), '%')\n    ELSE\n        IF [csum] THEN\n            STR([Кум. брони])\n        ELSE\n            STR([Дневные брони])\n        END\n    END\nEND",
+              "guid_formula": "IF [month_bucket_75dp] = 0 THEN\n-- Показываем сколько всего броней за месяц\n    STR(SUM([cohort_cnt_8zjc]))\n\n-- По месяцам\nELSE\n    -- По процентам\n    IF [metrics_bool] THEN\n        CONCAT(STR([7a582c00-c472-11f0-98ce-83b9cb1fd9b3]), '%')\n    ELSE\n        IF [csum] THEN\n            STR([0a02b1f0-c472-11f0-98ce-83b9cb1fd9b3])\n        ELSE\n            STR([45ef4570-c472-11f0-98ce-83b9cb1fd9b3])\n        END\n    END\nEND",
+              "local": true,
+              "originalTitle": "book_cnt_on_month",
+              "fakeTitle": "Брони",
+              "datasetId": "7me5hxuk4tzks",
+              "id": "measure-1",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "positiveColorIndex": 2,
+                    "negativeColorIndex": 1
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "80e1dbd0-c462-11f0-abfb-e979d84d4258",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "6adb3fe0-c465-11f0-abfb-e979d84d4258"
+              },
+              "datasetName": "Когортный брони",
+              "default_value": null,
+              "value_constraint": null
+            }
+          ],
+          "settings": {}
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": ""
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "nfjyrpkvdv6eb",
+  "collectionId": null
+}

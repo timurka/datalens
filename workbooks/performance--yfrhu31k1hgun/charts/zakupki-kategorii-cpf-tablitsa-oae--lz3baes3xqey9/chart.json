@@ -1,0 +1,488 @@
+{
+  "entryId": "lz3baes3xqey9",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1677573096917173981/Закупки - Категории CPF — Таблица ОАЭ",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-05-03T11:38:16.962Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-05-03T11:48:24.393Z",
+  "savedId": "u8clcoypkl9ki",
+  "publishedId": "u8clcoypkl9ki",
+  "revId": "u8clcoypkl9ki",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "guy4rr9o46ho4"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "month_year",
+          "title": "month_year",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_followers_msc",
+          "title": "total_followers_msc",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_followers_uae",
+          "title": "total_followers_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_followers_bali",
+          "title": "total_followers_bali",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_cost_msc",
+          "title": "total_cost_msc",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_cost_uae",
+          "title": "total_cost_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "total_cost_bali",
+          "title": "total_cost_bali",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpf_msc",
+          "title": "cpf_msc",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpf_uae",
+          "title": "cpf_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cpf_bali",
+          "title": "cpf_bali",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "msc_placements_count",
+          "title": "msc_placements_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "uae_placements_count",
+          "title": "uae_placements_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "bali_placements_count",
+          "title": "bali_placements_count",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 50,
+      "titleMode": "hide",
+      "title": "Закупки - Категории CPF — Таблица ОАЭ",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "totals": "off",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      }
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "month_year",
+        "datasetId": "guy4rr9o46ho4",
+        "data_type": "date",
+        "title": "month_year",
+        "source": "month_year",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      },
+      {
+        "guid": "uae_placements_count",
+        "datasetId": "guy4rr9o46ho4",
+        "data_type": "integer",
+        "title": "uae_placements_count",
+        "source": "uae_placements_count",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "description": "",
+              "valid": true,
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "cast": "date",
+              "guid": "month_year",
+              "managed_by": "user",
+              "initial_data_type": "date",
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "title": "month_year",
+              "data_type": "date",
+              "hidden": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "avatar_id": "89fcae90-0940-11ef-8998-41df399dd867",
+              "source": "month_year",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "guy4rr9o46ho4",
+              "id": "dimension-0",
+              "datasetName": "Закупки - Категории CPF",
+              "format": "DD.MM.YYYY",
+              "grouping": "none",
+              "fakeTitle": "Месяц",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "2e338fb0-0941-11ef-92a2-a5cf6d7fd18e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "month_year"
+              }
+            },
+            {
+              "description": "",
+              "valid": true,
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "cast": "string",
+              "guid": "category",
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "title": "category",
+              "data_type": "string",
+              "hidden": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "avatar_id": "89fcae90-0940-11ef-8998-41df399dd867",
+              "source": "category",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "guy4rr9o46ho4",
+              "id": "dimension-1",
+              "datasetName": "Закупки - Категории CPF",
+              "fakeTitle": "Категория",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "10059420-0941-11ef-92a2-a5cf6d7fd18e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "category"
+              }
+            },
+            {
+              "description": "",
+              "valid": true,
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "cast": "integer",
+              "guid": "uae_placements_count",
+              "managed_by": "user",
+              "initial_data_type": "integer",
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "title": "uae_placements_count",
+              "data_type": "integer",
+              "hidden": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "avatar_id": "89fcae90-0940-11ef-8998-41df399dd867",
+              "source": "uae_placements_count",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "guy4rr9o46ho4",
+              "id": "dimension-12",
+              "datasetName": "Закупки - Категории CPF",
+              "fakeTitle": "Размещений",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "a9a82cf0-0941-11ef-b71d-61501ea4f2a3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "uae_placements_count"
+              }
+            },
+            {
+              "description": "",
+              "valid": true,
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "cast": "float",
+              "guid": "total_cost_uae",
+              "managed_by": "user",
+              "initial_data_type": "float",
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "title": "total_cost_uae",
+              "data_type": "float",
+              "hidden": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "avatar_id": "89fcae90-0940-11ef-8998-41df399dd867",
+              "source": "total_cost_uae",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "guy4rr9o46ho4",
+              "id": "dimension-6",
+              "datasetName": "Закупки - Категории CPF",
+              "fakeTitle": "Расход",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": " ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "b36464c0-0941-11ef-b71d-61501ea4f2a3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "total_cost_uae"
+              }
+            },
+            {
+              "description": "",
+              "valid": true,
+              "aggregation_locked": false,
+              "lock_aggregation": false,
+              "type": "DIMENSION",
+              "cast": "float",
+              "guid": "total_followers_uae",
+              "managed_by": "user",
+              "initial_data_type": "float",
+              "virtual": false,
+              "has_auto_aggregation": false,
+              "title": "total_followers_uae",
+              "data_type": "float",
+              "hidden": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "avatar_id": "89fcae90-0940-11ef-8998-41df399dd867",
+              "source": "total_followers_uae",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "guy4rr9o46ho4",
+              "id": "dimension-3",
+              "datasetName": "Закупки - Категории CPF",
+              "fakeTitle": "Подписчиков ОАЭ",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "c005bb20-0941-11ef-b71d-61501ea4f2a3",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "total_followers_uae"
+              }
+            },
+            {
+              "guid": "cpf_uae",
+              "aggregation_locked": false,
+              "hidden": false,
+              "cast": "float",
+              "managed_by": "user",
+              "virtual": false,
+              "type": "DIMENSION",
+              "lock_aggregation": false,
+              "aggregation": "none",
+              "autoaggregated": false,
+              "title": "cpf_uae",
+              "has_auto_aggregation": false,
+              "data_type": "float",
+              "initial_data_type": "float",
+              "description": "",
+              "valid": true,
+              "source": "cpf_uae",
+              "avatar_id": "89fcae90-0940-11ef-8998-41df399dd867",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "guy4rr9o46ho4",
+              "id": "dimension-9",
+              "datasetName": "Закупки - Категории CPF",
+              "fakeTitle": "CPF",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "  ₽",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": true,
+                "settingsId": "fd49d2e0-0942-11ef-8e4f-73ddbe8ac4d7",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": true
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "cpf_uae"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}

@@ -1,0 +1,1584 @@
+{
+  "id": "y4p7h02ve1koi",
+  "full_permissions": {},
+  "workbook_id": "10mo8a4aebtgm",
+  "key": "2187166977762526590/Блок 1 - сделки и задачи брокера",
+  "is_favorite": false,
+  "permissions": {
+    "execute": true,
+    "read": true,
+    "edit": true,
+    "admin": true
+  },
+  "dataset": {
+    "template_enabled": false,
+    "preview_enabled": true,
+    "description": "",
+    "rls2": {},
+    "data_export_forbidden": false,
+    "load_preview_by_default": true,
+    "component_errors": {
+      "items": []
+    },
+    "avatar_relations": [],
+    "sources": [
+      {
+        "raw_schema": [
+          {
+            "description": "",
+            "user_type": "integer",
+            "title": "CRM ID сделки",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "CRM ID сделки",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "genericdatetime",
+            "title": "Дата и время создания сделки",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "Дата и время создания сделки",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "string",
+            "title": "Брокер",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "varchar",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "Брокер",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "string",
+            "title": "Название задачи",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "Название задачи",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "genericdatetime",
+            "title": "Дата назначения задачи",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "Дата назначения задачи",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "genericdatetime",
+            "title": "Дата выполнения задачи",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "Дата выполнения задачи",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "genericdatetime",
+            "title": "Дедлайн задачи",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "Дедлайн задачи",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "string",
+            "title": "Итог блока 1",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "Итог блока 1",
+            "has_auto_aggregation": false
+          }
+        ],
+        "id": "febacc21-31c1-11f1-8a9b-89e81b293b66",
+        "parameter_hash": "7b52123ce906a6cd",
+        "connection_id": "qtp2vi8ns03ka",
+        "title": "SQL",
+        "managed_by": "user",
+        "index_info_set": null,
+        "source_type": "PG_SUBSELECT",
+        "virtual": false,
+        "parameters": {
+          "subsql": "SELECT\n    m.lead_id AS \"CRM ID сделки\",\n    lf.created_date AS \"Дата и время создания сделки\",\n    m.lead_user_name AS \"Брокер\",\n    COALESCE(NULLIF(BTRIM(t.text), ''), '[без названия]') AS \"Название задачи\",\n    tf.created_date AS \"Дата назначения задачи\",\n    gd_completed.full_date AS \"Дата выполнения задачи\",\n    tf.deadline_date AS \"Дедлайн задачи\",\n    CASE\n        WHEN m.block1_has_overdue_task_on_broker THEN 'Просроченная задача у брокера'\n        WHEN m.block1_has_no_tasks_on_broker THEN 'Нет задачи у брокера'\n        WHEN m.block1_is_healthy_on_broker THEN 'Норма'\n        ELSE 'Требует проверки'\n    END AS \"Итог блока 1\"\nFROM core.amocrm_leads_tasks_block1_metrics m\nLEFT JOIN core.amocrm_leads_facts lf\n  ON lf.account_id = m.account_id\n AND lf.leads_id = m.leads_id\nLEFT JOIN core.amocrm_tasks_facts tf\n  ON tf.account_id = m.account_id\n AND tf.leads_id = m.leads_id\nLEFT JOIN core.amocrm_tasks t\n  ON t.account_id = tf.account_id\n AND t.id = tf.tasks_id\nLEFT JOIN core.general_dates gd_completed\n  ON gd_completed.id = tf.completed_id\nWHERE m.is_in_block1_status_scope = true\n  AND (\n      tf.tasks_id IS NULL\n      OR (\n          COALESCE(t.is_deleted, FALSE) = FALSE\n          AND COALESCE(t.status_code, 0) = 0\n      )\n  )\nORDER BY\n    lf.created_date DESC NULLS LAST,\n    m.lead_id,\n    tf.deadline_date NULLS LAST,\n    t.task_id\n"
+        },
+        "valid": true
+      },
+      {
+        "raw_schema": [
+          {
+            "description": "",
+            "user_type": "integer",
+            "title": "account_id",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "account_id",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "integer",
+            "title": "crm_id",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "integer",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "crm_id",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "genericdatetime",
+            "title": "deal_created_at",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "deal_created_at",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "string",
+            "title": "broker",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "varchar",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "broker",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "string",
+            "title": "task_name",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "task_name",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "genericdatetime",
+            "title": "task_assigned_at",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "task_assigned_at",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "genericdatetime",
+            "title": "task_completed_at",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "task_completed_at",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "genericdatetime",
+            "title": "task_deadline_at",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "timestamp",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "task_deadline_at",
+            "has_auto_aggregation": false
+          },
+          {
+            "description": "",
+            "user_type": "string",
+            "title": "block1_result",
+            "nullable": true,
+            "lock_aggregation": false,
+            "native_type": {
+              "name": "text",
+              "nullable": true,
+              "native_type_class_name": "common_native_type"
+            },
+            "name": "block1_result",
+            "has_auto_aggregation": false
+          }
+        ],
+        "id": "e924de40-31c2-11f1-8a9b-89e81b293b66",
+        "parameter_hash": "e7bc740261b55314",
+        "connection_id": "qtp2vi8ns03ka",
+        "title": "SQL1",
+        "managed_by": "user",
+        "index_info_set": null,
+        "source_type": "PG_SUBSELECT",
+        "virtual": false,
+        "parameters": {
+          "subsql": "SELECT\n    m.account_id AS account_id,\n    m.lead_id AS crm_id,\n    lf.created_date AS deal_created_at,\n    m.lead_user_name AS broker,\n    COALESCE(NULLIF(BTRIM(t.text), ''), '[без названия]') AS task_name,\n    tf.created_date AS task_assigned_at,\n    gd_completed.full_date AS task_completed_at,\n    tf.deadline_date AS task_deadline_at,\n    CASE\n        WHEN m.block1_has_overdue_task_on_broker THEN 'Просроченная задача у брокера'\n        WHEN m.block1_has_no_tasks_on_broker THEN 'Нет задачи у брокера'\n        WHEN m.block1_is_healthy_on_broker THEN 'Норма'\n        ELSE 'Требует проверки'\n    END AS block1_result\nFROM core.amocrm_leads_tasks_block1_metrics m\nLEFT JOIN core.amocrm_leads_facts lf\n  ON lf.account_id = m.account_id\n AND lf.leads_id = m.leads_id\nLEFT JOIN core.amocrm_tasks_facts tf\n  ON tf.account_id = m.account_id\n AND tf.leads_id = m.leads_id\nLEFT JOIN core.amocrm_tasks t\n  ON t.account_id = tf.account_id\n AND t.id = tf.tasks_id\nLEFT JOIN core.general_dates gd_completed\n  ON gd_completed.id = tf.completed_id\nWHERE m.is_in_block1_status_scope = true\n  AND (\n      tf.tasks_id IS NULL\n      OR (\n          COALESCE(t.is_deleted, FALSE) = FALSE\n          AND COALESCE(t.status_code, 0) = 0\n      )\n  )\nORDER BY\n    lf.created_date DESC NULLS LAST,\n    m.lead_id,\n    tf.deadline_date NULLS LAST,\n    t.task_id\n"
+        },
+        "valid": true
+      }
+    ],
+    "result_schema_aux": {
+      "inter_dependencies": {
+        "deps": []
+      }
+    },
+    "cache_invalidation_source": {
+      "last_result_timestamp": null,
+      "field": null,
+      "filters": [],
+      "last_result_error": null,
+      "mode": "off",
+      "sql": null,
+      "cache_invalidation_error": null
+    },
+    "result_schema": [
+      {
+        "aggregation": "none",
+        "description": "",
+        "type": "DIMENSION",
+        "hidden": false,
+        "title": "account_id",
+        "aggregation_locked": false,
+        "has_auto_aggregation": false,
+        "guid": "account_id_okig",
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "cast": "integer",
+        "virtual": false,
+        "data_type": "integer",
+        "autoaggregated": false,
+        "ui_settings": "",
+        "initial_data_type": "integer",
+        "valid": true,
+        "source": "account_id",
+        "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "description": "",
+        "type": "DIMENSION",
+        "hidden": false,
+        "title": "crm_id",
+        "aggregation_locked": false,
+        "has_auto_aggregation": false,
+        "guid": "crm_id_pn4s",
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "cast": "integer",
+        "virtual": false,
+        "data_type": "integer",
+        "autoaggregated": false,
+        "ui_settings": "",
+        "initial_data_type": "integer",
+        "valid": true,
+        "source": "crm_id",
+        "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "description": "",
+        "type": "DIMENSION",
+        "hidden": false,
+        "title": "deal_created_at",
+        "aggregation_locked": false,
+        "has_auto_aggregation": false,
+        "guid": "deal_created_at_6z2g",
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "cast": "genericdatetime",
+        "virtual": false,
+        "data_type": "genericdatetime",
+        "autoaggregated": false,
+        "ui_settings": "",
+        "initial_data_type": "genericdatetime",
+        "valid": true,
+        "source": "deal_created_at",
+        "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "description": "",
+        "type": "DIMENSION",
+        "hidden": false,
+        "title": "broker",
+        "aggregation_locked": false,
+        "has_auto_aggregation": false,
+        "guid": "broker_s6yo",
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "cast": "string",
+        "virtual": false,
+        "data_type": "string",
+        "autoaggregated": false,
+        "ui_settings": "",
+        "initial_data_type": "string",
+        "valid": true,
+        "source": "broker",
+        "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "description": "",
+        "type": "DIMENSION",
+        "hidden": false,
+        "title": "task_name",
+        "aggregation_locked": false,
+        "has_auto_aggregation": false,
+        "guid": "task_name_u673",
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "cast": "string",
+        "virtual": false,
+        "data_type": "string",
+        "autoaggregated": false,
+        "ui_settings": "",
+        "initial_data_type": "string",
+        "valid": true,
+        "source": "task_name",
+        "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "description": "",
+        "type": "DIMENSION",
+        "hidden": false,
+        "title": "task_assigned_at",
+        "aggregation_locked": false,
+        "has_auto_aggregation": false,
+        "guid": "task_assigned_at_3qya",
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "cast": "genericdatetime",
+        "virtual": false,
+        "data_type": "genericdatetime",
+        "autoaggregated": false,
+        "ui_settings": "",
+        "initial_data_type": "genericdatetime",
+        "valid": true,
+        "source": "task_assigned_at",
+        "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "description": "",
+        "type": "DIMENSION",
+        "hidden": false,
+        "title": "task_completed_at",
+        "aggregation_locked": false,
+        "has_auto_aggregation": false,
+        "guid": "task_completed_at_ijvo",
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "cast": "genericdatetime",
+        "virtual": false,
+        "data_type": "genericdatetime",
+        "autoaggregated": false,
+        "ui_settings": "",
+        "initial_data_type": "genericdatetime",
+        "valid": true,
+        "source": "task_completed_at",
+        "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "description": "",
+        "type": "DIMENSION",
+        "hidden": false,
+        "title": "task_deadline_at",
+        "aggregation_locked": false,
+        "has_auto_aggregation": false,
+        "guid": "task_deadline_at_q4ge",
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "cast": "genericdatetime",
+        "virtual": false,
+        "data_type": "genericdatetime",
+        "autoaggregated": false,
+        "ui_settings": "",
+        "initial_data_type": "genericdatetime",
+        "valid": true,
+        "source": "task_deadline_at",
+        "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      },
+      {
+        "aggregation": "none",
+        "description": "",
+        "type": "DIMENSION",
+        "hidden": false,
+        "title": "block1_result",
+        "aggregation_locked": false,
+        "has_auto_aggregation": false,
+        "guid": "block1_result_hjm7",
+        "lock_aggregation": false,
+        "managed_by": "user",
+        "cast": "string",
+        "virtual": false,
+        "data_type": "string",
+        "autoaggregated": false,
+        "ui_settings": "",
+        "initial_data_type": "string",
+        "valid": true,
+        "source": "block1_result",
+        "avatar_id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+        "calc_mode": "direct",
+        "formula": "",
+        "guid_formula": "",
+        "default_value": null,
+        "value_constraint": null
+      }
+    ],
+    "rls": {},
+    "revision_id": "NABmRwLh6wJYZiL5AwALLt",
+    "obligatory_filters": [],
+    "source_avatars": [
+      {
+        "id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+        "title": "SQL1",
+        "managed_by": "user",
+        "source_id": "e924de40-31c2-11f1-8a9b-89e81b293b66",
+        "virtual": false,
+        "is_root": true,
+        "valid": true
+      }
+    ]
+  },
+  "options": {
+    "is_cache_invalidation_enabled_in_conn": false,
+    "data_types": {
+      "items": [
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "type": "string"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "aggregations": [
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "type": "integer"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "aggregations": [
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "float",
+            "integer",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "type": "float"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ],
+          "casts": [
+            "date",
+            "genericdatetime",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "date"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ],
+          "casts": [
+            "genericdatetime",
+            "datetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "datetime"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "boolean",
+            "integer",
+            "float",
+            "string"
+          ],
+          "type": "boolean"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "geopoint",
+            "string"
+          ],
+          "type": "geopoint"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "IN",
+            "NIN"
+          ],
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "geopolygon",
+            "string"
+          ],
+          "type": "geopolygon"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "STARTSWITH",
+            "ISTARTSWITH",
+            "ENDSWITH",
+            "IENDSWITH",
+            "CONTAINS",
+            "ICONTAINS",
+            "NOTCONTAINS",
+            "NOTICONTAINS",
+            "NOTICONTAINS",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "uuid",
+            "string"
+          ],
+          "type": "uuid"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL"
+          ],
+          "aggregations": [
+            "count"
+          ],
+          "casts": [
+            "markup"
+          ],
+          "type": "markup"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique",
+            "avg"
+          ],
+          "casts": [
+            "datetimetz",
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "datetimetz"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL"
+          ],
+          "aggregations": [],
+          "casts": [
+            "unsupported"
+          ],
+          "type": "unsupported"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "array_str",
+            "string"
+          ],
+          "type": "array_str"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "array_int",
+            "string"
+          ],
+          "type": "array_int"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "array_float",
+            "string"
+          ],
+          "type": "array_float"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "STARTSWITH",
+            "CONTAINS",
+            "NOTCONTAINS",
+            "LENEQ",
+            "LENEQ",
+            "LENNE",
+            "LENNE",
+            "LENGT",
+            "LENGT",
+            "LENGTE",
+            "LENGTE",
+            "LENLT",
+            "LENLT",
+            "LENLTE",
+            "LENLTE"
+          ],
+          "aggregations": [
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "tree_str"
+          ],
+          "type": "tree_str"
+        },
+        {
+          "filter_operations": [
+            "ISNULL",
+            "ISNOTNULL",
+            "ISNOTNULL",
+            "EQ",
+            "NE",
+            "GT",
+            "GTE",
+            "LT",
+            "LTE",
+            "IN",
+            "NIN",
+            "BETWEEN"
+          ],
+          "aggregations": [
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "type": "genericdatetime"
+        }
+      ]
+    },
+    "schema_update_enabled": true,
+    "supported_functions": [
+      "abs",
+      "acos",
+      "ago",
+      "all_concat",
+      "any",
+      "arr_distinct",
+      "arr_index_of",
+      "arr_intersect",
+      "arr_remove",
+      "arr_str",
+      "array",
+      "ascii",
+      "asin",
+      "at_date",
+      "atan",
+      "atan2",
+      "avg",
+      "avg_if",
+      "bold",
+      "bool",
+      "br",
+      "case",
+      "cast_arr_float",
+      "cast_arr_int",
+      "cast_arr_str",
+      "ceiling",
+      "char",
+      "color",
+      "concat",
+      "contains",
+      "contains_all",
+      "contains_any",
+      "cos",
+      "cot",
+      "count",
+      "count_if",
+      "count_item",
+      "countd",
+      "countd_if",
+      "date",
+      "dateadd",
+      "datepart",
+      "datetime",
+      "datetrunc",
+      "day",
+      "dayofweek",
+      "db_call_agg_float",
+      "db_call_agg_int",
+      "db_call_agg_string",
+      "db_call_array_float",
+      "db_call_array_int",
+      "db_call_array_string",
+      "db_call_bool",
+      "db_call_float",
+      "db_call_int",
+      "db_call_string",
+      "db_cast",
+      "degrees",
+      "div",
+      "div_safe",
+      "endswith",
+      "exp",
+      "fdiv_safe",
+      "find",
+      "first",
+      "float",
+      "floor",
+      "geopoint",
+      "geopolygon",
+      "get_item",
+      "greatest",
+      "hour",
+      "icontains",
+      "iendswith",
+      "if",
+      "ifnan",
+      "ifnull",
+      "iif",
+      "image",
+      "int",
+      "isnan",
+      "isnull",
+      "istartswith",
+      "italic",
+      "lag",
+      "last",
+      "least",
+      "left",
+      "len",
+      "ln",
+      "log",
+      "log10",
+      "lower",
+      "ltrim",
+      "markup",
+      "mavg",
+      "max",
+      "mcount",
+      "md5",
+      "median",
+      "min",
+      "minute",
+      "mmax",
+      "mmin",
+      "month",
+      "msum",
+      "notcontains",
+      "now",
+      "pi",
+      "power",
+      "quantile",
+      "quarter",
+      "radians",
+      "rank",
+      "rank_dense",
+      "rank_percentile",
+      "rank_unique",
+      "ravg",
+      "rcount",
+      "regexp_extract",
+      "regexp_extract_all",
+      "regexp_extract_nth",
+      "regexp_match",
+      "regexp_replace",
+      "replace",
+      "right",
+      "rmax",
+      "rmin",
+      "round",
+      "rsum",
+      "rtrim",
+      "second",
+      "sha1",
+      "sha256",
+      "sign",
+      "sin",
+      "size",
+      "slice",
+      "space",
+      "split",
+      "sqrt",
+      "square",
+      "startswith",
+      "stdev",
+      "stdevp",
+      "str",
+      "substr",
+      "sum",
+      "sum_if",
+      "tan",
+      "today",
+      "tooltip",
+      "tree",
+      "trim",
+      "unnest",
+      "upper",
+      "url",
+      "user_info",
+      "var",
+      "varp",
+      "week",
+      "year",
+      "zn"
+    ],
+    "preview": {
+      "enabled": true
+    },
+    "fields": {
+      "items": [
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "account_id_okig"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "sum",
+            "avg",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "integer",
+            "float",
+            "string",
+            "boolean",
+            "date",
+            "genericdatetime"
+          ],
+          "guid": "crm_id_pn4s"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "guid": "deal_created_at_6z2g"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "broker_s6yo"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "task_name_u673"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "guid": "task_assigned_at_3qya"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "guid": "task_completed_at_ijvo"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "min",
+            "max",
+            "countunique"
+          ],
+          "casts": [
+            "genericdatetime",
+            "date",
+            "string",
+            "integer",
+            "float",
+            "boolean"
+          ],
+          "guid": "task_deadline_at_q4ge"
+        },
+        {
+          "aggregations": [
+            "none",
+            "count",
+            "countunique"
+          ],
+          "casts": [
+            "string",
+            "date",
+            "genericdatetime",
+            "boolean",
+            "integer",
+            "float",
+            "geopoint",
+            "geopolygon"
+          ],
+          "guid": "block1_result_hjm7"
+        }
+      ]
+    },
+    "sources": {
+      "compatible_types": [
+        {
+          "source_type": "PG_TABLE"
+        },
+        {
+          "source_type": "PG_SUBSELECT"
+        }
+      ],
+      "items": [
+        {
+          "id": "febacc21-31c1-11f1-8a9b-89e81b293b66",
+          "schema_update_enabled": true
+        },
+        {
+          "id": "e924de40-31c2-11f1-8a9b-89e81b293b66",
+          "schema_update_enabled": true
+        }
+      ]
+    },
+    "join": {
+      "operators": [
+        "eq"
+      ],
+      "types": [
+        "inner",
+        "left",
+        "right",
+        "full"
+      ]
+    },
+    "source_listing": {
+      "db_name_required_for_search": false,
+      "db_name_label": null,
+      "supports_source_search": true,
+      "supports_source_pagination": true,
+      "supports_db_name_listing": false
+    },
+    "supports_offset": true,
+    "source_avatars": {
+      "items": [
+        {
+          "id": "e924b730-31c2-11f1-8a9b-89e81b293b66",
+          "schema_update_enabled": true
+        }
+      ],
+      "max": 32
+    },
+    "connections": {
+      "compatible_types": [],
+      "items": [
+        {
+          "id": "qtp2vi8ns03ka",
+          "replacement_types": [
+            {
+              "conn_type": "yadocs"
+            },
+            {
+              "conn_type": "file"
+            },
+            {
+              "conn_type": "ch_frozen_covid"
+            },
+            {
+              "conn_type": "metrika_api"
+            },
+            {
+              "conn_type": "postgres"
+            },
+            {
+              "conn_type": "appmetrica_api"
+            },
+            {
+              "conn_type": "extractor1c"
+            },
+            {
+              "conn_type": "usage_analytics_light"
+            },
+            {
+              "conn_type": "mysql"
+            },
+            {
+              "conn_type": "ch_frozen_demo"
+            },
+            {
+              "conn_type": "ch_ya_music_podcast_stats"
+            },
+            {
+              "conn_type": "kontur_market"
+            },
+            {
+              "conn_type": "promql"
+            },
+            {
+              "conn_type": "snowflake"
+            },
+            {
+              "conn_type": "equeo"
+            },
+            {
+              "conn_type": "ch_billing_analytics"
+            },
+            {
+              "conn_type": "trino"
+            },
+            {
+              "conn_type": "ch_frozen_transparency"
+            },
+            {
+              "conn_type": "ch_frozen_dtp"
+            },
+            {
+              "conn_type": "ch_frozen_bumpy_roads"
+            },
+            {
+              "conn_type": "chyt"
+            },
+            {
+              "conn_type": "smb_heatmaps"
+            },
+            {
+              "conn_type": "bitrix24"
+            },
+            {
+              "conn_type": "ydb"
+            },
+            {
+              "conn_type": "mssql"
+            },
+            {
+              "conn_type": "json_api"
+            },
+            {
+              "conn_type": "speechsense"
+            },
+            {
+              "conn_type": "gsheets_v2"
+            },
+            {
+              "conn_type": "yq"
+            },
+            {
+              "conn_type": "bigquery"
+            },
+            {
+              "conn_type": "gsheets"
+            },
+            {
+              "conn_type": "clickhouse"
+            },
+            {
+              "conn_type": "ch_geo_filtered"
+            },
+            {
+              "conn_type": "moysklad"
+            },
+            {
+              "conn_type": "ch_frozen_gkh"
+            },
+            {
+              "conn_type": "ch_frozen_samples"
+            },
+            {
+              "conn_type": "oracle"
+            },
+            {
+              "conn_type": "greenplum"
+            },
+            {
+              "conn_type": "usage_analytics_detailed"
+            },
+            {
+              "conn_type": "ch_frozen_horeca"
+            },
+            {
+              "conn_type": "ch_frozen_weather"
+            }
+          ]
+        }
+      ],
+      "max": 1
+    }
+  },
+  "name": "Блок 1 - сделки и задачи брокера"
+}

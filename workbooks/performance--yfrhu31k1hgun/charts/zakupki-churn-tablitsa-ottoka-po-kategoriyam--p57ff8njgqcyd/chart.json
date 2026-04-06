@@ -1,0 +1,673 @@
+{
+  "entryId": "p57ff8njgqcyd",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "1684885548172314513/zakupki_churn — Таблица оттока по категориям",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2024-05-13T13:46:49.145Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2024-05-15T16:18:40.670Z",
+  "savedId": "k1ha720zfx9w8",
+  "publishedId": "k1ha720zfx9w8",
+  "revId": "k1ha720zfx9w8",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "1hjbd83idivip"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "58ca77e0-12d6-11ef-a654-af02d7d09aa2",
+          "title": "title-58ca77e0-12d6-11ef-a654-af02d7d09aa2",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "2ff71d00-12d6-11ef-a654-af02d7d09aa2",
+          "title": "title-2ff71d00-12d6-11ef-a654-af02d7d09aa2",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "28c11ae0-12d6-11ef-a654-af02d7d09aa2",
+          "title": "title-28c11ae0-12d6-11ef-a654-af02d7d09aa2",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "b304f380-1140-11ef-9333-b1c84138e543",
+          "title": "churn_rate",
+          "calc_mode": "formula"
+        },
+        {
+          "guid": "98a89960-1140-11ef-9333-b1c84138e543",
+          "title": "title-98a89960-1140-11ef-9333-b1c84138e543",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "date",
+          "title": "date",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_name",
+          "title": "channel_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "channel_link",
+          "title": "channel_link",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "cost",
+          "title": "cost",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "followers_uae",
+          "title": "followers_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "invitelinks_uae",
+          "title": "invitelinks_uae",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "category",
+          "title": "category",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "leavers_count",
+          "title": "leavers_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "churn_rate_percentage",
+          "title": "churn_rate_percentage",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "joiners_count",
+          "title": "joiners_count",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "avg_lifetime_days",
+          "title": "avg_lifetime_days",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100,
+      "titleMode": "hide",
+      "title": "zakupki_churn — Таблица оттока по категориям",
+      "legendMode": "show",
+      "tooltipSum": "on",
+      "totals": "on",
+      "feed": "",
+      "pivotFallback": "off",
+      "navigatorSettings": {
+        "isNavigatorAvailable": false,
+        "selectedLines": []
+      }
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "b304f380-1140-11ef-9333-b1c84138e543",
+        "datasetId": "1hjbd83idivip",
+        "data_type": "float",
+        "title": "churn_rate",
+        "source": "",
+        "direction": "DESC",
+        "type": "MEASURE"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "data_type": "integer",
+          "initial_data_type": "integer",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "guid": "98a89960-1140-11ef-9333-b1c84138e543",
+          "valid": true,
+          "virtual": false,
+          "aggregation_locked": false,
+          "hidden": false,
+          "cast": "integer",
+          "type": "MEASURE",
+          "autoaggregated": false,
+          "has_auto_aggregation": false,
+          "title": "title-98a89960-1140-11ef-9333-b1c84138e543",
+          "aggregation": "sum",
+          "source": "leavers_count",
+          "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "1hjbd83idivip"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "data_type": "integer",
+          "initial_data_type": "integer",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "guid": "28c11ae0-12d6-11ef-a654-af02d7d09aa2",
+          "valid": true,
+          "virtual": false,
+          "aggregation_locked": false,
+          "hidden": false,
+          "cast": "integer",
+          "type": "MEASURE",
+          "autoaggregated": false,
+          "has_auto_aggregation": false,
+          "title": "title-28c11ae0-12d6-11ef-a654-af02d7d09aa2",
+          "aggregation": "sum",
+          "source": "joiners_count",
+          "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "1hjbd83idivip"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "data_type": "integer",
+          "initial_data_type": "integer",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "guid": "2ff71d00-12d6-11ef-a654-af02d7d09aa2",
+          "valid": true,
+          "virtual": false,
+          "aggregation_locked": false,
+          "hidden": false,
+          "cast": "integer",
+          "type": "MEASURE",
+          "autoaggregated": false,
+          "has_auto_aggregation": false,
+          "title": "title-2ff71d00-12d6-11ef-a654-af02d7d09aa2",
+          "aggregation": "sum",
+          "source": "followers_uae",
+          "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "datasetId": "1hjbd83idivip"
+        }
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "data_type": "float",
+          "initial_data_type": "float",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "guid": "b304f380-1140-11ef-9333-b1c84138e543",
+          "valid": true,
+          "virtual": false,
+          "aggregation_locked": true,
+          "hidden": false,
+          "cast": "float",
+          "type": "MEASURE",
+          "autoaggregated": true,
+          "has_auto_aggregation": true,
+          "title": "churn_rate",
+          "aggregation": "none",
+          "formula": "IF SUM([joiners_count]) > 0 THEN\n    SUM([leavers_count]) / SUM([joiners_count])\nEND",
+          "guid_formula": "IF SUM([joiners_count]) > 0 THEN\n    SUM([leavers_count]) / SUM([joiners_count])\nEND",
+          "calc_mode": "formula",
+          "source": "",
+          "local": true,
+          "datasetId": "1hjbd83idivip"
+        },
+        "debug_info": "merged-update"
+      },
+      {
+        "action": "add_field",
+        "field": {
+          "description": "",
+          "data_type": "float",
+          "initial_data_type": "float",
+          "lock_aggregation": false,
+          "managed_by": "user",
+          "guid": "58ca77e0-12d6-11ef-a654-af02d7d09aa2",
+          "valid": true,
+          "virtual": false,
+          "aggregation_locked": false,
+          "hidden": false,
+          "cast": "float",
+          "type": "MEASURE",
+          "autoaggregated": false,
+          "has_auto_aggregation": false,
+          "title": "title-58ca77e0-12d6-11ef-a654-af02d7d09aa2",
+          "aggregation": "avg",
+          "source": "avg_lifetime_days",
+          "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+          "calc_mode": "direct",
+          "formula": "",
+          "guid_formula": "",
+          "local": true,
+          "quickFormula": true,
+          "originalTitle": "avg_lifetime_days",
+          "fakeTitle": "avg_lifetime_days",
+          "datasetId": "1hjbd83idivip"
+        }
+      }
+    ],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "description": "",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "valid": true,
+              "aggregation": "none",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "initial_data_type": "string",
+              "title": "category",
+              "virtual": false,
+              "managed_by": "user",
+              "hidden": false,
+              "guid": "category",
+              "autoaggregated": false,
+              "cast": "string",
+              "data_type": "string",
+              "source": "category",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "1hjbd83idivip",
+              "id": "dimension-11",
+              "datasetName": "zakupki_churn_agg",
+              "fakeTitle": "Категория",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "db2d4150-1140-11ef-9333-b1c84138e543",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "category"
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "description": "",
+              "aggregation_locked": false,
+              "type": "MEASURE",
+              "valid": true,
+              "aggregation": "sum",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "initial_data_type": "integer",
+              "title": "title-98a89960-1140-11ef-9333-b1c84138e543",
+              "virtual": false,
+              "managed_by": "user",
+              "hidden": false,
+              "guid": "98a89960-1140-11ef-9333-b1c84138e543",
+              "autoaggregated": false,
+              "cast": "integer",
+              "data_type": "integer",
+              "source": "leavers_count",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "1hjbd83idivip",
+              "id": "measure-4",
+              "datasetName": "zakupki_churn_agg",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "96c58180-1140-11ef-9333-b1c84138e543",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "98a89960-1140-11ef-9333-b1c84138e543"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "leavers_count",
+              "fakeTitle": "Вышло",
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "positiveColor": "#8AD554",
+                    "negativeColor": "#FF3D64"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "default_value": null,
+              "value_constraint": null
+            },
+            {
+              "data_type": "integer",
+              "aggregation": "sum",
+              "autoaggregated": false,
+              "type": "MEASURE",
+              "virtual": false,
+              "valid": true,
+              "description": "",
+              "managed_by": "user",
+              "guid": "28c11ae0-12d6-11ef-a654-af02d7d09aa2",
+              "aggregation_locked": false,
+              "has_auto_aggregation": false,
+              "initial_data_type": "integer",
+              "cast": "integer",
+              "lock_aggregation": false,
+              "title": "title-28c11ae0-12d6-11ef-a654-af02d7d09aa2",
+              "hidden": false,
+              "source": "joiners_count",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "1hjbd83idivip",
+              "id": "measure-2",
+              "datasetName": "zakupki_churn_agg",
+              "fakeTitle": "Пришло (логи)",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "24e84d80-12d6-11ef-a654-af02d7d09aa2",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "joiners_count"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "joiners_count"
+            },
+            {
+              "valid": true,
+              "hidden": false,
+              "aggregation": "sum",
+              "autoaggregated": false,
+              "data_type": "integer",
+              "cast": "integer",
+              "aggregation_locked": false,
+              "virtual": false,
+              "description": "",
+              "managed_by": "user",
+              "lock_aggregation": false,
+              "has_auto_aggregation": false,
+              "type": "MEASURE",
+              "initial_data_type": "integer",
+              "guid": "2ff71d00-12d6-11ef-a654-af02d7d09aa2",
+              "title": "title-2ff71d00-12d6-11ef-a654-af02d7d09aa2",
+              "source": "followers_uae",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "1hjbd83idivip",
+              "id": "measure-1",
+              "datasetName": "zakupki_churn_agg",
+              "fakeTitle": "Пришло (руки)",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "2bfda840-12d6-11ef-a654-af02d7d09aa2",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "followers_uae"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "followers_uae"
+            },
+            {
+              "cast": "float",
+              "title": "churn_rate",
+              "guid": "b304f380-1140-11ef-9333-b1c84138e543",
+              "autoaggregated": true,
+              "description": "",
+              "aggregation": "none",
+              "aggregation_locked": true,
+              "managed_by": "user",
+              "valid": true,
+              "virtual": false,
+              "hidden": false,
+              "initial_data_type": "float",
+              "lock_aggregation": false,
+              "has_auto_aggregation": true,
+              "type": "MEASURE",
+              "data_type": "float",
+              "guid_formula": "IF SUM([joiners_count]) > 0 THEN\n    SUM([leavers_count]) / SUM([joiners_count])\nEND",
+              "formula": "IF SUM([joiners_count]) > 0 THEN\n    SUM([leavers_count]) / SUM([joiners_count])\nEND",
+              "calc_mode": "formula",
+              "source": "",
+              "local": true,
+              "datasetId": "1hjbd83idivip",
+              "id": "measure-3",
+              "datasetName": "zakupki_churn_agg",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "percent",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "barsSettings": {
+                "enabled": false,
+                "colorSettings": {
+                  "colorType": "two-color",
+                  "settings": {
+                    "palette": "classic20",
+                    "positiveColor": "#8AD554",
+                    "negativeColor": "#FF3D64"
+                  }
+                },
+                "showLabels": true,
+                "align": "default",
+                "scale": {
+                  "mode": "auto"
+                },
+                "showBarsInTotals": false
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "4e626fb0-12d6-11ef-a654-af02d7d09aa2",
+                "settings": {
+                  "gradientState": {
+                    "thresholdsMode": "auto",
+                    "gradientPalette": "blue",
+                    "gradientMode": "2-point",
+                    "reversed": false
+                  },
+                  "paletteState": {},
+                  "isContinuous": true
+                },
+                "colorFieldGuid": "b304f380-1140-11ef-9333-b1c84138e543"
+              }
+            },
+            {
+              "guid": "58ca77e0-12d6-11ef-a654-af02d7d09aa2",
+              "virtual": false,
+              "autoaggregated": false,
+              "has_auto_aggregation": false,
+              "cast": "float",
+              "aggregation_locked": false,
+              "valid": true,
+              "lock_aggregation": false,
+              "managed_by": "user",
+              "title": "title-58ca77e0-12d6-11ef-a654-af02d7d09aa2",
+              "initial_data_type": "float",
+              "description": "",
+              "aggregation": "avg",
+              "data_type": "float",
+              "type": "MEASURE",
+              "hidden": false,
+              "source": "avg_lifetime_days",
+              "avatar_id": "5c512b90-113f-11ef-905c-0f153743af0b",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "datasetId": "1hjbd83idivip",
+              "id": "measure-0",
+              "datasetName": "zakupki_churn_agg",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 2
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "573ef5e0-12d6-11ef-a654-af02d7d09aa2",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "avg_lifetime_days"
+              },
+              "local": true,
+              "quickFormula": true,
+              "originalTitle": "avg_lifetime_days",
+              "fakeTitle": "avg_lifetime_days"
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": null,
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "yfrhu31k1hgun",
+  "collectionId": null
+}
