@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-04-09T13:45:35.340967Z",
+  "config": {
+    "configPath": "/Users/timur/.codex/skills/datalens/sync.config.json",
+    "datalensRoot": "/Users/timur/.codex/skills/datalens",
+    "envFile": "/Users/timur/Documents/datalens/datalens/.env",
+    "branches": {
+      "dashboard": "published",
+      "wizard": "published",
+      "ql": "published",
+      "editor": "saved"
+    }
+  },
+  "workbook": {
+    "id": "06cal43xo0bok",
+    "title": "Тех. отдел",
+    "path": "workbook.json",
+    "hashes": {
+      "path": "e64b2c0714065b5bac8368d719677384a62294fdb351008ba215a47f002501a0"
+    }
+  },
+  "counts": {
+    "dashboards": 0,
+    "charts": 1,
+    "datasets": 1,
+    "connections": 2
+  },
+  "entries": {
+    "dashboards": [],
+    "charts": [
+      {
+        "id": "lrxw1441y1nq5",
+        "title": "Okdesk — Тикеты",
+        "type": "table_wizard_node",
+        "kind": "wizard",
+        "scope": "widget",
+        "updatedAt": "2026-04-09T13:45:31.457Z",
+        "path": "charts/okdesk-tikety--lrxw1441y1nq5/chart.json",
+        "metaPath": "charts/okdesk-tikety--lrxw1441y1nq5/meta.json",
+        "hashes": {
+          "path": "c420d3e76cda420e8fdf4e6c16172ce124892d1d1ba9daeaaa211a306fb3ffab",
+          "metaPath": "cd69d0fbb3e4add8fc5e41dee6264933baab614afc2eeba835c426ad04f17250"
+        },
+        "refs": {
+          "datasets": [
+            "pv10rjdcidba9"
+          ]
+        }
+      }
+    ],
+    "datasets": [
+      {
+        "id": "pv10rjdcidba9",
+        "title": "okdesk_tickets_stg",
+        "scope": "dataset",
+        "updatedAt": null,
+        "path": "datasets/okdesk-tickets-stg--pv10rjdcidba9/dataset.update.json",
+        "fullPath": "datasets/okdesk-tickets-stg--pv10rjdcidba9/dataset.full.json",
+        "metaPath": "datasets/okdesk-tickets-stg--pv10rjdcidba9/meta.json",
+        "hashes": {
+          "path": "3355c52591fe7e8b5b5bf430a05163393760e7bb37b036cabe197a6a505578d5",
+          "fullPath": "594a23c3623bcdd0d969b06fb853a9c0dfcc5f5304478b3854b3f4e972e9e609",
+          "metaPath": "130ce043bc67543fef688bf59dd9108bd4aaabdb48aa25bda0f6f725e2aa09b1"
+        },
+        "refs": {
+          "connections": [
+            "rx31gnh1xjf6b"
+          ]
+        }
+      }
+    ],
+    "connections": [
+      {
+        "id": "39fdqji0c9aen",
+        "title": "neginsky.ru",
+        "scope": "connection",
+        "updatedAt": null,
+        "path": "connections/neginsky-ru--39fdqji0c9aen/connection.redacted.json",
+        "metaPath": "connections/neginsky-ru--39fdqji0c9aen/meta.json",
+        "hashes": {
+          "path": "df012dba21b6058b2436b3d728d1c460b834a3b7f30195db3867575b62d29c2d",
+          "metaPath": "bcb72d13e52b05a2dc36afe12986edb77b16d57693a50f565e3107153f30eec9"
+        },
+        "redacted": true
+      },
+      {
+        "id": "rx31gnh1xjf6b",
+        "title": "test_dwh",
+        "scope": "connection",
+        "updatedAt": null,
+        "path": "connections/test-dwh--rx31gnh1xjf6b/connection.redacted.json",
+        "metaPath": "connections/test-dwh--rx31gnh1xjf6b/meta.json",
+        "hashes": {
+          "path": "9d8be8dc395271cbb7e6354445c20752ee5e596ddf49ac9edfe26d34f46f8db1",
+          "metaPath": "074ae038c03622079239219a1c8297a451d7b5a4ba19a037ede1df6928c6f6ab"
+        },
+        "redacted": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,959 @@
+{
+  "entryId": "lrxw1441y1nq5",
+  "scope": "widget",
+  "type": "table_wizard_node",
+  "key": "2189305181923968477/Okdesk — Тикеты",
+  "createdBy": "uid:ajesf24tpoiqnj5d4g54",
+  "createdAt": "2026-04-09T12:58:35.334Z",
+  "updatedBy": "uid:ajesf24tpoiqnj5d4g54",
+  "updatedAt": "2026-04-09T13:45:31.457Z",
+  "savedId": "kqx4ekisr8rc4",
+  "publishedId": "kqx4ekisr8rc4",
+  "revId": "kqx4ekisr8rc4",
+  "tenantId": "org_bpfnudaj6l5tbjenmg0k",
+  "data": {
+    "colors": [],
+    "colorsConfig": {},
+    "datasetsIds": [
+      "pv10rjdcidba9"
+    ],
+    "datasetsPartialFields": [
+      [
+        {
+          "guid": "updated_at_okd2",
+          "title": "updated_at",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "created_at_okd3",
+          "title": "created_at",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "reacted_at_okd4",
+          "title": "reacted_at",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "completed_at_okdb",
+          "title": "completed_at",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "opened_by_okd5",
+          "title": "opened_by",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "assignee_name_okd6",
+          "title": "assignee_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "title_okd7",
+          "title": "title",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "priority_name_okd8",
+          "title": "priority_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "status_name_okd9",
+          "title": "status_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "type_name_okdd",
+          "title": "type_name",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "without_answer_okde",
+          "title": "without_answer",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "deadline_at_okdf",
+          "title": "deadline_at",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "planned_reaction_at_okdg",
+          "title": "planned_reaction_at",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "comments_last_at_okdh",
+          "title": "comments_last_at",
+          "calc_mode": "direct"
+        },
+        {
+          "guid": "comments_count_okda",
+          "title": "comments_count",
+          "calc_mode": "direct"
+        }
+      ]
+    ],
+    "extraSettings": {
+      "pagination": "on",
+      "limit": 100
+    },
+    "filters": [],
+    "geopointsConfig": {},
+    "hierarchies": [],
+    "labels": [],
+    "links": [],
+    "segments": [],
+    "shapes": [],
+    "shapesConfig": {},
+    "sort": [
+      {
+        "guid": "updated_at_okd2",
+        "datasetId": "pv10rjdcidba9",
+        "data_type": "genericdatetime",
+        "title": "updated_at",
+        "source": "updated_at",
+        "direction": "DESC",
+        "type": "DIMENSION"
+      }
+    ],
+    "tooltips": [],
+    "type": "datalens",
+    "updates": [],
+    "version": "15",
+    "visualization": {
+      "id": "flatTable",
+      "type": "table",
+      "name": "label_visualization-flat-table",
+      "iconProps": {
+        "id": "visFlatTable",
+        "width": "24"
+      },
+      "allowFilters": true,
+      "allowColors": true,
+      "allowSort": true,
+      "placeholders": [
+        {
+          "allowedTypes": {},
+          "id": "flat-table-columns",
+          "type": "flat-table-columns",
+          "title": "section_columns",
+          "iconProps": {},
+          "items": [
+            {
+              "data_type": "genericdatetime",
+              "ui_settings": "",
+              "title": "updated_at",
+              "cast": "genericdatetime",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "updated_at_okd2",
+              "managed_by": "user",
+              "initial_data_type": "genericdatetime",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "updated_at",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-0",
+              "datasetName": "okdesk_tickets_stg",
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none",
+              "fakeTitle": "Дата апдейта тикета",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "b5e85e03-ad3b-4a90-aa25-02adda6c24c7",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "updated_at_okd2"
+              }
+            },
+            {
+              "data_type": "genericdatetime",
+              "ui_settings": "",
+              "title": "created_at",
+              "cast": "genericdatetime",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "created_at_okd3",
+              "managed_by": "user",
+              "initial_data_type": "genericdatetime",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "created_at",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-1",
+              "datasetName": "okdesk_tickets_stg",
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none",
+              "fakeTitle": "Дата создания",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "f6e715d3-08cb-49bd-a3c4-2f71e1d3990e",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "created_at_okd3"
+              }
+            },
+            {
+              "data_type": "genericdatetime",
+              "ui_settings": "",
+              "title": "reacted_at",
+              "cast": "genericdatetime",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "reacted_at_okd4",
+              "managed_by": "user",
+              "initial_data_type": "genericdatetime",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "reacted_at",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-2",
+              "datasetName": "okdesk_tickets_stg",
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none",
+              "fakeTitle": "Дата реагирования",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "cddad208-fa0a-4dae-975a-286dac2abd2b",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "reacted_at_okd4"
+              }
+            },
+            {
+              "data_type": "genericdatetime",
+              "ui_settings": "",
+              "title": "completed_at",
+              "cast": "genericdatetime",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "completed_at_okdb",
+              "managed_by": "user",
+              "initial_data_type": "genericdatetime",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "completed_at",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-3",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "Дата закрытия",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "6d8b887b-4c91-4d11-92cb-c5e8f2b7c3b0",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "completed_at_okdb"
+              },
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none"
+            },
+            {
+              "data_type": "string",
+              "ui_settings": "",
+              "title": "opened_by",
+              "cast": "string",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "opened_by_okd5",
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "opened_by",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-4",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "Кто открыл",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "fbc6a9ce-0799-4134-9aef-5c871edd8b8f",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "opened_by_okd5"
+              }
+            },
+            {
+              "data_type": "string",
+              "ui_settings": "",
+              "title": "assignee_name",
+              "cast": "string",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "assignee_name_okd6",
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "assignee_name",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-5",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "Кто ответственный",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "c19c1d59-5e36-47d4-9696-2e309f6bdada",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "assignee_name_okd6"
+              }
+            },
+            {
+              "data_type": "string",
+              "ui_settings": "",
+              "title": "title",
+              "cast": "string",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "title_okd7",
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "title",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-6",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "Заголовок",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "0cce0a35-bbc9-4e67-bef7-07786ef0bf21",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "title_okd7"
+              }
+            },
+            {
+              "data_type": "string",
+              "ui_settings": "",
+              "title": "priority_name",
+              "cast": "string",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "priority_name_okd8",
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "priority_name",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-7",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "Приоритет",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "6f80c01c-468b-4ad3-aed5-7c7de180fab2",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "priority_name_okd8"
+              }
+            },
+            {
+              "data_type": "string",
+              "ui_settings": "",
+              "title": "status_name",
+              "cast": "string",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "status_name_okd9",
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "status_name",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-8",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "Статус",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "80113782-3d09-42b0-9d23-c1b652f63503",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "status_name_okd9"
+              }
+            },
+            {
+              "data_type": "string",
+              "ui_settings": "",
+              "title": "type_name",
+              "cast": "string",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "type_name_okdd",
+              "managed_by": "user",
+              "initial_data_type": "string",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "type_name",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-9",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "Тип обращения",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "cc7a348b-15b0-4cc0-9c7b-fdfcc536f4e5",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "type_name_okdd"
+              }
+            },
+            {
+              "data_type": "boolean",
+              "ui_settings": "",
+              "title": "without_answer",
+              "cast": "boolean",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "without_answer_okde",
+              "managed_by": "user",
+              "initial_data_type": "boolean",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "without_answer",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-10",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "Без ответа сотрудника",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "3941c641-437a-43f8-82a8-8349eb391406",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "without_answer_okde"
+              }
+            },
+            {
+              "data_type": "genericdatetime",
+              "ui_settings": "",
+              "title": "deadline_at",
+              "cast": "genericdatetime",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "deadline_at_okdf",
+              "managed_by": "user",
+              "initial_data_type": "genericdatetime",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "deadline_at",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-11",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "Дедлайн",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "701760e2-ac49-4dca-a27b-402e4955f6ff",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "deadline_at_okdf"
+              },
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none"
+            },
+            {
+              "data_type": "genericdatetime",
+              "ui_settings": "",
+              "title": "planned_reaction_at",
+              "cast": "genericdatetime",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "planned_reaction_at_okdg",
+              "managed_by": "user",
+              "initial_data_type": "genericdatetime",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "planned_reaction_at",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-12",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "План реакции",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "f626cd20-e395-490e-8bc3-132468391443",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "planned_reaction_at_okdg"
+              },
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none"
+            },
+            {
+              "data_type": "genericdatetime",
+              "ui_settings": "",
+              "title": "comments_last_at",
+              "cast": "genericdatetime",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "comments_last_at_okdh",
+              "managed_by": "user",
+              "initial_data_type": "genericdatetime",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "comments_last_at",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-13",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "Последний комментарий",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "f6a2db30-f1cb-46e0-a09c-0b0734f86f61",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "comments_last_at_okdh"
+              },
+              "format": "DD.MM.YYYY HH:mm:ss",
+              "grouping": "none"
+            },
+            {
+              "data_type": "integer",
+              "ui_settings": "",
+              "title": "comments_count",
+              "cast": "integer",
+              "virtual": false,
+              "autoaggregated": false,
+              "lock_aggregation": false,
+              "hidden": false,
+              "valid": true,
+              "aggregation": "none",
+              "aggregation_locked": false,
+              "type": "DIMENSION",
+              "has_auto_aggregation": false,
+              "guid": "comments_count_okda",
+              "managed_by": "user",
+              "initial_data_type": "integer",
+              "description": "",
+              "avatar_id": "13eec284-fac7-47e5-9693-27e1894ff863",
+              "source": "comments_count",
+              "calc_mode": "direct",
+              "formula": "",
+              "guid_formula": "",
+              "default_value": null,
+              "value_constraint": null,
+              "datasetId": "pv10rjdcidba9",
+              "id": "dimension-14",
+              "datasetName": "okdesk_tickets_stg",
+              "fakeTitle": "Количество комментариев",
+              "hideLabelMode": "show",
+              "formatting": {
+                "format": "number",
+                "showRankDelimiter": true,
+                "prefix": "",
+                "postfix": "",
+                "labelMode": "absolute",
+                "precision": 0
+              },
+              "backgroundSettings": {
+                "enabled": false,
+                "settingsId": "276e6b72-26a1-42f0-960c-280e241f01fe",
+                "settings": {
+                  "gradientState": {},
+                  "paletteState": {
+                    "palette": "classic20",
+                    "mountedColors": {}
+                  },
+                  "isContinuous": false
+                },
+                "colorFieldGuid": "comments_count_okda"
+              }
+            }
+          ],
+          "required": true,
+          "settings": {
+            "groupping": "on"
+          }
+        }
+      ],
+      "allowLayerFilters": false
+    }
+  },
+  "meta": {},
+  "annotation": {
+    "description": "Таблица тикетов Okdesk из основной витрины dbt."
+  },
+  "version": null,
+  "sourceVersion": null,
+  "hidden": false,
+  "public": false,
+  "workbookId": "06cal43xo0bok",
+  "collectionId": null
+}
