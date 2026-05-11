@@ -1,0 +1,78 @@
+name: Notify webhook on push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check delivery window
+        id: delivery_window
+        run: |
+          python3 <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          now = datetime.now(ZoneInfo("Europe/Moscow"))
+          allowed = now.weekday() < 5 and 9 <= now.hour < 22
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write(f"allowed={'true' if allowed else 'false'}\n")
+              fh.write(f"now={now.isoformat()}\n")
+
+          print(f"delivery_window_allowed={allowed}")
+          print(f"delivery_window_now={now.isoformat()}")
+          PY
+
+      - name: Build payload
+        if: steps.delivery_window.outputs.allowed == 'true'
+        env:
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: |
+          python3 <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          event = json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())
+          head = event.get('head_commit') or {}
+          full_message = head.get('message') or ''
+          message = full_message.splitlines()[0] if full_message else ''
+          payload = {
+              'repository': os.environ['GITHUB_REPOSITORY'],
+              'branch': os.environ['GITHUB_REF_NAME'],
+              'commit_count': len(event.get('commits') or []),
+              'author': ((head.get('author') or {}).get('name') or event.get('pusher', {}).get('name') or ''),
+              'commit_message': message,
+              'commit_message_full': full_message,
+              'short_sha': os.environ['GITHUB_SHA'][:7],
+              'commit_sha': os.environ['GITHUB_SHA'],
+              'commit_url': head.get('url') or f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/commit/{os.environ['GITHUB_SHA']}",
+              'pusher': (event.get('pusher') or {}).get('name') or '',
+              'timestamp': head.get('timestamp') or event.get('repository', {}).get('updated_at') or '',
+          }
+          Path('payload.json').write_text(json.dumps(payload, ensure_ascii=False), encoding='utf-8')
+          print(Path('payload.json').read_text(encoding='utf-8'))
+          PY
+
+      - name: Send webhook
+        if: steps.delivery_window.outputs.allowed == 'true'
+        env:
+          WEBHOOK_URL: ${{ secrets.N8N_WEBHOOK_URL }}
+        run: |
+          test -n "$WEBHOOK_URL"
+          curl -fsS -X POST \
+            -H 'Content-Type: application/json' \
+            --data @payload.json \
+            "$WEBHOOK_URL"
+
+      - name: Skip webhook outside working hours
+        if: steps.delivery_window.outputs.allowed != 'true'
+        run: echo "Skipping webhook, outside working hours or weekend"
