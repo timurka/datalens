@@ -13,19 +13,37 @@ jobs:
         id: delivery_window
         run: |
           python3 <<'PY'
+          import json
           import os
           from datetime import datetime
+          from pathlib import Path
           from zoneinfo import ZoneInfo
 
           now = datetime.now(ZoneInfo("Europe/Moscow"))
-          allowed = now.weekday() < 5 and 9 <= now.hour < 20
+          working_hours = now.weekday() < 5 and 9 <= now.hour < 20
+
+          event = json.loads(Path(os.environ["GITHUB_EVENT_PATH"]).read_text())
+          changed_paths = set()
+          for commit in event.get("commits") or []:
+              for key in ("added", "modified", "removed"):
+                  changed_paths.update(commit.get(key) or [])
+          workflow_only = bool(changed_paths) and changed_paths <= {".github/workflows/notify-webhook.yml"}
+
+          allowed = working_hours and not workflow_only
+          reason = "allowed"
+          if not working_hours:
+              reason = "outside_working_hours"
+          elif workflow_only:
+              reason = "workflow_only_change"
 
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
               fh.write(f"allowed={'true' if allowed else 'false'}\n")
               fh.write(f"now={now.isoformat()}\n")
+              fh.write(f"reason={reason}\n")
 
           print(f"delivery_window_allowed={allowed}")
           print(f"delivery_window_now={now.isoformat()}")
+          print(f"delivery_window_reason={reason}")
           PY
 
       - name: Build payload
