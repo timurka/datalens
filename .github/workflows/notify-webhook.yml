@@ -43,20 +43,61 @@ jobs:
 
           event = json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())
           head = event.get('head_commit') or {}
-          full_message = head.get('message') or ''
-          message = full_message.splitlines()[0] if full_message else ''
+          raw_commits = event.get('commits') or []
+
+          def first_line(value):
+              return value.splitlines()[0] if value else ''
+
+          def author_name(commit):
+              author = commit.get('author') or {}
+              return author.get('name') or author.get('username') or ''
+
+          commits = []
+          for commit in raw_commits:
+              sha = commit.get('id') or ''
+              full_message = commit.get('message') or ''
+              commits.append({
+                  'sha': sha,
+                  'short_sha': sha[:7],
+                  'message': first_line(full_message),
+                  'message_full': full_message,
+                  'author': author_name(commit),
+                  'url': commit.get('url') or (f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/commit/{sha}" if sha else ''),
+                  'timestamp': commit.get('timestamp') or '',
+              })
+
+          non_merge_commits = [
+              commit for commit in commits
+              if not commit['message'].startswith('Merge pull request #')
+          ]
+          primary = (non_merge_commits or commits or [{
+              'sha': os.environ['GITHUB_SHA'],
+              'short_sha': os.environ['GITHUB_SHA'][:7],
+              'message': first_line(head.get('message') or ''),
+              'message_full': head.get('message') or '',
+              'author': ((head.get('author') or {}).get('name') or event.get('pusher', {}).get('name') or ''),
+              'url': head.get('url') or f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/commit/{os.environ['GITHUB_SHA']}",
+              'timestamp': head.get('timestamp') or event.get('repository', {}).get('updated_at') or '',
+          }])[0]
+
           payload = {
               'repository': os.environ['GITHUB_REPOSITORY'],
               'branch': os.environ['GITHUB_REF_NAME'],
-              'commit_count': len(event.get('commits') or []),
-              'author': ((head.get('author') or {}).get('name') or event.get('pusher', {}).get('name') or ''),
-              'commit_message': message,
-              'commit_message_full': full_message,
-              'short_sha': os.environ['GITHUB_SHA'][:7],
-              'commit_sha': os.environ['GITHUB_SHA'],
-              'commit_url': head.get('url') or f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/commit/{os.environ['GITHUB_SHA']}",
+              'commit_count': len(raw_commits),
+              'commits': commits,
+              'non_merge_commit_count': len(non_merge_commits),
+              'author': primary['author'],
+              'commit_message': primary['message'],
+              'commit_message_full': primary['message_full'],
+              'short_sha': primary['short_sha'],
+              'commit_sha': primary['sha'],
+              'commit_url': primary['url'],
+              'head_short_sha': os.environ['GITHUB_SHA'][:7],
+              'head_commit_sha': os.environ['GITHUB_SHA'],
+              'head_commit_message': first_line(head.get('message') or ''),
+              'head_commit_url': head.get('url') or f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/commit/{os.environ['GITHUB_SHA']}",
               'pusher': (event.get('pusher') or {}).get('name') or '',
-              'timestamp': head.get('timestamp') or event.get('repository', {}).get('updated_at') or '',
+              'timestamp': primary['timestamp'] or event.get('repository', {}).get('updated_at') or '',
           }
           Path('payload.json').write_text(json.dumps(payload, ensure_ascii=False), encoding='utf-8')
           print(Path('payload.json').read_text(encoding='utf-8'))
